@@ -1,4 +1,4 @@
-name: Collect City League Results
+name: Sync City League DB
 
 on:
   workflow_dispatch:
@@ -8,38 +8,172 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: city-db-sync
+  cancel-in-progress: true
+
 jobs:
-  collect:
+  sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
+      - name: Download Termux DB
         run: |
-          pip install -r requirements.txt
-          python -m playwright install --with-deps chromium
+          set -euo pipefail
+          mkdir -p .tmp data
 
-      - name: Collect official results
-        run: python collector/collect.py
+          curl --fail --silent --show-error --location \
+            --retry 3 \
+            --retry-all-errors \
+            --connect-timeout 15 \
+            --max-time 90 \
+            -H "ngrok-skip-browser-warning: true" \
+            "https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json" \
+            -o .tmp/city_db.json
 
-      - name: Commit collected data
+          curl --fail --silent --show-error --location \
+            --retry 3 \
+            --retry-all-errors \
+            --connect-timeout 15 \
+            --max-time 120 \
+            -H "ngrok-skip-browser-warning: true" \
+            "https://tuition-occultist-unwritten.ngrok-free.dev/city-decks.json" \
+            -o .tmp/city_decks.json
+
+      - name: Validate and update
         run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          tmp_city = Path(".tmp/city_db.json")
+          tmp_decks = Path(".tmp/city_decks.json")
+
+          out_city = Path("data/city_db.json")
+          out_decks = Path("data/city_decks.json")
+          out_index = Path("data/index.json")
+
+          with tmp_city.open(encoding="utf-8") as f:
+              city = json.load(f)
+
+          with tmp_decks.open(encoding="utf-8") as f:
+              decks = json.load(f)
+
+          if not isinstance(city, dict):
+              raise SystemExit("city-db is not a JSON object")
+
+          events = city.get("events")
+          if not isinstance(events, list) or not events:
+              raise SystemExit("city-db contains no events")
+
+          if not isinstance(decks, dict):
+              raise SystemExit("city-decks is not a JSON object")
+
+          deck_map = decks.get("decks")
+          if not isinstance(deck_map, dict) or not deck_map:
+              raise SystemExit("city-decks contains no decks")
+
+          bad = [
+              code
+              for code, deck in deck_map.items()
+              if not isinstance(deck, dict)
+              or deck.get("total_cards") != 60
+          ]
+
+          if bad:
+              raise SystemExit(
+                  f"{len(bad)} decks failed total_cards == 60"
+              )
+
+          # 過去データより件数が減ったら上書き禁止
+          if out_city.exists():
+              old = json.loads(
+                  out_city.read_text(encoding="utf-8")
+              )
+              old_count = len(old.get("events", []))
+
+              if len(events) < old_count:
+                  raise SystemExit(
+                      f"event count decreased: "
+                      f"{old_count} -> {len(events)}"
+                  )
+
+          if out_decks.exists():
+              old = json.loads(
+                  out_decks.read_text(encoding="utf-8")
+              )
+              old_map = old.get("decks", {})
+
+              if (
+                  isinstance(old_map, dict)
+                  and len(deck_map) < len(old_map)
+              ):
+                  raise SystemExit(
+                      f"deck count decreased: "
+                      f"{len(old_map)} -> {len(deck_map)}"
+                  )
+
+          # 検証完了後に初めて正式ファイルへ反映
+          out_city.write_bytes(tmp_city.read_bytes())
+          out_decks.write_bytes(tmp_decks.read_bytes())
+
+          city_hash = hashlib.sha256(
+              out_city.read_bytes()
+          ).hexdigest()
+
+          decks_hash = hashlib.sha256(
+              out_decks.read_bytes()
+          ).hexdigest()
+
+          summary = {
+              "season": city.get("season", "2027-S1"),
+              "source": city.get("source"),
+              "source_updated_at": city.get("updated_at"),
+              "event_count": len(events),
+              "placement_count": city.get("placement_count"),
+              "unique_deck_count": len(deck_map),
+              "valid_60_count": len(deck_map),
+              "city_sha256": city_hash,
+              "decks_sha256": decks_hash,
+              "status": "ok"
+          }
+
+          out_index.write_text(
+              json.dumps(
+                  summary,
+                  ensure_ascii=False,
+                  indent=2
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(
+              f"OK: events={len(events)}, "
+              f"decks={len(deck_map)}"
+          )
+          PY
+
+      - name: Commit only when changed
+        run: |
+          set -euo pipefail
+
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/index.json
+          git add \
+            data/index.json \
+            data/city_db.json \
+            data/city_decks.json
 
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Update city league results"
+            git commit -m "Sync city league DB"
             git push
           fi
