@@ -1,9 +1,9 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-09-28T19:26:31+09:00",
-  "event_count": 67,
-  "placement_count": 528,
+  "updated_at": "2026-09-28T21:16:03+09:00",
+  "event_count": 68,
+  "placement_count": 536,
   "events": [
     {
       "event_id": "1115619",
@@ -102,6 +102,104 @@
         }
       ],
       "collected_at": "2026-09-28T19:26:14+09:00"
+    },
+    {
+      "event_id": "1115011",
+      "date": "2026-09-28",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115011/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "papa",
+          "player_id": "0030995444",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "J88cK4-jKNW0q-x884G8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/J88cK4-jKNW0q-x884G8",
+          "raw_text": "1 位 100pt\npapa\nプレイヤーID：0030995444\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ハヤト",
+          "player_id": "0002231312",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "n9nLQN-TScucn-6PggQg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/n9nLQN-TScucn-6PggQg",
+          "raw_text": "2 位 75pt\nハヤト\nプレイヤーID：0002231312\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "shin",
+          "player_id": "0058698523",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "H9inLQ-cu9FFQ-6nngPL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/H9inLQ-cu9FFQ-6nngPL",
+          "raw_text": "3 位 50pt\nshin\nプレイヤーID：0058698523\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "しょとり",
+          "player_id": "0010225202",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "nnPng9-qEdDix-g6gn6Q",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nnPng9-qEdDix-g6gn6Q",
+          "raw_text": "3 位 50pt\nしょとり\nプレイヤーID：0010225202\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "コンドウコンドル",
+          "player_id": "0000289324",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "cY8x8x-0Q5aRC-4GKJYa",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cY8x8x-0Q5aRC-4GKJYa",
+          "raw_text": "5 位 25pt\nコンドウコンドル\nプレイヤーID：0000289324\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "こーちゃん",
+          "player_id": "0015424714",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0015424714",
+          "deck_code": "JYc84D-QzEMUY-xK8G8x",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/JYc84D-QzEMUY-xK8G8x",
+          "raw_text": "5 位 25pt\nこーちゃん\nプレイヤーID：0015424714\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ハル",
+          "player_id": "0069648216",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "KKYc8J-M3JVoK-G8x8YG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/KKYc8J-M3JVoK-G8x8YG",
+          "raw_text": "5 位 25pt\nハル\nプレイヤーID：0069648216\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Azuma",
+          "player_id": "0000637006",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "6gN9Ln-Ba6nv0-gn6gNi",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/6gN9Ln-Ba6nv0-gn6gNi",
+          "raw_text": "5 位 25pt\nAzuma\nプレイヤーID：0000637006\n神奈川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-09-28T21:16:02+09:00"
     },
     {
       "event_id": "1115634",
