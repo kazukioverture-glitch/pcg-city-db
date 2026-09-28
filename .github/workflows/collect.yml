@@ -3,7 +3,7 @@ name: Sync City League DB
 on:
   workflow_dispatch:
   schedule:
-    - cron: "10,40 0-14 * * *"
+    - cron: "10,40 0-14,23 * * *"
 
 permissions:
   contents: write
