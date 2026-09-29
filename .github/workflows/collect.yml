@@ -1,83 +1,74 @@
 name: Sync City League DB
-
 on:
   workflow_dispatch:
   schedule:
     - cron: "10,40 0-14,23 * * *"
-
 permissions:
   contents: write
-
 concurrency:
   group: city-db-sync
   cancel-in-progress: true
-
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - name: Download Termux DB
         run: |
           set -euo pipefail
           mkdir -p .tmp data
-
-          download_json() {
-            local name="$1"
-            local url="$2"
-            local output="$3"
-
-            echo "Downloading $name from $url"
-            curl --fail --silent --show-error --location \
-              --retry 3 \
-              --retry-connrefused \
-              --connect-timeout 15 \
-              --max-time 120 \
-              --write-out "\nHTTP status: %{http_code}\n" \
-              -H "ngrok-skip-browser-warning: true" \
-              "$url" \
-              -o "$output"
-          }
-
-          city_status=0
-          decks_status=0
-
-          download_json "city-db.json" \
-            "https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json" \
-            ".tmp/city_db.json" || city_status=$?
-
-          download_json "city-decks.json" \
-            "https://tuition-occultist-unwritten.ngrok-free.dev/city-decks.json" \
-            ".tmp/city_decks.json" || decks_status=$?
-
-          if [ "$city_status" -ne 0 ] || [ "$decks_status" -ne 0 ]; then
-            echo "::error::Download failed (city-db curl=$city_status, city-decks curl=$decks_status)."
-            exit 1
-          fi
-
+          failed=0
+          for file in city-db.json city-decks.json; do
+            echo "Downloading $file"
+            if ! curl --fail -sS -L --retry 3 --retry-connrefused \
+              --connect-timeout 15 --max-time 60 --retry-max-time 75 \
+              -H 'ngrok-skip-browser-warning: true' \
+              -w 'HTTP %{http_code}\n' \
+              "https://tuition-occultist-unwritten.ngrok-free.dev/$file" \
+              -o ".tmp/${file//-/_}"; then
+              echo "::error::$file download failed"
+              failed=1
+            fi
+          done
+          test "$failed" -eq 0
       - name: Validate and update
         run: |
           python - <<'PY'
-          import hashlib
-          import json
+          import json, hashlib
           from pathlib import Path
-
-          tmp_city = Path(".tmp/city_db.json")
-          tmp_decks = Path(".tmp/city_decks.json")
-
-          out_city = Path("data/city_db.json")
-          out_decks = Path("data/city_decks.json")
-          out_index = Path("data/index.json")
-
-          with tmp_city.open(encoding="utf-8") as f:
-              city = json.load(f)
-
-          with tmp_decks.open(encoding="utf-8") as f:
-              decks = json.load(f)
-
-          if not isinstance(city, dict):
-              raise SystemExit
+          def read(p):
+              return json.loads(Path(p).read_text(encoding='utf-8'))
+          city=read('.tmp/city_db.json')
+          decks=read('.tmp/city_decks.json')
+          assert isinstance(city,dict), 'city must be an object'
+          assert isinstance(decks,dict), 'decks must be an object'
+          events=city.get('events')
+          dm=decks.get('decks')
+          assert isinstance(events,list) and events, 'No events'
+          assert isinstance(dm,dict) and dm, 'No decks'
+          assert all(isinstance(d,dict) and d.get('total_cards')==60 for d in dm.values()), 'Invalid 60-card deck'
+          for name,key,new in [('city_db','events',events),('city_decks','decks',dm)]:
+              p=Path('data/'+name+'.json')
+              if p.exists():
+                  old=read(p)
+                  assert isinstance(old,dict) and isinstance(old.get(key),type(new)), 'Invalid stored DB'
+                  assert len(new)>=len(old[key]), name+' count decreased'
+          for name in ['city_db','city_decks']:
+              Path('data/'+name+'.json').write_bytes(Path('.tmp/'+name+'.json').read_bytes())
+          def sha(name):
+              return hashlib.sha256(Path('data/'+name+'.json').read_bytes()).hexdigest()
+          index=dict(season=city.get('season','2027-S1'),source=city.get('source'),source_updated_at=city.get('updated_at'),event_count=len(events),placement_count=city.get('placement_count'),unique_deck_count=len(dm),valid_60_count=len(dm),city_sha256=sha('city_db'),decks_sha256=sha('city_decks'),status='ok')
+          Path('data/index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('OK:',len(events),'events,',len(dm),'decks')
+          PY
+      - name: Commit only when changed
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/city_db.json data/city_decks.json data/index.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Sync city league DB'
+            git push
+          fi
