@@ -26,23 +26,38 @@ jobs:
           set -euo pipefail
           mkdir -p .tmp data
 
-          curl --fail --silent --show-error --location \
-            --retry 3 \
-            --retry-all-errors \
-            --connect-timeout 15 \
-            --max-time 90 \
-            -H "ngrok-skip-browser-warning: true" \
-            "https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json" \
-            -o .tmp/city_db.json
+          download_json() {
+            local name="$1"
+            local url="$2"
+            local output="$3"
 
-          curl --fail --silent --show-error --location \
-            --retry 3 \
-            --retry-all-errors \
-            --connect-timeout 15 \
-            --max-time 120 \
-            -H "ngrok-skip-browser-warning: true" \
+            echo "Downloading $name from $url"
+            curl --fail --silent --show-error --location \
+              --retry 3 \
+              --retry-connrefused \
+              --connect-timeout 15 \
+              --max-time 120 \
+              --write-out "\nHTTP status: %{http_code}\n" \
+              -H "ngrok-skip-browser-warning: true" \
+              "$url" \
+              -o "$output"
+          }
+
+          city_status=0
+          decks_status=0
+
+          download_json "city-db.json" \
+            "https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json" \
+            ".tmp/city_db.json" || city_status=$?
+
+          download_json "city-decks.json" \
             "https://tuition-occultist-unwritten.ngrok-free.dev/city-decks.json" \
-            -o .tmp/city_decks.json
+            ".tmp/city_decks.json" || decks_status=$?
+
+          if [ "$city_status" -ne 0 ] || [ "$decks_status" -ne 0 ]; then
+            echo "::error::Download failed (city-db curl=$city_status, city-decks curl=$decks_status)."
+            exit 1
+          fi
 
       - name: Validate and update
         run: |
@@ -65,115 +80,4 @@ jobs:
               decks = json.load(f)
 
           if not isinstance(city, dict):
-              raise SystemExit("city-db is not a JSON object")
-
-          events = city.get("events")
-          if not isinstance(events, list) or not events:
-              raise SystemExit("city-db contains no events")
-
-          if not isinstance(decks, dict):
-              raise SystemExit("city-decks is not a JSON object")
-
-          deck_map = decks.get("decks")
-          if not isinstance(deck_map, dict) or not deck_map:
-              raise SystemExit("city-decks contains no decks")
-
-          bad = [
-              code
-              for code, deck in deck_map.items()
-              if not isinstance(deck, dict)
-              or deck.get("total_cards") != 60
-          ]
-
-          if bad:
-              raise SystemExit(
-                  f"{len(bad)} decks failed total_cards == 60"
-              )
-
-          # 過去データより件数が減ったら上書き禁止
-          if out_city.exists():
-              old = json.loads(
-                  out_city.read_text(encoding="utf-8")
-              )
-              old_count = len(old.get("events", []))
-
-              if len(events) < old_count:
-                  raise SystemExit(
-                      f"event count decreased: "
-                      f"{old_count} -> {len(events)}"
-                  )
-
-          if out_decks.exists():
-              old = json.loads(
-                  out_decks.read_text(encoding="utf-8")
-              )
-              old_map = old.get("decks", {})
-
-              if (
-                  isinstance(old_map, dict)
-                  and len(deck_map) < len(old_map)
-              ):
-                  raise SystemExit(
-                      f"deck count decreased: "
-                      f"{len(old_map)} -> {len(deck_map)}"
-                  )
-
-          # 検証完了後に初めて正式ファイルへ反映
-          out_city.write_bytes(tmp_city.read_bytes())
-          out_decks.write_bytes(tmp_decks.read_bytes())
-
-          city_hash = hashlib.sha256(
-              out_city.read_bytes()
-          ).hexdigest()
-
-          decks_hash = hashlib.sha256(
-              out_decks.read_bytes()
-          ).hexdigest()
-
-          summary = {
-              "season": city.get("season", "2027-S1"),
-              "source": city.get("source"),
-              "source_updated_at": city.get("updated_at"),
-              "event_count": len(events),
-              "placement_count": city.get("placement_count"),
-              "unique_deck_count": len(deck_map),
-              "valid_60_count": len(deck_map),
-              "city_sha256": city_hash,
-              "decks_sha256": decks_hash,
-              "status": "ok"
-          }
-
-          out_index.write_text(
-              json.dumps(
-                  summary,
-                  ensure_ascii=False,
-                  indent=2
-              ) + "\n",
-              encoding="utf-8"
-          )
-
-          print(
-              f"OK: events={len(events)}, "
-              f"decks={len(deck_map)}"
-          )
-          PY
-
-      - name: Commit only when changed
-        run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add \
-            data/index.json \
-            data/city_db.json \
-            data/city_decks.json
-
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Sync city league DB"
-            git push
-          fi
+              raise SystemExit
