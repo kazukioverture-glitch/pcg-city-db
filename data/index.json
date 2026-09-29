@@ -1,12 +1,12 @@
 {
   "season": "2027-S1",
   "source": "https://players.pokemon-card.com/event/result/list",
-  "source_updated_at": "2026-09-28T21:16:03+09:00",
-  "event_count": 68,
-  "placement_count": 536,
-  "unique_deck_count": 533,
-  "valid_60_count": 533,
-  "city_sha256": "bcb5265f1716829026d477f9760187b6b884294e32f9b23e87c4755a6c1a982c",
-  "decks_sha256": "bb621bc878fe4a66158f4d8d8da2a3ae6a7a474f5b4af184f310a74f49f407f4",
+  "source_updated_at": "2026-09-29T19:05:51+09:00",
+  "event_count": 69,
+  "placement_count": 544,
+  "unique_deck_count": 541,
+  "valid_60_count": 541,
+  "city_sha256": "e3ef9af7374a2c40032d8580e5be83cdbbcb11392cb30b8627359f83a557fa33",
+  "decks_sha256": "4456f83cdce0c724ccc1d79aa0a64860eef7077fdad0e8a8cdbcbb1edd97a38f",
   "status": "ok"
 }

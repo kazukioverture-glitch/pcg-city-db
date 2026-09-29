@@ -1,10 +1,108 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-09-28T21:16:03+09:00",
-  "event_count": 68,
-  "placement_count": 536,
+  "updated_at": "2026-09-29T19:05:51+09:00",
+  "event_count": 69,
+  "placement_count": 544,
   "events": [
+    {
+      "event_id": "1115293",
+      "date": "2026-09-29",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115293/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "てんふー",
+          "player_id": "0065811955",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "cDxGc4-CbKul3-888DKK",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cDxGc4-CbKul3-888DKK",
+          "raw_text": "1 位 100pt\nてんふー\nプレイヤーID：0065811955\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ユウジーン",
+          "player_id": "0025601644",
+          "prefecture": "京都府",
+          "player_url": null,
+          "deck_code": "5dFkFk-Zg0YCn-VwwbFw",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5dFkFk-Zg0YCn-VwwbFw",
+          "raw_text": "2 位 75pt\nユウジーン\nプレイヤーID：0025601644\n京都府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "カニパン",
+          "player_id": "0089135040",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0089135040",
+          "deck_code": "8GD8c8-cCQxi9-ca4KGD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8GD8c8-cCQxi9-ca4KGD",
+          "raw_text": "3 位 50pt\nカニパン\nプレイヤーID：0089135040\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "モヒJ",
+          "player_id": "0065218462",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0065218462",
+          "deck_code": "PPLL69-8kwJoD-NLnngn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/PPLL69-8kwJoD-NLnngn",
+          "raw_text": "3 位 50pt\nモヒJ\nプレイヤーID：0065218462\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "蒼いろ",
+          "player_id": "0071538925",
+          "prefecture": "奈良県",
+          "player_url": null,
+          "deck_code": "MUEyR3-GeODjf-MSRUpy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MUEyR3-GeODjf-MSRUpy",
+          "raw_text": "5 位 25pt\n蒼いろ\nプレイヤーID：0071538925\n奈良県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Yuto",
+          "player_id": "0042971430",
+          "prefecture": "奈良県",
+          "player_url": null,
+          "deck_code": "5FkFwb-YK14Zr-wFFVkF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5FkFwb-YK14Zr-wFFVkF",
+          "raw_text": "5 位 25pt\nYuto\nプレイヤーID：0042971430\n奈良県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "きき",
+          "player_id": "0084739078",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0084739078",
+          "deck_code": "3yMySy-aCHy91-pMXpR3",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/3yMySy-aCHy91-pMXpR3",
+          "raw_text": "5 位 25pt\nきき\nプレイヤーID：0084739078\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "猫店長",
+          "player_id": "0020014423",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "DYK4c8-MNMwvJ-8GaKDx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/DYK4c8-MNMwvJ-8GaKDx",
+          "raw_text": "5 位 25pt\n猫店長\nプレイヤーID：0020014423\n大阪府 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-09-29T19:05:50+09:00"
+    },
     {
       "event_id": "1115619",
       "date": "2026-09-28",
