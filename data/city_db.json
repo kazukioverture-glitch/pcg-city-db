@@ -1,10 +1,108 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-09-29T23:19:51+09:00",
-  "event_count": 71,
-  "placement_count": 560,
+  "updated_at": "2026-10-01T17:08:48+09:00",
+  "event_count": 72,
+  "placement_count": 568,
   "events": [
+    {
+      "event_id": "1115294",
+      "date": "2026-10-01",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115294/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "メガウーラオス",
+          "player_id": "0010830776",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "ng9nQg-wOQ8NK-96nLgN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ng9nQg-wOQ8NK-96nLgN",
+          "raw_text": "1 位 100pt\nメガウーラオス\nプレイヤーID：0010830776\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ひゅーが",
+          "player_id": "0014940233",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "ypy3Uy-IOkSSL-RXpMX2",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypy3Uy-IOkSSL-RXpMX2",
+          "raw_text": "2 位 75pt\nひゅーが\nプレイヤーID：0014940233\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ヒツジ猫",
+          "player_id": "0034006889",
+          "prefecture": "京都府",
+          "player_url": "https://players.pokemon-card.com/users/0034006889",
+          "deck_code": "ngnQig-xC9dDV-n9QgN6",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ngnQig-xC9dDV-n9QgN6",
+          "raw_text": "3 位 50pt\nヒツジ猫\nプレイヤーID：0034006889\n京都府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "みちみち",
+          "player_id": "0035025229",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0035025229",
+          "deck_code": "cGxcxc-8UXny6-xa88Gc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cGxcxc-8UXny6-xa88Gc",
+          "raw_text": "3 位 50pt\nみちみち\nプレイヤーID：0035025229\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "孔文革",
+          "player_id": "0199529386",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0199529386",
+          "deck_code": "ggNQi9-0jGMB2-gnLnLi",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ggNQi9-0jGMB2-gnLnLi",
+          "raw_text": "5 位 25pt\n孔文革\nプレイヤーID：0199529386\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "リグス",
+          "player_id": "0018759886",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "LnHg9P-A9jgX5-H6LNnH",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LnHg9P-A9jgX5-H6LNnH",
+          "raw_text": "5 位 25pt\nリグス\nプレイヤーID：0018759886\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ケイツゥ",
+          "player_id": "0011198808",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "xcc8Gc-bLtA7y-cccc8x",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xcc8Gc-bLtA7y-cccc8x",
+          "raw_text": "5 位 25pt\nケイツゥ\nプレイヤーID：0011198808\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "オニギリ",
+          "player_id": "0012119543",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "MUEMpp-zEhHwX-MpRypM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MUEMpp-zEhHwX-MpRypM",
+          "raw_text": "5 位 25pt\nオニギリ\nプレイヤーID：0012119543\n兵庫県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-01T17:08:47+09:00"
+    },
     {
       "event_id": "1115604",
       "date": "2026-09-29",
