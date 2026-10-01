@@ -1,9 +1,9 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-10-01T19:33:14+09:00",
-  "event_count": 74,
-  "placement_count": 584,
+  "updated_at": "2026-10-01T20:09:02+09:00",
+  "event_count": 75,
+  "placement_count": 592,
   "events": [
     {
       "event_id": "1115294",
@@ -102,6 +102,104 @@
         }
       ],
       "collected_at": "2026-10-01T17:08:47+09:00"
+    },
+    {
+      "event_id": "1115013",
+      "date": "2026-10-01",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115013/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "Tsubasa",
+          "player_id": "0000706496",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "gng96n-Pu7RSx-Nn9ng6",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gng96n-Pu7RSx-Nn9ng6",
+          "raw_text": "1 位 100pt\nTsubasa\nプレイヤーID：0000706496\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ぱぉーん",
+          "player_id": "0093027832",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "ffFkbF-IwSajf-bkVwwk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ffFkbF-IwSajf-bkVwwk",
+          "raw_text": "2 位 75pt\nぱぉーん\nプレイヤーID：0093027832\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ヒデ",
+          "player_id": "0000068969",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "8cxcGa-5CuFhi-4cxcc8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cxcGa-5CuFhi-4cxcc8",
+          "raw_text": "3 位 50pt\nヒデ\nプレイヤーID：0000068969\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "hammer",
+          "player_id": "0068157546",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "kkF1ff-fYDq6u-5k1Fbw",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkF1ff-fYDq6u-5k1Fbw",
+          "raw_text": "3 位 50pt\nhammer\nプレイヤーID：0068157546\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "せつ",
+          "player_id": "0075539975",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0075539975",
+          "deck_code": "8cxKDc-9ENh2r-xJ8DG8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cxKDc-9ENh2r-xJ8DG8",
+          "raw_text": "5 位 25pt\nせつ\nプレイヤーID：0075539975\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ら",
+          "player_id": "0001073438",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "2pXRp3-GNQDX2-pySUM3",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/2pXRp3-GNQDX2-pySUM3",
+          "raw_text": "5 位 25pt\nら\nプレイヤーID：0001073438\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "くろすけ",
+          "player_id": "0044777773",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0044777773",
+          "deck_code": "Vwfbf1-GJ5lzC-51FFfk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Vwfbf1-GJ5lzC-51FFfk",
+          "raw_text": "5 位 25pt\nくろすけ\nプレイヤーID：0044777773\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "さゆう",
+          "player_id": "0040296887",
+          "prefecture": "青森県",
+          "player_url": null,
+          "deck_code": "FbVFFF-nkIWKO-FbvVkk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FbVFFF-nkIWKO-FbvVkk",
+          "raw_text": "5 位 25pt\nさゆう\nプレイヤーID：0040296887\n青森県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-01T20:09:01+09:00"
     },
     {
       "event_id": "1115012",
