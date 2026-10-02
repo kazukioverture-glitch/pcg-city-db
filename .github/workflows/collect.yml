@@ -14,12 +14,18 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Install state tooling
+        id: state_dependencies
+        run: python -m pip install -r requirements-analysis.txt
       - name: Download Termux DB
+        id: download
         run: |
           set -euo pipefail
           mkdir -p .tmp data
           failed=0
           for file in city-db.json city-decks.json; do
+            status_file=".tmp/${file//-/_}.status"
+            echo failed > "$status_file"
             echo "Downloading $file"
             if ! curl --fail -sS -L --retry 3 --retry-connrefused \
               --connect-timeout 15 --max-time 60 --retry-max-time 75 \
@@ -29,10 +35,13 @@ jobs:
               -o ".tmp/${file//-/_}"; then
               echo "::error::$file download failed"
               failed=1
+            else
+              echo success > "$status_file"
             fi
           done
           test "$failed" -eq 0
       - name: Validate and update
+        id: validate
         run: |
           python - <<'PY'
           import json, hashlib
@@ -62,12 +71,35 @@ jobs:
           Path('data/index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print('OK:',len(events),'events,',len(dm),'decks')
           PY
+      - name: Update event ledger
+        id: ledger
+        if: ${{ always() && !cancelled() && steps.state_dependencies.outcome == 'success' && steps.download.outcome != 'skipped' }}
+        env:
+          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
+        run: |
+          set -euo pipefail
+          fetch_status=$(cat .tmp/city_db.json.status)
+          parse_args=()
+          if [ "$VALIDATE_OUTCOME" = failure ]; then
+            parse_args=(--parse-status failed)
+          fi
+          python -m analysis sync-ledger \
+            --city .tmp/city_db.json --decks .tmp/city_decks.json \
+            --fetch-status "$fetch_status" "${parse_args[@]}" \
+            --coverage-scope collection_feed \
+            --source-url 'https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json'
       - name: Commit only when changed
+        if: ${{ always() && !cancelled() && steps.ledger.outcome == 'success' }}
+        env:
+          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/city_db.json data/city_decks.json data/index.json
+          git add data/analysis/event_ledger.json
+          if [ "$VALIDATE_OUTCOME" = success ]; then
+            git add data/city_db.json data/city_decks.json data/index.json
+          fi
           if ! git diff --cached --quiet; then
             git commit -m 'Sync city league DB'
             git push

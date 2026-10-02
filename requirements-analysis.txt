@@ -1,2 +1,2 @@
-# Optional tooling; the collector's dependencies are unchanged.
+# State tooling used by the collector and collection workflow.
 jsonschema==4.26.0

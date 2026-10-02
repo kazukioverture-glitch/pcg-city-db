@@ -1,6 +1,8 @@
 import asyncio
 import json
 import re
+import subprocess
+import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -34,7 +36,17 @@ def extract_date(text: str):
     return None
 
 
-async def main():
+def record_collection(fetch_status, parse_status=None):
+    command = [sys.executable, "-m", "analysis", "sync-ledger", "--city", str(OUTPUT.resolve()),
+               "--fetch-status", fetch_status, "--coverage-scope", "result_list",
+               "--source-url", LIST_URL]
+    if parse_status:
+        command.extend(["--parse-status", parse_status])
+    subprocess.run(command, cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+async def main(attempt=None):
+    attempt = attempt if attempt is not None else {}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
     async with async_playwright() as p:
@@ -46,11 +58,13 @@ async def main():
         )
 
         print("Opening official result list...")
+        attempt["fetch_status"] = "failed"
         await page.goto(
             LIST_URL,
             wait_until="domcontentloaded",
             timeout=120000,
         )
+        attempt["fetch_status"] = "success"
 
         try:
             await page.wait_for_load_state(
@@ -215,7 +229,17 @@ async def main():
         )
 
         await browser.close()
+    record_collection("success")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    attempt = {"fetch_status": "not_attempted"}
+    try:
+        asyncio.run(main(attempt))
+    except Exception:
+        # Do not parse a stale index on failure. Preserve the collector failure.
+        try:
+            record_collection(attempt["fetch_status"], "failed" if attempt["fetch_status"] == "success" else "not_parsed")
+        except Exception as state_error:
+            print(f"Event ledger update failed: {type(state_error).__name__}", file=sys.stderr)
+        raise

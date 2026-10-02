@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "City League analysis state v1.2.1",
+  "title": "City League analysis state v1.2.2 (v1.2.1 compatible)",
   "description": "Additive sidecars; independent publication/fetch/parse observations. Null means unknown, never estimated.",
   "oneOf": [
     {
@@ -30,7 +30,10 @@
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "event_ledger"
@@ -125,7 +128,8 @@
                         "result_list",
                         "full_results",
                         "top8",
-                        "partial_results"
+                        "partial_results",
+                        "collection_feed"
                       ]
                     },
                     "published_rank_slots_total": {
@@ -165,6 +169,20 @@
                         "null"
                       ],
                       "minLength": 1
+                    },
+                    "source_sha256": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "source_updated_at": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
                     }
                   },
                   "required": [
@@ -247,7 +265,10 @@
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "deck_classifications"
@@ -368,7 +389,10 @@
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "processed_sources"
@@ -461,7 +485,10 @@
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "research_requests"
@@ -532,7 +559,10 @@
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "forecast_log"
@@ -540,58 +570,146 @@
         "records": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "forecast_id": {
-                "type": "string",
-                "minLength": 1
-              },
-              "recorded_at": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "target_week": {
-                "type": "string",
-                "pattern": "^[0-9]{4}-W[0-9]{2}$"
-              },
-              "snapshot_ids": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "minLength": 1
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "forecast_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "recorded_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "target_week": {
+                    "type": "string",
+                    "pattern": "^[0-9]{4}-W[0-9]{2}$"
+                  },
+                  "snapshot_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true
+                  },
+                  "forecast": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "outcome": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "minLength": 1
+                  },
+                  "status": {
+                    "enum": [
+                      "recorded",
+                      "evaluated",
+                      "withdrawn",
+                      "unknown"
+                    ]
+                  }
                 },
-                "uniqueItems": true
-              },
-              "forecast": {
-                "type": "string",
-                "minLength": 1
-              },
-              "outcome": {
-                "type": [
-                  "string",
-                  "null"
+                "required": [
+                  "forecast_id",
+                  "recorded_at",
+                  "target_week",
+                  "snapshot_ids",
+                  "forecast",
+                  "outcome",
+                  "status"
                 ],
-                "minLength": 1
+                "additionalProperties": false
               },
-              "status": {
-                "enum": [
-                  "recorded",
-                  "evaluated",
-                  "withdrawn",
-                  "unknown"
+              {
+                "type": "object",
+                "properties": {
+                  "forecast_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "target_week": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+                  },
+                  "forecast_timing": {
+                    "enum": [
+                      "PRE",
+                      "LATE",
+                      "POST"
+                    ]
+                  },
+                  "forecast_text": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 1
+                  },
+                  "falsification_condition": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "source_snapshot_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evaluation_eligible": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "forecast_id",
+                  "created_at",
+                  "target_week",
+                  "forecast_timing",
+                  "forecast_text",
+                  "evidence",
+                  "falsification_condition",
+                  "source_snapshot_id",
+                  "evaluation_eligible"
+                ],
+                "additionalProperties": false,
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "forecast_timing": {
+                          "const": "PRE"
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "evaluation_eligible": {
+                          "const": true
+                        }
+                      }
+                    },
+                    "else": {
+                      "properties": {
+                        "evaluation_eligible": {
+                          "const": false
+                        }
+                      }
+                    }
+                  }
                 ]
               }
-            },
-            "required": [
-              "forecast_id",
-              "recorded_at",
-              "target_week",
-              "snapshot_ids",
-              "forecast",
-              "outcome",
-              "status"
-            ],
-            "additionalProperties": false
+            ]
           },
           "uniqueItems": false
         }
@@ -604,93 +722,205 @@
       "additionalProperties": false
     },
     "weekly_snapshot": {
-      "type": "object",
-      "properties": {
-        "schema_version": {
-          "const": "1.2.1"
-        },
-        "kind": {
-          "const": "weekly_snapshot"
-        },
-        "snapshot_id": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9_-]{1,80}$"
-        },
-        "target_week": {
-          "type": "string",
-          "pattern": "^[0-9]{4}-W[0-9]{2}$"
-        },
-        "retrieved_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "event_ids": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "uniqueItems": true
-        },
-        "git_commit_sha": {
-          "type": "string",
-          "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
-        },
-        "git_dirty": {
-          "type": "boolean"
-        },
-        "references": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "path": {
-                "type": "string",
-                "minLength": 1
-              },
-              "snapshot_path": {
-                "type": "string",
-                "minLength": 1
-              },
-              "sha256": {
-                "type": "string",
-                "pattern": "^[0-9a-f]{64}$"
-              }
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "1.2.1"
             },
-            "required": [
-              "path",
-              "snapshot_path",
-              "sha256"
-            ],
-            "additionalProperties": false
+            "kind": {
+              "const": "weekly_snapshot"
+            },
+            "snapshot_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,80}$"
+            },
+            "target_week": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-W[0-9]{2}$"
+            },
+            "retrieved_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "event_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "git_commit_sha": {
+              "type": "string",
+              "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
+            },
+            "git_dirty": {
+              "type": "boolean"
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "snapshot_path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "path",
+                  "snapshot_path",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "uniqueItems": false,
+              "minItems": 1
+            }
           },
-          "uniqueItems": false,
-          "minItems": 1
+          "required": [
+            "schema_version",
+            "kind",
+            "snapshot_id",
+            "target_week",
+            "retrieved_at",
+            "created_at",
+            "event_ids",
+            "git_commit_sha",
+            "git_dirty",
+            "references"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "1.2.2"
+            },
+            "kind": {
+              "const": "weekly_snapshot"
+            },
+            "snapshot_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,80}$"
+            },
+            "retrieved_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "event_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "git_commit_sha": {
+              "type": "string",
+              "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
+            },
+            "git_dirty": {
+              "type": "boolean"
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "snapshot_path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "path",
+                  "snapshot_path",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "uniqueItems": false,
+              "minItems": 1
+            },
+            "week_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+            },
+            "period_start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "period_end": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "cutoff_datetime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "analysis_stage": {
+              "enum": [
+                "INTERIM",
+                "FINAL"
+              ]
+            }
+          },
+          "required": [
+            "schema_version",
+            "kind",
+            "snapshot_id",
+            "retrieved_at",
+            "created_at",
+            "event_ids",
+            "git_commit_sha",
+            "git_dirty",
+            "references",
+            "week_id",
+            "period_start",
+            "period_end",
+            "analysis_stage",
+            "cutoff_datetime"
+          ],
+          "additionalProperties": false
         }
-      },
-      "required": [
-        "schema_version",
-        "kind",
-        "snapshot_id",
-        "target_week",
-        "retrieved_at",
-        "created_at",
-        "event_ids",
-        "git_commit_sha",
-        "git_dirty",
-        "references"
-      ],
-      "additionalProperties": false
+      ]
     },
     "card_master": {
       "type": "object",
       "properties": {
         "schema_version": {
-          "const": "1.2.1"
+          "enum": [
+            "1.2.1",
+            "1.2.2"
+          ]
         },
         "kind": {
           "const": "card_master"

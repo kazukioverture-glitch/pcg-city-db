@@ -9,19 +9,33 @@ from .state import (ROOT, STATE_FILES, create_snapshot, import_legacy, read_json
 
 
 def main():
-    parser = argparse.ArgumentParser(description="v1.2.1 weekly input/state tooling")
+    parser = argparse.ArgumentParser(description="v1.2.2 weekly input/state tooling")
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("validate-state")
     commands.add_parser("init-ledger", help="Import explicit legacy facts; refuse overwrite")
     cards = commands.add_parser("validate-cards")
     cards.add_argument("--master", type=Path)
     snapshot = commands.add_parser("snapshot")
-    snapshot.add_argument("--target-week", required=True, help="ISO week, e.g. 2026-W40")
+    snapshot.add_argument("--target-week", help="Legacy ISO week, e.g. 2026-W40")
+    snapshot.add_argument("--week-id", help="Custom week identifier, e.g. W02")
+    snapshot.add_argument("--period-start")
+    snapshot.add_argument("--period-end")
+    snapshot.add_argument("--analysis-stage", choices=["INTERIM", "FINAL"])
+    snapshot.add_argument("--cutoff-datetime")
     snapshot.add_argument("--retrieved-at", required=True, help="Actual acquisition timestamp with offset")
     snapshot.add_argument("--event-id", action="append", required=True, dest="event_ids")
     snapshot.add_argument("--file", action="append", dest="files", help="Override default inputs; include state/master used")
     verify = commands.add_parser("verify-snapshot")
     verify.add_argument("directory", type=Path)
+    sync = commands.add_parser("sync-ledger", help="Record a collection attempt without changing legacy DBs")
+    sync.add_argument("--city", type=Path)
+    sync.add_argument("--decks", type=Path)
+    sync.add_argument("--ledger", type=Path, default=ROOT / "data/analysis/event_ledger.json")
+    sync.add_argument("--fetch-status", required=True, choices=["not_attempted", "success", "failed"])
+    sync.add_argument("--parse-status", choices=["not_parsed", "success", "partial", "failed"])
+    sync.add_argument("--coverage-scope", required=True, choices=["collection_feed", "result_list"])
+    sync.add_argument("--source-url", required=True)
+    sync.add_argument("--observed-at")
     args = parser.parse_args()
     if args.command == "validate-state":
         for filename in STATE_FILES.values():
@@ -33,7 +47,15 @@ def main():
             raise FileExistsError("Ledger exists; use append_observation/write_state without discarding history")
         write_state(path, import_legacy(read_json(ROOT / "data/city_db.json")))
     elif args.command == "snapshot":
-        print(create_snapshot(ROOT, args.target_week, args.event_ids, args.retrieved_at, args.files))
+        print(create_snapshot(ROOT, args.target_week, args.event_ids, args.retrieved_at, args.files,
+                              week_id=args.week_id, period_start=args.period_start, period_end=args.period_end,
+                              analysis_stage=args.analysis_stage, cutoff_datetime=args.cutoff_datetime))
+    elif args.command == "sync-ledger":
+        from .collection import sync_ledger
+        print("OK:", sync_ledger(args.ledger, city_path=args.city, decks_path=args.decks,
+                                 fetch_status=args.fetch_status, parse_status=args.parse_status,
+                                 coverage_scope=args.coverage_scope, source_url=args.source_url,
+                                 observed_at=args.observed_at), "observations appended")
     elif args.command == "verify-snapshot":
         print("OK:", verify_snapshot(args.directory)["snapshot_id"])
     elif args.command == "validate-cards":

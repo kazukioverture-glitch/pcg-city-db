@@ -1,1 +1,2 @@
 playwright==1.55.0
+-r requirements-analysis.txt
