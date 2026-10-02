@@ -1,0 +1,757 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "City League analysis state v1.2.1",
+  "description": "Additive sidecars; independent publication/fetch/parse observations. Null means unknown, never estimated.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/event_ledger"
+    },
+    {
+      "$ref": "#/$defs/deck_classifications"
+    },
+    {
+      "$ref": "#/$defs/processed_sources"
+    },
+    {
+      "$ref": "#/$defs/research_requests"
+    },
+    {
+      "$ref": "#/$defs/forecast_log"
+    },
+    {
+      "$ref": "#/$defs/weekly_snapshot"
+    },
+    {
+      "$ref": "#/$defs/card_master"
+    }
+  ],
+  "$defs": {
+    "event_ledger": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "event_ledger"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "event_date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "category": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "venue_name": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "venue_prefecture": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "event_status": {
+                "enum": [
+                  "unknown",
+                  "scheduled",
+                  "held",
+                  "cancelled",
+                  "not_held"
+                ]
+              },
+              "observations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "observed_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "source_url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "publication_status": {
+                      "enum": [
+                        "not_published",
+                        "published",
+                        "unknown"
+                      ]
+                    },
+                    "fetch_status": {
+                      "enum": [
+                        "not_attempted",
+                        "success",
+                        "failed"
+                      ]
+                    },
+                    "parse_status": {
+                      "enum": [
+                        "not_parsed",
+                        "success",
+                        "partial",
+                        "failed"
+                      ]
+                    },
+                    "coverage_scope": {
+                      "enum": [
+                        "unknown",
+                        "result_list",
+                        "full_results",
+                        "top8",
+                        "partial_results"
+                      ]
+                    },
+                    "published_rank_slots_total": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 0
+                    },
+                    "top8_slots_published": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 8
+                    },
+                    "top8_slots_retrieved": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 8
+                    },
+                    "top8_decks_known": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 8
+                    },
+                    "notes": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "observed_at",
+                    "source_url",
+                    "publication_status",
+                    "fetch_status",
+                    "parse_status",
+                    "coverage_scope",
+                    "published_rank_slots_total",
+                    "top8_slots_published",
+                    "top8_slots_retrieved",
+                    "top8_decks_known",
+                    "notes"
+                  ],
+                  "additionalProperties": false
+                },
+                "uniqueItems": false
+              },
+              "legacy_source": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "players": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "player_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    },
+                    "player_prefecture": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "player_id",
+                    "player_prefecture"
+                  ],
+                  "additionalProperties": false
+                },
+                "uniqueItems": false
+              }
+            },
+            "required": [
+              "event_id",
+              "event_date",
+              "category",
+              "venue_name",
+              "venue_prefecture",
+              "event_status",
+              "observations",
+              "legacy_source",
+              "players"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "deck_classifications": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "deck_classifications"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "deck_code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parent_archetype": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "variant_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "classification_status": {
+                "enum": [
+                  "classified",
+                  "partial",
+                  "unknown"
+                ]
+              },
+              "classified_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "classifier_version": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "evidence": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "deck_code",
+              "parent_archetype",
+              "variant_tags",
+              "classification_status",
+              "classified_at",
+              "classifier_version",
+              "evidence"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "classification_status": {
+                      "const": "classified"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "parent_archetype": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "classification_status": {
+                      "const": "unknown"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "parent_archetype": {
+                      "type": "null"
+                    },
+                    "variant_tags": {
+                      "maxItems": 0
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "processed_sources": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "processed_sources"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_type": {
+                "enum": [
+                  "page",
+                  "video",
+                  "file",
+                  "other"
+                ]
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "content_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "processed_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "status": {
+                "enum": [
+                  "pending",
+                  "processed",
+                  "failed",
+                  "unknown"
+                ]
+              },
+              "snapshot_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "notes": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "source_id",
+              "source_type",
+              "url",
+              "content_sha256",
+              "processed_at",
+              "status",
+              "snapshot_ids",
+              "notes"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "research_requests": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "research_requests"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "request_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "requested_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "pending",
+                  "in_progress",
+                  "completed",
+                  "cancelled",
+                  "unknown"
+                ]
+              },
+              "snapshot_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "result": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "request_id",
+              "requested_at",
+              "question",
+              "status",
+              "snapshot_ids",
+              "result"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "forecast_log": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "forecast_log"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "forecast_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recorded_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "target_week": {
+                "type": "string",
+                "pattern": "^[0-9]{4}-W[0-9]{2}$"
+              },
+              "snapshot_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "forecast": {
+                "type": "string",
+                "minLength": 1
+              },
+              "outcome": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "recorded",
+                  "evaluated",
+                  "withdrawn",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "forecast_id",
+              "recorded_at",
+              "target_week",
+              "snapshot_ids",
+              "forecast",
+              "outcome",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "weekly_snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "weekly_snapshot"
+        },
+        "snapshot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,80}$"
+        },
+        "target_week": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-W[0-9]{2}$"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "git_commit_sha": {
+          "type": "string",
+          "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "git_dirty": {
+          "type": "boolean"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "snapshot_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "snapshot_path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": false,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "snapshot_id",
+        "target_week",
+        "retrieved_at",
+        "created_at",
+        "event_ids",
+        "git_commit_sha",
+        "git_dirty",
+        "references"
+      ],
+      "additionalProperties": false
+    },
+    "card_master": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.2.1"
+        },
+        "kind": {
+          "const": "card_master"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cards": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "card_type": {
+                "enum": [
+                  "pokemon",
+                  "tool",
+                  "item",
+                  "supporter",
+                  "stadium",
+                  "energy"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "aliases",
+              "card_type"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "source",
+        "updated_at",
+        "cards"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

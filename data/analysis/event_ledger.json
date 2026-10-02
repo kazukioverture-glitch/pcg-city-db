@@ -1,0 +1,3450 @@
+{
+  "schema_version": "1.2.1",
+  "kind": "event_ledger",
+  "records": [
+    {
+      "event_id": "1115295",
+      "event_date": "2026-10-02",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0068698692",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0007476385",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0004508850",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0041507636",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0126432378",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0035839086",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0088911557",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0045926792",
+          "player_prefecture": "京都府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115015",
+      "event_date": "2026-10-02",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0090745061",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0015056827",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0008682183",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0002597979",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0099876964",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0039048239",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0006657150",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0145115546",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115014",
+      "event_date": "2026-10-02",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0010597428",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000003182",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0080653237",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0008717395",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0089560435",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0084674762",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0102720103",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0003281486",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115294",
+      "event_date": "2026-10-01",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0010830776",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0014940233",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0034006889",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0035025229",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0199529386",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0018759886",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0011198808",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0012119543",
+          "player_prefecture": "兵庫県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115013",
+      "event_date": "2026-10-01",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0000706496",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0093027832",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0000068969",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0068157546",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0075539975",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0001073438",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0044777773",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0040296887",
+          "player_prefecture": "青森県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115012",
+      "event_date": "2026-10-01",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0083521010",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0003811610",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0066053325",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0031469283",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0071441816",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0040167312",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0054679551",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0031965790",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115604",
+      "event_date": "2026-09-29",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0035818948",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0089538485",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0029208089",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0102856259",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0028707183",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0014960381",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0000467085",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0092768585",
+          "player_prefecture": "兵庫県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115293",
+      "event_date": "2026-09-29",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0065811955",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0025601644",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0089135040",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0065218462",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0071538925",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0042971430",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0084739078",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0020014423",
+          "player_prefecture": "大阪府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115161",
+      "event_date": "2026-09-29",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0001582501",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0079517818",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0034131912",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0053860800",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0083026201",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0014230088",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0044073738",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0024613365",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115619",
+      "event_date": "2026-09-28",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0078488331",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0100889972",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0002431684",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0001534755",
+          "player_prefecture": "岩手県"
+        },
+        {
+          "player_id": "0080881476",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0092213423",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0043448665",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0054865110",
+          "player_prefecture": "宮城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115011",
+      "event_date": "2026-09-28",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0030995444",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0002231312",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0058698523",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0010225202",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0000289324",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0015424714",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0069648216",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0000637006",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115634",
+      "event_date": "2026-09-27",
+      "category": "ジュニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0057983585",
+          "player_prefecture": "山形県"
+        },
+        {
+          "player_id": "0103152428",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0076119004",
+          "player_prefecture": "岩手県"
+        },
+        {
+          "player_id": "0081454743",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0083731057",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0080612939",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0077506601",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0101922195",
+          "player_prefecture": "宮城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115618",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0009880993",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0071041698",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0066022770",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0073567402",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0063552090",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0005859849",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0028147990",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0078608010",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115555",
+      "event_date": "2026-09-27",
+      "category": "ジュニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0041793026",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0100921711",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0067753794",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0023465268",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0071626068",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0031838441",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0061587456",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0054112878",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115464",
+      "event_date": "2026-09-27",
+      "category": "シニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0060713456",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0078187786",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0036039124",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0084928472",
+          "player_prefecture": "北海道"
+        }
+      ]
+    },
+    {
+      "event_id": "1115292",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0041204988",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0085090518",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0096716313",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0060078753",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0081821459",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0052642076",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0037413974",
+          "player_prefecture": "鹿児島県"
+        },
+        {
+          "player_id": "0009193136",
+          "player_prefecture": "鹿児島県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115291",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0004799391",
+          "player_prefecture": "徳島県"
+        },
+        {
+          "player_id": "0011273565",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0002295660",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0073464554",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0000285498",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0089295070",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0029011351",
+          "player_prefecture": "香川県"
+        },
+        {
+          "player_id": "0035696009",
+          "player_prefecture": "香川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115290",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0014947993",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0032049851",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0033998721",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0060587769",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0033666789",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0121028497",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0064793649",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0031642365",
+          "player_prefecture": "奈良県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115289",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0011072450",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0020566986",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0088310145",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0007626742",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0100852387",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0057476313",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0004991474",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0001767258",
+          "player_prefecture": "大阪府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115288",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0042197687",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0030231751",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0205498132",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0054861587",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0099538587",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0042908519",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0063829828",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0066014524",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115287",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0085317925",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0029333190",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0073165990",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0030645154",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0040867511",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0075196536",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0085211423",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0023953866",
+          "player_prefecture": "大阪府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115286",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0101257905",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0036202812",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0071930392",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0006814346",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0034479412",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0031085175",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0000089939",
+          "player_prefecture": "三重県"
+        },
+        {
+          "player_id": "0069257111",
+          "player_prefecture": "三重県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115285",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0035512927",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0081974885",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0018769179",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0043570065",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0074051726",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0084884125",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0074741878",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0091144199",
+          "player_prefecture": "兵庫県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115284",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0085600199",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0079701802",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0033084806",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0054667761",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0036844533",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0062822303",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0071173942",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0004103200",
+          "player_prefecture": "岡山県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115283",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0101016324",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0000162515",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0061254491",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0102342394",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0023889516",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0003498969",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0068386168",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0047598609",
+          "player_prefecture": "京都府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115282",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0010892932",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0079604927",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0072651090",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0083250750",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0028720447",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0096368361",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0078181128",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0068778422",
+          "player_prefecture": "島根県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115281",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0068760445",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0095689793",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0100034884",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0031739597",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0082932217",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0067529379",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0022417275",
+          "player_prefecture": "滋賀県"
+        },
+        {
+          "player_id": "0030235496",
+          "player_prefecture": "滋賀県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115280",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0202839093",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0055977182",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0049600234",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0036630974",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0020353935",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0063273135",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0037094553",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0011225955",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115279",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0075598970",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0058887905",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0037261920",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0066758518",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0082592578",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0071956996",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0012349739",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0082641630",
+          "player_prefecture": "熊本県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115278",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0040741859",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0013605601",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0003055643",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0055281663",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0035040978",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0036994865",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0036469659",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0043384877",
+          "player_prefecture": "兵庫県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115277",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0055560135",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0001281293",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0031741196",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0013924054",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0009896327",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0093487900",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0068862808",
+          "player_prefecture": "愛媛県"
+        },
+        {
+          "player_id": "0001263248",
+          "player_prefecture": "愛媛県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115276",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0072728972",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0037350255",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0113686230",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0033393865",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0035900467",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0078777017",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0039756606",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0004615297",
+          "player_prefecture": "広島県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115275",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0000690993",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0000723811",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0000021755",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0082919515",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0146501906",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0078450598",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0083684515",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0079033574",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115274",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0014125148",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0104807493",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0075988669",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0007137424",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0080534145",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0072316425",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0071445236",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0074469000",
+          "player_prefecture": "山口県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115160",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0061929467",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0036540637",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0000247474",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0055953502",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0036105016",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0067872190",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0004904489",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0002859790",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115159",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0077264758",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0014375358",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0086347682",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0013063249",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0070857861",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0056497023",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0082883571",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0025553123",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115158",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0103226431",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0042171881",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0023853056",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0001269637",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0086336152",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0085309511",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0037067407",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0008782465",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115157",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0055889184",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0081372337",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0056887756",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0059187954",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0074887251",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0074797655",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0019677820",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0043384158",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115156",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0019345631",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0031576923",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0042953564",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0061818914",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0066377469",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0066207753",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0041065163",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0079866332",
+          "player_prefecture": "静岡県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115155",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0009469222",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0033902276",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0100484557",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0022525185",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0084466244",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0085201512",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0071832102",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0063325436",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115154",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0030284490",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0099438025",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0101342012",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0079243320",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0063394960",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0012413708",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0067515925",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0037033994",
+          "player_prefecture": "長野県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115153",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0043329214",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0054973053",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0074517431",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0063696224",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0096851470",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0043563674",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0045321319",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0044102630",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115010",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0092849822",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0037417776",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0043111280",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0074467705",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0100781377",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0103302975",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0034114597",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0082960533",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115009",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0080660178",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0003241178",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0067232538",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0035405883",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0002272430",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0038875102",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0008869775",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0076550698",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115008",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0039777935",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0030757440",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0004402381",
+          "player_prefecture": "群馬県"
+        },
+        {
+          "player_id": "0035938750",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0036211935",
+          "player_prefecture": "群馬県"
+        },
+        {
+          "player_id": "0076813218",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0036581980",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0015958569",
+          "player_prefecture": "茨城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115007",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0079722502",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0036067068",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0103249942",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0065656918",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0077552590",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0080728229",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0045095418",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0085840274",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115006",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0004315339",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0030562433",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0079255996",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000237800",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0071387006",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0034259722",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0038332616",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0031843010",
+          "player_prefecture": "千葉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115005",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0075064079",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0034083109",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0075006772",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0098665813",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0096949401",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0073015758",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0063703054",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0035847478",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115004",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0081162233",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0064189693",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0052545595",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0030833984",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0058197101",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0076028306",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0034585207",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0065608454",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115003",
+      "event_date": "2026-09-27",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0086243711",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0037434539",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0055922058",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0072400407",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0080408011",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0002963347",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0071515335",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0075351157",
+          "player_prefecture": "茨城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115603",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0010864458",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0003018765",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0068550048",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0092458626",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0037030058",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0110175229",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0079641984",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0003499061",
+          "player_prefecture": "茨城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115554",
+      "event_date": "2026-09-26",
+      "category": "ジュニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0061278385",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0099967224",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0095260787",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0088668804",
+          "player_prefecture": "岡山県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115463",
+      "event_date": "2026-09-26",
+      "category": "シニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0073186140",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0076459034",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0073543260",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0086922726",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0105316602",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0072513389",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0173789139",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0082457488",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115462",
+      "event_date": "2026-09-26",
+      "category": "シニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0037492948",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0007407503",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0082822978",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0097853855",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0248999360",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0037239745",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0078843875",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0081425101",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115273",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0016986077",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0001198290",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0032490626",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0058152203",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0000008132",
+          "player_prefecture": "和歌山県"
+        },
+        {
+          "player_id": "0059047229",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0067329041",
+          "player_prefecture": "山口県"
+        },
+        {
+          "player_id": "0064054616",
+          "player_prefecture": "山口県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115272",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0060084266",
+          "player_prefecture": "岡山県"
+        },
+        {
+          "player_id": "0078361656",
+          "player_prefecture": "鳥取県"
+        },
+        {
+          "player_id": "0100712630",
+          "player_prefecture": "鳥取県"
+        },
+        {
+          "player_id": "0091473880",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0000155674",
+          "player_prefecture": "広島県"
+        },
+        {
+          "player_id": "0007959145",
+          "player_prefecture": "鳥取県"
+        },
+        {
+          "player_id": "0028728951",
+          "player_prefecture": "島根県"
+        },
+        {
+          "player_id": "0028127426",
+          "player_prefecture": "鳥取県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115271",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0002369291",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0018775503",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0033312529",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0046036481",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0003995556",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0005937060",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0000518532",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0041829183",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115270",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0054637184",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0018169476",
+          "player_prefecture": "京都府"
+        },
+        {
+          "player_id": "0068553153",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0064265788",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0085295403",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0063440928",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0067485134",
+          "player_prefecture": "高知県"
+        },
+        {
+          "player_id": "0027898363",
+          "player_prefecture": "高知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115269",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0066376345",
+          "player_prefecture": "福岡県"
+        },
+        {
+          "player_id": "0038229756",
+          "player_prefecture": "佐賀県"
+        },
+        {
+          "player_id": "0045327630",
+          "player_prefecture": "福岡県"
+        },
+        {
+          "player_id": "0052138560",
+          "player_prefecture": "佐賀県"
+        },
+        {
+          "player_id": "0006455741",
+          "player_prefecture": "佐賀県"
+        },
+        {
+          "player_id": "0084346128",
+          "player_prefecture": "佐賀県"
+        },
+        {
+          "player_id": "0074233559",
+          "player_prefecture": "福岡県"
+        },
+        {
+          "player_id": "0019386175",
+          "player_prefecture": "佐賀県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115268",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0022974060",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0081080300",
+          "player_prefecture": "長崎県"
+        },
+        {
+          "player_id": "0076938159",
+          "player_prefecture": "長崎県"
+        },
+        {
+          "player_id": "0035915621",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0048255329",
+          "player_prefecture": "長崎県"
+        },
+        {
+          "player_id": "0095601540",
+          "player_prefecture": "長崎県"
+        },
+        {
+          "player_id": "0030998447",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0047991695",
+          "player_prefecture": "長崎県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115267",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0085089370",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0061672091",
+          "player_prefecture": "大分県"
+        },
+        {
+          "player_id": "0036111013",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0039352811",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0011020093",
+          "player_prefecture": "大分県"
+        },
+        {
+          "player_id": "0101950253",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0085186930",
+          "player_prefecture": "熊本県"
+        },
+        {
+          "player_id": "0047989478",
+          "player_prefecture": "熊本県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115266",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0062165022",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0068798019",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0101734095",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0005872417",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0110947035",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0071129785",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0045221486",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0008175955",
+          "player_prefecture": "兵庫県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115265",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0074304457",
+          "player_prefecture": "奈良県"
+        },
+        {
+          "player_id": "0011040534",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0053949000",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0014291164",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0007800836",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0029559662",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0085770007",
+          "player_prefecture": "大阪府"
+        },
+        {
+          "player_id": "0025174324",
+          "player_prefecture": "大阪府"
+        }
+      ]
+    },
+    {
+      "event_id": "1115152",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0001886902",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000108885",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0032413193",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000092742",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0079436931",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0003533699",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0074347083",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0007696198",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115151",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0063850653",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0000291079",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0057675392",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0103673651",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0080522007",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0093050737",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0081635384",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0078190926",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115150",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0078682517",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0088614175",
+          "player_prefecture": "山梨県"
+        },
+        {
+          "player_id": "0074287345",
+          "player_prefecture": "山梨県"
+        },
+        {
+          "player_id": "0043158078",
+          "player_prefecture": "山梨県"
+        },
+        {
+          "player_id": "0074471676",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0078261105",
+          "player_prefecture": "山梨県"
+        },
+        {
+          "player_id": "0016862801",
+          "player_prefecture": "山梨県"
+        },
+        {
+          "player_id": "0036794076",
+          "player_prefecture": "静岡県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115149",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0008403443",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0088734358",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0078174984",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0006082567",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0091416326",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0079277327",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0092449299",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0061870529",
+          "player_prefecture": "神奈川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115148",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0003374232",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0054687695",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0076500211",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0007952766",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0007035386",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0103605386",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0066362272",
+          "player_prefecture": "静岡県"
+        },
+        {
+          "player_id": "0088420495",
+          "player_prefecture": "静岡県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115147",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0039452889",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0102359291",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0083092800",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0071488985",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0076028025",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0073827748",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0101143976",
+          "player_prefecture": "神奈川県"
+        },
+        {
+          "player_id": "0043618518",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115146",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0079884668",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0012548684",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0068691022",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0014762303",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0054983278",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0088121730",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0006980430",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0061674239",
+          "player_prefecture": "石川県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115145",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0008143657",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0012657359",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0029656020",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0029049554",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0073672241",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0071003652",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0000577403",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0056692008",
+          "player_prefecture": "愛知県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115002",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0030892147",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0001775932",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0090221880",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0021564301",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0084660813",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0012043448",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0060935283",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0071248383",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1115001",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0041304046",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0067430965",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0074135965",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0000262459",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0100030868",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0090184204",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0112135216",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0004953001",
+          "player_prefecture": "東京都"
+        }
+      ]
+    },
+    {
+      "event_id": "1115000",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0082703741",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0072916386",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0085601314",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0054111349",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0034338359",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0006899923",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0080155852",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0078997820",
+          "player_prefecture": "北海道"
+        }
+      ]
+    },
+    {
+      "event_id": "1114999",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0012436680",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0003001970",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0061644214",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0073146764",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0071239697",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0080528081",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0040420831",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0036360839",
+          "player_prefecture": "千葉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1114998",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0010749247",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0100895047",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0103436254",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0071289030",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0031131469",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0085848429",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0081993381",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0048954684",
+          "player_prefecture": "茨城県"
+        }
+      ]
+    },
+    {
+      "event_id": "1114997",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0058593943",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0036037672",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0098483114",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0016368701",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0100780433",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0027838479",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0083671117",
+          "player_prefecture": "北海道"
+        },
+        {
+          "player_id": "0059421090",
+          "player_prefecture": "北海道"
+        }
+      ]
+    },
+    {
+      "event_id": "1114996",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0072589326",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0044300382",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000209865",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0010737064",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0012749733",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0086248402",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0000795573",
+          "player_prefecture": "群馬県"
+        },
+        {
+          "player_id": "0101184959",
+          "player_prefecture": "埼玉県"
+        }
+      ]
+    },
+    {
+      "event_id": "1114995",
+      "event_date": "2026-09-26",
+      "category": "オープン",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [],
+      "legacy_source": "data/city_db.json",
+      "players": [
+        {
+          "player_id": "0045327168",
+          "player_prefecture": "宮城県"
+        },
+        {
+          "player_id": "0037488640",
+          "player_prefecture": "福島県"
+        },
+        {
+          "player_id": "0089698763",
+          "player_prefecture": "福島県"
+        },
+        {
+          "player_id": "0040681302",
+          "player_prefecture": "福島県"
+        },
+        {
+          "player_id": "0069375279",
+          "player_prefecture": "兵庫県"
+        },
+        {
+          "player_id": "0100271124",
+          "player_prefecture": "福島県"
+        },
+        {
+          "player_id": "0029387009",
+          "player_prefecture": "福島県"
+        },
+        {
+          "player_id": "0018370043",
+          "player_prefecture": "福島県"
+        }
+      ]
+    }
+  ]
+}
