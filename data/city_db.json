@@ -1,10 +1,3426 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-10-03T21:20:01+09:00",
-  "event_count": 124,
-  "placement_count": 952,
+  "updated_at": "2026-10-04T21:43:23+09:00",
+  "event_count": 162,
+  "placement_count": 1228,
   "events": [
+    {
+      "event_id": "1140559",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1140559/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "シュウト",
+          "player_id": "0000213118",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "wF5fkF-D87Px9-VkVVbf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/wF5fkF-D87Px9-VkVVbf",
+          "raw_text": "1 位 100pt\nシュウト\nプレイヤーID：0000213118\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "やゆ",
+          "player_id": "0002387617",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "MpUppR-c3Djjk-2RyyXp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MpUppR-c3Djjk-2RyyXp",
+          "raw_text": "2 位 75pt\nやゆ\nプレイヤーID：0002387617\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "べる",
+          "player_id": "0028930855",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "4Y8ccx-8wEWJ0-cxcDGY",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/4Y8ccx-8wEWJ0-cxcDGY",
+          "raw_text": "3 位 50pt\nべる\nプレイヤーID：0028930855\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "JoeH",
+          "player_id": "0004352172",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "XyMpyR-GiyrmZ-S2ySXp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/XyMpyR-GiyrmZ-S2ySXp",
+          "raw_text": "3 位 50pt\nJoeH\nプレイヤーID：0004352172\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ペイ",
+          "player_id": "0081288816",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0081288816",
+          "deck_code": "Fvfb1F-vRyyCq-FfFkV5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Fvfb1F-vRyyCq-FfFkV5",
+          "raw_text": "5 位 25pt\nペイ\nプレイヤーID：0081288816\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "カステラ",
+          "player_id": "0090782523",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "MRpSyM-Ho1S5n-pUX3yM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MRpSyM-Ho1S5n-pUX3yM",
+          "raw_text": "5 位 25pt\nカステラ\nプレイヤーID：0090782523\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "きよの",
+          "player_id": "0039451136",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0039451136",
+          "deck_code": "bFvVkk-A9VkVD-fFVfvV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bFvVkk-A9VkVD-fFVfvV",
+          "raw_text": "5 位 25pt\nきよの\nプレイヤーID：0039451136\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "でこぽん",
+          "player_id": "0108525988",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "4G448G-9Eg3ax-cccxGc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/4G448G-9Eg3ax-cccxGc",
+          "raw_text": "5 位 25pt\nでこぽん\nプレイヤーID：0108525988\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:37:55+09:00"
+    },
+    {
+      "event_id": "1140314",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1140314/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ハヤタンゴ",
+          "player_id": "0073706474",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "xxxKcG-x0gJEc-88cDYx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xxxKcG-x0gJEc-88cDYx",
+          "raw_text": "1 位 100pt\nハヤタンゴ\nプレイヤーID：0073706474\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ポッチャマ",
+          "player_id": "0067230749",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "2E2pyy-PlpLVP-yMRMXp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/2E2pyy-PlpLVP-yMRMXp",
+          "raw_text": "2 位 75pt\nポッチャマ\nプレイヤーID：0067230749\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "zen",
+          "player_id": "0086292108",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0086292108",
+          "deck_code": "8cxYcc-RNePWz-xxa48G",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cxYcc-RNePWz-xxa48G",
+          "raw_text": "3 位 50pt\nzen\nプレイヤーID：0086292108\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "のーゆ",
+          "player_id": "0036495883",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "F51fk1-XLhPiV-bVFFV1",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/F51fk1-XLhPiV-bVFFV1",
+          "raw_text": "3 位 50pt\nのーゆ\nプレイヤーID：0036495883\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "デンジャコ",
+          "player_id": "0036436855",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0036436855",
+          "deck_code": "8xx8cc-zmFJFh-cGDcDG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8xx8cc-zmFJFh-cGDcDG",
+          "raw_text": "5 位 25pt\nデンジャコ\nプレイヤーID：0036436855\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "レオ",
+          "player_id": "0087094132",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "dbFVkk-VYzqGO-Fw5VFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/dbFVkk-VYzqGO-Fw5VFF",
+          "raw_text": "5 位 25pt\nレオ\nプレイヤーID：0087094132\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "yu",
+          "player_id": "0099345156",
+          "prefecture": "群馬県",
+          "player_url": null,
+          "deck_code": "4GKcDc-z6eLRb-8cxxx8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/4GKcDc-z6eLRb-8cxxx8",
+          "raw_text": "5 位 25pt\nyu\nプレイヤーID：0099345156\n群馬県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "からあげ",
+          "player_id": "0093465298",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0093465298",
+          "deck_code": "8c4GxG-2SPyQT-8c4cK4",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8c4GxG-2SPyQT-8c4cK4",
+          "raw_text": "5 位 25pt\nからあげ\nプレイヤーID：0093465298\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:05+09:00"
+    },
+    {
+      "event_id": "1115621",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115621/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ろ",
+          "player_id": "0007108129",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "LQgg9H-8cn5n6-gLQinL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LQgg9H-8cn5n6-gLQinL",
+          "raw_text": "1 位 100pt\nろ\nプレイヤーID：0007108129\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "7shix",
+          "player_id": "0083524675",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "bFkkfF-eeYnyy-V5FVFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bFkkfF-eeYnyy-V5FVFF",
+          "raw_text": "2 位 75pt\n7shix\nプレイヤーID：0083524675\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "しゅんぺ",
+          "player_id": "0053098487",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0053098487",
+          "deck_code": "fvfVbb-J4hHxd-kVkF1F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fvfVbb-J4hHxd-kVkF1F",
+          "raw_text": "3 位 50pt\nしゅんぺ\nプレイヤーID：0053098487\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "かっか",
+          "player_id": "0082067160",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0082067160",
+          "deck_code": "iL9gLL-jyGGUw-NLngin",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/iL9gLL-jyGGUw-NLngin",
+          "raw_text": "3 位 50pt\nかっか\nプレイヤーID：0082067160\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "にしこう",
+          "player_id": "0035860990",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "bffkfw-wziu4G-FFVk5F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bffkfw-wziu4G-FFVk5F",
+          "raw_text": "5 位 25pt\nにしこう\nプレイヤーID：0035860990\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "せいやん",
+          "player_id": "0037147406",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "p3MM3y-QDCiHt-RMpXyy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/p3MM3y-QDCiHt-RMpXyy",
+          "raw_text": "5 位 25pt\nせいやん\nプレイヤーID：0037147406\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "しののめ",
+          "player_id": "0036936502",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "8cGcDY-qB1ftK-xx4Dx8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cGcDY-qB1ftK-xx4Dx8",
+          "raw_text": "5 位 25pt\nしののめ\nプレイヤーID：0036936502\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Zumi",
+          "player_id": "0035803784",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0035803784",
+          "deck_code": "8ccDD8-1fqimw-Dxc8DG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8ccDD8-1fqimw-Dxc8DG",
+          "raw_text": "5 位 25pt\nZumi\nプレイヤーID：0035803784\n埼玉県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:14+09:00"
+    },
+    {
+      "event_id": "1115606",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115606/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "まさk",
+          "player_id": "0090284137",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "pM22Rp-j2gl7t-pp3py2",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pM22Rp-j2gl7t-pp3py2",
+          "raw_text": "1 位 100pt\nまさk\nプレイヤーID：0090284137\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "よっしー４",
+          "player_id": "0039929710",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0039929710",
+          "deck_code": "pRM2p2-M7cFaJ-yMyEpp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pRM2p2-M7cFaJ-yMyEpp",
+          "raw_text": "2 位 75pt\nよっしー４\nプレイヤーID：0039929710\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "Yuiking",
+          "player_id": "0086006707",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "fbFVkb-9OykVF-kVFFVk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fbFVkb-9OykVF-kVFFVk",
+          "raw_text": "3 位 50pt\nYuiking\nプレイヤーID：0086006707\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "タマキ",
+          "player_id": "0007456530",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "pM3XSp-92XdJN-RyXMyX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pM3XSp-92XdJN-RyXMyX",
+          "raw_text": "3 位 50pt\nタマキ\nプレイヤーID：0007456530\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "タクト",
+          "player_id": "0053337832",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "LQggNg-aieuNz-nNg9nN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LQggNg-aieuNz-nNg9nN",
+          "raw_text": "5 位 25pt\nタクト\nプレイヤーID：0053337832\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "So",
+          "player_id": "0045732797",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "9nngLg-CXiUtY-iNQNgN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9nngLg-CXiUtY-iNQNgN",
+          "raw_text": "5 位 25pt\nSo\nプレイヤーID：0045732797\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ケイ",
+          "player_id": "0008440938",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "xaYDY8-EgePGT-c4xccG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xaYDY8-EgePGT-c4xccG",
+          "raw_text": "5 位 25pt\nケイ\nプレイヤーID：0008440938\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "イズンズン",
+          "player_id": "0082276836",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0082276836",
+          "deck_code": "Y4GxcG-f9KGLo-4caG8c",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Y4GxcG-f9KGLo-4caG8c",
+          "raw_text": "5 位 25pt\nイズンズン\nプレイヤーID：0082276836\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:23+09:00"
+    },
+    {
+      "event_id": "1115605",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115605/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "サカナ",
+          "player_id": "0097990565",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "RRXyyy-1M9Vqw-ypUppM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/RRXyyy-1M9Vqw-ypUppM",
+          "raw_text": "1 位 100pt\nサカナ\nプレイヤーID：0097990565\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ミニトマト",
+          "player_id": "0082331243",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "L6LgHN-otnrLU-L9nQ9g",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/L6LgHN-otnrLU-L9nQ9g",
+          "raw_text": "2 位 75pt\nミニトマト\nプレイヤーID：0082331243\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "アツミン",
+          "player_id": "0060876322",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "bkVvfF-AE1G6Q-bkVd5F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bkVvfF-AE1G6Q-bkVd5F",
+          "raw_text": "3 位 50pt\nアツミン\nプレイヤーID：0060876322\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "enj",
+          "player_id": "0094343474",
+          "prefecture": "静岡県",
+          "player_url": "https://players.pokemon-card.com/users/0094343474",
+          "deck_code": "FkffVb-HPpNKD-1VVFw5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkffVb-HPpNKD-1VVFw5",
+          "raw_text": "3 位 50pt\nenj\nプレイヤーID：0094343474\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "RY",
+          "player_id": "0029961355",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "5Vb1bF-2zGbFB-FfkVVk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5Vb1bF-2zGbFB-FfkVVk",
+          "raw_text": "5 位 25pt\nRY\nプレイヤーID：0029961355\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "バイゴン",
+          "player_id": "0095792440",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "gLnQnQ-4cPDFz-gH9NLN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gLnQnQ-4cPDFz-gH9NLN",
+          "raw_text": "5 位 25pt\nバイゴン\nプレイヤーID：0095792440\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "たいしょー",
+          "player_id": "0048011521",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "kVFbwV-upYxoS-5FdkFf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kVFbwV-upYxoS-5FdkFf",
+          "raw_text": "5 位 25pt\nたいしょー\nプレイヤーID：0048011521\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ごんつん",
+          "player_id": "0067503034",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "x8axG4-HPDMvA-cDDDcc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x8axG4-HPDMvA-cDDDcc",
+          "raw_text": "5 位 25pt\nごんつん\nプレイヤーID：0067503034\n静岡県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:32+09:00"
+    },
+    {
+      "event_id": "1115585",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115585/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "たける",
+          "player_id": "0071443515",
+          "prefecture": "山口県",
+          "player_url": null,
+          "deck_code": "pXyXyp-6XqGZC-MypRyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXyXyp-6XqGZC-MypRyp",
+          "raw_text": "1 位 100pt\nたける\nプレイヤーID：0071443515\n山口県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ぶっきー",
+          "player_id": "0009550728",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "kkb5ff-t0NFMX-kFFVkd",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkb5ff-t0NFMX-kFFVkd",
+          "raw_text": "2 位 75pt\nぶっきー\nプレイヤーID：0009550728\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "大誠",
+          "player_id": "0054951318",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "fwk5bF-XHo9tG-1FVFkV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fwk5bF-XHo9tG-1FVFkV",
+          "raw_text": "3 位 50pt\n大誠\nプレイヤーID：0054951318\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "はると",
+          "player_id": "0052579299",
+          "prefecture": "広島県",
+          "player_url": "https://players.pokemon-card.com/users/0052579299",
+          "deck_code": "cccYxG-QTTCAJ-88x8Da",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cccYxG-QTTCAJ-88x8Da",
+          "raw_text": "3 位 50pt\nはると\nプレイヤーID：0052579299\n広島県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:38+09:00"
+    },
+    {
+      "event_id": "1115559",
+      "date": "2026-10-04",
+      "category": "ジュニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115559/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "れお",
+          "player_id": "0008033824",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "ySpypy-E6LoHH-MXyRpy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ySpypy-E6LoHH-MXyRpy",
+          "raw_text": "1 位 100pt\nれお\nプレイヤーID：0008033824\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "カイ",
+          "player_id": "0087628506",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "nNQQnL-CDWBRL-9gLgN9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nNQQnL-CDWBRL-9gLgN9",
+          "raw_text": "2 位 75pt\nカイ\nプレイヤーID：0087628506\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ひなた",
+          "player_id": "0075817626",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "3Sy3Mp-C599dY-UMREy2",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/3Sy3Mp-C599dY-UMREy2",
+          "raw_text": "3 位 50pt\nひなた\nプレイヤーID：0075817626\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "しーちゃん",
+          "player_id": "0066237206",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "Fkk5kF-0YaeBY-VbVkbk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Fkk5kF-0YaeBY-VbVkbk",
+          "raw_text": "3 位 50pt\nしーちゃん\nプレイヤーID：0066237206\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "りなちゅう",
+          "player_id": "0079060495",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "kVV1wV-0mt4nU-kbbFfF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kVV1wV-0mt4nU-kbbFfF",
+          "raw_text": "5 位 25pt\nりなちゅう\nプレイヤーID：0079060495\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "そうチャム",
+          "player_id": "0070823910",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "J4c8Dx-dpHqn5-GcJKcx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/J4c8Dx-dpHqn5-GcJKcx",
+          "raw_text": "5 位 25pt\nそうチャム\nプレイヤーID：0070823910\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "あきひと",
+          "player_id": "0032491548",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "FkFbF5-cZuSz6-VFkVFf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkFbF5-cZuSz6-VFkVFf",
+          "raw_text": "5 位 25pt\nあきひと\nプレイヤーID：0032491548\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ゆうそうま",
+          "player_id": "0079093637",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "LLLgN9-fhz7MU-6Ngngn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LLLgN9-fhz7MU-6Ngngn",
+          "raw_text": "5 位 25pt\nゆうそうま\nプレイヤーID：0079093637\n千葉県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:47+09:00"
+    },
+    {
+      "event_id": "1115558",
+      "date": "2026-10-04",
+      "category": "ジュニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115558/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "けんぼー",
+          "player_id": "0048132693",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "NnnNNL-X7xt8g-Ng96gn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NnnNNL-X7xt8g-Ng96gn",
+          "raw_text": "1 位 100pt\nけんぼー\nプレイヤーID：0048132693\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ユウツー",
+          "player_id": "0033647520",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "S2yXXM-SbhnGG-pyRyMp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/S2yXXM-SbhnGG-pyRyMp",
+          "raw_text": "2 位 75pt\nユウツー\nプレイヤーID：0033647520\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "カズ",
+          "player_id": "0043553022",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "yMpXRR-hNQWwj-ypMSM3",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMpXRR-hNQWwj-ypMSM3",
+          "raw_text": "3 位 50pt\nカズ\nプレイヤーID：0043553022\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "カイセイ",
+          "player_id": "0035001199",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "MyXy3M-gbko8X-MpRypy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MyXy3M-gbko8X-MpRypy",
+          "raw_text": "3 位 50pt\nカイセイ\nプレイヤーID：0035001199\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ハルキ",
+          "player_id": "0077536312",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0077536312",
+          "deck_code": "cDGc88-4iHGu2-88xcaK",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cDGc88-4iHGu2-88xcaK",
+          "raw_text": "5 位 25pt\nハルキ\nプレイヤーID：0077536312\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ポケモン大好きっ子",
+          "player_id": "0013372095",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "y3pMRX-xHLWDu-ppUMyM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/y3pMRX-xHLWDu-ppUMyM",
+          "raw_text": "5 位 25pt\nポケモン大好きっ子\nプレイヤーID：0013372095\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "うーたん",
+          "player_id": "0078577992",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0078577992",
+          "deck_code": "Ff5Vfw-AZZKSy-V1kFFb",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Ff5Vfw-AZZKSy-V1kFFb",
+          "raw_text": "5 位 25pt\nうーたん\nプレイヤーID：0078577992\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "サラモチVSTAR",
+          "player_id": "0036723887",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "pMyMRX-PQj7UN-M3SEpS",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pMyMRX-PQj7UN-M3SEpS",
+          "raw_text": "5 位 25pt\nサラモチVSTAR\nプレイヤーID：0036723887\n神奈川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:38:56+09:00"
+    },
+    {
+      "event_id": "1115557",
+      "date": "2026-10-04",
+      "category": "ジュニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115557/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "まーさん",
+          "player_id": "0075031129",
+          "prefecture": "宮崎県",
+          "player_url": null,
+          "deck_code": "NnN6nn-IVmhu0-9niLgn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NnN6nn-IVmhu0-9niLgn",
+          "raw_text": "1 位 100pt\nまーさん\nプレイヤーID：0075031129\n宮崎県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ゆうき",
+          "player_id": "0078145858",
+          "prefecture": "熊本県",
+          "player_url": null,
+          "deck_code": "yXMpyp-kSSd6i-yXpRMS",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yXMpyp-kSSd6i-yXpRMS",
+          "raw_text": "2 位 75pt\nゆうき\nプレイヤーID：0078145858\n熊本県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ゆうゆう",
+          "player_id": "0097917935",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "FkbFvF-wN8GNS-d5VVVk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkbFvF-wN8GNS-d5VVVk",
+          "raw_text": "3 位 50pt\nゆうゆう\nプレイヤーID：0097917935\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "れん",
+          "player_id": "0086670276",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "MMRyMy-tDuzRH-pXp2UX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MMRyMy-tDuzRH-pXp2UX",
+          "raw_text": "3 位 50pt\nれん\nプレイヤーID：0086670276\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "はやと",
+          "player_id": "0096892576",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "bVF15v-FQDEiw-FkF5Fd",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bVF15v-FQDEiw-FkF5Fd",
+          "raw_text": "5 位 25pt\nはやと\nプレイヤーID：0096892576\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "そーすけ",
+          "player_id": "0087231630",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "VbVkdF-wZLd2M-1FFkvv",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VbVkdF-wZLd2M-1FFkvv",
+          "raw_text": "5 位 25pt\nそーすけ\nプレイヤーID：0087231630\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "こうたろう",
+          "player_id": "0068417578",
+          "prefecture": "大分県",
+          "player_url": null,
+          "deck_code": "gnLN9N-vhAU7g-LngigH",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gnLN9N-vhAU7g-LngigH",
+          "raw_text": "5 位 25pt\nこうたろう\nプレイヤーID：0068417578\n大分県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "きょうこ",
+          "player_id": "0100533518",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0100533518",
+          "deck_code": "L9LgNL-9edJ4b-ning9g",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/L9LgNL-9edJ4b-ning9g",
+          "raw_text": "5 位 25pt\nきょうこ\nプレイヤーID：0100533518\n福岡県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:05+09:00"
+    },
+    {
+      "event_id": "1115505",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115505/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "メタモン",
+          "player_id": "0060037657",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "SXpMyp-1v5vQU-MyUp2R",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/SXpMyp-1v5vQU-MyUp2R",
+          "raw_text": "1 位 100pt\nメタモン\nプレイヤーID：0060037657\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "だいき",
+          "player_id": "0086092128",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "fFvFVf-2xgI5m-wbFkfk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fFvFVf-2xgI5m-wbFkfk",
+          "raw_text": "2 位 75pt\nだいき\nプレイヤーID：0086092128\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "こーき",
+          "player_id": "0063622447",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "xxxc8c-QUp2Dv-D88cGx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xxxc8c-QUp2Dv-D88cGx",
+          "raw_text": "3 位 50pt\nこーき\nプレイヤーID：0063622447\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "C",
+          "player_id": "0059458898",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "5kFfFV-8nqq73-FbfF5k",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5kFfFV-8nqq73-FbfF5k",
+          "raw_text": "3 位 50pt\nC\nプレイヤーID：0059458898\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "抹茶",
+          "player_id": "0070070105",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "8x8GJ8-nFbVxq-GcYKxx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8x8GJ8-nFbVxq-GcYKxx",
+          "raw_text": "5 位 25pt\n抹茶\nプレイヤーID：0070070105\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Yuzuki",
+          "player_id": "0088408637",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "vwkwVb-c6rHpI-kkdFFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/vwkwVb-c6rHpI-kkdFFF",
+          "raw_text": "5 位 25pt\nYuzuki\nプレイヤーID：0088408637\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ハルオーガ",
+          "player_id": "0028901617",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0028901617",
+          "deck_code": "xD4x8G-TXutaB-cacDGc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xD4x8G-TXutaB-cacDGc",
+          "raw_text": "5 位 25pt\nハルオーガ\nプレイヤーID：0028901617\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "kaimisa",
+          "player_id": "0041334083",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "VkkFVd-f5zOTT-5FbFd5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VkkFVd-f5zOTT-5FbFd5",
+          "raw_text": "5 位 25pt\nkaimisa\nプレイヤーID：0041334083\n神奈川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:15+09:00"
+    },
+    {
+      "event_id": "1115504",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115504/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "パチリスさん",
+          "player_id": "0086949567",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0086949567",
+          "deck_code": "kkFbkF-I5xrm7-dFVF5F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkFbkF-I5xrm7-dFVF5F",
+          "raw_text": "1 位 100pt\nパチリスさん\nプレイヤーID：0086949567\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "チョコパン",
+          "player_id": "0074211926",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0074211926",
+          "deck_code": "VkkvFb-vtvxdr-fkVFFf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VkkvFb-vtvxdr-fkVFFf",
+          "raw_text": "2 位 75pt\nチョコパン\nプレイヤーID：0074211926\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "いおっぴー",
+          "player_id": "0071546801",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "wfkvFV-KS23D1-kbf1kF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/wfkvFV-KS23D1-kbf1kF",
+          "raw_text": "3 位 50pt\nいおっぴー\nプレイヤーID：0071546801\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ハヤ",
+          "player_id": "0055294139",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "VFFkkb-ceJgCI-dVffvf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VFFkkb-ceJgCI-dVffvf",
+          "raw_text": "3 位 50pt\nハヤ\nプレイヤーID：0055294139\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "いくら丼",
+          "player_id": "0061849985",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0061849985",
+          "deck_code": "gngNgN-GeV7EC-N9HLNL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gngNgN-GeV7EC-N9HLNL",
+          "raw_text": "5 位 25pt\nいくら丼\nプレイヤーID：0061849985\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "グリーンピース",
+          "player_id": "0068654414",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "XXXpRy-K0MXHx-yEMpyX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/XXXpRy-K0MXHx-yEMpyX",
+          "raw_text": "5 位 25pt\nグリーンピース\nプレイヤーID：0068654414\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ひーき",
+          "player_id": "0057604709",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "QnNnLg-rTuLFd-HnggL9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/QnNnLg-rTuLFd-HnggL9",
+          "raw_text": "5 位 25pt\nひーき\nプレイヤーID：0057604709\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Hello",
+          "player_id": "0070427976",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0070427976",
+          "deck_code": "8xY4cc-SAXUrW-Ja8cG4",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8xY4cc-SAXUrW-Ja8cG4",
+          "raw_text": "5 位 25pt\nHello\nプレイヤーID：0070427976\n兵庫県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:24+09:00"
+    },
+    {
+      "event_id": "1115502",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115502/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "チードル",
+          "player_id": "0004377348",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "84xYcY-457Lqi-DxcxGa",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/84xYcY-457Lqi-DxcxGa",
+          "raw_text": "1 位 100pt\nチードル\nプレイヤーID：0004377348\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ふうりん",
+          "player_id": "0086194356",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "bkvbFw-L9Tkgx-Vkwkfv",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bkvbFw-L9Tkgx-Vkwkfv",
+          "raw_text": "2 位 75pt\nふうりん\nプレイヤーID：0086194356\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "レンレン",
+          "player_id": "0076550463",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "Lg9gNH-u3r4g5-gL9Lng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Lg9gNH-u3r4g5-gL9Lng",
+          "raw_text": "3 位 50pt\nレンレン\nプレイヤーID：0076550463\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ケーティー",
+          "player_id": "0078133462",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "FfbFVk-zAWSdI-wfVkVw",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FfbFVk-zAWSdI-wfVkVw",
+          "raw_text": "3 位 50pt\nケーティー\nプレイヤーID：0078133462\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "メガジュラルドン",
+          "player_id": "0082890388",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "pXXppy-r4wz2F-pMyyMR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXXppy-r4wz2F-pMyyMR",
+          "raw_text": "5 位 25pt\nメガジュラルドン\nプレイヤーID：0082890388\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "たろ",
+          "player_id": "0023265187",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "c8xxJK-aidKgQ-cxc8DG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/c8xxJK-aidKgQ-cxc8DG",
+          "raw_text": "5 位 25pt\nたろ\nプレイヤーID：0023265187\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "そう",
+          "player_id": "0068740892",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "Pingn9-pg7NiN-QggLHg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Pingn9-pg7NiN-QggLHg",
+          "raw_text": "5 位 25pt\nそう\nプレイヤーID：0068740892\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "あつき",
+          "player_id": "0000622594",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "1fbwVb-nWgMmI-VkVfFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/1fbwVb-nWgMmI-VkVfFF",
+          "raw_text": "5 位 25pt\nあつき\nプレイヤーID：0000622594\n愛知県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:33+09:00"
+    },
+    {
+      "event_id": "1115501",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115501/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ゆう",
+          "player_id": "0057006514",
+          "prefecture": "富山県",
+          "player_url": null,
+          "deck_code": "G8xYcY-Nib4Mz-xxcKDD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/G8xYcY-Nib4Mz-xxcKDD",
+          "raw_text": "1 位 100pt\nゆう\nプレイヤーID：0057006514\n富山県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "アツデラ",
+          "player_id": "0099750910",
+          "prefecture": "石川県",
+          "player_url": "https://players.pokemon-card.com/users/0099750910",
+          "deck_code": "Q6iin9-uka9H0-ggin9N",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Q6iin9-uka9H0-ggin9N",
+          "raw_text": "2 位 75pt\nアツデラ\nプレイヤーID：0099750910\n石川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "あき",
+          "player_id": "0032579590",
+          "prefecture": "富山県",
+          "player_url": "https://players.pokemon-card.com/users/0032579590",
+          "deck_code": "gnngNg-VziBNT-LLnLn9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gnngNg-VziBNT-LLnLn9",
+          "raw_text": "3 位 50pt\nあき\nプレイヤーID：0032579590\n富山県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ルーク",
+          "player_id": "0080992659",
+          "prefecture": "石川県",
+          "player_url": null,
+          "deck_code": "5VFFfb-TVvjia-Vk1FbF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5VFFfb-TVvjia-Vk1FbF",
+          "raw_text": "3 位 50pt\nルーク\nプレイヤーID：0080992659\n石川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:40+09:00"
+    },
+    {
+      "event_id": "1115500",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115500/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "アガパー",
+          "player_id": "0084918651",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0084918651",
+          "deck_code": "cGD8cx-mjzKyK-4c8x84",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cGD8cx-mjzKyK-4c8x84",
+          "raw_text": "1 位 100pt\nアガパー\nプレイヤーID：0084918651\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "こうが",
+          "player_id": "0025179396",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0025179396",
+          "deck_code": "8DxDGc-t9vDK6-888Gxc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8DxDGc-t9vDK6-888Gxc",
+          "raw_text": "2 位 75pt\nこうが\nプレイヤーID：0025179396\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "SOTA",
+          "player_id": "0076688454",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0076688454",
+          "deck_code": "fffkVb-zoATXH-VvkFvF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fffkVb-zoATXH-VvkFvF",
+          "raw_text": "3 位 50pt\nSOTA\nプレイヤーID：0076688454\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "フクタロウ",
+          "player_id": "0040860042",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "gNLLg9-teDckm-Qgingn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gNLLg9-teDckm-Qgingn",
+          "raw_text": "3 位 50pt\nフクタロウ\nプレイヤーID：0040860042\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "トモキ",
+          "player_id": "0019862512",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "xxDxxa-89UJ0Q-G8cccD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xxDxxa-89UJ0Q-G8cccD",
+          "raw_text": "5 位 25pt\nトモキ\nプレイヤーID：0019862512\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "こうたろうのいとこ",
+          "player_id": "0103424644",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0103424644",
+          "deck_code": "2R2pMy-eNnxON-MpMppp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/2R2pMy-eNnxON-MpMppp",
+          "raw_text": "5 位 25pt\nこうたろうのいとこ\nプレイヤーID：0103424644\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "おにぎり",
+          "player_id": "0077123189",
+          "prefecture": "福岡県",
+          "player_url": null,
+          "deck_code": "NiNg9Q-VNpvJT-LQgLnn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NiNg9Q-VNpvJT-LQgLnn",
+          "raw_text": "5 位 25pt\nおにぎり\nプレイヤーID：0077123189\n福岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "宇都宮たくみ",
+          "player_id": "0099539386",
+          "prefecture": "福岡県",
+          "player_url": "https://players.pokemon-card.com/users/0099539386",
+          "deck_code": "VfVVFF-2mFqYU-wkkFkb",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VfVVFF-2mFqYU-wkkFkb",
+          "raw_text": "5 位 25pt\n宇都宮たくみ\nプレイヤーID：0099539386\n福岡県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:50+09:00"
+    },
+    {
+      "event_id": "1115499",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115499/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "なぎさ",
+          "player_id": "0074699050",
+          "prefecture": "沖縄県",
+          "player_url": null,
+          "deck_code": "kfFkwb-TCx3bg-5dwkfF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kfFkwb-TCx3bg-5dwkfF",
+          "raw_text": "1 位 100pt\nなぎさ\nプレイヤーID：0074699050\n沖縄県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "そうし",
+          "player_id": "0043968673",
+          "prefecture": "沖縄県",
+          "player_url": null,
+          "deck_code": "8Gxc8c-7XhMXK-4Dcx88",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8Gxc8c-7XhMXK-4Dcx88",
+          "raw_text": "2 位 75pt\nそうし\nプレイヤーID：0043968673\n沖縄県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "モフ",
+          "player_id": "0081063200",
+          "prefecture": "沖縄県",
+          "player_url": null,
+          "deck_code": "gPnLPn-mM7BTR-gNNnL9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gPnLPn-mM7BTR-gNNnL9",
+          "raw_text": "3 位 50pt\nモフ\nプレイヤーID：0081063200\n沖縄県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "SO",
+          "player_id": "0079266347",
+          "prefecture": "熊本県",
+          "player_url": null,
+          "deck_code": "HPH6gH-JTDT3D-Ln9gi9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/HPH6gH-JTDT3D-Ln9gi9",
+          "raw_text": "3 位 50pt\nSO\nプレイヤーID：0079266347\n熊本県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:39:57+09:00"
+    },
+    {
+      "event_id": "1115498",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115498/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "haruchi",
+          "player_id": "0063684265",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "kkbVFf-iTcIr8-FwV5k1",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkbVFf-iTcIr8-FwV5k1",
+          "raw_text": "1 位 100pt\nharuchi\nプレイヤーID：0063684265\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "shijin7",
+          "player_id": "0033893039",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "3ypypM-RnTiHe-MRpSXS",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/3ypypM-RnTiHe-MRpSXS",
+          "raw_text": "2 位 75pt\nshijin7\nプレイヤーID：0033893039\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ぴよゆう",
+          "player_id": "0019029393",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "VFkfkf-FQBYRr-bdFVfV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VFkfkf-FQBYRr-bdFVfV",
+          "raw_text": "3 位 50pt\nぴよゆう\nプレイヤーID：0019029393\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "どらポン",
+          "player_id": "0070120370",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "PNLL9g-gguzZB-nLgnNn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/PNLL9g-gguzZB-nLgnNn",
+          "raw_text": "3 位 50pt\nどらポン\nプレイヤーID：0070120370\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "kake????????",
+          "player_id": "0054255696",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "y3pRpX-7dRpnN-2y2XEM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/y3pRpX-7dRpnN-2y2XEM",
+          "raw_text": "5 位 25pt\nkake????????\nプレイヤーID：0054255696\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "けいすけ",
+          "player_id": "0084686495",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "gnnQnH-mqhN1q-gggL9L",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gnnQnH-mqhN1q-gggL9L",
+          "raw_text": "5 位 25pt\nけいすけ\nプレイヤーID：0084686495\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "けいた",
+          "player_id": "0009861307",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "UXpXRM-aDyqVq-pMpyRy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/UXpXRM-aDyqVq-pMpyRy",
+          "raw_text": "5 位 25pt\nけいた\nプレイヤーID：0009861307\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ひこ米",
+          "player_id": "0087026902",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "n9LgHH-TXCgSU-i9gLgN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/n9LgHH-TXCgSU-i9gLgN",
+          "raw_text": "5 位 25pt\nひこ米\nプレイヤーID：0087026902\n兵庫県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:06+09:00"
+    },
+    {
+      "event_id": "1115497",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115497/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ぎいち",
+          "player_id": "0196289061",
+          "prefecture": "香川県",
+          "player_url": "https://players.pokemon-card.com/users/0196289061",
+          "deck_code": "MRpyE2-rucAbr-pypMUy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MRpyE2-rucAbr-pypMUy",
+          "raw_text": "1 位 100pt\nぎいち\nプレイヤーID：0196289061\n香川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ハルト",
+          "player_id": "0061499920",
+          "prefecture": "徳島県",
+          "player_url": "https://players.pokemon-card.com/users/0061499920",
+          "deck_code": "yX2XRy-ky5yJ2-ppSppM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yX2XRy-ky5yJ2-ppSppM",
+          "raw_text": "2 位 75pt\nハルト\nプレイヤーID：0061499920\n徳島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ホゲワニ",
+          "player_id": "0068118420",
+          "prefecture": "徳島県",
+          "player_url": null,
+          "deck_code": "FvkkkV-op6fvn-VFVwbF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FvkkkV-op6fvn-VFVwbF",
+          "raw_text": "3 位 50pt\nホゲワニ\nプレイヤーID：0068118420\n徳島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "カツマン",
+          "player_id": "0062891488",
+          "prefecture": "滋賀県",
+          "player_url": null,
+          "deck_code": "ngLnLg-3tVzbz-9LgHQ6",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ngLnLg-3tVzbz-9LgHQ6",
+          "raw_text": "3 位 50pt\nカツマン\nプレイヤーID：0062891488\n滋賀県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:14+09:00"
+    },
+    {
+      "event_id": "1115469",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115469/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "いっさ",
+          "player_id": "0068135935",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "ypppMR-QHKuTx-MMX22p",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypppMR-QHKuTx-MMX22p",
+          "raw_text": "1 位 100pt\nいっさ\nプレイヤーID：0068135935\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "コタドン",
+          "player_id": "0038006041",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "gLnHLP-gbCOe5-NgQHN9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gLnHLP-gbCOe5-NgQHN9",
+          "raw_text": "2 位 75pt\nコタドン\nプレイヤーID：0038006041\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "右利きのちいかわ",
+          "player_id": "0081647534",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "y2RMRM-redlKM-Mp2ppM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/y2RMRM-redlKM-Mp2ppM",
+          "raw_text": "3 位 50pt\n右利きのちいかわ\nプレイヤーID：0081647534\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ローレン",
+          "player_id": "0080464912",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "FkFVk5-r8VloM-b5VFF5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkFVk5-r8VloM-b5VFF5",
+          "raw_text": "3 位 50pt\nローレン\nプレイヤーID：0080464912\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:21+09:00"
+    },
+    {
+      "event_id": "1115468",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115468/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ゆばしり",
+          "player_id": "0073931036",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0073931036",
+          "deck_code": "DcD84c-9VaNNy-G8Dxcc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/DcD84c-9VaNNy-G8Dxcc",
+          "raw_text": "1 位 100pt\nゆばしり\nプレイヤーID：0073931036\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "さりー",
+          "player_id": "0076202894",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "MppRXp-MjfIDq-MpMyMy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MppRXp-MjfIDq-MpMyMy",
+          "raw_text": "2 位 75pt\nさりー\nプレイヤーID：0076202894\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "トッポ",
+          "player_id": "0016090477",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "GK8xaK-j1fF2O-c8aD4x",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/GK8xaK-j1fF2O-c8aD4x",
+          "raw_text": "3 位 50pt\nトッポ\nプレイヤーID：0016090477\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "Sota",
+          "player_id": "0009837377",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "kfkd5b-ZPlN3g-kkVVFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kfkd5b-ZPlN3g-kkVVFF",
+          "raw_text": "3 位 50pt\nSota\nプレイヤーID：0009837377\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:28+09:00"
+    },
+    {
+      "event_id": "1115467",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115467/result",
+      "placement_count": 4,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "エイ",
+          "player_id": "0054035568",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "ngng6n-wbt7Kz-LNN9PL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ngng6n-wbt7Kz-LNN9PL",
+          "raw_text": "1 位 100pt\nエイ\nプレイヤーID：0054035568\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ふぶぽけ",
+          "player_id": "0035162142",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "LHL9nN-7qB5qU-LigNng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LHL9nN-7qB5qU-LigNng",
+          "raw_text": "2 位 75pt\nふぶぽけ\nプレイヤーID：0035162142\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "くりまろん",
+          "player_id": "0078679805",
+          "prefecture": "北海道",
+          "player_url": "https://players.pokemon-card.com/users/0078679805",
+          "deck_code": "kwbFVF-ojRuWQ-FkFf5F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kwbFVF-ojRuWQ-FkFf5F",
+          "raw_text": "3 位 50pt\nくりまろん\nプレイヤーID：0078679805\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ゆいと",
+          "player_id": "0055045773",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "8D48cc-lmQfUv-YcxG8J",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8D48cc-lmQfUv-YcxG8J",
+          "raw_text": "3 位 50pt\nゆいと\nプレイヤーID：0055045773\n北海道 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:35+09:00"
+    },
+    {
+      "event_id": "1115466",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115466/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ゾロア",
+          "player_id": "0036508091",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "8cDDcG-tRYeIX-xY8c8x",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cDDcG-tRYeIX-xY8c8x",
+          "raw_text": "1 位 100pt\nゾロア\nプレイヤーID：0036508091\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "aoi",
+          "player_id": "0076814983",
+          "prefecture": "千葉県",
+          "player_url": "https://players.pokemon-card.com/users/0076814983",
+          "deck_code": "HggnHg-gLBH0K-ingL9g",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/HggnHg-gLBH0K-ingL9g",
+          "raw_text": "2 位 75pt\naoi\nプレイヤーID：0076814983\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ぽんきち",
+          "player_id": "0080484408",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "VF5VFV-kaK9dA-b1FFbk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VF5VFV-kaK9dA-b1FFbk",
+          "raw_text": "3 位 50pt\nぽんきち\nプレイヤーID：0080484408\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "moku",
+          "player_id": "0054721111",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0054721111",
+          "deck_code": "ccDc84-qHMgBZ-xcccGY",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ccDc84-qHMgBZ-xcccGY",
+          "raw_text": "3 位 50pt\nmoku\nプレイヤーID：0054721111\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ねかん",
+          "player_id": "0088804547",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "ppMSMM-tEoFFl-MyX2pR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ppMSMM-tEoFFl-MyX2pR",
+          "raw_text": "5 位 25pt\nねかん\nプレイヤーID：0088804547\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ヒナ",
+          "player_id": "0015484811",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "G4aG44-XVllgE-xcccK8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/G4aG44-XVllgE-xcccK8",
+          "raw_text": "5 位 25pt\nヒナ\nプレイヤーID：0015484811\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ワドリ",
+          "player_id": "0064781703",
+          "prefecture": "千葉県",
+          "player_url": "https://players.pokemon-card.com/users/0064781703",
+          "deck_code": "8YcJDc-X7Uevq-8xccGc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8YcJDc-X7Uevq-8xccGc",
+          "raw_text": "5 位 25pt\nワドリ\nプレイヤーID：0064781703\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "とうふ",
+          "player_id": "0104965555",
+          "prefecture": "千葉県",
+          "player_url": "https://players.pokemon-card.com/users/0104965555",
+          "deck_code": "MUpyMX-n8hur7-yXREpp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MUpyMX-n8hur7-yXREpp",
+          "raw_text": "5 位 25pt\nとうふ\nプレイヤーID：0104965555\n千葉県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:44+09:00"
+    },
+    {
+      "event_id": "1115465",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115465/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ピジョン",
+          "player_id": "0088694443",
+          "prefecture": "宮城県",
+          "player_url": "https://players.pokemon-card.com/users/0088694443",
+          "deck_code": "NH69L6-gYyhJl-gLnggg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NH69L6-gYyhJl-gLnggg",
+          "raw_text": "1 位 100pt\nピジョン\nプレイヤーID：0088694443\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "エビ",
+          "player_id": "0070116072",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "8KcYJc-kiEPRS-8G8xGc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8KcYJc-kiEPRS-8G8xGc",
+          "raw_text": "2 位 75pt\nエビ\nプレイヤーID：0070116072\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "りょう",
+          "player_id": "0078631230",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "pXySpX-LDmnxe-XyMRUp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXySpX-LDmnxe-XyMRUp",
+          "raw_text": "3 位 50pt\nりょう\nプレイヤーID：0078631230\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "こう",
+          "player_id": "0049049051",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "nLHg6g-Ffvr3J-gNQn9g",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nLHg6g-Ffvr3J-gNQn9g",
+          "raw_text": "3 位 50pt\nこう\nプレイヤーID：0049049051\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "とも",
+          "player_id": "0059181745",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "2yMp2p-ZUiqg5-MMyRpR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/2yMp2p-ZUiqg5-MMyRpR",
+          "raw_text": "5 位 25pt\nとも\nプレイヤーID：0059181745\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "そうや",
+          "player_id": "0072954119",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "pyMyXM-Gp8G3F-XpRyXM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pyMyXM-Gp8G3F-XpRyXM",
+          "raw_text": "5 位 25pt\nそうや\nプレイヤーID：0072954119\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "宮",
+          "player_id": "0100977655",
+          "prefecture": "宮城県",
+          "player_url": "https://players.pokemon-card.com/users/0100977655",
+          "deck_code": "kkVVwf-BWBIG3-1dwbFk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkVVwf-BWBIG3-1dwbFk",
+          "raw_text": "5 位 25pt\n宮\nプレイヤーID：0100977655\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "田中ぺぺ",
+          "player_id": "0078427143",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "X2yppp-lQcLnU-MMURyy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/X2yppp-lQcLnU-MMURyy",
+          "raw_text": "5 位 25pt\n田中ぺぺ\nプレイヤーID：0078427143\n宮城県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:40:54+09:00"
+    },
+    {
+      "event_id": "1115320",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115320/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ふくだい",
+          "player_id": "0014171701",
+          "prefecture": "熊本県",
+          "player_url": null,
+          "deck_code": "yXMSMy-gonHAx-SRpyMp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yXMSMy-gonHAx-SRpyMp",
+          "raw_text": "1 位 100pt\nふくだい\nプレイヤーID：0014171701\n熊本県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ペリカン",
+          "player_id": "0065451045",
+          "prefecture": "宮崎県",
+          "player_url": "https://players.pokemon-card.com/users/0065451045",
+          "deck_code": "LLHgNg-eXrWT1-gN9nHn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LLHgNg-eXrWT1-gN9nHn",
+          "raw_text": "2 位 75pt\nペリカン\nプレイヤーID：0065451045\n宮崎県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ranブル",
+          "player_id": "0008260859",
+          "prefecture": "鹿児島県",
+          "player_url": null,
+          "deck_code": "G88cxD-Mr9pwM-8Y8cc8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/G88cxD-Mr9pwM-8Y8cc8",
+          "raw_text": "3 位 50pt\nranブル\nプレイヤーID：0008260859\n鹿児島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "もんぶらん",
+          "player_id": "0102872314",
+          "prefecture": "宮崎県",
+          "player_url": "https://players.pokemon-card.com/users/0102872314",
+          "deck_code": "bVFdfd-W2uC4p-kFF5F5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bVFdfd-W2uC4p-kFF5F5",
+          "raw_text": "3 位 50pt\nもんぶらん\nプレイヤーID：0102872314\n宮崎県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "オサ",
+          "player_id": "0075442440",
+          "prefecture": "宮崎県",
+          "player_url": null,
+          "deck_code": "9LgNLN-XVX2BL-HggLng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9LgNLN-XVX2BL-HggLng",
+          "raw_text": "5 位 25pt\nオサ\nプレイヤーID：0075442440\n宮崎県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "しゅん",
+          "player_id": "0033319021",
+          "prefecture": "鹿児島県",
+          "player_url": null,
+          "deck_code": "LLnn9g-57FDaV-QgHLg6",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LLnn9g-57FDaV-QgHLg6",
+          "raw_text": "5 位 25pt\nしゅん\nプレイヤーID：0033319021\n鹿児島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "蕾",
+          "player_id": "0030188268",
+          "prefecture": "宮崎県",
+          "player_url": "https://players.pokemon-card.com/users/0030188268",
+          "deck_code": "xDGa8x-tqKwE5-cx48Kc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xDGa8x-tqKwE5-cx48Kc",
+          "raw_text": "5 位 25pt\n蕾\nプレイヤーID：0030188268\n宮崎県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "レゴ",
+          "player_id": "0010241479",
+          "prefecture": "熊本県",
+          "player_url": null,
+          "deck_code": "yERXpp-wLfzro-2XMMyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yERXpp-wLfzro-2XMMyp",
+          "raw_text": "5 位 25pt\nレゴ\nプレイヤーID：0010241479\n熊本県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:03+09:00"
+    },
+    {
+      "event_id": "1115319",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115319/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "カイシ",
+          "player_id": "0083044122",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "nLiL9g-givcO5-gg6N9H",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nLiL9g-givcO5-gg6N9H",
+          "raw_text": "1 位 100pt\nカイシ\nプレイヤーID：0083044122\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "MIMIWALK",
+          "player_id": "0030297528",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "cJYx8D-CgUi1b-cDcGDc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cJYx8D-CgUi1b-cDcGDc",
+          "raw_text": "2 位 75pt\nMIMIWALK\nプレイヤーID：0030297528\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "あひるうさぎ",
+          "player_id": "0062151533",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "DDacc8-SBPgXY-GGx488",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/DDacc8-SBPgXY-GGx488",
+          "raw_text": "3 位 50pt\nあひるうさぎ\nプレイヤーID：0062151533\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "キャシー",
+          "player_id": "0079596219",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "RSyMyR-DjFhCT-yppppy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/RSyMyR-DjFhCT-yppppy",
+          "raw_text": "3 位 50pt\nキャシー\nプレイヤーID：0079596219\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ハヤト",
+          "player_id": "0029234370",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "ppXppR-towRwI-3RUMyM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ppXppR-towRwI-3RUMyM",
+          "raw_text": "5 位 25pt\nハヤト\nプレイヤーID：0029234370\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "れーちゃん",
+          "player_id": "0072003787",
+          "prefecture": "広島県",
+          "player_url": "https://players.pokemon-card.com/users/0072003787",
+          "deck_code": "FkbbFk-cp4hES-fVFkFV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkbbFk-cp4hES-fVFkFV",
+          "raw_text": "5 位 25pt\nれーちゃん\nプレイヤーID：0072003787\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "マオ",
+          "player_id": "0002573524",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "pyRMyy-5GKeOZ-pR3p2X",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pyRMyy-5GKeOZ-pR3p2X",
+          "raw_text": "5 位 25pt\nマオ\nプレイヤーID：0002573524\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ギタン",
+          "player_id": "0094036305",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "cGc4x4-2zFDEi-8ccDJx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cGc4x4-2zFDEi-8ccDJx",
+          "raw_text": "5 位 25pt\nギタン\nプレイヤーID：0094036305\n広島県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:12+09:00"
+    },
+    {
+      "event_id": "1115317",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115317/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "パパス",
+          "player_id": "0073806329",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "51FFFv-EXbeZV-bfVkFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/51FFFv-EXbeZV-bfVkFF",
+          "raw_text": "1 位 100pt\nパパス\nプレイヤーID：0073806329\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "けんしん",
+          "player_id": "0036461370",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0036461370",
+          "deck_code": "2p2RUX-EtG0yV-MEXMyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/2p2RUX-EtG0yV-MEXMyp",
+          "raw_text": "2 位 75pt\nけんしん\nプレイヤーID：0036461370\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "Manato",
+          "player_id": "0042179395",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0042179395",
+          "deck_code": "8xYc84-qVj9Ne-Gc84cY",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8xYc84-qVj9Ne-Gc84cY",
+          "raw_text": "3 位 50pt\nManato\nプレイヤーID：0042179395\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "あおい",
+          "player_id": "0042835350",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "NHggg9-gqMtEj-LnHNng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NHggg9-gqMtEj-LnHNng",
+          "raw_text": "3 位 50pt\nあおい\nプレイヤーID：0042835350\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "かじりがめ",
+          "player_id": "0092980367",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0092980367",
+          "deck_code": "pXMMRy-Qm3EQR-MpyyUy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXMMRy-Qm3EQR-MpyyUy",
+          "raw_text": "5 位 25pt\nかじりがめ\nプレイヤーID：0092980367\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "カズキ",
+          "player_id": "0031640958",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0031640958",
+          "deck_code": "acDxcG-7bAgfl-48cc8D",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/acDxcG-7bAgfl-48cc8D",
+          "raw_text": "5 位 25pt\nカズキ\nプレイヤーID：0031640958\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "テツノミツキ",
+          "player_id": "0028450357",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "GDxcG8-w4Dk3n-888cc8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/GDxcG8-w4Dk3n-888cc8",
+          "raw_text": "5 位 25pt\nテツノミツキ\nプレイヤーID：0028450357\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "外科ナース",
+          "player_id": "0066048677",
+          "prefecture": "京都府",
+          "player_url": "https://players.pokemon-card.com/users/0066048677",
+          "deck_code": "9nnLnL-I1E1gj-HiggNL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9nnLnL-I1E1gj-HiggNL",
+          "raw_text": "5 位 25pt\n外科ナース\nプレイヤーID：0066048677\n京都府 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:22+09:00"
+    },
+    {
+      "event_id": "1115316",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115316/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ルカ",
+          "player_id": "0071442985",
+          "prefecture": "岡山県",
+          "player_url": "https://players.pokemon-card.com/users/0071442985",
+          "deck_code": "kVk55b-YhWhZ9-kk1fwF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kVk55b-YhWhZ9-kk1fwF",
+          "raw_text": "1 位 100pt\nルカ\nプレイヤーID：0071442985\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "あきひろ",
+          "player_id": "0056784976",
+          "prefecture": "岡山県",
+          "player_url": "https://players.pokemon-card.com/users/0056784976",
+          "deck_code": "8DxJxG-kmNnLE-4c884c",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8DxJxG-kmNnLE-4c884c",
+          "raw_text": "2 位 75pt\nあきひろ\nプレイヤーID：0056784976\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "フェル",
+          "player_id": "0072884379",
+          "prefecture": "岡山県",
+          "player_url": "https://players.pokemon-card.com/users/0072884379",
+          "deck_code": "8ccaYc-tv7tbC-x4YGca",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8ccaYc-tv7tbC-x4YGca",
+          "raw_text": "3 位 50pt\nフェル\nプレイヤーID：0072884379\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "かずのこ",
+          "player_id": "0085296538",
+          "prefecture": "岡山県",
+          "player_url": null,
+          "deck_code": "ca8888-1RgW2h-DxxcGD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ca8888-1RgW2h-DxxcGD",
+          "raw_text": "3 位 50pt\nかずのこ\nプレイヤーID：0085296538\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "こんばた",
+          "player_id": "0035967358",
+          "prefecture": "岡山県",
+          "player_url": null,
+          "deck_code": "DGxDc8-a4WCNG-cYcxc8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/DGxDc8-a4WCNG-cYcxc8",
+          "raw_text": "5 位 25pt\nこんばた\nプレイヤーID：0035967358\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "KAI",
+          "player_id": "0006012009",
+          "prefecture": "岡山県",
+          "player_url": null,
+          "deck_code": "Gx8c84-QVCOKY-4cDccc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Gx8c84-QVCOKY-4cDccc",
+          "raw_text": "5 位 25pt\nKAI\nプレイヤーID：0006012009\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "オカダ",
+          "player_id": "0075370642",
+          "prefecture": "岡山県",
+          "player_url": null,
+          "deck_code": "aGKxc8-H94dm7-DYcxc4",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/aGKxc8-H94dm7-DYcxc4",
+          "raw_text": "5 位 25pt\nオカダ\nプレイヤーID：0075370642\n岡山県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ゆーづ",
+          "player_id": "0032705692",
+          "prefecture": "岡山県",
+          "player_url": null,
+          "deck_code": "Fk1wk1-IZXv5x-bVff1F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Fk1wk1-IZXv5x-bVff1F",
+          "raw_text": "5 位 25pt\nゆーづ\nプレイヤーID：0032705692\n岡山県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:31+09:00"
+    },
+    {
+      "event_id": "1115315",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115315/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ましろ",
+          "player_id": "0015808686",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "yXpMRy-YXVqk6-X2Rypy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yXpMRy-YXVqk6-X2Rypy",
+          "raw_text": "1 位 100pt\nましろ\nプレイヤーID：0015808686\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "瀬良",
+          "player_id": "0066104557",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "pRpXpX-xZCm1U-Mppyyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pRpXpX-xZCm1U-Mppyyp",
+          "raw_text": "2 位 75pt\n瀬良\nプレイヤーID：0066104557\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ヒカル",
+          "player_id": "0075851499",
+          "prefecture": "広島県",
+          "player_url": "https://players.pokemon-card.com/users/0075851499",
+          "deck_code": "pRSypM-lNaTNl-ES3MXR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pRSypM-lNaTNl-ES3MXR",
+          "raw_text": "3 位 50pt\nヒカル\nプレイヤーID：0075851499\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "タカバヤシジュンセイ",
+          "player_id": "0036843554",
+          "prefecture": "広島県",
+          "player_url": "https://players.pokemon-card.com/users/0036843554",
+          "deck_code": "c448xc-OEjkq8-xcGcc8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/c448xc-OEjkq8-xcGcc8",
+          "raw_text": "3 位 50pt\nタカバヤシジュンセイ\nプレイヤーID：0036843554\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "はゆさま",
+          "player_id": "0077791551",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "kwbVVV-5ty4Q4-FFkVbF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kwbVVV-5ty4Q4-FFkVbF",
+          "raw_text": "5 位 25pt\nはゆさま\nプレイヤーID：0077791551\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "いえもん",
+          "player_id": "0017026332",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "dbFFFk-mc9w22-FkVd5F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/dbFFFk-mc9w22-FkVd5F",
+          "raw_text": "5 位 25pt\nいえもん\nプレイヤーID：0017026332\n広島県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "まぼさん",
+          "player_id": "0078843268",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0078843268",
+          "deck_code": "xD84cc-SEJBDH-JYcacG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xD84cc-SEJBDH-JYcacG",
+          "raw_text": "5 位 25pt\nまぼさん\nプレイヤーID：0078843268\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ファントム",
+          "player_id": "0057367334",
+          "prefecture": "広島県",
+          "player_url": null,
+          "deck_code": "8xcxDD-i1tMDh-cGK4cx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8xcxDD-i1tMDh-cGK4cx",
+          "raw_text": "5 位 25pt\nファントム\nプレイヤーID：0057367334\n広島県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:40+09:00"
+    },
+    {
+      "event_id": "1115176",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115176/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "とこてん",
+          "player_id": "0022650016",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "3pyRM2-UkE49a-pyy3MX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/3pyRM2-UkE49a-pyy3MX",
+          "raw_text": "1 位 100pt\nとこてん\nプレイヤーID：0022650016\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ぱも",
+          "player_id": "0078216420",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "FkdFf5-GdftGt-VF5fbF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkdFf5-GdftGt-VF5fbF",
+          "raw_text": "2 位 75pt\nぱも\nプレイヤーID：0078216420\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "しゅう",
+          "player_id": "0031394741",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "FVFVfV-Tu8BNM-kdFb5f",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FVFVfV-Tu8BNM-kdFb5f",
+          "raw_text": "3 位 50pt\nしゅう\nプレイヤーID：0031394741\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "やかん",
+          "player_id": "0031194132",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "yMpXpR-eUO3NN-M2M2py",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMpXpR-eUO3NN-M2M2py",
+          "raw_text": "3 位 50pt\nやかん\nプレイヤーID：0031194132\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "たらこ",
+          "player_id": "0026773566",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "RpyXSp-yhVMnX-MpXyMy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/RpyXSp-yhVMnX-MpXyMy",
+          "raw_text": "5 位 25pt\nたらこ\nプレイヤーID：0026773566\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "コウセイ",
+          "player_id": "0002963437",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "bF51kV-48bXlT-FFFkVF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bF51kV-48bXlT-FFFkVF",
+          "raw_text": "5 位 25pt\nコウセイ\nプレイヤーID：0002963437\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "しゅん",
+          "player_id": "0017308065",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0017308065",
+          "deck_code": "QgnggH-LY093Q-LLg9Ng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/QgnggH-LY093Q-LLg9Ng",
+          "raw_text": "5 位 25pt\nしゅん\nプレイヤーID：0017308065\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "吟次郎",
+          "player_id": "0037724328",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "bf5Fkb-0iuggm-fFFVfV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bf5Fkb-0iuggm-fFFVfV",
+          "raw_text": "5 位 25pt\n吟次郎\nプレイヤーID：0037724328\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:49+09:00"
+    },
+    {
+      "event_id": "1115175",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115175/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ぽめはみ",
+          "player_id": "0041319637",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "nnnNgH-iMaKEa-g96nLn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nnnNgH-iMaKEa-g96nLn",
+          "raw_text": "1 位 100pt\nぽめはみ\nプレイヤーID：0041319637\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "タキ",
+          "player_id": "0085121524",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "pyMpMS-hykEme-p2RM2M",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pyMpMS-hykEme-p2RM2M",
+          "raw_text": "2 位 75pt\nタキ\nプレイヤーID：0085121524\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "さっさ",
+          "player_id": "0027863028",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "Yx8c8c-iUbK3i-c4Gc8x",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Yx8c8c-iUbK3i-c4Gc8x",
+          "raw_text": "3 位 50pt\nさっさ\nプレイヤーID：0027863028\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "いえろー",
+          "player_id": "0007119828",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "N9NnLL-R1Kffx-gngHHg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/N9NnLL-R1Kffx-gngHHg",
+          "raw_text": "3 位 50pt\nいえろー\nプレイヤーID：0007119828\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ゆうのようかん",
+          "player_id": "0000180920",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "bFVk5F-OgyHar-kvfVFk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bFVk5F-OgyHar-kvfVFk",
+          "raw_text": "5 位 25pt\nゆうのようかん\nプレイヤーID：0000180920\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "はこびや",
+          "player_id": "0073419688",
+          "prefecture": "神奈川県",
+          "player_url": "https://players.pokemon-card.com/users/0073419688",
+          "deck_code": "wFkbVw-zt1Mru-fFvVkV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/wFkbVw-zt1Mru-fFvVkV",
+          "raw_text": "5 位 25pt\nはこびや\nプレイヤーID：0073419688\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "イスラポニータ",
+          "player_id": "0000141152",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "8cGccc-eIuq9u-cYa4Gx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8cGccc-eIuq9u-cYa4Gx",
+          "raw_text": "5 位 25pt\nイスラポニータ\nプレイヤーID：0000141152\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "タっさん",
+          "player_id": "0003110869",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "g9QngQ-X9jcZz-nLgLgn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/g9QngQ-X9jcZz-nLgLgn",
+          "raw_text": "5 位 25pt\nタっさん\nプレイヤーID：0003110869\n神奈川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:41:58+09:00"
+    },
+    {
+      "event_id": "1115174",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115174/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "う。",
+          "player_id": "0032831119",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0032831119",
+          "deck_code": "pXRypX-C0l7Jo-yMMMyM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXRypX-C0l7Jo-yMMMyM",
+          "raw_text": "1 位 100pt\nう。\nプレイヤーID：0032831119\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ガルドラ",
+          "player_id": "0098775714",
+          "prefecture": "長野県",
+          "player_url": null,
+          "deck_code": "9gn9Ln-E7rz88-niHggH",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9gn9Ln-E7rz88-niHggH",
+          "raw_text": "2 位 75pt\nガルドラ\nプレイヤーID：0098775714\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ごちう",
+          "player_id": "0065230321",
+          "prefecture": "長野県",
+          "player_url": null,
+          "deck_code": "XRRSMX-uC1HpR-pRMpyM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/XRRSMX-uC1HpR-pRMpyM",
+          "raw_text": "3 位 50pt\nごちう\nプレイヤーID：0065230321\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "そーすけ",
+          "player_id": "0007294653",
+          "prefecture": "長野県",
+          "player_url": null,
+          "deck_code": "FkdVfV-bZKQS5-b5kvFf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkdVfV-bZKQS5-b5kvFf",
+          "raw_text": "3 位 50pt\nそーすけ\nプレイヤーID：0007294653\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ねこ",
+          "player_id": "0093643454",
+          "prefecture": "長野県",
+          "player_url": "https://players.pokemon-card.com/users/0093643454",
+          "deck_code": "gHN99L-H0iaXT-NgNnng",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gHN99L-H0iaXT-NgNnng",
+          "raw_text": "5 位 25pt\nねこ\nプレイヤーID：0093643454\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "さらしな",
+          "player_id": "0078421529",
+          "prefecture": "長野県",
+          "player_url": null,
+          "deck_code": "Ff5bVF-bBfx9r-V5FkdF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Ff5bVF-bBfx9r-V5FkdF",
+          "raw_text": "5 位 25pt\nさらしな\nプレイヤーID：0078421529\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "M®︎",
+          "player_id": "0071707439",
+          "prefecture": "長野県",
+          "player_url": "https://players.pokemon-card.com/users/0071707439",
+          "deck_code": "p2RMpp-FwYHbS-UpXyyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/p2RMpp-FwYHbS-UpXyyp",
+          "raw_text": "5 位 25pt\nM®︎\nプレイヤーID：0071707439\n長野県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "しょーご",
+          "player_id": "0002474591",
+          "prefecture": "長野県",
+          "player_url": "https://players.pokemon-card.com/users/0002474591",
+          "deck_code": "n6gLN9-HT9YRg-nQngNN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/n6gLN9-HT9YRg-nQngNN",
+          "raw_text": "5 位 25pt\nしょーご\nプレイヤーID：0002474591\n長野県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:08+09:00"
+    },
+    {
+      "event_id": "1115173",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115173/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "よこ",
+          "player_id": "0036125210",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "xG8Y48-h7KFfJ-xccccc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xG8Y48-h7KFfJ-xccccc",
+          "raw_text": "1 位 100pt\nよこ\nプレイヤーID：0036125210\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ユウ",
+          "player_id": "0063779484",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "pR2M2p-4R7hLy-Spp2yM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pR2M2p-4R7hLy-Spp2yM",
+          "raw_text": "2 位 75pt\nユウ\nプレイヤーID：0063779484\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "さく",
+          "player_id": "0079624086",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "UMp2MX-9F9OIb-ppy2Rp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/UMp2MX-9F9OIb-ppy2Rp",
+          "raw_text": "3 位 50pt\nさく\nプレイヤーID：0079624086\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "こーへい",
+          "player_id": "0042171645",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "kkVVFb-bmRPF5-fwFFF1",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kkVVFb-bmRPF5-fwFFF1",
+          "raw_text": "3 位 50pt\nこーへい\nプレイヤーID：0042171645\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "yuki",
+          "player_id": "0036082098",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "FkFfvV-31tadc-vVwbkV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FkFfvV-31tadc-vVwbkV",
+          "raw_text": "5 位 25pt\nyuki\nプレイヤーID：0036082098\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "タバスコン",
+          "player_id": "0035007577",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "9QNgHn-VSaxSk-LnLgLL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9QNgHn-VSaxSk-LnLgLL",
+          "raw_text": "5 位 25pt\nタバスコン\nプレイヤーID：0035007577\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "shunya",
+          "player_id": "0026687739",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "MpR2pR-80n7K1-XSpyEp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MpR2pR-80n7K1-XSpyEp",
+          "raw_text": "5 位 25pt\nshunya\nプレイヤーID：0026687739\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ゆあ",
+          "player_id": "0072212341",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "g6nLgQ-J28UOS-9ngggH",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/g6nLgQ-J28UOS-9ngggH",
+          "raw_text": "5 位 25pt\nゆあ\nプレイヤーID：0072212341\n神奈川県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:17+09:00"
+    },
+    {
+      "event_id": "1115036",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115036/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ゆうか",
+          "player_id": "0081214848",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "VFbfVf-4UbcHo-ffkkVF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VFbfVf-4UbcHo-ffkkVF",
+          "raw_text": "1 位 100pt\nゆうか\nプレイヤーID：0081214848\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "T",
+          "player_id": "0052327245",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "nHHLgg-DRlyFf-gnNiL9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nHHLgg-DRlyFf-gnNiL9",
+          "raw_text": "2 位 75pt\nT\nプレイヤーID：0052327245\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "riku",
+          "player_id": "0069602430",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "GDDDc8-Q7Cowk-8cKxcx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/GDDDc8-Q7Cowk-8cKxcx",
+          "raw_text": "3 位 50pt\nriku\nプレイヤーID：0069602430\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ナルホド",
+          "player_id": "0071586940",
+          "prefecture": "茨城県",
+          "player_url": null,
+          "deck_code": "pXyRUM-7zRL6m-yMpy2X",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pXyRUM-7zRL6m-yMpy2X",
+          "raw_text": "3 位 50pt\nナルホド\nプレイヤーID：0071586940\n茨城県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "もん",
+          "player_id": "0038596674",
+          "prefecture": "栃木県",
+          "player_url": "https://players.pokemon-card.com/users/0038596674",
+          "deck_code": "yXyppp-1y1GKm-XRRpMX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yXyppp-1y1GKm-XRRpMX",
+          "raw_text": "5 位 25pt\nもん\nプレイヤーID：0038596674\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ベネタレ",
+          "player_id": "0035849975",
+          "prefecture": "栃木県",
+          "player_url": "https://players.pokemon-card.com/users/0035849975",
+          "deck_code": "ypMX2R-Dpwdyi-M2ypRM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypMX2R-Dpwdyi-M2ypRM",
+          "raw_text": "5 位 25pt\nベネタレ\nプレイヤーID：0035849975\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "しゅがー",
+          "player_id": "0036332737",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "ccxGDD-UErFnq-xxcxK8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ccxGDD-UErFnq-xxcxK8",
+          "raw_text": "5 位 25pt\nしゅがー\nプレイヤーID：0036332737\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "たく",
+          "player_id": "0052834811",
+          "prefecture": "茨城県",
+          "player_url": null,
+          "deck_code": "cDx8xJ-X04pT3-c4xJcG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cDx8xJ-X04pT3-c4xJcG",
+          "raw_text": "5 位 25pt\nたく\nプレイヤーID：0052834811\n茨城県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:26+09:00"
+    },
+    {
+      "event_id": "1115035",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115035/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "しゅーと",
+          "player_id": "0000256104",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "MppRXM-VJIwO3-pMRpyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MppRXM-VJIwO3-pMRpyp",
+          "raw_text": "1 位 100pt\nしゅーと\nプレイヤーID：0000256104\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "しおれもん。",
+          "player_id": "0054108008",
+          "prefecture": "千葉県",
+          "player_url": "https://players.pokemon-card.com/users/0054108008",
+          "deck_code": "SpRpy2-YiptWJ-RMMSpp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/SpRpy2-YiptWJ-RMMSpp",
+          "raw_text": "2 位 75pt\nしおれもん。\nプレイヤーID：0054108008\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "にゃんじろう",
+          "player_id": "0061875265",
+          "prefecture": "千葉県",
+          "player_url": "https://players.pokemon-card.com/users/0061875265",
+          "deck_code": "bbkFV5-JY3LSy-FVdFFV",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/bbkFV5-JY3LSy-FVdFFV",
+          "raw_text": "3 位 50pt\nにゃんじろう\nプレイヤーID：0061875265\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "もがみ",
+          "player_id": "0073651024",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "igngnQ-bdihU7-LLnN9L",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/igngnQ-bdihU7-LLnN9L",
+          "raw_text": "3 位 50pt\nもがみ\nプレイヤーID：0073651024\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Ｋ",
+          "player_id": "0031337771",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "kVfbwF-3Te5wE-kFFFkF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kVfbwF-3Te5wE-kFFFkF",
+          "raw_text": "5 位 25pt\nＫ\nプレイヤーID：0031337771\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "suisei",
+          "player_id": "0078248672",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "FVfVFk-yjbnhB-VbkkFf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FVfVFk-yjbnhB-VbkkFf",
+          "raw_text": "5 位 25pt\nsuisei\nプレイヤーID：0078248672\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "てる",
+          "player_id": "0088595678",
+          "prefecture": "千葉県",
+          "player_url": null,
+          "deck_code": "nn6g9N-b2zT6o-nggg6L",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nn6g9N-b2zT6o-nggg6L",
+          "raw_text": "5 位 25pt\nてる\nプレイヤーID：0088595678\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ジイム",
+          "player_id": "0038235540",
+          "prefecture": "茨城県",
+          "player_url": null,
+          "deck_code": "fVkVfF-8nEtCj-VbF5kF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fVkVfF-8nEtCj-VbF5kF",
+          "raw_text": "5 位 25pt\nジイム\nプレイヤーID：0038235540\n茨城県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:35+09:00"
+    },
+    {
+      "event_id": "1115034",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115034/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "K",
+          "player_id": "0004255725",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "yRXUpS-xjCdcN-XMyUSp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yRXUpS-xjCdcN-XMyUSp",
+          "raw_text": "1 位 100pt\nK\nプレイヤーID：0004255725\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ひよこ",
+          "player_id": "0002936077",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "pRppyy-p6uVVR-ySMyEM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pRppyy-p6uVVR-ySMyEM",
+          "raw_text": "2 位 75pt\nひよこ\nプレイヤーID：0002936077\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "スマトラ@むろじむ",
+          "player_id": "0041755136",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "yMRpMy-BTvkrM-RpyyXp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMRpMy-BTvkrM-RpyyXp",
+          "raw_text": "3 位 50pt\nスマトラ@むろじむ\nプレイヤーID：0041755136\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "にっしー",
+          "player_id": "0026226121",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "55FkFV-uoQSwy-VwFbbf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/55FkFV-uoQSwy-VwFbbf",
+          "raw_text": "3 位 50pt\nにっしー\nプレイヤーID：0026226121\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "イガ汰つな",
+          "player_id": "0036013890",
+          "prefecture": "北海道",
+          "player_url": "https://players.pokemon-card.com/users/0036013890",
+          "deck_code": "cDDx4c-dKrYRf-c488Gc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cDDx4c-dKrYRf-c488Gc",
+          "raw_text": "5 位 25pt\nイガ汰つな\nプレイヤーID：0036013890\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "マオ",
+          "player_id": "0072833474",
+          "prefecture": "北海道",
+          "player_url": "https://players.pokemon-card.com/users/0072833474",
+          "deck_code": "VFFfkk-TF7Fv2-bkf5Fv",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VFFfkk-TF7Fv2-bkf5Fv",
+          "raw_text": "5 位 25pt\nマオ\nプレイヤーID：0072833474\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "OTTI",
+          "player_id": "0096550667",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "gnLQ9N-TaPjJE-9ngnLn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gnLQ9N-TaPjJE-9ngnLn",
+          "raw_text": "5 位 25pt\nOTTI\nプレイヤーID：0096550667\n北海道 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "やちなお",
+          "player_id": "0090893076",
+          "prefecture": "北海道",
+          "player_url": null,
+          "deck_code": "fkFkfF-lH0NAx-wFFfVb",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/fkFkfF-lH0NAx-wFFfVb",
+          "raw_text": "5 位 25pt\nやちなお\nプレイヤーID：0090893076\n北海道 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:44+09:00"
+    },
+    {
+      "event_id": "1115033",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115033/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "メタ☆トロン",
+          "player_id": "0049286199",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0049286199",
+          "deck_code": "5F1VFk-RppI7M-VbF5FF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5F1VFk-RppI7M-VbF5FF",
+          "raw_text": "1 位 100pt\nメタ☆トロン\nプレイヤーID：0049286199\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ハセポン",
+          "player_id": "0057454320",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "JcGxDa-ZfSciT-xcc888",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/JcGxDa-ZfSciT-xcc888",
+          "raw_text": "2 位 75pt\nハセポン\nプレイヤーID：0057454320\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ぷりんせす",
+          "player_id": "0049181508",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "yM3ppX-DIPlGg-MyyRXy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yM3ppX-DIPlGg-MyyRXy",
+          "raw_text": "3 位 50pt\nぷりんせす\nプレイヤーID：0049181508\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ばんばん",
+          "player_id": "0090759145",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0090759145",
+          "deck_code": "kFFkbv-yHFIKT-FFVVV5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kFFkbv-yHFIKT-FFVVV5",
+          "raw_text": "3 位 50pt\nばんばん\nプレイヤーID：0090759145\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "リューク",
+          "player_id": "0077173971",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "yypSyU-5TurJW-XMRppp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yypSyU-5TurJW-XMRppp",
+          "raw_text": "5 位 25pt\nリューク\nプレイヤーID：0077173971\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ケム",
+          "player_id": "0000229856",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "nL9HLg-Yqz7va-NH6Lgg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nL9HLg-Yqz7va-NH6Lgg",
+          "raw_text": "5 位 25pt\nケム\nプレイヤーID：0000229856\n神奈川県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "マキシマムドリラー",
+          "player_id": "0058396988",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "kbVkVF-whXBme-55F55F",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kbVkVF-whXBme-55F55F",
+          "raw_text": "5 位 25pt\nマキシマムドリラー\nプレイヤーID：0058396988\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "カトウ",
+          "player_id": "0024009533",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0024009533",
+          "deck_code": "yMpXRy-RASnUl-EXpMpS",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMpXRy-RASnUl-EXpMpS",
+          "raw_text": "5 位 25pt\nカトウ\nプレイヤーID：0024009533\n東京都 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:42:54+09:00"
+    },
+    {
+      "event_id": "1115032",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115032/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "まあや",
+          "player_id": "0002003443",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "pMppyp-itoAU3-yXRypR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pMppyp-itoAU3-yXRypR",
+          "raw_text": "1 位 100pt\nまあや\nプレイヤーID：0002003443\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "kj",
+          "player_id": "0063774276",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "ppXEpR-nod6lT-XMMyyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ppXEpR-nod6lT-XMMyyp",
+          "raw_text": "2 位 75pt\nkj\nプレイヤーID：0063774276\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "あこ",
+          "player_id": "0000109460",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "HnQLNn-OfxNLL-9ggNHL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/HnQLNn-OfxNLL-9ggNHL",
+          "raw_text": "3 位 50pt\nあこ\nプレイヤーID：0000109460\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "はまち",
+          "player_id": "0038914050",
+          "prefecture": "栃木県",
+          "player_url": null,
+          "deck_code": "ngNn9N-HuPFlt-LgNQNQ",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ngNn9N-HuPFlt-LgNQNQ",
+          "raw_text": "3 位 50pt\nはまち\nプレイヤーID：0038914050\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ぷーに",
+          "player_id": "0073801896",
+          "prefecture": "群馬県",
+          "player_url": "https://players.pokemon-card.com/users/0073801896",
+          "deck_code": "ccG88c-LGMDDw-8xxGx8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ccG88c-LGMDDw-8xxGx8",
+          "raw_text": "5 位 25pt\nぷーに\nプレイヤーID：0073801896\n群馬県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ハル",
+          "player_id": "0071855578",
+          "prefecture": "栃木県",
+          "player_url": "https://players.pokemon-card.com/users/0071855578",
+          "deck_code": "DD8x84-TKm225-Gcxc4D",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/DD8x84-TKm225-Gcxc4D",
+          "raw_text": "5 位 25pt\nハル\nプレイヤーID：0071855578\n栃木県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "たら",
+          "player_id": "0029006399",
+          "prefecture": "群馬県",
+          "player_url": "https://players.pokemon-card.com/users/0029006399",
+          "deck_code": "MR2ypp-Qpki7r-ppXM2R",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/MR2ypp-Qpki7r-ppXM2R",
+          "raw_text": "5 位 25pt\nたら\nプレイヤーID：0029006399\n群馬県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "くー",
+          "player_id": "0030824018",
+          "prefecture": "群馬県",
+          "player_url": null,
+          "deck_code": "nNHQng-M8wRY2-ggLgL9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nNHQng-M8wRY2-ggLgL9",
+          "raw_text": "5 位 25pt\nくー\nプレイヤーID：0030824018\n群馬県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:43:03+09:00"
+    },
+    {
+      "event_id": "1115026",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115026/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ゲッシルイ",
+          "player_id": "0031735100",
+          "prefecture": "岩手県",
+          "player_url": null,
+          "deck_code": "R2pEUy-W5gOIP-2pMppp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/R2pEUy-W5gOIP-2pMppp",
+          "raw_text": "1 位 100pt\nゲッシルイ\nプレイヤーID：0031735100\n岩手県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "かずっち",
+          "player_id": "0045290460",
+          "prefecture": "宮城県",
+          "player_url": "https://players.pokemon-card.com/users/0045290460",
+          "deck_code": "Gc4848-8ILXyO-Y8cDcx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Gc4848-8ILXyO-Y8cDcx",
+          "raw_text": "2 位 75pt\nかずっち\nプレイヤーID：0045290460\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "らぶ竹城",
+          "player_id": "0007437786",
+          "prefecture": "秋田県",
+          "player_url": "https://players.pokemon-card.com/users/0007437786",
+          "deck_code": "6gNLL9-xDXe1e-Hgnggn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/6gNLL9-xDXe1e-Hgnggn",
+          "raw_text": "3 位 50pt\nらぶ竹城\nプレイヤーID：0007437786\n秋田県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "君に嫉妬中",
+          "player_id": "0025468522",
+          "prefecture": "岩手県",
+          "player_url": null,
+          "deck_code": "ppypXy-jCYfw5-MRMMXU",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ppypXy-jCYfw5-MRMMXU",
+          "raw_text": "3 位 50pt\n君に嫉妬中\nプレイヤーID：0025468522\n岩手県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "てんぷら",
+          "player_id": "0036257227",
+          "prefecture": "岩手県",
+          "player_url": null,
+          "deck_code": "nNgLgg-DinI8h-nHgHP9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nNgLgg-DinI8h-nHgHP9",
+          "raw_text": "5 位 25pt\nてんぷら\nプレイヤーID：0036257227\n岩手県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "アルト",
+          "player_id": "0083642610",
+          "prefecture": "宮城県",
+          "player_url": null,
+          "deck_code": "kFdFkb-4na9Y1-FdVF5v",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kFdFkb-4na9Y1-FdVF5v",
+          "raw_text": "5 位 25pt\nアルト\nプレイヤーID：0083642610\n宮城県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "nanasi",
+          "player_id": "0040330651",
+          "prefecture": "岩手県",
+          "player_url": "https://players.pokemon-card.com/users/0040330651",
+          "deck_code": "ypRpp2-C8hKKB-RpyUMy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypRpp2-C8hKKB-RpyUMy",
+          "raw_text": "5 位 25pt\nnanasi\nプレイヤーID：0040330651\n岩手県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "だい",
+          "player_id": "0074236169",
+          "prefecture": "秋田県",
+          "player_url": null,
+          "deck_code": "kf5Vkk-7V5MYA-FbkbFF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kf5Vkk-7V5MYA-FbkbFF",
+          "raw_text": "5 位 25pt\nだい\nプレイヤーID：0074236169\n秋田県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:43:13+09:00"
+    },
+    {
+      "event_id": "1115025",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115025/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "ヅラニアン",
+          "player_id": "0057604866",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0057604866",
+          "deck_code": "c8DcGc-Tp59rN-xc48J8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/c8DcGc-Tp59rN-xc48J8",
+          "raw_text": "1 位 100pt\nヅラニアン\nプレイヤーID：0057604866\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "るい",
+          "player_id": "0110831239",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "NnLQng-CBAlI5-n9g9gL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/NnLQng-CBAlI5-n9g9gL",
+          "raw_text": "2 位 75pt\nるい\nプレイヤーID：0110831239\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "栗ゴリラ",
+          "player_id": "0067656190",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "cD8Dcx-JznhpZ-8cDDG4",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cD8Dcx-JznhpZ-8cDDG4",
+          "raw_text": "3 位 50pt\n栗ゴリラ\nプレイヤーID：0067656190\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ねこした",
+          "player_id": "0037346496",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "c888x8-h1RW6L-a84cGD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/c888x8-h1RW6L-a84cGD",
+          "raw_text": "3 位 50pt\nねこした\nプレイヤーID：0037346496\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ちゃき太",
+          "player_id": "0070395992",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0070395992",
+          "deck_code": "9gQLnL-x0Tb32-QLQngN",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9gQLnL-x0Tb32-QLQngN",
+          "raw_text": "5 位 25pt\nちゃき太\nプレイヤーID：0070395992\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "くり",
+          "player_id": "0000430580",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "8Jccx8-jAPBXA-44D8DG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8Jccx8-jAPBXA-44D8DG",
+          "raw_text": "5 位 25pt\nくり\nプレイヤーID：0000430580\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ヨシ",
+          "player_id": "0006166919",
+          "prefecture": "東京都",
+          "player_url": null,
+          "deck_code": "FdFkVb-goS2jd-fkkVkf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FdFkVb-goS2jd-fkkVkf",
+          "raw_text": "5 位 25pt\nヨシ\nプレイヤーID：0006166919\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "seren",
+          "player_id": "0039979771",
+          "prefecture": "埼玉県",
+          "player_url": null,
+          "deck_code": "FFkVk5-D0mTUI-bfkvkf",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FFkVk5-D0mTUI-bfkvkf",
+          "raw_text": "5 位 25pt\nseren\nプレイヤーID：0039979771\n埼玉県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-04T21:43:22+09:00"
+    },
     {
       "event_id": "1115620",
       "date": "2026-10-03",
