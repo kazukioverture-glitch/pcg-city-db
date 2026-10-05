@@ -44,8 +44,8 @@ jobs:
             status_file=".tmp/${file//-/_}.status"
             echo failed > "$status_file"
             echo "Downloading $file"
-            if ! curl --fail -sS -L --retry 3 --retry-connrefused \
-              --connect-timeout 15 --max-time 60 --retry-max-time 75 \
+            if ! curl --fail -sS -L --retry 0 \
+              --connect-timeout 15 --max-time 180 \
               -H 'ngrok-skip-browser-warning: true' \
               -w 'HTTP %{http_code}\n' \
               "$base_url/$file" \
@@ -148,14 +148,18 @@ jobs:
 
       - name: Check final DB and official coverage
         id: final_check
-        if: ${{ !cancelled() && (steps.official.outcome == 'success' || steps.validate.outcome == 'success') }}
+        if: ${{ always() && !cancelled() && steps.checkout.outcome == 'success' }}
         env:
           OFFICIAL_OUTCOME: ${{ steps.official.outcome }}
+          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
         run: |
           if [ "$OFFICIAL_OUTCOME" = success ]; then
             python collector/check_sync.py
-          else
+          elif [ "$VALIDATE_OUTCOME" = success ]; then
             python collector/check_sync.py --official-unavailable
+          else
+            echo '::error::Neither official backfill nor Termux validation succeeded'
+            exit 1
           fi
 
       - name: Commit only when changed
