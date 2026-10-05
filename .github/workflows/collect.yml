@@ -1,27 +1,44 @@
 name: Sync City League DB
+
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/collect.yml"
+      - "collector/**"
   schedule:
     - cron: "10,40 0-14,23 * * *"
+
 permissions:
   contents: write
+
 concurrency:
   group: city-db-sync
   cancel-in-progress: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
+    env:
+      TERMUX_BASE_URL: ${{ vars.TERMUX_BASE_URL }}
     steps:
       - uses: actions/checkout@v4
+        id: checkout
+
       - name: Install state tooling
         id: state_dependencies
         run: python -m pip install -r requirements-analysis.txt
+
       - name: Download Termux DB
         id: download
+        continue-on-error: true
         run: |
           set -euo pipefail
           mkdir -p .tmp data
+          base_url="${TERMUX_BASE_URL:-https://tuition-occultist-unwritten.ngrok-free.dev}"
+          base_url="${base_url%/}"
+          echo "$base_url" > .tmp/termux_base_url
           failed=0
           for file in city-db.json city-decks.json; do
             status_file=".tmp/${file//-/_}.status"
@@ -31,7 +48,7 @@ jobs:
               --connect-timeout 15 --max-time 60 --retry-max-time 75 \
               -H 'ngrok-skip-browser-warning: true' \
               -w 'HTTP %{http_code}\n' \
-              "https://tuition-occultist-unwritten.ngrok-free.dev/$file" \
+              "$base_url/$file" \
               -o ".tmp/${file//-/_}"; then
               echo "::error::$file download failed"
               failed=1
@@ -40,8 +57,20 @@ jobs:
             fi
           done
           test "$failed" -eq 0
+
+      - name: Merge Termux snapshot without losing history
+        id: merge
+        if: ${{ steps.download.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          cp .tmp/city_db.json .tmp/termux_city.json
+          cp .tmp/city_decks.json .tmp/termux_decks.json
+          python collector/merge_termux_snapshot.py
+
       - name: Validate and update
         id: validate
+        if: ${{ steps.merge.outcome == 'success' }}
+        continue-on-error: true
         run: |
           python - <<'PY'
           import json, hashlib
@@ -71,35 +100,63 @@ jobs:
           Path('data/index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print('OK:',len(events),'events,',len(dm),'decks')
           PY
-      - name: Update event ledger
+
+      - name: Backfill from official results
+        id: official
+        if: ${{ always() && !cancelled() && steps.checkout.outcome == 'success' }}
+        run: python collector/sync_official_api.py
+
+      - name: Update Termux event ledger
         id: ledger
         if: ${{ always() && !cancelled() && steps.state_dependencies.outcome == 'success' && steps.download.outcome != 'skipped' }}
         env:
           VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
         run: |
           set -euo pipefail
-          fetch_status=$(cat .tmp/city_db.json.status)
+          fetch_status=$(cat .tmp/city_db.json.status 2>/dev/null || echo failed)
           parse_args=()
-          if [ "$VALIDATE_OUTCOME" = failure ]; then
+          city_args=()
+          deck_args=()
+          if [ "$VALIDATE_OUTCOME" = failure ] || [ "$VALIDATE_OUTCOME" = skipped ]; then
             parse_args=(--parse-status failed)
           fi
+          if [ -f .tmp/termux_city.json ]; then city_args=(--city .tmp/termux_city.json); elif [ -f .tmp/city_db.json ]; then city_args=(--city .tmp/city_db.json); fi
+          if [ -f .tmp/termux_decks.json ]; then deck_args=(--decks .tmp/termux_decks.json); elif [ -f .tmp/city_decks.json ]; then deck_args=(--decks .tmp/city_decks.json); fi
+          base_url=$(cat .tmp/termux_base_url 2>/dev/null || echo 'https://tuition-occultist-unwritten.ngrok-free.dev')
           python -m analysis sync-ledger \
-            --city .tmp/city_db.json --decks .tmp/city_decks.json \
+            "${city_args[@]}" "${deck_args[@]}" \
             --fetch-status "$fetch_status" "${parse_args[@]}" \
             --coverage-scope collection_feed \
-            --source-url 'https://tuition-occultist-unwritten.ngrok-free.dev/city-db.json'
+            --source-url "$base_url/city-db.json"
+
+      - name: Update official event ledger
+        id: official_ledger
+        if: ${{ always() && !cancelled() && steps.state_dependencies.outcome == 'success' && steps.official.outcome == 'success' }}
+        run: |
+          set -euo pipefail
+          if [ -f .tmp/official_backfill.changed ]; then
+            python -m analysis sync-ledger \
+              --city .tmp/official_backfill_city.json \
+              --decks .tmp/official_backfill_decks.json \
+              --fetch-status success \
+              --coverage-scope top8 \
+              --source-url 'https://players.pokemon-card.com/event/result/list'
+          else
+            echo 'No official backfill ledger update needed'
+          fi
+
+      - name: Check final DB and official coverage
+        id: final_check
+        if: ${{ !cancelled() && steps.official.outcome == 'success' }}
+        run: python collector/check_sync.py
+
       - name: Commit only when changed
-        if: ${{ always() && !cancelled() && steps.ledger.outcome == 'success' }}
-        env:
-          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
+        if: ${{ always() && !cancelled() && steps.final_check.outcome == 'success' && steps.official.outcome == 'success' && steps.ledger.outcome == 'success' && (steps.official_ledger.outcome == 'success' || steps.official_ledger.outcome == 'skipped') }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/analysis/event_ledger.json
-          if [ "$VALIDATE_OUTCOME" = success ]; then
-            git add data/city_db.json data/city_decks.json data/index.json
-          fi
+          git add data/city_db.json data/city_decks.json data/index.json data/analysis/event_ledger.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync city league DB'
             git push
