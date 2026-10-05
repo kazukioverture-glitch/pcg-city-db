@@ -73956,10 +73956,42 @@
           "notes": "Source acquisition only; official result page completeness is not certified.",
           "source_sha256": "bf6c8dbe6cba1b5b402e1c9327b32582dbb1ad1039ab44dfe0df4c2fac861984",
           "source_updated_at": "2026-10-05T21:11:12+09:00"
+        },
+        {
+          "observed_at": "2026-10-05T13:31:33.487355+00:00",
+          "source_url": "https://players.pokemon-card.com/event/result/list",
+          "publication_status": "published",
+          "fetch_status": "success",
+          "parse_status": "success",
+          "coverage_scope": "top8",
+          "published_rank_slots_total": null,
+          "top8_slots_published": null,
+          "top8_slots_retrieved": 4,
+          "top8_decks_known": 4,
+          "notes": "Source acquisition only; official result page completeness is not certified.",
+          "source_sha256": "d3295c47af9e60768021a8d273d06b7f10dbb1404a0b79eab0b3545ed85e1359",
+          "source_updated_at": "2026-10-05T13:34:34+09:00"
         }
       ],
       "legacy_source": ".tmp/city_db.json",
-      "players": []
+      "players": [
+        {
+          "player_id": "0045452189",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0045419171",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0100188121",
+          "player_prefecture": "石川県"
+        },
+        {
+          "player_id": "0098001929",
+          "player_prefecture": "石川県"
+        }
+      ]
     },
     {
       "event_id": "1115489",
@@ -116586,10 +116618,58 @@
           "notes": "Source acquisition only; official result page completeness is not certified.",
           "source_sha256": "bf6c8dbe6cba1b5b402e1c9327b32582dbb1ad1039ab44dfe0df4c2fac861984",
           "source_updated_at": "2026-10-05T21:11:12+09:00"
+        },
+        {
+          "observed_at": "2026-10-05T13:31:33.487355+00:00",
+          "source_url": "https://players.pokemon-card.com/event/result/list",
+          "publication_status": "published",
+          "fetch_status": "success",
+          "parse_status": "success",
+          "coverage_scope": "top8",
+          "published_rank_slots_total": null,
+          "top8_slots_published": null,
+          "top8_slots_retrieved": 8,
+          "top8_decks_known": 8,
+          "notes": "Source acquisition only; official result page completeness is not certified.",
+          "source_sha256": "d3295c47af9e60768021a8d273d06b7f10dbb1404a0b79eab0b3545ed85e1359",
+          "source_updated_at": "2026-10-05T13:34:34+09:00"
         }
       ],
       "legacy_source": ".tmp/city_db.json",
-      "players": []
+      "players": [
+        {
+          "player_id": "0067162259",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0061508314",
+          "player_prefecture": "岐阜県"
+        },
+        {
+          "player_id": "0070021651",
+          "player_prefecture": "長野県"
+        },
+        {
+          "player_id": "0084221793",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0073434045",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0062009399",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0070755284",
+          "player_prefecture": "愛知県"
+        },
+        {
+          "player_id": "0069384101",
+          "player_prefecture": "愛知県"
+        }
+      ]
     },
     {
       "event_id": "1115496",
@@ -123153,10 +123233,58 @@
           "notes": "Source acquisition only; official result page completeness is not certified.",
           "source_sha256": "bf6c8dbe6cba1b5b402e1c9327b32582dbb1ad1039ab44dfe0df4c2fac861984",
           "source_updated_at": "2026-10-05T21:11:12+09:00"
+        },
+        {
+          "observed_at": "2026-10-05T13:31:33.487355+00:00",
+          "source_url": "https://players.pokemon-card.com/event/result/list",
+          "publication_status": "published",
+          "fetch_status": "success",
+          "parse_status": "success",
+          "coverage_scope": "top8",
+          "published_rank_slots_total": null,
+          "top8_slots_published": null,
+          "top8_slots_retrieved": 8,
+          "top8_decks_known": 8,
+          "notes": "Source acquisition only; official result page completeness is not certified.",
+          "source_sha256": "d3295c47af9e60768021a8d273d06b7f10dbb1404a0b79eab0b3545ed85e1359",
+          "source_updated_at": "2026-10-05T13:34:34+09:00"
         }
       ],
       "legacy_source": ".tmp/city_db.json",
-      "players": []
+      "players": [
+        {
+          "player_id": "0034506200",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0038423404",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0035879417",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0027967326",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0071522748",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0076557752",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0061107522",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0063473946",
+          "player_prefecture": "東京都"
+        }
+      ]
     },
     {
       "event_id": "1115321",
@@ -123230,6 +123358,66 @@
         {
           "player_id": "0036697797",
           "player_prefecture": "大阪府"
+        }
+      ]
+    },
+    {
+      "event_id": "1140313",
+      "event_date": "2026-10-03",
+      "category": "ジュニア",
+      "venue_name": null,
+      "venue_prefecture": null,
+      "event_status": "unknown",
+      "observations": [
+        {
+          "observed_at": "2026-10-05T13:31:33.487355+00:00",
+          "source_url": "https://players.pokemon-card.com/event/result/list",
+          "publication_status": "published",
+          "fetch_status": "success",
+          "parse_status": "success",
+          "coverage_scope": "top8",
+          "published_rank_slots_total": null,
+          "top8_slots_published": null,
+          "top8_slots_retrieved": 8,
+          "top8_decks_known": 8,
+          "notes": "Source acquisition only; official result page completeness is not certified.",
+          "source_sha256": "d3295c47af9e60768021a8d273d06b7f10dbb1404a0b79eab0b3545ed85e1359",
+          "source_updated_at": "2026-10-05T13:34:34+09:00"
+        }
+      ],
+      "legacy_source": ".tmp/official_backfill_city.json",
+      "players": [
+        {
+          "player_id": "0062925701",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0037164562",
+          "player_prefecture": "千葉県"
+        },
+        {
+          "player_id": "0065090101",
+          "player_prefecture": "茨城県"
+        },
+        {
+          "player_id": "0073527161",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0100495425",
+          "player_prefecture": "栃木県"
+        },
+        {
+          "player_id": "0101695798",
+          "player_prefecture": "東京都"
+        },
+        {
+          "player_id": "0077499815",
+          "player_prefecture": "埼玉県"
+        },
+        {
+          "player_id": "0079255862",
+          "player_prefecture": "東京都"
         }
       ]
     }
