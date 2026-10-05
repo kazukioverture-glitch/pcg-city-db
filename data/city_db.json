@@ -1,10 +1,108 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-10-05T11:47:46+09:00",
-  "event_count": 179,
-  "placement_count": 1348,
+  "updated_at": "2026-10-05T21:11:12+09:00",
+  "event_count": 180,
+  "placement_count": 1356,
   "events": [
+    {
+      "event_id": "1115321",
+      "date": "2026-10-05",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115321/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "さとりく",
+          "player_id": "0038606463",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0038606463",
+          "deck_code": "gLHng9-cjxplA-gQPggn",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gLHng9-cjxplA-gQPggn",
+          "raw_text": "1 位 100pt\nさとりく\nプレイヤーID：0038606463\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "やもやも",
+          "player_id": "0071157966",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "b5fFF1-8MD3ii-vFVkVF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/b5fFF1-8MD3ii-vFVkVF",
+          "raw_text": "2 位 75pt\nやもやも\nプレイヤーID：0071157966\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "まりも",
+          "player_id": "0109648266",
+          "prefecture": "兵庫県",
+          "player_url": "https://players.pokemon-card.com/users/0109648266",
+          "deck_code": "8Gcxc4-iGe7RX-cxK8cc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/8Gcxc4-iGe7RX-cxK8cc",
+          "raw_text": "3 位 50pt\nまりも\nプレイヤーID：0109648266\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "タルマルコ",
+          "player_id": "0012066432",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0012066432",
+          "deck_code": "VFVkFV-oblkhk-kvfFb5",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/VFVkFV-oblkhk-kvfFb5",
+          "raw_text": "3 位 50pt\nタルマルコ\nプレイヤーID：0012066432\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "えぬむら",
+          "player_id": "0079985176",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0079985176",
+          "deck_code": "9gL9gg-LNUQXF-LQgLnL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9gL9gg-LNUQXF-LQgLnL",
+          "raw_text": "5 位 25pt\nえぬむら\nプレイヤーID：0079985176\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "key",
+          "player_id": "0077426422",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "1FVvbF-efddw8-kbFVFk",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/1FVvbF-efddw8-kbFVFk",
+          "raw_text": "5 位 25pt\nkey\nプレイヤーID：0077426422\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "キャラ",
+          "player_id": "0037559762",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "ySyXMp-qQt4mn-pRppyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ySyXMp-qQt4mn-pRppyp",
+          "raw_text": "5 位 25pt\nキャラ\nプレイヤーID：0037559762\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ダビデ",
+          "player_id": "0036697797",
+          "prefecture": "大阪府",
+          "player_url": "https://players.pokemon-card.com/users/0036697797",
+          "deck_code": "9LLQQg-FptpXw-ggNLnL",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/9LLQQg-FptpXw-ggNLnL",
+          "raw_text": "5 位 25pt\nダビデ\nプレイヤーID：0036697797\n大阪府 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-05T21:11:11+09:00"
+    },
     {
       "event_id": "1140559",
       "date": "2026-10-04",
