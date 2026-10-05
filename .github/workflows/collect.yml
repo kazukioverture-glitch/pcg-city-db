@@ -103,6 +103,7 @@ jobs:
 
       - name: Backfill from official results
         id: official
+        continue-on-error: true
         if: ${{ always() && !cancelled() && steps.checkout.outcome == 'success' }}
         run: python collector/sync_official_api.py
 
@@ -147,11 +148,18 @@ jobs:
 
       - name: Check final DB and official coverage
         id: final_check
-        if: ${{ !cancelled() && steps.official.outcome == 'success' }}
-        run: python collector/check_sync.py
+        if: ${{ !cancelled() && (steps.official.outcome == 'success' || steps.validate.outcome == 'success') }}
+        env:
+          OFFICIAL_OUTCOME: ${{ steps.official.outcome }}
+        run: |
+          if [ "$OFFICIAL_OUTCOME" = success ]; then
+            python collector/check_sync.py
+          else
+            python collector/check_sync.py --official-unavailable
+          fi
 
       - name: Commit only when changed
-        if: ${{ always() && !cancelled() && steps.final_check.outcome == 'success' && steps.official.outcome == 'success' && steps.ledger.outcome == 'success' && (steps.official_ledger.outcome == 'success' || steps.official_ledger.outcome == 'skipped') }}
+        if: ${{ always() && !cancelled() && steps.final_check.outcome == 'success' && (steps.official.outcome == 'success' || steps.validate.outcome == 'success') && steps.ledger.outcome == 'success' && (steps.official_ledger.outcome == 'success' || steps.official_ledger.outcome == 'skipped') }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
