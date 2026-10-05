@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate final files and print official discovery versus stored results."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -18,8 +19,15 @@ def main():
     city = read('data/city_db.json')
     decks = read('data/city_decks.json')['decks']
     index = read('data/index.json')
-    audit = read('.tmp/official_audit.json')
-    assert not audit['fetch_errors'], 'Official fetch errors remain'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--official-unavailable', action='store_true')
+    args = parser.parse_args()
+    if args.official_unavailable:
+        audit = {'events': [], 'fetch_errors': {}}
+        print('::warning::Official coverage unavailable; validating stored DB only')
+    else:
+        audit = read('.tmp/official_audit.json')
+        assert not audit['fetch_errors'], 'Official fetch errors remain'
     assert all(valid_deck(d) for d in decks.values()), 'Invalid actual card quantity'
     expected = {'event_count': len(city['events']),
                 'placement_count': sum(len(e.get('placements', [])) for e in city['events']),
