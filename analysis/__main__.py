@@ -33,7 +33,7 @@ def main():
     sync.add_argument("--ledger", type=Path, default=ROOT / "data/analysis/event_ledger.json")
     sync.add_argument("--fetch-status", required=True, choices=["not_attempted", "success", "failed"])
     sync.add_argument("--parse-status", choices=["not_parsed", "success", "partial", "failed"])
-    sync.add_argument("--coverage-scope", required=True, choices=["collection_feed", "result_list"])
+    sync.add_argument("--coverage-scope", required=True, choices=["collection_feed", "result_list", "top8"])
     sync.add_argument("--source-url", required=True)
     sync.add_argument("--observed-at")
     args = parser.parse_args()
