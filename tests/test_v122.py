@@ -294,7 +294,7 @@ class WorkflowCompatibilityTests(unittest.TestCase):
             return textwrap.dedent(text.split("python - <<'PY'\n", 1)[1].split("          PY", 1)[0])
         self.assertEqual(block(current), block(previous))
         self.assertIn("steps.ledger.outcome == 'success'", current)
-        self.assertIn('if [ "$VALIDATE_OUTCOME" = success ]; then', current)
+        self.assertIn("steps.official.outcome == 'success'", current)
 
 if __name__ == "__main__":
     unittest.main()
