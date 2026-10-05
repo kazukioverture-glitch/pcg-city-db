@@ -44,8 +44,10 @@ jobs:
             status_file=".tmp/${file//-/_}.status"
             echo failed > "$status_file"
             echo "Downloading $file"
+            max_transfer_time=180
+            if [ "$file" = city-decks.json ]; then max_transfer_time=480; fi
             if ! curl --fail -sS -L --retry 0 \
-              --connect-timeout 15 --max-time 180 \
+              --connect-timeout 15 --max-time "$max_transfer_time" \
               -H 'ngrok-skip-browser-warning: true' \
               -w 'HTTP %{http_code}\n' \
               "$base_url/$file" \
