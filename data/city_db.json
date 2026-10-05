@@ -1,9 +1,9 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-10-05T09:37:47+09:00",
-  "event_count": 177,
-  "placement_count": 1340,
+  "updated_at": "2026-10-05T11:47:46+09:00",
+  "event_count": 179,
+  "placement_count": 1348,
   "events": [
     {
       "event_id": "1140559",
@@ -1047,6 +1047,104 @@
         }
       ],
       "collected_at": "2026-10-04T21:39:24+09:00"
+    },
+    {
+      "event_id": "1115503",
+      "date": "2026-10-04",
+      "category": "シニア",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115503/result",
+      "placement_count": 8,
+      "placements": [
+        {
+          "rank": 1,
+          "points": 100,
+          "player_name": "Ｊ",
+          "player_id": "0072365744",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "gnngNL-UbKC8f-H9Hggi",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/gnngNL-UbKC8f-H9Hggi",
+          "raw_text": "1 位 100pt\nＪ\nプレイヤーID：0072365744\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 2,
+          "points": 75,
+          "player_name": "ありさか",
+          "player_id": "0027965515",
+          "prefecture": "愛知県",
+          "player_url": null,
+          "deck_code": "inN9nn-w8lTXU-NgLgHg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/inN9nn-w8lTXU-NgLgHg",
+          "raw_text": "2 位 75pt\nありさか\nプレイヤーID：0027965515\n愛知県 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "ペンギン",
+          "player_id": "0042778558",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "Kx8cxJ-EPIeey-xG8DcD",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Kx8cxJ-EPIeey-xG8DcD",
+          "raw_text": "3 位 50pt\nペンギン\nプレイヤーID：0042778558\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 3,
+          "points": 50,
+          "player_name": "たいよー",
+          "player_id": "0086002073",
+          "prefecture": "三重県",
+          "player_url": null,
+          "deck_code": "88xGcY-ggQaHd-8DcYxc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/88xGcY-ggQaHd-8DcYxc",
+          "raw_text": "3 位 50pt\nたいよー\nプレイヤーID：0086002073\n三重県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "Rafa",
+          "player_id": "0074525104",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "5FkbV5-ZqrtOQ-FFVvv1",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/5FkbV5-ZqrtOQ-FFVvv1",
+          "raw_text": "5 位 25pt\nRafa\nプレイヤーID：0074525104\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "ソウタ",
+          "player_id": "0034479085",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "XMpR2X-CSkxHv-MyypXp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/XMpR2X-CSkxHv-MyypXp",
+          "raw_text": "5 位 25pt\nソウタ\nプレイヤーID：0034479085\n兵庫県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "カプ・ホタル",
+          "player_id": "0007060317",
+          "prefecture": "静岡県",
+          "player_url": null,
+          "deck_code": "cc8KYc-OT7KIU-xxYG8K",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cc8KYc-OT7KIU-xxYG8K",
+          "raw_text": "5 位 25pt\nカプ・ホタル\nプレイヤーID：0007060317\n静岡県 デッキ\nをみる"
+        },
+        {
+          "rank": 5,
+          "points": 25,
+          "player_name": "コーダイ",
+          "player_id": "0029889950",
+          "prefecture": "奈良県",
+          "player_url": null,
+          "deck_code": "H6LnnQ-Y3orwD-N6gng9",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/H6LnnQ-Y3orwD-N6gng9",
+          "raw_text": "5 位 25pt\nコーダイ\nプレイヤーID：0029889950\n奈良県 デッキ\nをみる"
+        }
+      ],
+      "collected_at": "2026-10-05T11:47:40+09:00"
     },
     {
       "event_id": "1115502",
@@ -3527,6 +3625,15 @@
         }
       ],
       "collected_at": "2026-10-04T21:42:17+09:00"
+    },
+    {
+      "event_id": "1115172",
+      "date": "2026-10-04",
+      "category": "オープン",
+      "result_url": "https://players.pokemon-card.com/event/detail/1115172/result",
+      "placement_count": 0,
+      "placements": [],
+      "collected_at": "2026-10-05T11:47:45+09:00"
     },
     {
       "event_id": "1115171",
