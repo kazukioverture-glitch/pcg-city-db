@@ -18,6 +18,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 BASE = "https://players.pokemon-card.com"
 RESULT_LIST_URL = f"{BASE}/event/result/list"
@@ -65,6 +66,12 @@ def fetch_bytes(url: str, *, attempts: int = 4, timeout: int = 25) -> bytes:
                 if response.status != 200:
                     raise RuntimeError(f"HTTP {response.status}: {url}")
                 return response.read()
+        except HTTPError as exc:
+            if exc.code in (401, 403):
+                raise RuntimeError(f"Official source unavailable: HTTP {exc.code}: {url}") from exc
+            last_error = exc
+            if attempt < attempts:
+                time.sleep(min(2 ** (attempt - 1), 5))
         except Exception as exc:
             last_error = exc
             if attempt < attempts:
@@ -326,10 +333,21 @@ def update_index(city: dict, decks: dict) -> None:
 
 
 def main() -> int:
+    global DATA, TMP, CITY_PATH, DECKS_PATH, INDEX_PATH, PARTIAL_CITY_PATH, PARTIAL_DECKS_PATH, CHANGED_FLAG
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-pages", type=int, default=100)
     parser.add_argument("--deck-workers", type=int, default=8)
+    parser.add_argument("--data-dir", type=Path)
+    parser.add_argument("--tmp-dir", type=Path)
     args = parser.parse_args()
+    if args.data_dir:
+        DATA = args.data_dir
+        CITY_PATH, DECKS_PATH, INDEX_PATH = [DATA / f"{name}.json" for name in ("city_db", "city_decks", "index")]
+    if args.tmp_dir:
+        TMP = args.tmp_dir
+        PARTIAL_CITY_PATH = TMP / "official_backfill_city.json"
+        PARTIAL_DECKS_PATH = TMP / "official_backfill_decks.json"
+        CHANGED_FLAG = TMP / "official_backfill.changed"
 
     TMP.mkdir(parents=True, exist_ok=True)
     for path in (PARTIAL_CITY_PATH, PARTIAL_DECKS_PATH, CHANGED_FLAG):

@@ -286,15 +286,15 @@ class WorkflowCompatibilityTests(unittest.TestCase):
             self.assertEqual(record["event_id"], "1")
             self.assertEqual(record["observations"][0]["publication_status"], "published")
 
-    def test_validate_python_block_identical_to_baseline(self):
+    def test_workflow_uses_transaction_and_preserves_queue_and_schedule(self):
         current = (ROOT / ".github/workflows/collect.yml").read_text(encoding="utf-8")
-        previous = subprocess.check_output(["git", "show", "bae6a6b:.github/workflows/collect.yml"],
-                                           cwd=ROOT, encoding="utf-8")
-        def block(text):
-            return textwrap.dedent(text.split("python - <<'PY'\n", 1)[1].split("          PY", 1)[0])
-        self.assertEqual(block(current), block(previous))
-        self.assertIn("steps.ledger.outcome == 'success'", current)
-        self.assertIn("steps.official.outcome == 'success'", current)
+        self.assertIn("python -m collector.sync", current)
+        self.assertIn("cancel-in-progress: false", current)
+        self.assertIn('cron: "10,40 0-14,23 * * *"', current)
+        self.assertIn("ref: main", current)
+        commit_step = current.split("- name: Commit only when changed", 1)[1].split("- name:", 1)[0]
+        self.assertNotIn("always()", commit_step)
+        self.assertNotIn("continue-on-error", current)
 
 if __name__ == "__main__":
     unittest.main()

@@ -20,7 +20,7 @@ def stamp(value):
 def valid_deck(deck):
     return (isinstance(deck, dict) and deck.get('total_cards') == 60
             and isinstance(deck.get('cards'), list) and bool(deck['cards'])
-            and all(isinstance(c.get('count'), int) and c['count'] > 0 for c in deck['cards'])
+            and all(isinstance(c, dict) and type(c.get('count')) is int and c['count'] > 0 for c in deck['cards'])
             and sum(c['count'] for c in deck['cards']) == 60)
 
 
