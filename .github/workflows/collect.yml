@@ -3,6 +3,7 @@ name: Sync City League DB
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - ".github/workflows/collect.yml"
       - "collector/**"
