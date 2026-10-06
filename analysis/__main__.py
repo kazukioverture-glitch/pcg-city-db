@@ -13,6 +13,12 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("validate-state")
     commands.add_parser("init-ledger", help="Import explicit legacy facts; refuse overwrite")
+    classify = commands.add_parser("classify-decks", help="Offline date-range classification; preserve snapshots")
+    classify.add_argument("--start", required=True)
+    classify.add_argument("--end", required=True)
+    classify.add_argument("--city", type=Path, default=ROOT / "data/city_db.json")
+    classify.add_argument("--decks", type=Path, default=ROOT / "data/city_decks.json")
+    classify.add_argument("--output", type=Path, default=ROOT / "data/analysis/deck_classifications.json")
     cards = commands.add_parser("validate-cards")
     cards.add_argument("--master", type=Path)
     snapshot = commands.add_parser("snapshot")
@@ -41,7 +47,10 @@ def main():
     sync.add_argument("--source-url", required=True)
     sync.add_argument("--observed-at")
     args = parser.parse_args()
-    if args.command == "validate-state":
+    if args.command == "classify-decks":
+        from .classification import classify_range
+        print(json.dumps(classify_range(args.city, args.decks, args.output, args.start, args.end)))
+    elif args.command == "validate-state":
         for filename in STATE_FILES.values():
             read_state(ROOT / "data/analysis" / filename)
         print("OK: 5 state documents")

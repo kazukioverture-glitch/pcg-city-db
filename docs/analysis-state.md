@@ -119,7 +119,8 @@ Top8取得枠は有効なrank行数、デッキ判明数は60枚デッキ実体�
 `classification_status: classified / partial / unknown`を保存します。
 `classified`は親分類必須、`partial`は親分類未確定でも保持可能、
 `unknown`は親分類`null`・タグ空配列です。分類時刻・分類器版・根拠も保持できます。
-既存分類の割り当てや巨大な辞書の新設は行いません。
+W01/W02の実データ分類は `classify-decks` で投入します。詳細は
+[deck-classification.md](deck-classification.md) を参照してください。
 
 60枚検査を維持し、追加検査ではカード枚数の実合計、ID、表示名、種類を確認します。
 種類は公式のsectionラベルとの完全一致（末尾の枚数表記のみ許容）で判定します。
