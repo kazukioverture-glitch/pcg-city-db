@@ -18,6 +18,7 @@ def main():
         return json.loads((ROOT / name).read_text(encoding='utf-8'))
     parser = argparse.ArgumentParser()
     parser.add_argument('--official-unavailable', action='store_true')
+    parser.add_argument('--allow-partial-official', action='store_true')
     parser.add_argument('--root', type=Path, default=ROOT)
     args = parser.parse_args()
     root = args.root
@@ -31,7 +32,10 @@ def main():
         print('::warning::Official coverage unavailable; validating stored DB only')
     else:
         audit = read('official/official_audit.json') if args.root != ROOT else read('.tmp/official_audit.json')
-        assert not audit['fetch_errors'], 'Official fetch errors remain'
+        if audit['fetch_errors']:
+            assert args.allow_partial_official, 'Official fetch errors remain'
+            print('::warning::Official coverage incomplete; failed event IDs: ' +
+                  json.dumps(sorted(audit['fetch_errors'])))
     assert all(valid_deck(d) for d in decks.values()), 'Invalid actual card quantity'
     expected = {'event_count': len(city['events']),
                 'placement_count': sum(len(e.get('placements', [])) for e in city['events']),

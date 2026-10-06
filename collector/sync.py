@@ -72,7 +72,13 @@ def sync(root=ROOT, base_url=None):
         for name, content in backup.items():
             (stage / name).write_bytes(content)
         print('::warning::Official coverage unavailable; no completeness claim', flush=True)
-    report = dict(termux_configured=bool(url), termux_accepted=termux_ok, official_accepted=official_ok, published=False)
+    official_errors = {}
+    if official_ok:
+        audit = read(work / 'official/official_audit.json')
+        official_errors = audit.get('fetch_errors', {})
+    report = dict(termux_configured=bool(url), termux_accepted=termux_ok, official_accepted=official_ok,
+                  official_complete=official_ok and not official_errors,
+                  official_failed_event_ids=sorted(official_errors), published=False)
     report_path = work / 'sync_report.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
     if not (termux_ok or official_ok):
@@ -82,6 +88,8 @@ def sync(root=ROOT, base_url=None):
     check = [sys.executable, str(ROOT / 'collector/check_sync.py'), '--root', str(work)]
     if not official_ok:
         check += ['--official-unavailable']
+    elif official_errors:
+        check += ['--allow-partial-official']
     subprocess.run(check, check=True)
     ledger = stage / 'analysis/event_ledger.json'
     if url:

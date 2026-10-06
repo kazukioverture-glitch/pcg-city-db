@@ -448,8 +448,10 @@ def main() -> int:
     write_json(TMP / "official_audit.json", {"checked_at": now_jst(), "floor_date": floor_date,
                "events": sorted(checked_events, key=lambda e: (e["date"], e["event_id"])), "fetch_errors": errors})
     print(f"Official discovery: {len(discovered)} city events on/after {floor_date}; {len(new_events)} new/updated")
+    if errors and not new_events:
+        raise RuntimeError(f"Official detail fetch failure without usable updates; no main files written: {errors}")
     if errors:
-        raise RuntimeError(f"Official detail fetch failure; no main files written: {errors}")
+        print(f"::warning::Partial official collection; retaining failed event records: {errors}", flush=True)
     if not new_events:
         print("No official backfill needed")
         return 0
