@@ -19,6 +19,8 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install analysis requirements
         run: python -m pip install -r requirements-analysis.txt
