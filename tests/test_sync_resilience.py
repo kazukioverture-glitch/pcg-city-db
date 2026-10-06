@@ -270,6 +270,21 @@ class TransactionTests(unittest.TestCase):
         pair.assert_not_called()
         self.assertEqual(self.contents(), self.before)
 
+    def test_partial_official_updates_report_incomplete_coverage(self):
+        def official_partial(stage, work, **kwargs):
+            work.mkdir(parents=True)
+            (work / 'official_audit.json').write_text(json.dumps({
+                'events': [], 'fetch_errors': {'failed-id': 'HTTP 403'}}))
+            return True
+        with self.acquire(False, False), patch.object(transaction, 'run_official', side_effect=official_partial):
+            result = transaction.sync(self.root)
+        self.assertTrue(result['published'])
+        self.assertTrue(result['official_accepted'])
+        self.assertFalse(result['official_complete'])
+        self.assertEqual(result['official_failed_event_ids'], ['failed-id'])
+        self.assertEqual(read(self.root / 'data/city_db.json')['events'],
+                         read(transaction.ROOT / 'data/city_db.json')['events'])
+
     def test_official_inconsistent_index_cannot_publish(self):
         def official_bad(stage, work, **kwargs):
             work.mkdir(parents=True)
@@ -292,3 +307,56 @@ class TransactionTests(unittest.TestCase):
             with self.assertRaisesRegex(OSError, 'disk full'):
                 transaction.sync(self.root)
         self.assertEqual(self.contents(), self.before)
+
+
+class PartialOfficialTests(unittest.TestCase):
+    def test_valid_update_survives_unrelated_detail_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data = root / 'data'
+            data.mkdir()
+            for name in transaction.DATA_FILES[:3]:
+                shutil.copyfile(transaction.ROOT / 'data' / name, data / name)
+            before = read(data / 'city_db.json')
+            failed = before['events'][0]
+            new = copy.deepcopy(before['events'][1])
+            new['event_id'] = 'new-test-event'
+            candidates = [{'event_id': new['event_id'], 'date': new['date'], 'category': new['category']},
+                          {'event_id': str(failed['event_id']), 'date': failed['date'], 'category': failed['category']}]
+            def result(event_id):
+                if event_id == new['event_id']:
+                    return new
+                raise RuntimeError('HTTP 403')
+            paths = dict(DATA=data, TMP=root / 'work', CITY_PATH=data / 'city_db.json',
+                         DECKS_PATH=data / 'city_decks.json', INDEX_PATH=data / 'index.json',
+                         PARTIAL_CITY_PATH=root / 'work/city.json',
+                         PARTIAL_DECKS_PATH=root / 'work/decks.json', CHANGED_FLAG=root / 'work/changed')
+            with patch.multiple(official, **paths), patch('sys.argv', ['sync_official_api']), \
+                 patch.object(official, 'discover_recent_city_events', return_value=candidates), \
+                 patch.object(official, 'result_event_from_api', side_effect=result):
+                self.assertEqual(official.main(), 0)
+            after = read(data / 'city_db.json')
+            self.assertEqual(len(after['events']), len(before['events']) + 1)
+            self.assertEqual(next(e for e in after['events'] if e['event_id'] == failed['event_id']), failed)
+            validate_snapshot(after, read(data / 'city_decks.json'), before, read(transaction.ROOT / 'data/city_decks.json'))
+            self.assertIn(str(failed['event_id']), read(root / 'work/official_audit.json')['fetch_errors'])
+
+    def test_all_detail_failures_leave_files_unchanged(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data = root / 'data'
+            data.mkdir()
+            for name in transaction.DATA_FILES[:3]:
+                shutil.copyfile(transaction.ROOT / 'data' / name, data / name)
+            before = {name: (data / name).read_bytes() for name in transaction.DATA_FILES[:3]}
+            candidates = [{'event_id': 'failed', 'date': '2026-10-06', 'category': 'OPEN'}]
+            paths = dict(DATA=data, TMP=root / 'work', CITY_PATH=data / 'city_db.json',
+                         DECKS_PATH=data / 'city_decks.json', INDEX_PATH=data / 'index.json',
+                         PARTIAL_CITY_PATH=root / 'work/city.json',
+                         PARTIAL_DECKS_PATH=root / 'work/decks.json', CHANGED_FLAG=root / 'work/changed')
+            with patch.multiple(official, **paths), patch('sys.argv', ['sync_official_api']), \
+                 patch.object(official, 'discover_recent_city_events', return_value=candidates), \
+                 patch.object(official, 'result_event_from_api', side_effect=RuntimeError('HTTP 403')):
+                with self.assertRaisesRegex(RuntimeError, 'without usable updates'):
+                    official.main()
+            self.assertEqual(before, {name: (data / name).read_bytes() for name in transaction.DATA_FILES[:3]})
