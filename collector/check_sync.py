@@ -16,17 +16,21 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     def read(name):
         return json.loads((ROOT / name).read_text(encoding='utf-8'))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--official-unavailable', action='store_true')
+    parser.add_argument('--root', type=Path, default=ROOT)
+    args = parser.parse_args()
+    root = args.root
+    def read(name):
+        return json.loads((root / name).read_text(encoding='utf-8'))
     city = read('data/city_db.json')
     decks = read('data/city_decks.json')['decks']
     index = read('data/index.json')
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--official-unavailable', action='store_true')
-    args = parser.parse_args()
     if args.official_unavailable:
         audit = {'events': [], 'fetch_errors': {}}
         print('::warning::Official coverage unavailable; validating stored DB only')
     else:
-        audit = read('.tmp/official_audit.json')
+        audit = read('official/official_audit.json') if args.root != ROOT else read('.tmp/official_audit.json')
         assert not audit['fetch_errors'], 'Official fetch errors remain'
     assert all(valid_deck(d) for d in decks.values()), 'Invalid actual card quantity'
     expected = {'event_count': len(city['events']),
@@ -35,7 +39,7 @@ def main():
     for key, value in expected.items():
         assert index[key] == value, f'Index mismatch: {key}'
     for name, key in [('city_db', 'city_sha256'), ('city_decks', 'decks_sha256')]:
-        assert index[key] == hashlib.sha256((ROOT / f'data/{name}.json').read_bytes()).hexdigest()
+        assert index[key] == hashlib.sha256((root / f'data/{name}.json').read_bytes()).hexdigest()
     stored = {str(e['event_id']): e for e in city['events']}
     assert len(stored) == len(city['events']), 'Duplicate event identity'
     for date in sorted({e['date'] for e in audit['events']}):
