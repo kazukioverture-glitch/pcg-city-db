@@ -5,15 +5,17 @@ import shutil
 import subprocess
 import sys
 import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from analysis.collection import sync_ledger
+from analysis.collection import sync_ledger, sync_schedule_snapshot
 from analysis.state import read_state
-from collector.download_termux import download_pair
+from collector.download_termux import download_one, download_pair
 from collector.merge_termux_snapshot import merge_snapshot
 from collector.validate_snapshot import read, validate_snapshot, write_candidate
 
 ROOT = Path(__file__).resolve().parents[1]
+JST = timezone(timedelta(hours=9))
 DATA_FILES = ('city_db.json', 'city_decks.json', 'index.json', 'analysis/event_ledger.json')
 
 
@@ -27,6 +29,33 @@ def run_official(stage, work, timeout=720):
         print(f'::warning::Official collection exceeded {timeout:.0f}-second budget', flush=True)
         return False
 
+
+
+def refresh_local_schedule(root, work):
+    """On the Android collector, fetch one exact day only when the target date changes."""
+    root = Path(root)
+    if root.resolve() != ROOT.resolve() or os.environ.get("TERMUX_BASE_URL"):
+        return None
+    now = datetime.now(JST)
+    target = (now.date() + timedelta(days=1 if now.hour >= 20 else 0)).isoformat()
+    output = root / ".tmp/public/city-schedule.json"
+    if output.exists():
+        try:
+            if json.loads(output.read_text(encoding="utf-8")).get("target_date") == target:
+                return output
+        except (OSError, ValueError):
+            pass
+    try:
+        result = subprocess.run([sys.executable, "-m", "collector.schedule",
+                                 "--date", target, "--output", str(output)],
+                                cwd=root, timeout=120)
+    except subprocess.TimeoutExpired:
+        print("::warning::Schedule collection exceeded 120-second budget", flush=True)
+        return None
+    if result.returncode != 0:
+        print("::warning::Schedule collection failed; result sync continues", flush=True)
+        return None
+    return output
 
 def sync(root=ROOT, base_url=None):
     deadline = time.monotonic() + 900
@@ -45,6 +74,17 @@ def sync(root=ROOT, base_url=None):
     validate_snapshot(old_city, old_decks)
     configured_url = base_url if base_url is not None else os.environ.get('TERMUX_BASE_URL')
     url = configured_url.strip().rstrip('/') if configured_url else ''
+    schedule_from_termux = base_url is None and bool(os.environ.get('TERMUX_BASE_URL'))
+    ledger = stage / 'analysis/event_ledger.json'
+    schedule_accepted = False
+    schedule_updates = 0
+    local_schedule = refresh_local_schedule(root, work) if not url else None
+    if local_schedule is not None:
+        try:
+            schedule_updates = sync_schedule_snapshot(ledger, local_schedule)
+            schedule_accepted = True
+        except (ValueError, TypeError, KeyError, AssertionError) as exc:
+            print(f'::warning::Local schedule snapshot rejected: {exc}', flush=True)
     if url:
         downloads = download_pair(url, work / 'termux')
     else:
@@ -64,6 +104,16 @@ def sync(root=ROOT, base_url=None):
             termux_ok = True
         except (ValueError, TypeError, KeyError, AssertionError) as exc:
             print(f'::warning::Termux snapshot rejected: {exc}', flush=True)
+    if url and schedule_from_termux and termux_ok:
+        schedule_download = download_one(url, 'city-schedule.json',
+                                         work / 'termux/city_schedule.json',
+                                         budget=30, attempts=1)
+        if schedule_download['success']:
+            try:
+                schedule_updates = sync_schedule_snapshot(ledger, work / 'termux/city_schedule.json')
+                schedule_accepted = True
+            except (ValueError, TypeError, KeyError, AssertionError) as exc:
+                print(f'::warning::Termux schedule snapshot rejected: {exc}', flush=True)
     # A failed official run may have written candidate files; restore the accepted
     # Termux candidate (or baseline) before continuing.
     backup = {name: (stage / name).read_bytes() for name in DATA_FILES[:3]}
@@ -76,8 +126,9 @@ def sync(root=ROOT, base_url=None):
     if official_ok:
         audit = read(work / 'official/official_audit.json')
         official_errors = audit.get('fetch_errors', {})
-    report = dict(termux_configured=bool(url), termux_accepted=termux_ok, official_accepted=official_ok,
-                  official_complete=official_ok and not official_errors,
+    report = dict(termux_configured=bool(url), termux_accepted=termux_ok,
+                  schedule_accepted=schedule_accepted, schedule_updates=schedule_updates,
+                  official_accepted=official_ok, official_complete=official_ok and not official_errors,
                   official_failed_event_ids=sorted(official_errors), published=False)
     report_path = work / 'sync_report.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
@@ -91,7 +142,6 @@ def sync(root=ROOT, base_url=None):
     elif official_errors:
         check += ['--allow-partial-official']
     subprocess.run(check, check=True)
-    ledger = stage / 'analysis/event_ledger.json'
     if url:
         sync_ledger(ledger, city_path=work / 'termux/city_db.json', decks_path=work / 'termux/city_decks.json',
                     fetch_status='success' if downloads['city-db.json']['success'] else 'failed',

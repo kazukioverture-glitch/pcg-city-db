@@ -134,3 +134,104 @@ def sync_ledger(ledger_path, *, city_path=None, decks_path=None, fetch_status,
     validate(ledger)
     write_state(ledger_path, ledger)
     return added
+
+
+
+def sync_schedule_snapshot(ledger_path, snapshot_path, observed_at=None):
+    """Merge only changed next-day schedule/venue facts into the event ledger."""
+    ledger_path = Path(ledger_path)
+    snapshot_path = Path(snapshot_path)
+    content = snapshot_path.read_bytes()
+    payload = json.loads(content)
+    events = payload.get("events") if isinstance(payload, dict) else None
+    if not isinstance(events, list):
+        raise ValueError("Schedule snapshot events must be a list")
+    source_url = payload.get("source")
+    source_updated_at = payload.get("updated_at")
+    target_date = payload.get("target_date")
+    if not isinstance(source_url, str) or not source_url:
+        raise ValueError("Schedule snapshot source is required")
+    if not isinstance(source_updated_at, str) or not source_updated_at:
+        raise ValueError("Schedule snapshot updated_at is required")
+    parsed_time = datetime.fromisoformat(source_updated_at.upper().replace("Z", "+00:00"))
+    if parsed_time.tzinfo is None:
+        raise ValueError("Schedule snapshot updated_at requires timezone")
+
+    ledger = read_state(ledger_path) if ledger_path.exists() else {
+        "schema_version": "1.2.2", "kind": "event_ledger", "records": []}
+    if ledger["kind"] != "event_ledger":
+        raise ValueError("Expected event ledger")
+    ledger["schema_version"] = "1.2.2"
+    current = {record["event_id"]: record for record in ledger["records"]}
+    observed_at = observed_at or datetime.now(timezone.utc).isoformat()
+    source_sha = hashlib.sha256(content).hexdigest()
+    seen = set()
+    changed = 0
+
+    for event in events:
+        if not isinstance(event, dict):
+            raise ValueError("Invalid schedule event row")
+        event_id = str(event.get("event_id") or "")
+        if not event_id or event_id in seen:
+            raise ValueError("Missing or duplicate schedule event_id")
+        seen.add(event_id)
+        event_date = event.get("date")
+        venue_name = event.get("venue_name")
+        venue_prefecture = event.get("venue_prefecture")
+        if not isinstance(event_date, str) or not event_date:
+            raise ValueError("Schedule event date is required")
+        if venue_name is not None and (not isinstance(venue_name, str) or not venue_name.strip()):
+            raise ValueError("Invalid venue_name")
+        if venue_prefecture is not None and (not isinstance(venue_prefecture, str) or not venue_prefecture.strip()):
+            raise ValueError("Invalid venue_prefecture")
+
+        record = current.get(event_id)
+        created = record is None
+        if created:
+            record = {
+                "event_id": event_id,
+                "event_date": event_date,
+                "category": None,
+                "venue_name": venue_name,
+                "venue_prefecture": venue_prefecture,
+                "event_status": "scheduled",
+                "observations": [],
+                "legacy_source": None,
+                "players": [],
+            }
+            ledger["records"].append(record)
+            current[event_id] = record
+
+        before = (record.get("event_date"), record.get("venue_name"),
+                  record.get("venue_prefecture"), record.get("event_status"))
+        record["event_date"] = event_date
+        if venue_name is not None:
+            record["venue_name"] = venue_name.strip()
+        if venue_prefecture is not None:
+            record["venue_prefecture"] = venue_prefecture.strip()
+        after = (record.get("event_date"), record.get("venue_name"),
+                 record.get("venue_prefecture"), record.get("event_status"))
+
+        if not created and before == after:
+            continue
+        record["observations"].append({
+            "observed_at": observed_at,
+            "source_url": source_url,
+            "publication_status": "unknown",
+            "fetch_status": "success",
+            "parse_status": "success",
+            "coverage_scope": "unknown",
+            "published_rank_slots_total": None,
+            "top8_slots_published": None,
+            "top8_slots_retrieved": None,
+            "top8_decks_known": None,
+            "notes": f"Scheduled event/venue snapshot for {target_date or event_date}",
+            "source_sha256": source_sha,
+            "source_updated_at": source_updated_at,
+        })
+        changed += 1
+
+    if changed:
+        validate(ledger)
+        write_state(ledger_path, ledger)
+    return changed

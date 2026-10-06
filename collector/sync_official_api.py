@@ -295,9 +295,11 @@ def result_event_from_api(event_id: str) -> dict | None:
 def discover_recent_city_events(floor_date: str, max_pages: int) -> list[dict]:
     found = {}
     per_page = 200
-    for page in range(max_pages):
+    offset = 0
+    seen_pages = set()
+    for _ in range(max_pages):
         payload = fetch_json(EVENT_SEARCH_URL, {
-            "offset": page * per_page,
+            "offset": offset,
             "limit": per_page,
             "order": 4,
             "result_resist": 1,
@@ -308,10 +310,14 @@ def discover_recent_city_events(floor_date: str, max_pages: int) -> list[dict]:
             raise ValueError('Invalid discovery structure')
         if not rows:
             break
+        page_key = tuple(str(row.get("event_holding_id") or "") for row in rows)
+        if page_key in seen_pages:
+            raise ValueError("Non-advancing event discovery pagination")
+        seen_pages.add(page_key)
         valid_dates = []
         for row in rows:
             ymd = str(row.get("event_date_params") or "")
-            if len(ymd) != 8:
+            if len(ymd) != 8 or not ymd.isdigit():
                 continue
             iso_date = f"{ymd[:4]}-{ymd[4:6]}-{ymd[6:8]}"
             valid_dates.append(iso_date)
@@ -320,11 +326,20 @@ def discover_recent_city_events(floor_date: str, max_pages: int) -> list[dict]:
                 continue
             if row.get("event_type") != 2 or not title.startswith("シティリーグ2027"):
                 continue
+            venue_name = row.get("shop_name")
+            venue_prefecture = row.get("prefecture_name")
             found[str(row["event_holding_id"])] = {
                 "event_id": str(row["event_holding_id"]),
                 "date": iso_date,
                 "category": row.get("leagueName"),
+                "venue_name": venue_name.strip() if isinstance(venue_name, str) and venue_name.strip() else None,
+                "venue_prefecture": (venue_prefecture.strip()
+                                      if isinstance(venue_prefecture, str) and venue_prefecture.strip() else None),
             }
+        offset += len(rows)
+        total = int(payload.get("eventCount") or 0)
+        if total and offset >= total:
+            break
         if valid_dates and min(valid_dates) < floor_date:
             break
     else:
@@ -432,6 +447,9 @@ def main() -> int:
                 continue
             event["date"] = event.get("date") or candidate["date"]
             event["category"] = event.get("category") or candidate["category"]
+            for key in ("venue_name", "venue_prefecture"):
+                if candidate.get(key) is not None:
+                    event[key] = candidate[key]
             old = stored_events.get(event["event_id"])
             if old:
                 # Preserve historic rows when the endpoint temporarily publishes fewer rows.
@@ -441,9 +459,17 @@ def main() -> int:
                                  for p in event["placements"]})
                 event["placements"] = list(old_rows.values())
                 event["placement_count"] = len(event["placements"])
-                if sorted(old.get("placements", []), key=lambda p: str(p.get("player_id"))) == sorted(event["placements"], key=lambda p: str(p.get("player_id"))):
-                    continue
                 event = {**old, **event}
+                same_rows = (
+                    sorted(old.get("placements", []), key=lambda p: str(p.get("player_id")))
+                    == sorted(event["placements"], key=lambda p: str(p.get("player_id")))
+                )
+                same_metadata = all(
+                    old.get(key) == event.get(key)
+                    for key in ("date", "category", "venue_name", "venue_prefecture")
+                )
+                if same_rows and same_metadata:
+                    continue
             new_events.append(event)
     write_json(TMP / "official_audit.json", {"checked_at": now_jst(), "floor_date": floor_date,
                "events": sorted(checked_events, key=lambda e: (e["date"], e["event_id"])), "fetch_errors": errors})
