@@ -19,153 +19,21 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 16
     env:
       TERMUX_BASE_URL: ${{ vars.TERMUX_BASE_URL }}
     steps:
       - uses: actions/checkout@v4
-        id: checkout
+        with:
+          ref: main
 
       - name: Install state tooling
-        id: state_dependencies
         run: python -m pip install -r requirements-analysis.txt
 
-      - name: Download Termux DB
-        id: download
-        continue-on-error: true
-        run: |
-          set -euo pipefail
-          mkdir -p .tmp data
-          base_url="${TERMUX_BASE_URL:-https://tuition-occultist-unwritten.ngrok-free.dev}"
-          base_url="${base_url%/}"
-          echo "$base_url" > .tmp/termux_base_url
-          failed=0
-          for file in city-db.json city-decks.json; do
-            status_file=".tmp/${file//-/_}.status"
-            echo failed > "$status_file"
-            echo "Downloading $file"
-            max_transfer_time=180
-            if [ "$file" = city-decks.json ]; then max_transfer_time=480; fi
-            if ! curl --fail -sS -L --retry 0 \
-              --connect-timeout 15 --max-time "$max_transfer_time" \
-              -H 'ngrok-skip-browser-warning: true' \
-              -w 'HTTP %{http_code}\n' \
-              "$base_url/$file" \
-              -o ".tmp/${file//-/_}"; then
-              echo "::error::$file download failed"
-              failed=1
-            else
-              echo success > "$status_file"
-            fi
-          done
-          test "$failed" -eq 0
-
-      - name: Merge Termux snapshot without losing history
-        id: merge
-        if: ${{ steps.download.outcome == 'success' }}
-        continue-on-error: true
-        run: |
-          cp .tmp/city_db.json .tmp/termux_city.json
-          cp .tmp/city_decks.json .tmp/termux_decks.json
-          python collector/merge_termux_snapshot.py
-
-      - name: Validate and update
-        id: validate
-        if: ${{ steps.merge.outcome == 'success' }}
-        continue-on-error: true
-        run: |
-          python - <<'PY'
-          import json, hashlib
-          from pathlib import Path
-          def read(p):
-              return json.loads(Path(p).read_text(encoding='utf-8'))
-          city=read('.tmp/city_db.json')
-          decks=read('.tmp/city_decks.json')
-          assert isinstance(city,dict), 'city must be an object'
-          assert isinstance(decks,dict), 'decks must be an object'
-          events=city.get('events')
-          dm=decks.get('decks')
-          assert isinstance(events,list) and events, 'No events'
-          assert isinstance(dm,dict) and dm, 'No decks'
-          assert all(isinstance(d,dict) and d.get('total_cards')==60 for d in dm.values()), 'Invalid 60-card deck'
-          for name,key,new in [('city_db','events',events),('city_decks','decks',dm)]:
-              p=Path('data/'+name+'.json')
-              if p.exists():
-                  old=read(p)
-                  assert isinstance(old,dict) and isinstance(old.get(key),type(new)), 'Invalid stored DB'
-                  assert len(new)>=len(old[key]), name+' count decreased'
-          for name in ['city_db','city_decks']:
-              Path('data/'+name+'.json').write_bytes(Path('.tmp/'+name+'.json').read_bytes())
-          def sha(name):
-              return hashlib.sha256(Path('data/'+name+'.json').read_bytes()).hexdigest()
-          index=dict(season=city.get('season','2027-S1'),source=city.get('source'),source_updated_at=city.get('updated_at'),event_count=len(events),placement_count=city.get('placement_count'),unique_deck_count=len(dm),valid_60_count=len(dm),city_sha256=sha('city_db'),decks_sha256=sha('city_decks'),status='ok')
-          Path('data/index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          print('OK:',len(events),'events,',len(dm),'decks')
-          PY
-
-      - name: Backfill from official results
-        id: official
-        continue-on-error: true
-        if: ${{ always() && !cancelled() && steps.checkout.outcome == 'success' }}
-        run: python collector/sync_official_api.py
-
-      - name: Update Termux event ledger
-        id: ledger
-        if: ${{ always() && !cancelled() && steps.state_dependencies.outcome == 'success' && steps.download.outcome != 'skipped' }}
-        env:
-          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
-        run: |
-          set -euo pipefail
-          fetch_status=$(cat .tmp/city_db.json.status 2>/dev/null || echo failed)
-          parse_args=()
-          city_args=()
-          deck_args=()
-          if [ "$VALIDATE_OUTCOME" = failure ] || [ "$VALIDATE_OUTCOME" = skipped ]; then
-            parse_args=(--parse-status failed)
-          fi
-          if [ -f .tmp/termux_city.json ]; then city_args=(--city .tmp/termux_city.json); elif [ -f .tmp/city_db.json ]; then city_args=(--city .tmp/city_db.json); fi
-          if [ -f .tmp/termux_decks.json ]; then deck_args=(--decks .tmp/termux_decks.json); elif [ -f .tmp/city_decks.json ]; then deck_args=(--decks .tmp/city_decks.json); fi
-          base_url=$(cat .tmp/termux_base_url 2>/dev/null || echo 'https://tuition-occultist-unwritten.ngrok-free.dev')
-          python -m analysis sync-ledger \
-            "${city_args[@]}" "${deck_args[@]}" \
-            --fetch-status "$fetch_status" "${parse_args[@]}" \
-            --coverage-scope collection_feed \
-            --source-url "$base_url/city-db.json"
-
-      - name: Update official event ledger
-        id: official_ledger
-        if: ${{ always() && !cancelled() && steps.state_dependencies.outcome == 'success' && steps.official.outcome == 'success' }}
-        run: |
-          set -euo pipefail
-          if [ -f .tmp/official_backfill.changed ]; then
-            python -m analysis sync-ledger \
-              --city .tmp/official_backfill_city.json \
-              --decks .tmp/official_backfill_decks.json \
-              --fetch-status success \
-              --coverage-scope top8 \
-              --source-url 'https://players.pokemon-card.com/event/result/list'
-          else
-            echo 'No official backfill ledger update needed'
-          fi
-
-      - name: Check final DB and official coverage
-        id: final_check
-        if: ${{ always() && !cancelled() && steps.checkout.outcome == 'success' }}
-        env:
-          OFFICIAL_OUTCOME: ${{ steps.official.outcome }}
-          VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
-        run: |
-          if [ "$OFFICIAL_OUTCOME" = success ]; then
-            python collector/check_sync.py
-          elif [ "$VALIDATE_OUTCOME" = success ]; then
-            python collector/check_sync.py --official-unavailable
-          else
-            echo '::error::Neither official backfill nor Termux validation succeeded'
-            exit 1
-          fi
+      - name: Acquire, validate and stage DB transaction
+        run: python -m collector.sync
 
       - name: Commit only when changed
-        if: ${{ always() && !cancelled() && steps.final_check.outcome == 'success' && (steps.official.outcome == 'success' || steps.validate.outcome == 'success') && steps.ledger.outcome == 'success' && (steps.official_ledger.outcome == 'success' || steps.official_ledger.outcome == 'skipped') }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -175,3 +43,15 @@ jobs:
             git commit -m 'Sync city league DB'
             git push
           fi
+
+      - name: Retain collection diagnostics
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-diagnostics-${{ github.run_id }}
+          path: |
+            .tmp/sync/sync_report.json
+            .tmp/sync/termux/download_report.json
+            .tmp/sync/official/official_audit.json
+          if-no-files-found: ignore
+          retention-days: 14
