@@ -19,6 +19,15 @@ def main():
     classify.add_argument("--city", type=Path, default=ROOT / "data/city_db.json")
     classify.add_argument("--decks", type=Path, default=ROOT / "data/city_decks.json")
     classify.add_argument("--output", type=Path, default=ROOT / "data/analysis/deck_classifications.json")
+    players = commands.add_parser("join-players", help="Offline selected Top8 evidence JOIN; JSON to stdout only")
+    for name in ("start", "end", "history-start"):
+        players.add_argument(f"--{name}", required=True)
+    players.add_argument("--previous-start")
+    players.add_argument("--previous-end")
+    players.add_argument("--city", type=Path, default=ROOT / "data/city_db.json")
+    players.add_argument("--classifications", type=Path, default=ROOT / "data/analysis/deck_classifications.json")
+    players.add_argument("--csp-season", help="Required when CSP facts are supplied")
+    players.add_argument("--facts", type=Path, help="Optional verified CSP observations (JSON list)")
     cards = commands.add_parser("validate-cards")
     cards.add_argument("--master", type=Path)
     snapshot = commands.add_parser("snapshot")
@@ -47,7 +56,14 @@ def main():
     sync.add_argument("--source-url", required=True)
     sync.add_argument("--observed-at")
     args = parser.parse_args()
-    if args.command == "classify-decks":
+    if args.command == "join-players":
+        from .players import join_players
+        result = join_players(read_json(args.city), read_state(args.classifications),
+                              args.start, args.end, args.history_start,
+                              previous_start=args.previous_start, previous_end=args.previous_end,
+                              facts=read_json(args.facts) if args.facts else None, csp_season=args.csp_season)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    elif args.command == "classify-decks":
         from .classification import classify_range
         print(json.dumps(classify_range(args.city, args.decks, args.output, args.start, args.end)))
     elif args.command == "validate-state":
