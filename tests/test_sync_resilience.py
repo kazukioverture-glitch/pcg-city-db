@@ -1,12 +1,12 @@
 import copy
 import json
+import os
 import shutil
 import subprocess
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
-from urllib.error import HTTPError
+from unittest.mock import patch, Mock
 
 from collector import download_termux as download
 from collector import sync as transaction
@@ -72,18 +72,70 @@ class DownloadTests(unittest.TestCase):
             self.assertEqual(one.call_args_list[0].args[0], download.DEFAULT_URL)
 
     def test_403_official_is_not_retried(self):
-        error = HTTPError('url', 403, 'Forbidden', {}, None)
-        with patch.object(official, 'urlopen', side_effect=error) as fetch, patch.object(official.time, 'sleep') as sleep:
+        session = Mock()
+        session.get.return_value = Mock(status_code=403)
+        with patch.object(official, '_get_session', return_value=session), patch.object(official, '_wait_for_request'), patch.object(official.time, 'sleep') as sleep:
             with self.assertRaisesRegex(RuntimeError, 'unavailable: HTTP 403'):
                 official.fetch_bytes('https://example.test')
-            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(session.get.call_count, 1)
             sleep.assert_not_called()
+
+    def test_official_transient_failure_recovers(self):
+        session = Mock()
+        session.get.side_effect = [Mock(status_code=503), Mock(status_code=200, content=b'{}')]
+        with patch.object(official, '_get_session', return_value=session), patch.object(official, '_wait_for_request'), patch.object(official.time, 'sleep'):
+            self.assertEqual(official.fetch_bytes(official.EVENT_SEARCH_URL), b'{}')
+        headers = session.get.call_args.kwargs['headers']
+        self.assertEqual(headers['Referer'], official.RESULT_LIST_URL)
+
+    def test_official_not_found_is_not_retried(self):
+        session = Mock()
+        session.get.return_value = Mock(status_code=404)
+        with patch.object(official, '_get_session', return_value=session), patch.object(official, '_wait_for_request'):
+            with self.assertRaisesRegex(RuntimeError, 'HTTP 404'):
+                official.fetch_bytes('https://example.test')
+        self.assertEqual(session.get.call_count, 1)
+
+    def test_official_rate_limit_stops_this_run(self):
+        session = Mock()
+        session.get.return_value = Mock(status_code=429)
+        with patch.object(official, '_get_session', return_value=session), \
+             patch.object(official, '_wait_for_request'), patch.object(official.time, 'sleep') as sleep:
+            with self.assertRaisesRegex(RuntimeError, 'unavailable: HTTP 429'):
+                official.fetch_bytes('https://example.test')
+        self.assertEqual(session.get.call_count, 1)
+        sleep.assert_not_called()
+
+    def test_rate_limit_prevents_queued_worker_requests(self):
+        with patch.object(official, '_RATE_LIMITED', True):
+            with self.assertRaisesRegex(RuntimeError, 'rate limited'):
+                official._wait_for_request()
+
+    def test_request_gate_spaces_worker_starts(self):
+        with patch.object(official, '_RATE_LIMITED', False), \
+             patch.object(official, '_NEXT_REQUEST', 11.0), \
+             patch.object(official.time, 'monotonic', side_effect=[10.0, 11.0]), \
+             patch.object(official.time, 'sleep') as sleep:
+            official._wait_for_request()
+            sleep.assert_called_once_with(1.0)
+            self.assertEqual(official._NEXT_REQUEST, 12.0)
+
+    def test_official_transport_timeout_is_bounded(self):
+        session = Mock()
+        session.get.side_effect = official.cffi_requests.RequestsError('timeout')
+        with patch.object(official, '_get_session', return_value=session), patch.object(official, '_wait_for_request'), patch.object(official.time, 'sleep'):
+            with self.assertRaisesRegex(RuntimeError, 'Failed after 2 attempts'):
+                official.fetch_bytes('https://example.test', attempts=2, timeout=1)
+        self.assertEqual(session.get.call_count, 2)
 
 
 class TransactionTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
+        env = patch.dict(os.environ, {'TERMUX_BASE_URL': 'https://example.test'})
+        env.start()
+        self.addCleanup(env.stop)
         self.root = Path(self.tmp.name)
         for name in transaction.DATA_FILES:
             path = self.root / 'data' / name
@@ -143,7 +195,7 @@ class TransactionTests(unittest.TestCase):
         validate_snapshot(read(self.root / 'data/city_db.json'), read(self.root / 'data/city_decks.json'))
 
     def test_failed_official_partial_write_restores_accepted_termux(self):
-        def official_fail(stage, work):
+        def official_fail(stage, work, **kwargs):
             (stage / 'city_db.json').write_text('broken')
             return False
         with self.acquire(), patch.object(transaction, 'run_official', side_effect=official_fail):
@@ -185,7 +237,7 @@ class TransactionTests(unittest.TestCase):
             self.assertFalse(transaction.run_official(self.root, self.root))
 
     def test_official_only_success_can_publish_valid_candidate(self):
-        def official_ok(stage, work):
+        def official_ok(stage, work, **kwargs):
             work.mkdir(parents=True)
             (work / 'official_audit.json').write_text(json.dumps({'events': [], 'fetch_errors': {}}))
             return True
@@ -195,8 +247,31 @@ class TransactionTests(unittest.TestCase):
         self.assertFalse(result['termux_accepted'])
         self.assertTrue(result['official_accepted'])
 
+    def test_unconfigured_termux_is_skipped_when_official_succeeds(self):
+        def official_ok(stage, work, **kwargs):
+            work.mkdir(parents=True)
+            (work / 'official_audit.json').write_text(json.dumps({'events': [], 'fetch_errors': {}}))
+            return True
+        with patch.dict(os.environ, {'TERMUX_BASE_URL': ''}), \
+             patch.object(transaction, 'download_pair') as pair, \
+             patch.object(transaction, 'run_official', side_effect=official_ok):
+            result = transaction.sync(self.root)
+        pair.assert_not_called()
+        self.assertTrue(result['published'])
+        self.assertFalse(result['termux_configured'])
+        self.assertTrue(result['official_accepted'])
+
+    def test_unconfigured_termux_and_official_failure_preserves_every_byte(self):
+        with patch.dict(os.environ, {'TERMUX_BASE_URL': ''}), \
+             patch.object(transaction, 'download_pair') as pair, \
+             patch.object(transaction, 'run_official', return_value=False):
+            with self.assertRaisesRegex(RuntimeError, 'Neither source'):
+                transaction.sync(self.root)
+        pair.assert_not_called()
+        self.assertEqual(self.contents(), self.before)
+
     def test_official_inconsistent_index_cannot_publish(self):
-        def official_bad(stage, work):
+        def official_bad(stage, work, **kwargs):
             work.mkdir(parents=True)
             (work / 'official_audit.json').write_text(json.dumps({'events': [], 'fetch_errors': {}}))
             (stage / 'index.json').write_text('{}')
