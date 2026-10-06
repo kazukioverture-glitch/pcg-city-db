@@ -12,13 +12,13 @@ import html as html_lib
 import json
 import re
 import time
+import threading
 from html.parser import HTMLParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError
+from curl_cffi import requests as cffi_requests
 
 BASE = "https://players.pokemon-card.com"
 RESULT_LIST_URL = f"{BASE}/event/result/list"
@@ -37,7 +37,31 @@ PARTIAL_DECKS_PATH = TMP / "official_backfill_decks.json"
 CHANGED_FLAG = TMP / "official_backfill.changed"
 
 JST = timezone(timedelta(hours=9))
-USER_AGENT = "pcg-city-db/official-backfill (+https://github.com/kazukioverture-glitch/pcg-city-db)"
+_HTTP = threading.local()
+_REQUEST_LOCK = threading.Lock()
+_NEXT_REQUEST = 0.0
+_RATE_LIMITED = False
+
+
+def _wait_for_request():
+    """Space all workers' requests one second apart, including retries."""
+    global _NEXT_REQUEST
+    with _REQUEST_LOCK:
+        if _RATE_LIMITED:
+            raise RuntimeError('Official source unavailable: rate limited; retry on next scheduled run')
+        delay = _NEXT_REQUEST - time.monotonic()
+        if delay > 0:
+            time.sleep(delay)
+        _NEXT_REQUEST = time.monotonic() + 1.0
+
+
+def _get_session():
+    """Keep independent browser-compatible HTTP sessions for each worker."""
+    session = getattr(_HTTP, 'session', None)
+    if session is None:
+        session = cffi_requests.Session(impersonate='chrome')
+        _HTTP.session = session
+    return session
 
 
 def now_jst() -> str:
@@ -54,29 +78,39 @@ def write_json(path: Path, value: dict) -> None:
 
 
 def fetch_bytes(url: str, *, attempts: int = 4, timeout: int = 25) -> bytes:
+    global _RATE_LIMITED
+    headers = {'Accept-Language': 'ja-JP,ja;q=0.9,en;q=0.8'}
+    if url.startswith(BASE + '/'):
+        headers.update({'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Referer': RESULT_LIST_URL})
+    else:
+        headers['Accept'] = 'text/html,application/xhtml+xml,*/*;q=0.8'
     last_error = None
     for attempt in range(1, attempts + 1):
         try:
-            req = Request(url, headers={
-                "User-Agent": USER_AGENT,
-                "Accept-Language": "ja-JP,ja;q=0.9",
-                "Accept": "application/json,text/html;q=0.9,*/*;q=0.8",
-            })
-            with urlopen(req, timeout=timeout) as response:
-                if response.status != 200:
-                    raise RuntimeError(f"HTTP {response.status}: {url}")
-                return response.read()
-        except HTTPError as exc:
-            if exc.code in (401, 403):
-                raise RuntimeError(f"Official source unavailable: HTTP {exc.code}: {url}") from exc
+            _wait_for_request()
+            response = _get_session().get(url, headers=headers, timeout=timeout)
+        except cffi_requests.RequestsError as exc:
             last_error = exc
-            if attempt < attempts:
-                time.sleep(min(2 ** (attempt - 1), 5))
-        except Exception as exc:
-            last_error = exc
-            if attempt < attempts:
-                time.sleep(min(2 ** (attempt - 1), 5))
-    raise RuntimeError(f"Failed after {attempts} attempts: {url}: {last_error}") from last_error
+        else:
+            status = int(response.status_code)
+            if status == 200:
+                return response.content
+            print(f'Official HTTP {status}, attempt {attempt}/{attempts}: {url}', flush=True)
+            if status in (401, 403):
+                raise RuntimeError(f'Official source unavailable: HTTP {status}: {url}')
+            if status == 429:
+                # Stop this source instead of continuing queued requests into a rate limit.
+                with _REQUEST_LOCK:
+                    _RATE_LIMITED = True
+                raise RuntimeError(f'Official source unavailable: HTTP 429; retry on next scheduled run: {url}')
+            last_error = RuntimeError(f'HTTP {status}: {url}')
+            if status not in (500, 502, 503, 504):
+                raise last_error
+        if attempt < attempts:
+            time.sleep(min(2 ** (attempt - 1), 5))
+    raise RuntimeError(f'Failed after {attempts} attempts: {url}: {last_error}') from last_error
 
 
 def fetch_json(url: str, params: dict) -> dict:

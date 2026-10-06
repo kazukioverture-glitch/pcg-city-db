@@ -4,11 +4,12 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 from analysis.collection import sync_ledger
 from analysis.state import read_state
-from collector.download_termux import DEFAULT_URL, download_pair
+from collector.download_termux import download_pair
 from collector.merge_termux_snapshot import merge_snapshot
 from collector.validate_snapshot import read, validate_snapshot, write_candidate
 
@@ -16,18 +17,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_FILES = ('city_db.json', 'city_decks.json', 'index.json', 'analysis/event_ledger.json')
 
 
-def run_official(stage, work):
+def run_official(stage, work, timeout=720):
     try:
         result = subprocess.run([sys.executable, str(ROOT / 'collector/sync_official_api.py'),
                                  '--data-dir', str(stage), '--tmp-dir', str(work)],
-                                timeout=180)
+                                timeout=timeout)
         return result.returncode == 0
     except subprocess.TimeoutExpired:
-        print('::warning::Official collection exceeded 180-second budget', flush=True)
+        print(f'::warning::Official collection exceeded {timeout:.0f}-second budget', flush=True)
         return False
 
 
 def sync(root=ROOT, base_url=None):
+    deadline = time.monotonic() + 900
     root = Path(root)
     data = root / 'data'
     work = root / '.tmp/sync'
@@ -41,8 +43,17 @@ def sync(root=ROOT, base_url=None):
         shutil.copyfile(data / name, destination)
     old_city, old_decks = read(data / 'city_db.json'), read(data / 'city_decks.json')
     validate_snapshot(old_city, old_decks)
-    url = (base_url or os.environ.get('TERMUX_BASE_URL') or DEFAULT_URL).rstrip('/')
-    downloads = download_pair(url, work / 'termux')
+    configured_url = base_url if base_url is not None else os.environ.get('TERMUX_BASE_URL')
+    url = configured_url.strip().rstrip('/') if configured_url else ''
+    if url:
+        downloads = download_pair(url, work / 'termux')
+    else:
+        termux_work = work / 'termux'
+        termux_work.mkdir(parents=True)
+        downloads = {name: dict(success=False, attempts=[], skipped='TERMUX_BASE_URL not configured')
+                     for name in ('city-db.json', 'city-decks.json')}
+        (termux_work / 'download_report.json').write_text(json.dumps(downloads, indent=2) + '\n')
+        print('::notice::TERMUX_BASE_URL not configured; using official source only', flush=True)
     termux_ok = False
     if all(r['success'] for r in downloads.values()):
         try:
@@ -56,12 +67,12 @@ def sync(root=ROOT, base_url=None):
     # A failed official run may have written candidate files; restore the accepted
     # Termux candidate (or baseline) before continuing.
     backup = {name: (stage / name).read_bytes() for name in DATA_FILES[:3]}
-    official_ok = run_official(stage, work / 'official')
+    official_ok = run_official(stage, work / 'official', timeout=min(720, max(1, deadline - time.monotonic())))
     if not official_ok:
         for name, content in backup.items():
             (stage / name).write_bytes(content)
         print('::warning::Official coverage unavailable; no completeness claim', flush=True)
-    report = dict(termux_accepted=termux_ok, official_accepted=official_ok, published=False)
+    report = dict(termux_configured=bool(url), termux_accepted=termux_ok, official_accepted=official_ok, published=False)
     report_path = work / 'sync_report.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
     if not (termux_ok or official_ok):
@@ -73,10 +84,11 @@ def sync(root=ROOT, base_url=None):
         check += ['--official-unavailable']
     subprocess.run(check, check=True)
     ledger = stage / 'analysis/event_ledger.json'
-    sync_ledger(ledger, city_path=work / 'termux/city_db.json', decks_path=work / 'termux/city_decks.json',
-                fetch_status='success' if downloads['city-db.json']['success'] else 'failed',
-                parse_status=None if termux_ok else 'failed', coverage_scope='collection_feed',
-                source_url=url + '/city-db.json')
+    if url:
+        sync_ledger(ledger, city_path=work / 'termux/city_db.json', decks_path=work / 'termux/city_decks.json',
+                    fetch_status='success' if downloads['city-db.json']['success'] else 'failed',
+                    parse_status=None if termux_ok else 'failed', coverage_scope='collection_feed',
+                    source_url=url + '/city-db.json')
     if official_ok and (work / 'official/official_backfill.changed').exists():
         sync_ledger(ledger, city_path=work / 'official/official_backfill_city.json',
                     decks_path=work / 'official/official_backfill_decks.json', fetch_status='success',
