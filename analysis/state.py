@@ -107,6 +107,14 @@ def write_state(path, document):
             if (record["event_id"] not in current or
                     current[record["event_id"]]["observations"][:len(history)] != history):
                 raise ValueError("Ledger history cannot be removed or rewritten")
+
+    if path.exists() and document["kind"] == "processed_sources":
+        current = {r["source_id"]: r for r in document["records"]}
+        for record in previous["records"]:
+            if record["source_id"] not in current:
+                raise ValueError("Processed source history cannot be removed")
+            if record.get("status") == "processed" and current[record["source_id"]] != record:
+                raise ValueError("Processed source analysis is immutable; use a new source_id")
     if path.exists() and document["kind"] == "forecast_log":
         current = {r["forecast_id"]: r for r in document["records"]}
         for record in previous["records"]:

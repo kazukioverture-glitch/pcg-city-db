@@ -28,6 +28,24 @@ def main():
     players.add_argument("--classifications", type=Path, default=ROOT / "data/analysis/deck_classifications.json")
     players.add_argument("--csp-season", help="Required when CSP facts are supplied")
     players.add_argument("--facts", type=Path, help="Optional verified CSP observations (JSON list)")
+    weekly = commands.add_parser("weekly-report", help="Analyze one immutable weekly snapshot; never mutate inputs")
+    weekly.add_argument("--snapshot", type=Path, required=True)
+    weekly.add_argument("--category", default="オープン")
+    weekly.add_argument("--region", default="愛知県")
+    weekly.add_argument("--compare-start")
+    weekly.add_argument("--compare-end")
+    weekly.add_argument("--watch-cards", type=Path)
+    weekly.add_argument("--external-sources", type=Path,
+                        help="Optional processed_sources sidecar analysed independently before DB comparison")
+    weekly.add_argument("--output-json", type=Path)
+    weekly.add_argument("--output-md", type=Path)
+    discover = commands.add_parser("discover-cards", help="Literal candidate ID discovery; never merge identities")
+    discover.add_argument("--snapshot", type=Path, required=True)
+    discover.add_argument("--name", action="append", required=True, dest="names")
+    source = commands.add_parser("record-source-analysis",
+                                 help="Append one independently analysed external source; no fetching")
+    source.add_argument("record", type=Path)
+    source.add_argument("--output", type=Path, default=ROOT / "data/analysis/processed_sources.json")
     cards = commands.add_parser("validate-cards")
     cards.add_argument("--master", type=Path)
     snapshot = commands.add_parser("snapshot")
@@ -56,7 +74,47 @@ def main():
     sync.add_argument("--source-url", required=True)
     sync.add_argument("--observed-at")
     args = parser.parse_args()
-    if args.command == "join-players":
+
+    if args.command == "weekly-report":
+        from .weekly import analyze_snapshot, render_markdown
+        watch = read_json(args.watch_cards) if args.watch_cards else None
+        external = read_state(args.external_sources) if args.external_sources else None
+        result = analyze_snapshot(
+            args.snapshot, category=args.category, region=args.region,
+            compare_start=args.compare_start, compare_end=args.compare_end,
+            watch_config=watch, external_sources=external)
+        json_text = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+        md_text = render_markdown(result)
+
+        def save(path, content):
+            if path is None:
+                return
+            resolved = path.resolve()
+            snapshot_root = args.snapshot.resolve()
+            if resolved == snapshot_root or resolved.is_relative_to(snapshot_root):
+                raise ValueError("Report outputs cannot be written inside immutable snapshot inputs")
+            resolved.parent.mkdir(parents=True, exist_ok=True)
+            resolved.write_text(content, encoding="utf-8")
+
+        save(args.output_json, json_text)
+        save(args.output_md, md_text)
+        if args.output_json is None and args.output_md is None:
+            print(json_text, end="")
+        else:
+            print(json.dumps({"snapshot_id": result["snapshot_id"],
+                              "audit_status": result["audit"]["status"],
+                              "output_json": str(args.output_json) if args.output_json else None,
+                              "output_md": str(args.output_md) if args.output_md else None},
+                             ensure_ascii=False))
+    elif args.command == "discover-cards":
+        from .weekly import discover_card_identities
+        verify_snapshot(args.snapshot)
+        decks = read_json(args.snapshot / "inputs/data/city_decks.json")
+        print(json.dumps(discover_card_identities(decks, args.names), ensure_ascii=False, indent=2))
+    elif args.command == "record-source-analysis":
+        from .sources import append_source_analysis
+        print(json.dumps(append_source_analysis(args.record, args.output), ensure_ascii=False))
+    elif args.command == "join-players":
         from .players import join_players
         result = join_players(read_json(args.city), read_state(args.classifications),
                               args.start, args.end, args.history_start,
