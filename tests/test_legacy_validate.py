@@ -1,6 +1,7 @@
-"""Execute the unchanged workflow's actual Validate script against offline fixtures."""
+"""Exercise the production validator against stored DB and corrupt candidates."""
 
 import hashlib
+import os
 import json
 import subprocess
 import sys
@@ -14,8 +15,14 @@ from analysis.state import ROOT, read_json
 
 class LegacyValidateTests(unittest.TestCase):
     def run_validate(self, mutate=None):
-        workflow = (ROOT / ".github/workflows/collect.yml").read_text(encoding="utf-8")
-        script = textwrap.dedent(workflow.split("python - <<'PY'\n", 1)[1].split("          PY", 1)[0])
+        script = """
+from collector.validate_snapshot import read, validate_snapshot, write_candidate
+from pathlib import Path
+validate_snapshot(read('.tmp/city_db.json'), read('.tmp/city_decks.json'),
+                  read('data/city_db.json'), read('data/city_decks.json'))
+counts = write_candidate(Path('data'), read('.tmp/city_db.json'), read('.tmp/city_decks.json'))
+print(f"OK: {counts['event_count']} events, {counts['unique_deck_count']} decks")
+"""
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / ".tmp").mkdir()
@@ -26,7 +33,7 @@ class LegacyValidateTests(unittest.TestCase):
                 (root / f"data/{name}.json").write_bytes(content)
             if mutate:
                 mutate(root)
-            result = subprocess.run([sys.executable, "-c", script], cwd=root, capture_output=True, text=True)
+            result = subprocess.run([sys.executable, "-c", script], cwd=root, capture_output=True, text=True, env={**os.environ, "PYTHONPATH": str(ROOT)})
             if result.returncode == 0:
                 index = read_json(root / "data/index.json")
                 for name, key in (("city_db", "city_sha256"), ("city_decks", "decks_sha256")):
@@ -58,7 +65,7 @@ class LegacyValidateTests(unittest.TestCase):
             path.write_text(json.dumps(data), encoding="utf-8")
         result = self.run_validate(mutate)
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("city_db count decreased", result.stderr)
+        self.assertIn("city_db identity/count decreased", result.stderr)
 
 
 if __name__ == "__main__":
