@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 16
     env:
       TERMUX_BASE_URL: ${{ vars.TERMUX_BASE_URL }}
