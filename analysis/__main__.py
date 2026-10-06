@@ -25,6 +25,10 @@ def main():
     snapshot.add_argument("--retrieved-at", required=True, help="Actual acquisition timestamp with offset")
     snapshot.add_argument("--event-id", action="append", required=True, dest="event_ids")
     snapshot.add_argument("--file", action="append", dest="files", help="Override default inputs; include state/master used")
+    final = commands.add_parser("finalize-week", help="Verify and locally commit FINAL inputs; never push")
+    for name in ("week-id", "period-start", "period-end", "cutoff-datetime", "retrieved-at"):
+        final.add_argument(f"--{name}", required=True)
+    final.add_argument("--event-id", action="append", required=True, dest="event_ids")
     verify = commands.add_parser("verify-snapshot")
     verify.add_argument("directory", type=Path)
     sync = commands.add_parser("sync-ledger", help="Record a collection attempt without changing legacy DBs")
@@ -50,6 +54,13 @@ def main():
         print(create_snapshot(ROOT, args.target_week, args.event_ids, args.retrieved_at, args.files,
                               week_id=args.week_id, period_start=args.period_start, period_end=args.period_end,
                               analysis_stage=args.analysis_stage, cutoff_datetime=args.cutoff_datetime))
+    elif args.command == "finalize-week":
+        from .finalize import finalize_week
+        directory, sha = finalize_week(ROOT, week_id=args.week_id,
+                                      period_start=args.period_start, period_end=args.period_end,
+                                      cutoff_datetime=args.cutoff_datetime,
+                                      retrieved_at=args.retrieved_at, event_ids=args.event_ids)
+        print(json.dumps({"directory": str(directory), "commit_sha": sha}))
     elif args.command == "sync-ledger":
         from .collection import sync_ledger
         print("OK:", sync_ledger(args.ledger, city_path=args.city, decks_path=args.decks,

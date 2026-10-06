@@ -221,3 +221,24 @@ PREだったという情報を後から推測補完せず、評価対象フラ�
 unit testはworkflow内の既存Validate Pythonコードを読み取り、一時ディレクトリで
 現データの合格・60枚違反の拒否・大会件数減少の拒否を検査します。
 ネットワークアクセスやworkflowの手動実行は行いません。
+
+## FINAL の確定コマンド
+
+`python -m analysis finalize-week` はcleanなGit作業ツリーでのみ実行できます。
+同じweek_idのFINALディレクトリが存在する場合は拒否します。
+既存の作成処理で入力を保存し、SHA256検証後にsnapshotディレクトリだけを
+ローカルcommitします。pushは行いません。commit前に失敗した場合は今回の
+FINALとそのstagingを取り消します。既存のINTERIMには影響しません。
+
+```bash
+python -m analysis finalize-week \
+  --week-id W02 \
+  --period-start 2026-09-30T00:00:00+09:00 \
+  --period-end 2026-10-06T23:59:59+09:00 \
+  --cutoff-datetime 2026-10-07T00:00:00+09:00 \
+  --retrieved-at <実際の取得日時・オフセット付き> \
+  --event-id <対象大会ID> --event-id <対象大会ID>
+```
+
+対象大会IDと取得日時は実際の入力に合わせて指定してください。
+このコマンドは週のデータ収集完了を判定しません。
