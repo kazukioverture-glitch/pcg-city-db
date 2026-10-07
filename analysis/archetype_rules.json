@@ -15,22 +15,15 @@
     "priority_direction": "higher_wins",
     "equal_priority_collision": "unknown",
     "multiple_variant_tags_allowed": true,
-    "engine_cards_are_not_parents_by_presence_alone": true,
-    "fallback_rules_are_lower_priority": true,
-    "fallback_parent_names_describe_observed_structure_not_inferred_gameplan": true,
-    "fallback_parent_rules_allowed": true,
+    "engine_cards_are_not_high_priority_parents_by_presence_alone": true,
     "fallback_rules_must_have_lower_priority_than_specific_archetypes": true
   },
   "parents": [
     {
       "id": "banette_dhelmise",
-      "name": "ジュペッタ・ダダリン",
-      "priority": 200,
+      "name": "ジュペッタ／ダダリン",
+      "priority": 110,
       "requires": [
-        {
-          "card": "カゲボウズ",
-          "min_count": 3
-        },
         {
           "card": "ジュペッタ",
           "min_count": 2
@@ -40,100 +33,51 @@
           "min_count": 3
         }
       ],
+      "variants": []
+    },
+    {
+      "id": "mega_greninja_ex",
+      "name": "メガゲッコウガex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガゲッコウガex",
+          "min_count": 2
+        }
+      ],
       "variants": [
         {
-          "label": "リーリエのピッピex採用",
+          "label": "ゲッコウガex採用",
           "requires": [
             {
-              "card": "リーリエのピッピex",
-              "min_count": 1
+              "card": "ゲッコウガex",
+              "min_count": 2
             }
           ]
         }
       ]
     },
     {
-      "id": "dipplin_thwackey",
-      "name": "カミッチュ・バチンキー",
-      "priority": 200,
+      "id": "mega_sharpedo_ex",
+      "name": "メガサメハダーex",
+      "priority": 110,
       "requires": [
         {
-          "card": "サルノリ",
-          "min_count": 3
-        },
-        {
-          "card": "バチンキー",
-          "min_count": 3
-        },
-        {
-          "card": "カジッチュ",
+          "card": "メガサメハダーex",
           "min_count": 2
-        },
-        {
-          "card": "カミッチュ",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "metagross_mega_excadrill",
-      "name": "メタグロス・メガドリュウズex",
-      "priority": 200,
-      "requires": [
-        {
-          "card": "ダンバル",
-          "min_count": 3
-        },
-        {
-          "card": "メタング",
-          "min_count": 3
-        },
-        {
-          "card": "メガドリュウズex",
-          "min_count": 1
         }
       ],
       "variants": [
         {
-          "label": "メタグロス採用",
+          "label": "ストリンダー型",
           "requires": [
             {
-              "card": "メタグロス",
-              "min_count": 1
-            }
-          ]
-        },
-        {
-          "label": "ゲノセクトex採用",
-          "requires": [
-            {
-              "card": "ゲノセクトex",
-              "min_count": 1
+              "card": "ストリンダー",
+              "min_count": 2
             }
           ]
         }
       ]
-    },
-    {
-      "id": "rocket_spidops_mewtwo",
-      "name": "ロケット団のワナイダー・ミュウツーex",
-      "priority": 200,
-      "requires": [
-        {
-          "card": "ロケット団のタマンチュラ",
-          "min_count": 3
-        },
-        {
-          "card": "ロケット団のワナイダー",
-          "min_count": 3
-        },
-        {
-          "card": "ロケット団のミュウツーex",
-          "min_count": 2
-        }
-      ],
-      "variants": []
     },
     {
       "id": "dragapult_ex",
@@ -317,362 +261,28 @@
       ]
     },
     {
-      "id": "mega_lucario_ex",
-      "name": "メガルカリオex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "リオル",
-          "min_count": 3
-        },
-        {
-          "card": "メガルカリオex",
-          "min_count": 3
-        }
-      ],
-      "variants": [
-        {
-          "label": "ソルロック・ルナトーン型",
-          "requires": [
-            {
-              "card": "ソルロック",
-              "min_count": 2
-            },
-            {
-              "card": "ルナトーン",
-              "min_count": 2
-            }
-          ]
-        },
-        {
-          "label": "ノココッチ採用",
-          "requires": [
-            {
-              "card": "ノココッチ",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "n_zoroark_ex",
       "name": "Nのゾロアークex",
       "priority": 100,
       "requires": [
         {
-          "card": "Nのゾロア",
-          "min_count": 4
-        },
-        {
           "card": "Nのゾロアークex",
-          "min_count": 4
-        }
-      ],
-      "variants": [
-        {
-          "label": "Nのゼクロム採用",
-          "requires": [
-            {
-              "card": "Nのゼクロム",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "alakazam",
-      "name": "フーディン",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ケーシィ",
-          "min_count": 3
-        },
-        {
-          "card": "ユンゲラー",
-          "min_count": 3
-        },
-        {
-          "card": "フーディン",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "greninja_ex_line",
-      "name": "ゲッコウガex系統",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ケロマツ",
-          "min_count": 3
-        },
-        {
-          "card": "ゲコガシラ",
-          "min_count": 1
-        },
-        {
-          "card": "ゲッコウガex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "メガゲッコウガex採用",
-          "requires": [
-            {
-              "card": "メガゲッコウガex",
-              "min_count": 1
-            }
-          ]
-        },
-        {
-          "label": "メガガルーラex採用",
-          "requires": [
-            {
-              "card": "メガガルーラex",
-              "min_count": 1
-            }
-          ]
-        },
-        {
-          "label": "ファイアローex採用",
-          "requires": [
-            {
-              "card": "ファイアローex",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mega_lopunny_ex",
-      "name": "メガミミロップex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ミミロル",
-          "min_count": 2
-        },
-        {
-          "card": "メガミミロップex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "ヨノワール採用",
-          "requires": [
-            {
-              "card": "ヨノワール",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cynthia_garchomp_ex",
-      "name": "シロナのガブリアスex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "シロナのフカマル",
-          "min_count": 3
-        },
-        {
-          "card": "シロナのガバイト",
-          "min_count": 3
-        },
-        {
-          "card": "シロナのガブリアスex",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "marnie_grimmsnarl_ex",
-      "name": "マリィのオーロンゲex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "マリィのベロバー",
-          "min_count": 3
-        },
-        {
-          "card": "マリィのギモー",
-          "min_count": 2
-        },
-        {
-          "card": "マリィのオーロンゲex",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "mega_sharpedo_ex",
-      "name": "メガサメハダーex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "キバニア",
-          "min_count": 3
-        },
-        {
-          "card": "メガサメハダーex",
           "min_count": 3
         }
       ],
       "variants": []
     },
     {
-      "id": "ceruledge_ex",
-      "name": "ソウブレイズex",
+      "id": "mega_lucario_ex",
+      "name": "メガルカリオex",
       "priority": 100,
       "requires": [
         {
-          "card": "カルボウ",
-          "min_count": 3
-        },
-        {
-          "card": "ソウブレイズex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "ソルロック・ルナトーン採用",
-          "requires": [
-            {
-              "card": "ソルロック",
-              "min_count": 1
-            },
-            {
-              "card": "ルナトーン",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "archaludon_ex",
-      "name": "ブリジュラスex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ジュラルドン",
-          "min_count": 3
-        },
-        {
-          "card": "ブリジュラスex",
+          "card": "メガルカリオex",
           "min_count": 2
         }
       ],
       "variants": []
-    },
-    {
-      "id": "mega_starmie_ex",
-      "name": "メガスターミーex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ヒトデマン",
-          "min_count": 3
-        },
-        {
-          "card": "メガスターミーex",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "mega_chandelure_ex",
-      "name": "メガシャンデラex",
-      "priority": 100,
-      "requires": [
-        {
-          "card": "ヒトモシ",
-          "min_count": 3
-        },
-        {
-          "card": "ランプラー",
-          "min_count": 3
-        },
-        {
-          "card": "メガシャンデラex",
-          "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "mega_kangaskhan_ogerpon_fallback",
-      "name": "メガガルーラex・オーガポン みどりのめんex",
-      "priority": 50,
-      "requires": [
-        {
-          "card": "メガガルーラex",
-          "min_count": 2
-        },
-        {
-          "card": "オーガポン みどりのめんex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "リーリエのピッピex採用",
-          "requires": [
-            {
-              "card": "リーリエのピッピex",
-              "min_count": 1
-            }
-          ]
-        },
-        {
-          "label": "ファイアローex採用",
-          "requires": [
-            {
-              "card": "ファイアローex",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mega_kangaskhan_talonflame_fallback",
-      "name": "メガガルーラex・ファイアローex",
-      "priority": 40,
-      "requires": [
-        {
-          "card": "メガガルーラex",
-          "min_count": 3
-        },
-        {
-          "card": "ファイアローex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "リーリエのピッピex採用",
-          "requires": [
-            {
-              "card": "リーリエのピッピex",
-              "min_count": 1
-            }
-          ]
-        }
-      ]
     },
     {
       "id": "dipplin_rillaboom",
@@ -686,6 +296,22 @@
         {
           "card": "バチンキー",
           "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "alakazam",
+      "name": "フーディン",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "フーディン",
+          "min_count": 2
+        },
+        {
+          "card": "ユンゲラー",
+          "min_count": 2
         }
       ],
       "variants": []
@@ -727,28 +353,6 @@
         }
       ],
       "variants": []
-    },
-    {
-      "id": "mega_greninja_ex",
-      "name": "メガゲッコウガex",
-      "priority": 110,
-      "requires": [
-        {
-          "card": "メガゲッコウガex",
-          "min_count": 2
-        }
-      ],
-      "variants": [
-        {
-          "label": "ゲッコウガex採用",
-          "requires": [
-            {
-              "card": "ゲッコウガex",
-              "min_count": 2
-            }
-          ]
-        }
-      ]
     },
     {
       "id": "cynthias_garchomp_ex",
@@ -803,6 +407,30 @@
       "requires": [
         {
           "card": "ストリンダー",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_lopunny_ex",
+      "name": "メガミミロップex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガミミロップex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "ceruledge_ex",
+      "name": "ソウブレイズex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ソウブレイズex",
           "min_count": 2
         }
       ],
