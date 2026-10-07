@@ -29,7 +29,7 @@ def deck(**counts):
 
 class ClassificationTests(unittest.TestCase):
     def test_rules_are_versioned_japan_specific_and_external_reference_only(self):
-        self.assertEqual(VERSION, "JP-2026-W02-v4")
+        self.assertEqual(VERSION, "JP-2026-W02-v4.1")
         self.assertEqual(RULES["market"], "JP")
         self.assertFalse(RULES["external_taxonomy_reference"]["rules_imported"])
         self.assertFalse(RULES["external_taxonomy_reference"]["card_pool_equivalent"])
@@ -186,6 +186,22 @@ class ClassificationTests(unittest.TestCase):
             "ワンダーパッチ": 2,
         }), NOW)
         self.assertEqual(mew["parent_archetype"], "メガミミロップex")
+
+    def test_v41_hybrid_and_player_named_bomb_dudunsparce_bronzong(self):
+        hybrid = classify("code", deck(**{
+            "ドデカバシ": 3,
+            "ケララッパ": 2,
+            "ドラパルトex": 2,
+            "ドロンチ": 4,
+        }), NOW)
+        self.assertEqual(hybrid["parent_archetype"], "ドラパルトex／ドデカバシ")
+
+        named = classify("code", deck(**{
+            "ヨノワール": 3,
+            "ノココッチ": 3,
+            "ドータクン": 2,
+        }), NOW)
+        self.assertEqual(named["parent_archetype"], "ボムノココッチ／ドータクン")
 
     def test_original_parent_and_variant_rules_remain_deterministic(self):
         cases = [
