@@ -6,7 +6,7 @@ from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from .cards import section_type, validate_deck
+from .cards import validate_deck
 from .state import read_json, read_state, write_state
 
 IDENTITIES = read_json(Path(__file__).with_name("classification_cards.json"))
@@ -86,8 +86,6 @@ _validate_rules()
 def _logical_counts(deck):
     counts = Counter()
     for card in deck["cards"]:
-        if section_type(card.get("section")) != "pokemon":
-            continue
         logical_name = IDENTITY_LOOKUP.get((card.get("card_id"), card.get("name")))
         if logical_name is not None:
             counts[logical_name] += card["count"]
