@@ -1,0 +1,88 @@
+{
+  "version": "JP-2026-W02-v1",
+  "market": "JP",
+  "target_week": "W02",
+  "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
+  "external_taxonomy_reference": {
+    "name": "LimitlessTCG",
+    "role": "classification-engine design reference only",
+    "rules_imported": false,
+    "card_pool_equivalent": false,
+    "known_gap": "ストームエメラルダ is not yet released in the overseas card pool used by Limitless at this point"
+  },
+  "policy": {
+    "unknown_allowed": true,
+    "priority_direction": "higher_wins",
+    "equal_priority_collision": "unknown",
+    "multiple_variant_tags_allowed": true,
+    "engine_cards_are_not_parents_by_presence_alone": true
+  },
+  "parents": [
+    {
+      "id": "dragapult_ex",
+      "name": "ドラパルトex",
+      "priority": 100,
+      "requires": [{"card": "ドラパルトex", "min_count": 2}],
+      "variants": [
+        {"label": "ノココッチ型", "requires": [{"card": "ノココッチ", "min_count": 1}]},
+        {"label": "ヨノワール型", "requires": [{"card": "ヨノワール", "min_count": 1}]}
+      ]
+    },
+    {
+      "id": "mega_rayquaza_ex",
+      "name": "メガレックウザex",
+      "priority": 100,
+      "requires": [{"card": "メガレックウザex", "min_count": 2}],
+      "variants": [
+        {"label": "メガガルーラex採用", "requires": [{"card": "メガガルーラex", "min_count": 1}]},
+        {"label": "ヒビキのホウオウex採用", "requires": [{"card": "ヒビキのホウオウex", "min_count": 1}]}
+      ]
+    },
+    {
+      "id": "hydrapple_ex",
+      "name": "カミツオロチex",
+      "priority": 100,
+      "requires": [{"card": "カミツオロチex", "min_count": 2}],
+      "variants": [
+        {"label": "オーガポン みどりのめんex型", "requires": [{"card": "オーガポン みどりのめんex", "min_count": 3}]}
+      ]
+    },
+    {
+      "id": "arboliva_ex",
+      "name": "オリーヴァex",
+      "priority": 100,
+      "requires": [{"card": "オリーヴァex", "min_count": 2}],
+      "variants": [
+        {"label": "オーガポン みどりのめんex型", "requires": [{"card": "オーガポン みどりのめんex", "min_count": 3}]}
+      ]
+    },
+    {
+      "id": "mega_venusaur_ex",
+      "name": "メガフシギバナex",
+      "priority": 100,
+      "requires": [{"card": "メガフシギバナex", "min_count": 2}],
+      "variants": [
+        {"label": "オーガポン みどりのめんex型", "requires": [{"card": "オーガポン みどりのめんex", "min_count": 3}]}
+      ]
+    },
+    {
+      "id": "raging_bolt_ex",
+      "name": "タケルライコex",
+      "priority": 100,
+      "requires": [{"card": "タケルライコex", "min_count": 2}],
+      "variants": [
+        {"label": "オーガポン みどりのめんex型", "requires": [{"card": "オーガポン みどりのめんex", "min_count": 3}]},
+        {"label": "メガガルーラex採用", "requires": [{"card": "メガガルーラex", "min_count": 1}]}
+      ]
+    },
+    {
+      "id": "slowking",
+      "name": "ヤドキング",
+      "priority": 100,
+      "requires": [{"card": "ヤドキング", "min_count": 2}],
+      "variants": [
+        {"label": "メガガルーラex採用", "requires": [{"card": "メガガルーラex", "min_count": 1}]}
+      ]
+    }
+  ]
+}
