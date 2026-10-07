@@ -68,6 +68,37 @@ jobs:
           }, ensure_ascii=False))
           PY
 
+      - name: Materialize W02 answer index
+        shell: bash
+        run: |
+          set -euo pipefail
+          SNAP="data/analysis/weekly_snapshots/W02/FINAL/c2931ef42b944a3e86536742089d0c3f"
+          python -m analysis materialize-answer-index \
+            --snapshot "$SNAP" \
+            --category "オープン" \
+            --region "愛知県" \
+            --compare-start 2026-09-23 \
+            --compare-end 2026-09-29 \
+            --output-root .tmp/analysis-ci/answer-index
+          python - <<'PY'
+          import json
+          current = json.load(open(".tmp/analysis-ci/answer-index/current.json", encoding="utf-8"))
+          summary = json.load(open(current["summary_path"], encoding="utf-8"))
+          decks = json.load(open(current["decks_path"], encoding="utf-8"))
+          assert current["week_id"] == "W02"
+          assert current["analysis_stage"] == "FINAL"
+          assert current["audit_status"] != "FAIL"
+          assert summary["snapshot_id"] == current["snapshot_id"]
+          expected = summary["current_week"]["national"]["analysis"]["coverage"]["captured_top8_rows"]
+          assert decks["row_count"] == expected
+          assert decks["row_count"] > 0
+          print(json.dumps({
+              "generation_id": current["generation_id"],
+              "rows": decks["row_count"],
+              "audit": current["audit_status"],
+          }, ensure_ascii=False))
+          PY
+
       - name: Discover watch-card identity candidates
         shell: bash
         run: |

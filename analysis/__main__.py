@@ -39,6 +39,18 @@ def main():
                         help="Optional processed_sources sidecar analysed independently before DB comparison")
     weekly.add_argument("--output-json", type=Path)
     weekly.add_argument("--output-md", type=Path)
+    answer = commands.add_parser(
+        "materialize-answer-index",
+        help="Materialize compact reusable answer artifacts from one immutable FINAL snapshot")
+    answer.add_argument("--snapshot", type=Path, required=True)
+    answer.add_argument("--category", default="オープン")
+    answer.add_argument("--region", default="愛知県")
+    answer.add_argument("--compare-start")
+    answer.add_argument("--compare-end")
+    answer.add_argument("--watch-cards", type=Path)
+    answer.add_argument("--external-sources", type=Path)
+    answer.add_argument("--output-root", type=Path,
+                        default=ROOT / "data/analysis/answer_index")
     discover = commands.add_parser("discover-cards", help="Literal candidate ID discovery; never merge identities")
     discover.add_argument("--snapshot", type=Path, required=True)
     discover.add_argument("--name", action="append", required=True, dest="names")
@@ -75,7 +87,17 @@ def main():
     sync.add_argument("--observed-at")
     args = parser.parse_args()
 
-    if args.command == "weekly-report":
+    if args.command == "materialize-answer-index":
+        from .answer_index import materialize_answer_index
+        watch = read_json(args.watch_cards) if args.watch_cards else None
+        external = read_state(args.external_sources) if args.external_sources else None
+        result = materialize_answer_index(
+            args.snapshot, output_root=args.output_root,
+            category=args.category, region=args.region,
+            compare_start=args.compare_start, compare_end=args.compare_end,
+            watch_config=watch, external_sources=external)
+        print(json.dumps(result, ensure_ascii=False))
+    elif args.command == "weekly-report":
         from .weekly import analyze_snapshot, render_markdown
         watch = read_json(args.watch_cards) if args.watch_cards else None
         external = read_state(args.external_sources) if args.external_sources else None

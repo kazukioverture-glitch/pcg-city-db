@@ -1,0 +1,29 @@
+{
+  "schema_version": "answer-index-v1",
+  "week_id": "W02",
+  "analysis_stage": "FINAL",
+  "snapshot_id": "c2931ef42b944a3e86536742089d0c3f",
+  "generation_id": "c2931ef42b944a3e86536742089d0c3f-29ceb10cfb3b",
+  "category": "オープン",
+  "region": "愛知県",
+  "report_generated_at": "2026-10-07T11:59:22.582063+00:00",
+  "audit_status": "WARN",
+  "classifier_version": "JP-2026-W02-v3",
+  "classifier_sha256": "29ceb10cfb3b6cdcd303f8a5a058fec69edd51059531548cf314b1fc060b45dc",
+  "summary_path": "data/analysis/answer_index/W02/FINAL/c2931ef42b944a3e86536742089d0c3f-29ceb10cfb3b/summary.json",
+  "decks_path": "data/analysis/answer_index/W02/FINAL/c2931ef42b944a3e86536742089d0c3f-29ceb10cfb3b/decks.json",
+  "summary_sha256": "7e681254ad46e39f9984400dd3b9559f98c45463e8034781866666048b7e0eb1",
+  "decks_sha256": "c13f091570b0403fc86b11a1b153a19fa6ad1bdd4a11aa8dbd8c9e91f3992268",
+  "snapshot_git_commit_sha": "5a80b0b93854b2fb412bdd982abd53f5e582890c",
+  "snapshot_reference_hashes": {
+    "data/city_db.json": "484bd5813e6e9597518957db522c217e8b9d5673e9e0e0ddc9df215ba6dead79",
+    "data/city_decks.json": "2b974503efc2e95bf1d3ac316b4e6cadc50304d73ccafa384371c9b203daa323",
+    "data/index.json": "458782f800a6d745a2399e2ae009e00263b637de01a12024e4a47819537546d3",
+    "data/analysis/event_ledger.json": "44d4d3e6571418533bc03a2e5bb2a1a37a6088c06d89c18c8f546793d7af1d23",
+    "data/analysis/deck_classifications.json": "61b9b0f992f2e3a57cdaf568173351f3fddb4c239b46b13c3144d2e47eceb0c5",
+    "data/analysis/processed_sources.json": "0dbbc59279366c153be2699da7f74d08ca845531fc8e45479897432f3df57f7e",
+    "data/analysis/research_requests.json": "0592a8aeb1a5fe1894469a1568144756895f0aa856f5c27f38953a33d49421e2",
+    "data/analysis/forecast_log.json": "7301ca612e91263aeced7069e3b0df5419ef77a740bb17f028eacd8733bbc53b"
+  },
+  "fast_path_rule": "read_summary_then_decks_then_raw_then_external"
+}
