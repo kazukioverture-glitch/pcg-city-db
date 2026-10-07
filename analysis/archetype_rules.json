@@ -1,5 +1,5 @@
 {
-  "version": "JP-2026-W02-v3",
+  "version": "JP-2026-W02-v4",
   "market": "JP",
   "target_week": "W02",
   "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
@@ -17,7 +17,9 @@
     "multiple_variant_tags_allowed": true,
     "engine_cards_are_not_high_priority_parents_by_presence_alone": true,
     "fallback_rules_must_have_lower_priority_than_specific_archetypes": true,
-    "festival_lead_parent_basis": "お祭り会場3+ and バチンキー3+; attacker variant only when a clear 3+ line is present"
+    "festival_lead_parent_basis": "お祭り会場3+ and バチンキー3+; attacker variant only when a clear 3+ line is present",
+    "fallback_bullet_basis": "宝石バレット and ミュウバレット are low-priority engine/archetype fallbacks; specific parent archetypes win.",
+    "slowking_dragapult_basis": "ヤドキング2+ is treated as the parent over ドラパルトex when both appear; ドロンチ3+ marks ドロンチ型."
   },
   "parents": [
     {
@@ -242,7 +244,7 @@
     {
       "id": "slowking",
       "name": "ヤドキング",
-      "priority": 100,
+      "priority": 105,
       "requires": [
         {
           "card": "ヤドキング",
@@ -256,6 +258,15 @@
             {
               "card": "メガガルーラex",
               "min_count": 1
+            }
+          ]
+        },
+        {
+          "label": "ドロンチ型",
+          "requires": [
+            {
+              "card": "ドロンチ",
+              "min_count": 3
             }
           ]
         }
@@ -475,14 +486,10 @@
       "requires": [
         {
           "card": "オーガポン みどりのめんex",
-          "min_count": 4
+          "min_count": 3
         },
         {
           "card": "メガガルーラex",
-          "min_count": 2
-        },
-        {
-          "card": "ニャースex",
           "min_count": 2
         },
         {
@@ -508,6 +515,186 @@
         {
           "card": "ロケット団のドンカラス",
           "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_chandelure_ex",
+      "name": "メガシャンデラex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガシャンデラex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_starmie_froslass",
+      "name": "メガスターミーex／メガユキメノコex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガスターミーex",
+          "min_count": 2
+        },
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "archaludon_ex",
+      "name": "ブリジュラスex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ブリジュラスex",
+          "min_count": 3
+        }
+      ],
+      "variants": [
+        {
+          "label": "ノココッチ型",
+          "requires": [
+            {
+              "card": "ノココッチ",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okidogi_barbaracle",
+      "name": "イイネイヌ／ガメノデス",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "イイネイヌ",
+          "min_count": 3
+        },
+        {
+          "card": "ガメノデス",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "toucannon",
+      "name": "ドデカバシ",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ドデカバシ",
+          "min_count": 3
+        },
+        {
+          "card": "ケララッパ",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "jewel_bullet",
+      "name": "宝石バレット",
+      "priority": 80,
+      "requires": [
+        {
+          "card": "ホーホー",
+          "min_count": 3
+        },
+        {
+          "card": "ヨルノズク",
+          "min_count": 2
+        },
+        {
+          "card": "ゼロの大空洞",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mew_bullet",
+      "name": "ミュウバレット",
+      "priority": 80,
+      "requires": [
+        {
+          "card": "ミュウex",
+          "min_count": 3
+        },
+        {
+          "card": "テレパス超エネルギー",
+          "min_count": 4
+        },
+        {
+          "card": "ワンダーパッチ",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_diancie_ex",
+      "name": "メガディアンシーex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガディアンシーex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ヨノワール型",
+          "requires": [
+            {
+              "card": "ヨノワール",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mega_manectric_ex",
+      "name": "メガライボルトex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガライボルトex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "flareon_ex",
+      "name": "ブースターex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ブースターex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "diggersby",
+      "name": "ホルード",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ホルード",
+          "min_count": 2
         }
       ],
       "variants": []

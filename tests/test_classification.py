@@ -13,7 +13,15 @@ def deck(**counts):
     cards = []
     for name, count in counts.items():
         card_id, aliases = next(iter(IDENTITIES["cards"][name].items()))
-        cards.append(dict(card_id=card_id, name=aliases[0], count=count, section=("スタジアム" if name == "お祭り会場" else "ポケモン (10)")))
+        if name in {"お祭り会場", "ゼロの大空洞"}:
+            section = "スタジアム"
+        elif name == "テレパス超エネルギー":
+            section = "エネルギー"
+        elif name == "ワンダーパッチ":
+            section = "グッズ"
+        else:
+            section = "ポケモン (10)"
+        cards.append(dict(card_id=card_id, name=aliases[0], count=count, section=section))
     cards.append(dict(card_id="energy", name="基本エネルギー",
                       count=60-sum(counts.values()), section="エネルギー"))
     return dict(deck_code="code", total_cards=60, cards=cards)
@@ -21,7 +29,7 @@ def deck(**counts):
 
 class ClassificationTests(unittest.TestCase):
     def test_rules_are_versioned_japan_specific_and_external_reference_only(self):
-        self.assertEqual(VERSION, "JP-2026-W02-v3")
+        self.assertEqual(VERSION, "JP-2026-W02-v4")
         self.assertEqual(RULES["market"], "JP")
         self.assertFalse(RULES["external_taxonomy_reference"]["rules_imported"])
         self.assertFalse(RULES["external_taxonomy_reference"]["card_pool_equivalent"])
@@ -120,6 +128,62 @@ class ClassificationTests(unittest.TestCase):
         }), NOW)
         self.assertEqual(honchkrow["parent_archetype"], "ロケット団のドンカラス")
         self.assertEqual(honchkrow["classification_status"], "classified")
+
+    def test_v4_new_parents_bullets_and_slowking_drakloak(self):
+        cases = [
+            ({"メガシャンデラex": 3}, "メガシャンデラex", []),
+            ({"メガスターミーex": 2, "メガユキメノコex": 2},
+             "メガスターミーex／メガユキメノコex", []),
+            ({"ブリジュラスex": 3, "ノココッチ": 2},
+             "ブリジュラスex", ["ノココッチ型"]),
+            ({"イイネイヌ": 3, "ガメノデス": 2},
+             "イイネイヌ／ガメノデス", []),
+            ({"ドデカバシ": 3, "ケララッパ": 2},
+             "ドデカバシ", []),
+            ({"ホーホー": 3, "ヨルノズク": 2, "ゼロの大空洞": 3},
+             "宝石バレット", []),
+            ({"ミュウex": 3, "テレパス超エネルギー": 4, "ワンダーパッチ": 2},
+             "ミュウバレット", []),
+            ({"メガディアンシーex": 2, "ヨノワール": 2},
+             "メガディアンシーex", ["ヨノワール型"]),
+            ({"メガライボルトex": 3}, "メガライボルトex", []),
+            ({"ブースターex": 2}, "ブースターex", []),
+            ({"ホルード": 2}, "ホルード", []),
+            ({"ヤドキング": 2, "ドラパルトex": 2, "ドロンチ": 4},
+             "ヤドキング", ["ドロンチ型"]),
+        ]
+        for counts, parent, tags in cases:
+            with self.subTest(parent=parent):
+                result = classify("code", deck(**counts), NOW)
+                self.assertEqual(result["parent_archetype"], parent)
+                self.assertEqual(result["variant_tags"], tags)
+                self.assertEqual(result["classification_status"], "classified")
+
+        relaxed = classify("code", deck(**{
+            "オーガポン みどりのめんex": 3,
+            "メガガルーラex": 2,
+            "ラティアスex": 2,
+            "リーリエのピッピex": 2,
+        }), NOW)
+        self.assertEqual(relaxed["parent_archetype"], "メガガルーラ・オーガポンバレット")
+
+    def test_v4_bullet_fallbacks_do_not_override_specific_parents(self):
+        jewel = classify("code", deck(**{
+            "ドデカバシ": 3,
+            "ケララッパ": 2,
+            "ホーホー": 3,
+            "ヨルノズク": 2,
+            "ゼロの大空洞": 3,
+        }), NOW)
+        self.assertEqual(jewel["parent_archetype"], "ドデカバシ")
+
+        mew = classify("code", deck(**{
+            "メガミミロップex": 2,
+            "ミュウex": 3,
+            "テレパス超エネルギー": 4,
+            "ワンダーパッチ": 2,
+        }), NOW)
+        self.assertEqual(mew["parent_archetype"], "メガミミロップex")
 
     def test_original_parent_and_variant_rules_remain_deterministic(self):
         cases = [
