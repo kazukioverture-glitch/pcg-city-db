@@ -13,7 +13,7 @@ def deck(**counts):
     cards = []
     for name, count in counts.items():
         card_id, aliases = next(iter(IDENTITIES["cards"][name].items()))
-        cards.append(dict(card_id=card_id, name=aliases[0], count=count, section="ポケモン (10)"))
+        cards.append(dict(card_id=card_id, name=aliases[0], count=count, section=("スタジアム" if name == "お祭り会場" else "ポケモン (10)")))
     cards.append(dict(card_id="energy", name="基本エネルギー",
                       count=60-sum(counts.values()), section="エネルギー"))
     return dict(deck_code="code", total_cards=60, cards=cards)
@@ -21,7 +21,7 @@ def deck(**counts):
 
 class ClassificationTests(unittest.TestCase):
     def test_rules_are_versioned_japan_specific_and_external_reference_only(self):
-        self.assertEqual(VERSION, "JP-2026-W02-v1")
+        self.assertEqual(VERSION, "JP-2026-W02-v2")
         self.assertEqual(RULES["market"], "JP")
         self.assertFalse(RULES["external_taxonomy_reference"]["rules_imported"])
         self.assertFalse(RULES["external_taxonomy_reference"]["card_pool_equivalent"])
@@ -46,7 +46,7 @@ class ClassificationTests(unittest.TestCase):
         cases = [
             ({"Nのゾロアークex": 3}, "Nのゾロアークex", []),
             ({"メガルカリオex": 2}, "メガルカリオex", []),
-            ({"カミッチュ": 3, "バチンキー": 3}, "カミッチュ", []),
+            ({"お祭り会場": 4, "バチンキー": 4, "カミッチュ": 4}, "おまつりおんど", ["カミッチュ型"]),
             ({"フーディン": 2, "ユンゲラー": 2}, "フーディン", []),
             ({"ジュペッタ": 2, "ダダリン": 3, "フーディン": 2, "ユンゲラー": 2},
              "ジュペッタ／ダダリン", []),
@@ -69,6 +69,29 @@ class ClassificationTests(unittest.TestCase):
                 self.assertEqual(result["parent_archetype"], parent)
                 self.assertEqual(result["variant_tags"], tags)
                 self.assertEqual(result["classification_status"], "classified")
+
+    def test_festival_lead_parent_and_attacker_variants(self):
+        cases = [
+            ({"お祭り会場": 4, "バチンキー": 4, "カミッチュ": 4, "アズマオウ": 1},
+             ["カミッチュ型"]),
+            ({"お祭り会場": 4, "バチンキー": 4, "カミッチュ": 1, "アズマオウ": 3},
+             ["アズマオウ型"]),
+            ({"お祭り会場": 4, "バチンキー": 4, "カミッチュ": 2, "アズマオウ": 2},
+             []),
+        ]
+        for counts, tags in cases:
+            with self.subTest(counts=counts):
+                result = classify("code", deck(**counts), NOW)
+                self.assertEqual(result["parent_archetype"], "おまつりおんど")
+                self.assertEqual(result["variant_tags"], tags)
+                self.assertEqual(result["classification_status"], "classified")
+
+        self.assertIsNone(classify(
+            "code", deck(**{"お祭り会場": 4, "バチンキー": 2, "カミッチュ": 4}), NOW
+        )["parent_archetype"])
+        self.assertIsNone(classify(
+            "code", deck(**{"お祭り会場": 2, "バチンキー": 4, "アズマオウ": 3}), NOW
+        )["parent_archetype"])
 
     def test_original_parent_and_variant_rules_remain_deterministic(self):
         cases = [

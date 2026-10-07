@@ -1,5 +1,5 @@
 {
-  "version": "JP-2026-W02-v1",
+  "version": "JP-2026-W02-v2",
   "market": "JP",
   "target_week": "W02",
   "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
@@ -16,7 +16,8 @@
     "equal_priority_collision": "unknown",
     "multiple_variant_tags_allowed": true,
     "engine_cards_are_not_high_priority_parents_by_presence_alone": true,
-    "fallback_rules_must_have_lower_priority_than_specific_archetypes": true
+    "fallback_rules_must_have_lower_priority_than_specific_archetypes": true,
+    "festival_lead_parent_basis": "お祭り会場3+ and バチンキー3+; attacker variant only when a clear 3+ line is present"
   },
   "parents": [
     {
@@ -285,12 +286,12 @@
       "variants": []
     },
     {
-      "id": "dipplin_rillaboom",
-      "name": "カミッチュ",
+      "id": "festival_lead",
+      "name": "おまつりおんど",
       "priority": 100,
       "requires": [
         {
-          "card": "カミッチュ",
+          "card": "お祭り会場",
           "min_count": 3
         },
         {
@@ -298,7 +299,26 @@
           "min_count": 3
         }
       ],
-      "variants": []
+      "variants": [
+        {
+          "label": "カミッチュ型",
+          "requires": [
+            {
+              "card": "カミッチュ",
+              "min_count": 3
+            }
+          ]
+        },
+        {
+          "label": "アズマオウ型",
+          "requires": [
+            {
+              "card": "アズマオウ",
+              "min_count": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "alakazam",
