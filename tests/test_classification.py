@@ -31,12 +31,63 @@ class ClassificationTests(unittest.TestCase):
         for counts in (
             {"オーガポン みどりのめんex": 4},
             {"メガガルーラex": 4},
-            {"オーガポン みどりのめんex": 4, "メガガルーラex": 3},
         ):
             with self.subTest(counts=counts):
                 result = classify("code", deck(**counts), NOW)
                 self.assertIsNone(result["parent_archetype"])
                 self.assertEqual(result["classification_status"], "unknown")
+
+    def test_engine_combination_is_low_priority_fallback_not_single_card_parent(self):
+        result = classify(
+            "code",
+            deck(**{"オーガポン みどりのめんex": 4, "メガガルーラex": 3}),
+            NOW,
+        )
+        self.assertEqual(
+            result["parent_archetype"],
+            "メガガルーラex・オーガポン みどりのめんex",
+        )
+        evidence = json.loads(result["evidence"])
+        self.assertEqual(evidence["reason"], "unique_parent_rule")
+
+    def test_stronger_structural_rule_suppresses_engine_fallback(self):
+        result = classify(
+            "code",
+            deck(**{
+                "カミツオロチex": 2,
+                "オーガポン みどりのめんex": 4,
+                "メガガルーラex": 3,
+            }),
+            NOW,
+        )
+        self.assertEqual(result["parent_archetype"], "カミツオロチex")
+        evidence = json.loads(result["evidence"])
+        self.assertTrue(any(
+            item["name"] == "メガガルーラex・オーガポン みどりのめんex"
+            for item in evidence["suppressed_parent_rules"]
+        ))
+
+    def test_expanded_w02_structural_archetypes(self):
+        cases = [
+            ({"リオル": 3, "メガルカリオex": 3, "ソルロック": 2, "ルナトーン": 2},
+             "メガルカリオex", ["ソルロック・ルナトーン型"]),
+            ({"Nのゾロア": 4, "Nのゾロアークex": 4, "Nのゼクロム": 2},
+             "Nのゾロアークex", ["Nのゼクロム採用"]),
+            ({"サルノリ": 3, "バチンキー": 3, "カジッチュ": 2, "カミッチュ": 2},
+             "カミッチュ・バチンキー", []),
+            ({"カゲボウズ": 3, "ジュペッタ": 2, "ダダリン": 3},
+             "ジュペッタ・ダダリン", []),
+            ({"ダンバル": 3, "メタング": 3, "メガドリュウズex": 1, "メタグロス": 1},
+             "メタグロス・メガドリュウズex", ["メタグロス採用"]),
+            ({"ケーシィ": 3, "ユンゲラー": 3, "フーディン": 2},
+             "フーディン", []),
+        ]
+        for counts, parent, tags in cases:
+            with self.subTest(parent=parent):
+                result = classify("code", deck(**counts), NOW)
+                self.assertEqual(result["parent_archetype"], parent)
+                self.assertEqual(result["variant_tags"], tags)
+                self.assertEqual(result["classification_status"], "classified")
 
     def test_main_attacker_parent_with_engine_variant(self):
         cases = [
