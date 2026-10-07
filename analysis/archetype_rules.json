@@ -21,7 +21,6 @@
     "fallback_bullet_basis": "宝石バレット and ミュウバレット are low-priority engine/archetype fallbacks; specific parent archetypes win.",
     "slowking_dragapult_basis": "ヤドキング2+ is treated as the parent over ドラパルトex when both appear; ドロンチ3+ marks ドロンチ型.",
     "dragapult_toucannon_basis": "When both thick lines coexist (ドラパルトex2+, ドロンチ3+, ドデカバシ3+), use a combined parent instead of inferring a main attacker.",
-    "toucannon_dragapult_basis": "ドデカバシ3+・ケララッパ2+とドラパルトex2+・ドロンチ4+が同居する反復構築は専用複合親として扱う。",
     "bomb_dudunsparce_bronzong_basis": "本人投稿で『ボムノココッチドータクン』と明示された構築に合わせ、ヨノワール3+・ノココッチ3+・ドータクン2+を親判定条件とする。"
   },
   "parents": [
@@ -41,30 +40,6 @@
         {
           "card": "ドータクン",
           "min_count": 2
-        }
-      ],
-      "variants": []
-    },
-    {
-      "id": "toucannon_dragapult",
-      "name": "ドデカバシ／ドラパルトex",
-      "priority": 110,
-      "requires": [
-        {
-          "card": "ドデカバシ",
-          "min_count": 3
-        },
-        {
-          "card": "ケララッパ",
-          "min_count": 2
-        },
-        {
-          "card": "ドラパルトex",
-          "min_count": 2
-        },
-        {
-          "card": "ドロンチ",
-          "min_count": 4
         }
       ],
       "variants": []
