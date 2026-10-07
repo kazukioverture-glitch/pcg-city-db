@@ -92,6 +92,10 @@ class WeeklyTests(unittest.TestCase):
         self.assertIsNotNone(metric["ci95_wilson"])
         self.assertTrue(metric["small_sample_warning"])
         self.assertEqual(len(wilson95(1, 2)), 2)
+        coverage = national["classification_coverage_top8"]
+        self.assertEqual(coverage["valid_60_deck_lists"], 16)
+        self.assertEqual(coverage["parent_classified_among_valid_60_lists"]["numerator"], 10)
+        self.assertEqual(report["provenance"]["classifier_market"], "JP")
 
     def test_watch_card_exact_identity(self):
         report = self.report()
@@ -129,7 +133,7 @@ class WeeklyTests(unittest.TestCase):
 
     def test_text_preserves_provenance_metrics_and_small_sample_warning(self):
         text = render_markdown(self.report())
-        for value in ("post-snapshot", "snapshot_sidecar_when_present_else_post_snapshot_derivation",
+        for value in ("post-snapshot", "snapshot_sidecar_when_compatible_else_post_snapshot_derivation",
                       "recomputed_from_same_FINAL_snapshot_captured_city_data",
                       "top8_to_top4", "top4_to_top2", "top2_to_champion",
                       "Wilson 95%CI", "少数標本", "愛知県 各段階", "採用リスト数",

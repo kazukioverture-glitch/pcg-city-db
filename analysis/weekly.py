@@ -15,7 +15,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from .cards import validate_deck
-from .classification import VERSION as CLASSIFIER_VERSION, classify
+from .classification import RULES as CLASSIFIER_RULES, VERSION as CLASSIFIER_VERSION, classify
 from .state import read_json, read_state, verify_snapshot
 
 ENGINE_VERSION = "weekly-analysis-v1"
@@ -131,7 +131,12 @@ def _classification_resolver(classifications, decks, derived_timestamp):
         if code in cache:
             return cache[code]
         existing = records.get(code)
-        if existing is not None:
+        existing_version = existing.get("classifier_version") if existing is not None else None
+        sidecar_compatible = (
+            existing is not None
+            and existing_version in (None, CLASSIFIER_VERSION, "manual")
+        )
+        if sidecar_compatible:
             parent = (existing.get("parent_archetype")
                       if existing.get("classification_status") in ("classified", "partial")
                       else None)
@@ -155,7 +160,8 @@ def _classification_resolver(classifications, decks, derived_timestamp):
                     "parent": parent,
                     "variant_tags": list(derived.get("variant_tags") or []) if parent else [],
                     "status": derived.get("classification_status"),
-                    "source": "derived_post_snapshot",
+                    "source": ("derived_post_snapshot_rule_upgrade"
+                               if existing is not None else "derived_post_snapshot"),
                 }
         cache[code] = result
         return result
@@ -232,18 +238,28 @@ def _conversion(rows_by_stage, resolve):
     return output
 
 
-def _classification_coverage(rows, resolve):
+def _classification_coverage(rows, resolve, decks):
     sources = Counter()
     known = 0
+    valid_lists = 0
+    classified_valid_lists = 0
     statuses = Counter()
     for row in rows:
+        valid = _valid_deck(row["deck_code"], decks) is not None
+        if valid:
+            valid_lists += 1
         c = resolve(row["deck_code"])
         sources[c["source"]] += 1
         statuses[c["status"]] += 1
         if c["parent"]:
             known += 1
+            if valid:
+                classified_valid_lists += 1
     return {
         "parent_classified": _ratio(known, len(rows)),
+        "parent_classified_among_valid_60_lists": _ratio(
+            classified_valid_lists, valid_lists),
+        "valid_60_deck_lists": valid_lists,
         "statuses": dict(sorted(statuses.items())),
         "sources": dict(sorted(sources.items())),
         "unclassified_count": len(rows) - known,
@@ -399,7 +415,7 @@ def _scope_analysis(events, decks, resolve, watch_config):
         "stage_composition": {stage: _composition(rows, resolve) for stage, rows in stages.items()},
         "variant_prevalence_top8": _variant_prevalence(stages["top8"], resolve),
         "conversion": _conversion(stages, resolve),
-        "classification_coverage_top8": _classification_coverage(stages["top8"], resolve),
+        "classification_coverage_top8": _classification_coverage(stages["top8"], resolve, decks),
         "card_analysis_top8": {
             "exact_identities": _exact_card_stats(stages["top8"], decks),
             "watch_cards": _watch_card_stats(stages["top8"], decks, watch_config),
@@ -636,7 +652,10 @@ def build_weekly_report(metadata, city, decks_document, classifications, *,
             "snapshot_retrieved_at": metadata["retrieved_at"],
             "snapshot_cutoff_datetime": metadata["cutoff_datetime"],
             "classifier_version": CLASSIFIER_VERSION,
-            "classification_mode": "snapshot_sidecar_when_present_else_post_snapshot_derivation",
+            "classifier_market": CLASSIFIER_RULES["market"],
+            "classifier_card_pool_basis": CLASSIFIER_RULES["card_pool_basis"],
+            "external_taxonomy_reference": CLASSIFIER_RULES["external_taxonomy_reference"],
+            "classification_mode": "snapshot_sidecar_when_compatible_else_post_snapshot_derivation",
         },
         "current_week": {
             "period_start": metadata["period_start"],
@@ -726,9 +745,14 @@ def analyze_snapshot(snapshot_dir, *, category="オープン", region="愛知県
     report["current_week"]["regional"]["target_coverage"] = _target_coverage(
         metadata, city, ledger, category, region=region)
 
-    classifier_path = Path(__file__).with_name("classification_cards.json")
+    identity_path = Path(__file__).with_name("classification_cards.json")
+    rules_path = Path(__file__).with_name("archetype_rules.json")
     report["provenance"]["classifier_sha256"] = hashlib.sha256(
-        classifier_path.read_bytes()).hexdigest()
+        identity_path.read_bytes() + b"\0" + rules_path.read_bytes()).hexdigest()
+    report["provenance"]["classification_identity_sha256"] = hashlib.sha256(
+        identity_path.read_bytes()).hexdigest()
+    report["provenance"]["classification_rules_sha256"] = hashlib.sha256(
+        rules_path.read_bytes()).hexdigest()
     report["provenance"]["snapshot_reference_hashes"] = {
         r["path"]: r["sha256"] for r in metadata["references"]
     }
@@ -751,7 +775,7 @@ def render_markdown(report):
         f"- snapshot: `{report['snapshot_id']}`",
         "- 比率は公開Top8捕捉行ベース。全参加者の使用率ではない。",
         f"- 分類provenance: `{report['provenance']['classification_mode']}`。snapshot内60枚リストからのpost-snapshot派生分析を含む。",
-        f"- 分類器: `{report['provenance']['classifier_version']}`、辞書SHA256: `{report['provenance'].get('classifier_sha256', 'not_available')}`",
+        f"- 分類器: `{report['provenance']['classifier_version']}`（{report['provenance'].get('classifier_market', 'unknown')}カードプール）、ルール+辞書SHA256: `{report['provenance'].get('classifier_sha256', 'not_available')}`",
         "",
         "## データカバレッジ",
         f"- 全国: 結果大会 {national['coverage']['result_events']}、Top8捕捉行 {national['coverage']['captured_top8_rows']}、60枚リスト判明 {national['coverage']['known_top8_deck_lists']}",
@@ -780,6 +804,7 @@ def render_markdown(report):
         "",
         "## 構築・採用カード",
         f"- 親分類判明: {coverage['parent_classified']['numerator']}/{coverage['parent_classified']['denominator']} = {pct(coverage['parent_classified'])}",
+        f"- 有効60枚リスト内の親分類カバレッジ: {coverage['parent_classified_among_valid_60_lists']['numerator']}/{coverage['parent_classified_among_valid_60_lists']['denominator']} = {pct(coverage['parent_classified_among_valid_60_lists'])}",
     ]
     watch = national["card_analysis_top8"]["watch_cards"]
     if watch["status"] == "configured":
