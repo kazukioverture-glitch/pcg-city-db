@@ -17,7 +17,9 @@
     "multiple_variant_tags_allowed": true,
     "engine_cards_are_not_parents_by_presence_alone": true,
     "fallback_rules_are_lower_priority": true,
-    "fallback_parent_names_describe_observed_structure_not_inferred_gameplan": true
+    "fallback_parent_names_describe_observed_structure_not_inferred_gameplan": true,
+    "fallback_parent_rules_allowed": true,
+    "fallback_rules_must_have_lower_priority_than_specific_archetypes": true
   },
   "parents": [
     {
@@ -671,6 +673,152 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dipplin_rillaboom",
+      "name": "カミッチュ",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "カミッチュ",
+          "min_count": 3
+        },
+        {
+          "card": "バチンキー",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "metang_genesect",
+      "name": "メタング／ゲノセクトex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メタング",
+          "min_count": 3
+        },
+        {
+          "card": "ゲノセクトex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "メガドリュウズex型",
+          "requires": [
+            {
+              "card": "メガドリュウズex",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greninja_ex",
+      "name": "ゲッコウガex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ゲッコウガex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_greninja_ex",
+      "name": "メガゲッコウガex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガゲッコウガex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ゲッコウガex採用",
+          "requires": [
+            {
+              "card": "ゲッコウガex",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cynthias_garchomp_ex",
+      "name": "シロナのガブリアスex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "シロナのガブリアスex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "marnies_grimmsnarl_ex",
+      "name": "マリィのオーロンゲex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "マリィのオーロンゲex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "team_rocket_spidops",
+      "name": "ロケット団のワナイダー",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ロケット団のワナイダー",
+          "min_count": 3
+        }
+      ],
+      "variants": [
+        {
+          "label": "ロケット団のミュウツーex採用",
+          "requires": [
+            {
+              "card": "ロケット団のミュウツーex",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toxtricity",
+      "name": "ストリンダー",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ストリンダー",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_kangaskhan_ex_fallback",
+      "name": "メガガルーラex",
+      "priority": 10,
+      "requires": [
+        {
+          "card": "メガガルーラex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
     }
   ]
 }
