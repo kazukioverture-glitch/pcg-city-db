@@ -194,6 +194,7 @@ class ClassificationTests(unittest.TestCase):
             "ドラパルトex": 2,
             "ドロンチ": 4,
         }), NOW)
+        print("DEBUG_HYBRID", hybrid["evidence"])
         self.assertEqual(hybrid["parent_archetype"], "ドデカバシ／ドラパルトex")
 
         named = classify("code", deck(**{
