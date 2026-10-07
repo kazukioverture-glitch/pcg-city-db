@@ -6,6 +6,10 @@ on:
       - main
     paths:
       - "data/analysis/weekly_snapshots/**/FINAL/**"
+      - "analysis/archetype_rules.json"
+      - "analysis/classification_cards.json"
+      - "analysis/classification.py"
+      - ".github/workflows/materialize-answer-index.yml"
 
 permissions:
   contents: write
