@@ -1,6 +1,6 @@
 {
   "version": "city-classifier-v1",
-  "source": "Exact card IDs and display aliases observed in captured City League deck data; expanded from W02 FINAL unclassified-deck diagnostic for JP-2026-W02-v1. Curated for classification only, not a global card master.",
+  "source": "Exact card IDs and display aliases observed in the immutable W02 FINAL snapshot and earlier collected City League data; curated for classification only, not a global card master.",
   "cards": {
     "ドラパルトex": {
       "45772": [
@@ -924,6 +924,14 @@
       "50033": [
         "リーリエのピッピex",
         "リーリエのピッピexMC765/742"
+      ]
+    },
+    "ストリンダー": {
+      "48397": [
+        "ストリンダーM2057/080"
+      ],
+      "48495": [
+        "ストリンダーM2089/080"
       ]
     }
   }
