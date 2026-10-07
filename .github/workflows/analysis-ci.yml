@@ -51,11 +51,20 @@ jobs:
           assert report["audit"]["status"] != "FAIL", report["audit"]
           assert report["current_week"]["regional"]["selection_basis"] == "venue_prefecture"
           assert report["trend"]["status"] == "available"
+          coverage = report["current_week"]["national"]["analysis"]["classification_coverage_top8"]
+          ratio = coverage["parent_classified_among_valid_60_lists"]
+          assert ratio["denominator"] > 0
+          assert ratio["value"] >= 0.90, ratio
+          assert report["provenance"]["classifier_market"] == "JP"
+          assert report["provenance"]["external_taxonomy_reference"]["rules_imported"] is False
           print(json.dumps({
               "audit": report["audit"]["status"],
               "national_top8": report["current_week"]["national"]["analysis"]["coverage"]["captured_top8_rows"],
               "aichi_top8": report["current_week"]["regional"]["analysis"]["coverage"]["captured_top8_rows"],
-              "unclassified": report["current_week"]["national"]["analysis"]["classification_coverage_top8"]["unclassified_count"],
+              "classified_valid_60": ratio["numerator"],
+              "valid_60": ratio["denominator"],
+              "classification_coverage": ratio["value"],
+              "unclassified": coverage["unclassified_count"],
           }, ensure_ascii=False))
           PY
 
