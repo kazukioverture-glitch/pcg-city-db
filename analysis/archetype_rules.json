@@ -1,5 +1,5 @@
 {
-  "version": "JP-2026-W02-v2",
+  "version": "JP-2026-W02-v3",
   "market": "JP",
   "target_week": "W02",
   "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
@@ -463,6 +463,50 @@
       "requires": [
         {
           "card": "メガガルーラex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_kangaskhan_ogerpon_bullet",
+      "name": "メガガルーラ・オーガポンバレット",
+      "priority": 90,
+      "requires": [
+        {
+          "card": "オーガポン みどりのめんex",
+          "min_count": 4
+        },
+        {
+          "card": "メガガルーラex",
+          "min_count": 2
+        },
+        {
+          "card": "ニャースex",
+          "min_count": 2
+        },
+        {
+          "card": "ラティアスex",
+          "min_count": 2
+        },
+        {
+          "card": "リーリエのピッピex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "team_rocket_honchkrow",
+      "name": "ロケット団のドンカラス",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ロケット団のヤミカラス",
+          "min_count": 4
+        },
+        {
+          "card": "ロケット団のドンカラス",
           "min_count": 3
         }
       ],
