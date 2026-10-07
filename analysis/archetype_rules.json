@@ -19,7 +19,8 @@
     "fallback_rules_must_have_lower_priority_than_specific_archetypes": true,
     "festival_lead_parent_basis": "お祭り会場3+ and バチンキー3+; attacker variant only when a clear 3+ line is present",
     "fallback_bullet_basis": "宝石バレット and ミュウバレット are low-priority engine/archetype fallbacks; specific parent archetypes win.",
-    "slowking_dragapult_basis": "ヤドキング2+ is treated as the parent over ドラパルトex when both appear; ドロンチ3+ marks ドロンチ型."
+    "slowking_dragapult_basis": "ヤドキング2+ is treated as the parent over ドラパルトex when both appear; ドロンチ3+ marks ドロンチ型.",
+    "dragapult_toucannon_basis": "When both thick lines coexist (ドラパルトex2+, ドロンチ3+, ドデカバシ3+), use a combined parent instead of inferring a main attacker."
   },
   "parents": [
     {
@@ -695,6 +696,26 @@
         {
           "card": "ホルード",
           "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "dragapult_toucannon",
+      "name": "ドラパルトex／ドデカバシ",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "ドラパルトex",
+          "min_count": 2
+        },
+        {
+          "card": "ドロンチ",
+          "min_count": 3
+        },
+        {
+          "card": "ドデカバシ",
+          "min_count": 3
         }
       ],
       "variants": []

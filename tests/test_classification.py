@@ -151,6 +151,8 @@ class ClassificationTests(unittest.TestCase):
             ({"ホルード": 2}, "ホルード", []),
             ({"ヤドキング": 2, "ドラパルトex": 2, "ドロンチ": 4},
              "ヤドキング", ["ドロンチ型"]),
+            ({"ドラパルトex": 2, "ドロンチ": 4, "ドデカバシ": 3},
+             "ドラパルトex／ドデカバシ", []),
         ]
         for counts, parent, tags in cases:
             with self.subTest(parent=parent):
