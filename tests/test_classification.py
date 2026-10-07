@@ -21,7 +21,7 @@ def deck(**counts):
 
 class ClassificationTests(unittest.TestCase):
     def test_rules_are_versioned_japan_specific_and_external_reference_only(self):
-        self.assertEqual(VERSION, "JP-2026-W02-v2")
+        self.assertEqual(VERSION, "JP-2026-W02-v3")
         self.assertEqual(RULES["market"], "JP")
         self.assertFalse(RULES["external_taxonomy_reference"]["rules_imported"])
         self.assertFalse(RULES["external_taxonomy_reference"]["card_pool_equivalent"])
@@ -92,6 +92,34 @@ class ClassificationTests(unittest.TestCase):
         self.assertIsNone(classify(
             "code", deck(**{"お祭り会場": 2, "バチンキー": 4, "アズマオウ": 3}), NOW
         )["parent_archetype"])
+
+    def test_bullet_and_rocket_honchkrow_rules(self):
+        bullet = classify("code", deck(**{
+            "オーガポン みどりのめんex": 4,
+            "メガガルーラex": 2,
+            "ニャースex": 2,
+            "ラティアスex": 2,
+            "リーリエのピッピex": 2,
+        }), NOW)
+        self.assertEqual(bullet["parent_archetype"], "メガガルーラ・オーガポンバレット")
+        self.assertEqual(bullet["classification_status"], "classified")
+
+        specific = classify("code", deck(**{
+            "タケルライコex": 2,
+            "オーガポン みどりのめんex": 4,
+            "メガガルーラex": 2,
+            "ニャースex": 2,
+            "ラティアスex": 2,
+            "リーリエのピッピex": 2,
+        }), NOW)
+        self.assertEqual(specific["parent_archetype"], "タケルライコex")
+
+        honchkrow = classify("code", deck(**{
+            "ロケット団のヤミカラス": 4,
+            "ロケット団のドンカラス": 3,
+        }), NOW)
+        self.assertEqual(honchkrow["parent_archetype"], "ロケット団のドンカラス")
+        self.assertEqual(honchkrow["classification_status"], "classified")
 
     def test_original_parent_and_variant_rules_remain_deterministic(self):
         cases = [
