@@ -1,6 +1,10 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
-from analysis.answer_index import build_deck_index
+from analysis.answer_index import (
+    build_deck_index, find_latest_final_snapshot, previous_week_period)
 
 
 def card(card_id, name, count=1):
@@ -51,6 +55,39 @@ class AnswerIndexTests(unittest.TestCase):
         self.assertEqual(result["rows"][0]["variant_tags"], ["v型"])
         self.assertIsNone(result["rows"][1]["parent_archetype"])
         self.assertTrue(result["rows"][1]["valid_60"])
+
+    def test_previous_week_period_is_exactly_seven_days_back(self):
+        metadata = {
+            "schema_version": "1.2.2",
+            "period_start": "2026-10-07T00:00:00+09:00",
+            "period_end": "2026-10-13T23:59:59+09:00",
+        }
+        self.assertEqual(
+            previous_week_period(metadata),
+            ("2026-09-30", "2026-10-06"))
+
+    def test_latest_final_snapshot_uses_period_end_not_directory_name(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            base = root / "data/analysis/weekly_snapshots"
+            for week, end, snapshot in (
+                    ("W09", "2026-10-06T23:59:59+09:00", "older"),
+                    ("W03", "2026-10-13T23:59:59+09:00", "newer")):
+                directory = base / week / "FINAL" / snapshot
+                directory.mkdir(parents=True)
+                (directory / "metadata.json").write_text(json.dumps({
+                    "schema_version": "1.2.2",
+                    "kind": "weekly_snapshot",
+                    "snapshot_id": snapshot,
+                    "week_id": week,
+                    "analysis_stage": "FINAL",
+                    "period_start": "2026-10-07T00:00:00+09:00",
+                    "period_end": end,
+                    "cutoff_datetime": end,
+                }), encoding="utf-8")
+            directory, metadata = find_latest_final_snapshot(root)
+            self.assertEqual(metadata["snapshot_id"], "newer")
+            self.assertEqual(directory.name, "newer")
 
 
 if __name__ == "__main__":

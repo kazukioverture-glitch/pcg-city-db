@@ -51,6 +51,13 @@ def main():
     answer.add_argument("--external-sources", type=Path)
     answer.add_argument("--output-root", type=Path,
                         default=ROOT / "data/analysis/answer_index")
+    latest_answer = commands.add_parser(
+        "materialize-latest-answer-index",
+        help="Find the newest immutable FINAL snapshot and refresh the reusable answer index")
+    latest_answer.add_argument("--category", default="オープン")
+    latest_answer.add_argument("--region", default="愛知県")
+    latest_answer.add_argument("--output-root", type=Path,
+                               default=ROOT / "data/analysis/answer_index")
     discover = commands.add_parser("discover-cards", help="Literal candidate ID discovery; never merge identities")
     discover.add_argument("--snapshot", type=Path, required=True)
     discover.add_argument("--name", action="append", required=True, dest="names")
@@ -87,7 +94,12 @@ def main():
     sync.add_argument("--observed-at")
     args = parser.parse_args()
 
-    if args.command == "materialize-answer-index":
+    if args.command == "materialize-latest-answer-index":
+        from .answer_index import materialize_latest_answer_index
+        result = materialize_latest_answer_index(
+            output_root=args.output_root, category=args.category, region=args.region)
+        print(json.dumps(result, ensure_ascii=False))
+    elif args.command == "materialize-answer-index":
         from .answer_index import materialize_answer_index
         watch = read_json(args.watch_cards) if args.watch_cards else None
         external = read_state(args.external_sources) if args.external_sources else None

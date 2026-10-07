@@ -6,7 +6,7 @@ import hashlib
 import json
 import os
 import tempfile
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from .state import ROOT, read_json, verify_snapshot
@@ -44,6 +44,64 @@ def _repo_relative(path):
     if not resolved.is_relative_to(root):
         raise ValueError("Answer index output must stay inside repository root")
     return resolved.relative_to(root).as_posix()
+
+
+def previous_week_period(metadata):
+    """Return the immediately preceding Wednesday-Tuesday date range."""
+    if metadata.get("schema_version") != "1.2.2":
+        raise ValueError("comparison period requires a v1.2.2 snapshot")
+    current_start = date.fromisoformat(metadata["period_start"][:10])
+    current_end = date.fromisoformat(metadata["period_end"][:10])
+    return (
+        (current_start - timedelta(days=7)).isoformat(),
+        (current_end - timedelta(days=7)).isoformat(),
+    )
+
+
+def find_latest_final_snapshot(root=ROOT):
+    """Select the newest FINAL snapshot by period_end/cutoff, without touching mutable DBs."""
+    snapshot_root = Path(root) / "data/analysis/weekly_snapshots"
+    candidates = []
+    for metadata_path in snapshot_root.glob("*/FINAL/*/metadata.json"):
+        try:
+            metadata = read_json(metadata_path)
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if (metadata.get("kind") != "weekly_snapshot"
+                or metadata.get("schema_version") != "1.2.2"
+                or metadata.get("analysis_stage") != "FINAL"):
+            continue
+        candidates.append((
+            metadata["period_end"],
+            metadata.get("cutoff_datetime", ""),
+            metadata.get("created_at", ""),
+            metadata.get("snapshot_id", ""),
+            metadata_path.parent,
+            metadata,
+        ))
+    if not candidates:
+        raise FileNotFoundError("No v1.2.2 FINAL weekly snapshot found")
+    *_, directory, metadata = max(candidates)
+    return directory, metadata
+
+
+def materialize_latest_answer_index(*, output_root=None,
+                                    category="オープン", region="愛知県",
+                                    generated_at=None):
+    """Refresh current.json from the newest FINAL snapshot and its previous week."""
+    snapshot_dir, metadata = find_latest_final_snapshot(ROOT)
+    compare_start, compare_end = previous_week_period(metadata)
+    result = materialize_answer_index(
+        snapshot_dir, output_root=output_root, category=category, region=region,
+        compare_start=compare_start, compare_end=compare_end,
+        generated_at=generated_at)
+    return {
+        **result,
+        "week_id": metadata["week_id"],
+        "snapshot": snapshot_dir.relative_to(ROOT).as_posix(),
+        "compare_start": compare_start,
+        "compare_end": compare_end,
+    }
 
 
 def build_deck_index(metadata, city, decks_document, classifications, *,
