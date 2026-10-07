@@ -15,6 +15,24 @@ VERSION = RULES["version"]
 LEGACY_AUTO_VERSION_PREFIXES = ("city-classifier-", "JP-")
 
 
+def _build_identity_lookup():
+    lookup = {}
+    for logical_name, aliases_by_id in IDENTITIES["cards"].items():
+        for card_id, aliases in aliases_by_id.items():
+            for display_name in aliases:
+                key = (card_id, display_name)
+                previous = lookup.get(key)
+                if previous is not None and previous != logical_name:
+                    raise ValueError(
+                        f"Card identity collision: {card_id}/{display_name}: "
+                        f"{previous} vs {logical_name}")
+                lookup[key] = logical_name
+    return lookup
+
+
+IDENTITY_LOOKUP = _build_identity_lookup()
+
+
 def _validate_rules():
     if RULES.get("market") != "JP":
         raise ValueError("Archetype rules must explicitly target the JP card pool")
@@ -70,11 +88,9 @@ def _logical_counts(deck):
     for card in deck["cards"]:
         if section_type(card.get("section")) != "pokemon":
             continue
-        card_id = card.get("card_id")
-        display_name = card.get("name")
-        for logical_name, aliases_by_id in IDENTITIES["cards"].items():
-            if display_name in aliases_by_id.get(card_id, []):
-                counts[logical_name] += card["count"]
+        logical_name = IDENTITY_LOOKUP.get((card.get("card_id"), card.get("name")))
+        if logical_name is not None:
+            counts[logical_name] += card["count"]
     return counts
 
 
