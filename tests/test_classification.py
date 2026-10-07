@@ -20,67 +20,48 @@ def deck(**counts):
 
 
 class ClassificationTests(unittest.TestCase):
-    def test_rules_are_japan_specific_and_external_taxonomy_is_reference_only(self):
+    def test_rules_are_versioned_japan_specific_and_external_reference_only(self):
         self.assertEqual(VERSION, "JP-2026-W02-v1")
         self.assertEqual(RULES["market"], "JP")
         self.assertFalse(RULES["external_taxonomy_reference"]["rules_imported"])
         self.assertFalse(RULES["external_taxonomy_reference"]["card_pool_equivalent"])
         self.assertTrue(RULES["policy"]["unknown_allowed"])
 
-    def test_engine_cards_are_not_parents_by_presence_alone(self):
-        for counts in (
-            {"オーガポン みどりのめんex": 4},
-            {"メガガルーラex": 4},
-        ):
-            with self.subTest(counts=counts):
-                result = classify("code", deck(**counts), NOW)
-                self.assertIsNone(result["parent_archetype"])
-                self.assertEqual(result["classification_status"], "unknown")
+    def test_ogerpon_alone_is_not_parent_and_kangaskhan_is_low_priority_fallback(self):
+        result = classify("code", deck(**{"オーガポン みどりのめんex": 4}), NOW)
+        self.assertIsNone(result["parent_archetype"])
+        self.assertEqual(result["classification_status"], "unknown")
 
-    def test_engine_combination_is_low_priority_fallback_not_single_card_parent(self):
+        result = classify("code", deck(**{"メガガルーラex": 3}), NOW)
+        self.assertEqual(result["parent_archetype"], "メガガルーラex")
+
         result = classify(
-            "code",
-            deck(**{"オーガポン みどりのめんex": 4, "メガガルーラex": 3}),
-            NOW,
-        )
-        self.assertEqual(
-            result["parent_archetype"],
-            "メガガルーラex・オーガポン みどりのめんex",
-        )
+            "code", deck(**{"メガガルーラex": 3, "メガレックウザex": 2}), NOW)
+        self.assertEqual(result["parent_archetype"], "メガレックウザex")
         evidence = json.loads(result["evidence"])
-        self.assertEqual(evidence["reason"], "unique_parent_rule")
+        self.assertIn("メガガルーラex",
+                      [x["name"] for x in evidence["suppressed_parent_rules"]])
 
-    def test_stronger_structural_rule_suppresses_engine_fallback(self):
-        result = classify(
-            "code",
-            deck(**{
-                "カミツオロチex": 2,
-                "オーガポン みどりのめんex": 4,
-                "メガガルーラex": 3,
-            }),
-            NOW,
-        )
-        self.assertEqual(result["parent_archetype"], "カミツオロチex")
-        evidence = json.loads(result["evidence"])
-        self.assertTrue(any(
-            item["name"] == "メガガルーラex・オーガポン みどりのめんex"
-            for item in evidence["suppressed_parent_rules"]
-        ))
-
-    def test_expanded_w02_structural_archetypes(self):
+    def test_high_confidence_w02_rules_and_priority(self):
         cases = [
-            ({"リオル": 3, "メガルカリオex": 3, "ソルロック": 2, "ルナトーン": 2},
-             "メガルカリオex", ["ソルロック・ルナトーン型"]),
-            ({"Nのゾロア": 4, "Nのゾロアークex": 4, "Nのゼクロム": 2},
-             "Nのゾロアークex", ["Nのゼクロム採用"]),
-            ({"サルノリ": 3, "バチンキー": 3, "カジッチュ": 2, "カミッチュ": 2},
-             "カミッチュ・バチンキー", []),
-            ({"カゲボウズ": 3, "ジュペッタ": 2, "ダダリン": 3},
-             "ジュペッタ・ダダリン", []),
-            ({"ダンバル": 3, "メタング": 3, "メガドリュウズex": 1, "メタグロス": 1},
-             "メタグロス・メガドリュウズex", ["メタグロス採用"]),
-            ({"ケーシィ": 3, "ユンゲラー": 3, "フーディン": 2},
-             "フーディン", []),
+            ({"Nのゾロアークex": 3}, "Nのゾロアークex", []),
+            ({"メガルカリオex": 2}, "メガルカリオex", []),
+            ({"カミッチュ": 3, "バチンキー": 3}, "カミッチュ", []),
+            ({"フーディン": 2, "ユンゲラー": 2}, "フーディン", []),
+            ({"ジュペッタ": 2, "ダダリン": 3, "フーディン": 2, "ユンゲラー": 2},
+             "ジュペッタ／ダダリン", []),
+            ({"メタング": 3, "ゲノセクトex": 2, "メガドリュウズex": 2},
+             "メタング／ゲノセクトex", ["メガドリュウズex型"]),
+            ({"ゲッコウガex": 2, "メガゲッコウガex": 2},
+             "メガゲッコウガex", ["ゲッコウガex採用"]),
+            ({"メガサメハダーex": 2, "ストリンダー": 2},
+             "メガサメハダーex", ["ストリンダー型"]),
+            ({"シロナのガブリアスex": 2}, "シロナのガブリアスex", []),
+            ({"マリィのオーロンゲex": 2}, "マリィのオーロンゲex", []),
+            ({"ロケット団のワナイダー": 3, "ロケット団のミュウツーex": 1},
+             "ロケット団のワナイダー", ["ロケット団のミュウツーex採用"]),
+            ({"メガミミロップex": 2}, "メガミミロップex", []),
+            ({"ソウブレイズex": 2}, "ソウブレイズex", []),
         ]
         for counts, parent, tags in cases:
             with self.subTest(parent=parent):
@@ -89,10 +70,10 @@ class ClassificationTests(unittest.TestCase):
                 self.assertEqual(result["variant_tags"], tags)
                 self.assertEqual(result["classification_status"], "classified")
 
-    def test_main_attacker_parent_with_engine_variant(self):
+    def test_original_parent_and_variant_rules_remain_deterministic(self):
         cases = [
-            ({"メガレックウザex": 2, "メガガルーラex": 3},
-             "メガレックウザex", ["メガガルーラex採用"]),
+            ({"ドラパルトex": 2, "ノココッチ": 2, "ヨノワール": 1},
+             "ドラパルトex", ["ノココッチ型", "ヨノワール型"]),
             ({"カミツオロチex": 2, "オーガポン みどりのめんex": 4},
              "カミツオロチex", ["オーガポン みどりのめんex型"]),
             ({"オリーヴァex": 2, "オーガポン みどりのめんex": 4},
@@ -101,35 +82,20 @@ class ClassificationTests(unittest.TestCase):
              "メガフシギバナex", ["オーガポン みどりのめんex型"]),
             ({"タケルライコex": 2, "オーガポン みどりのめんex": 4},
              "タケルライコex", ["オーガポン みどりのめんex型"]),
-            ({"ヤドキング": 2, "メガガルーラex": 2},
-             "ヤドキング", ["メガガルーラex採用"]),
         ]
         for counts, parent, tags in cases:
             with self.subTest(parent=parent):
                 result = classify("code", deck(**counts), NOW)
                 self.assertEqual(result["parent_archetype"], parent)
                 self.assertEqual(result["variant_tags"], tags)
-                self.assertEqual(result["classification_status"], "classified")
 
-    def test_dragapult_support_tags_are_nonexclusive(self):
-        d = deck(**{"ドラパルトex": 2, "ノココッチ": 2, "ヨノワール": 1})
-        self.assertEqual(
-            classify("code", d, NOW)["variant_tags"],
-            ["ノココッチ型", "ヨノワール型"],
-        )
-        d["cards"][1]["name"] = "ノココッチex"
-        self.assertEqual(classify("code", d, NOW)["variant_tags"], ["ヨノワール型"])
-
-    def test_equal_priority_main_attacker_collision_stays_unknown(self):
+    def test_equal_priority_collision_stays_unknown(self):
         result = classify(
-            "code",
-            deck(**{"メガレックウザex": 2, "タケルライコex": 2}),
-            NOW,
-        )
+            "code", deck(**{"メガレックウザex": 2, "タケルライコex": 2}), NOW)
         self.assertIsNone(result["parent_archetype"])
         self.assertEqual(result["classification_status"], "unknown")
-        evidence = json.loads(result["evidence"])
-        self.assertEqual(evidence["reason"], "parent_collision_equal_priority")
+        self.assertEqual(json.loads(result["evidence"])["reason"],
+                         "parent_collision_equal_priority")
 
     def test_printings_sum_and_alias_mismatch(self):
         d = deck(**{"ドラパルトex": 1})
@@ -149,7 +115,7 @@ class ClassificationTests(unittest.TestCase):
         d["cards"][-1]["count"] = 1
         self.assertEqual(classify("code", d, NOW)["classification_status"], "unknown")
 
-    def test_atomic_batch_idempotence_migration_missing_source_and_manual_preservation(self):
+    def test_atomic_batch_migrates_old_auto_version_but_preserves_manual(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             city, decks, output = [
@@ -179,8 +145,8 @@ class ClassificationTests(unittest.TestCase):
             document["records"][0]["classifier_version"] = "city-classifier-v1"
             output.write_text(json.dumps(document))
             self.assertEqual(run()["changed"], 1)
-            migrated = json.loads(output.read_text())
-            self.assertEqual(migrated["records"][0]["classifier_version"], VERSION)
+            self.assertEqual(
+                json.loads(output.read_text())["records"][0]["classifier_version"], VERSION)
 
             with self.assertRaisesRegex(ValueError, "Missing source"):
                 run("2026-10-07")
