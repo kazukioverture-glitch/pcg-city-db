@@ -403,6 +403,68 @@ def discover_card_identities(decks_document, queries):
     return {"mode": "literal_candidate_discovery_no_identity_merge", "queries": result}
 
 
+def _top16_context(events, decks, resolve, watch_config):
+    """Describe Top16 only for events with all eight observed 9-16 rows captured.
+
+    Comparisons use matched events, never the broader Top8 sample. The source's
+    first-seen timestamp is not a claim about the official publication time.
+    """
+    eligible = []
+    for event in events:
+        observed = event.get("top16_observed_rows")
+        extra = [p for p in event.get("placements", [])
+                 if type(p.get("rank")) is int and 8 < p["rank"] <= 16]
+        if (event.get("top16_checked_at") and type(observed) is int
+                and observed >= 8 and len(extra) >= observed):
+            eligible.append(event)
+    coverage = {
+        "result_events": len(events),
+        "complete_top16_events": len(eligible),
+        "excluded_events": len(events) - len(eligible),
+        "captured_top16_rows": 0,
+        "captured_matched_top8_rows": 0,
+    }
+    if not eligible:
+        return {
+            "status": "insufficient_coverage",
+            "scope": "Top16 event subset only; full participant usage is not observable",
+            "coverage": coverage,
+            "top16_composition": [],
+            "matched_top8_composition": [],
+            "top16_to_top8": [],
+        }
+    top16 = _placements(eligible, 16)
+    matched_top8 = _placements(eligible, 8)
+    coverage["captured_top16_rows"] = len(top16)
+    coverage["captured_matched_top8_rows"] = len(matched_top8)
+    counts16 = Counter(resolve(r["deck_code"])["parent"] or UNCLASSIFIED for r in top16)
+    counts8 = Counter(resolve(r["deck_code"])["parent"] or UNCLASSIFIED for r in matched_top8)
+    conversion = []
+    for parent, count in sorted(counts16.items(), key=lambda x: (-x[1], x[0])):
+        advanced = counts8[parent]
+        conversion.append({
+            "parent_archetype": parent,
+            "top16_count": count,
+            "top8_count_in_same_events": advanced,
+            "observed_top16_to_top8": {
+                **_ratio(advanced, count),
+                "ci95_wilson": wilson95(advanced, count),
+                "small_sample_warning": count < SMALL_SAMPLE_N,
+                "small_sample_threshold": SMALL_SAMPLE_N,
+            },
+        })
+    return {
+        "status": "observed_complete_event_subset",
+        "scope": "Top16 event subset only; not participant usage or match win rate",
+        "coverage": coverage,
+        "top16_composition": _composition(top16, resolve),
+        "matched_top8_composition": _composition(matched_top8, resolve),
+        "top16_to_top8": conversion,
+        "top16_classification": _classification_coverage(top16, resolve, decks),
+        "top16_watch_cards": _watch_card_stats(top16, decks, watch_config),
+    }
+
+
 def _scope_analysis(events, decks, resolve, watch_config):
     stages = _stage_rows(events)
     return {
@@ -420,6 +482,7 @@ def _scope_analysis(events, decks, resolve, watch_config):
             "exact_identities": _exact_card_stats(stages["top8"], decks),
             "watch_cards": _watch_card_stats(stages["top8"], decks, watch_config),
         },
+        "top16_context": _top16_context(events, decks, resolve, watch_config),
     }
 
 
@@ -646,6 +709,8 @@ def build_weekly_report(metadata, city, decks_document, classifications, *,
         "terminology": {
             "top8_share": "captured Top8 composition share; never participant usage rate",
             "card_adoption_rate": "share among captured Top8 rows with a valid 60-card list",
+            "top16_context": "Top16 upper-placing rows among complete captured Top16 event subset",
+            "top16_to_top8": "observed proportion advancing to Top8 within matched event subset; not match win rate",
         },
         "provenance": {
             "snapshot_git_commit_sha": metadata["git_commit_sha"],
