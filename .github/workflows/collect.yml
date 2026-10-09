@@ -8,7 +8,9 @@ on:
       - ".github/workflows/collect.yml"
       - "collector/**"
   schedule:
-    - cron: "10,40 0-14,23 * * *"
+    # JST 18:00, 20:00, 22:00, 23:00 (event day), 08:00 (next morning).
+    # GitHub Actions cron is UTC; early-morning JST run is 23:00 UTC on the previous day.
+    - cron: "0 9,11,13,14,23 * * *"
 
 permissions:
   contents: write
