@@ -64,7 +64,21 @@ def merge_snapshot(old_city, old_decks, new_city, new_decks):
                 return str(p.get('player_id') or (p.get('player_name'), p.get('deck_code')))
             event['placements'] = merge_records(old.get('placements', []), new.get('placements', []), placement_key,
                 old.get('collected_at') or ot, new.get('collected_at') or nt)
+            # Termux may publish only Top8; do not drop previously observed Top16 coverage.
+            observed = [value for value in (old.get('top16_observed_rows'),
+                                             new.get('top16_observed_rows'))
+                        if type(value) is int and value >= 0]
+            if observed:
+                event['top16_observed_rows'] = max(observed)
+            checked = [value for value in (old.get('top16_checked_at'),
+                                            new.get('top16_checked_at')) if value]
+            if checked:
+                event['top16_checked_at'] = max(checked, key=stamp)
         event['placement_count'] = len(event.get('placements', []))
+        if 'top16_observed_rows' in event:
+            event['top16_captured_rows'] = sum(
+                type(p.get('rank')) is int and 8 < p['rank'] <= 16
+                for p in event.get('placements', []))
     city.update(events=sorted(events, key=lambda e: (e.get('date', ''), str(e['event_id'])), reverse=True),
                 event_count=len(events), placement_count=sum(e['placement_count'] for e in events),
                 updated_at=max((ot, nt), key=stamp))
