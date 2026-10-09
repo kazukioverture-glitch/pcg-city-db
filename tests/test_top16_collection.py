@@ -5,6 +5,7 @@ from unittest.mock import patch
 
 from analysis.weekly import _scope_analysis, _top16_context
 from collector.sync_official_api import result_event_from_api, select_event_candidates
+from collector.merge_termux_snapshot import merge_snapshot
 
 
 def placement(rank):
@@ -92,6 +93,37 @@ class AnalysisTests(unittest.TestCase):
         context = _top16_context([event], {}, lambda _: {}, None)
         self.assertEqual(context["status"], "insufficient_coverage")
         self.assertEqual(context["coverage"]["complete_top16_events"], 0)
+
+class MergeTests(unittest.TestCase):
+    def test_newer_top8_feed_preserves_prior_top16_rows_and_coverage(self):
+        old_placements = [
+            {"rank": r, "player_id": str(r), "deck_code": None}
+            for r in range(1, 17)
+        ]
+        event = event_with_rows(16)
+        event["placements"] = old_placements
+        event["placement_count"] = 16
+        event["collected_at"] = "2026-10-08T23:00:00+09:00"
+        newer = {
+            **event,
+            "placements": old_placements[:8],
+            "placement_count": 8,
+            "collected_at": "2026-10-09T08:00:00+09:00",
+        }
+        for key in ("top16_observed_rows", "top16_checked_at", "top16_captured_rows"):
+            newer.pop(key, None)
+        city_base = {"season": "2027-S1", "season_start": "2026-09-26"}
+        old_city = {**city_base, "updated_at": "2026-10-08T23:00:00+09:00", "events": [event]}
+        new_city = {**city_base, "updated_at": "2026-10-09T08:00:00+09:00", "events": [newer]}
+        deck = {"total_cards": 60, "cards": [{"count": 60}], "usages": []}
+        old_decks = {"updated_at": old_city["updated_at"], "decks": {"a": deck}}
+        new_decks = {"updated_at": new_city["updated_at"], "decks": {"a": deck}}
+        merged, _ = merge_snapshot(old_city, old_decks, new_city, new_decks)
+        result = merged["events"][0]
+        self.assertEqual(result["placement_count"], 16)
+        self.assertEqual(result["top16_observed_rows"], 8)
+        self.assertEqual(result["top16_captured_rows"], 8)
+        self.assertEqual(result["top16_checked_at"], event["top16_checked_at"])
 
 
 if __name__ == "__main__":
