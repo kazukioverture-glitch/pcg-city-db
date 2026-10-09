@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Backfill published City League Top 8 results from official public endpoints.
+"""Backfill published City League Top 16 results from official public endpoints.
 
 Fallback/repair path for a stale or unavailable Termux/ngrok snapshot.
 Existing records are preserved; only newly published events/decks are added.
@@ -220,9 +220,7 @@ def result_event_from_api(event_id: str) -> dict | None:
     top_rows = []
     seen_pages = set()
 
-    # Do not assume that a published Top 8 is always exactly eight rows.
-    # Ties can produce more than eight rows with rank <= 8, so continue
-    # paging until the first result outside that rank range appears.
+    # Preserve ties; stop after reaching a rank outside the Top16 range.
     while True:
         payload = fetch_json(RESULT_DETAIL_URL, {
             "event_holding_id": event_id,
@@ -240,21 +238,21 @@ def result_event_from_api(event_id: str) -> dict | None:
             raise ValueError(f"Non-advancing result pagination: {event_id}")
         seen_pages.add(page_key)
 
-        reached_beyond_top8 = False
+        reached_beyond_top16 = False
         for item in results:
             try:
                 rank = int(item.get("rank"))
             except (TypeError, ValueError) as exc:
                 raise ValueError(f"Invalid rank: {event_id}") from exc
-            if 1 <= rank <= 8:
+            if 1 <= rank <= 16:
                 top_rows.append(item)
             else:
-                reached_beyond_top8 = True
+                reached_beyond_top16 = True
                 break
 
         total_count = int(payload.get("count") or 0)
         offset += len(results)
-        if reached_beyond_top8 or len(results) < per_page or (total_count and offset >= total_count):
+        if reached_beyond_top16 or len(results) < per_page or (total_count and offset >= total_count):
             break
 
     if not top_rows:
@@ -288,6 +286,8 @@ def result_event_from_api(event_id: str) -> dict | None:
         "result_url": f"{BASE}/event/detail/{event_id}/result",
         "placement_count": len(placements),
         "placements": placements,
+        "top16_observed_rows": sum(8 < p["rank"] <= 16 for p in placements),
+        "top16_checked_at": now_jst(),
         "collected_at": now_jst(),
     }
 
@@ -381,11 +381,41 @@ def update_index(city: dict, decks: dict) -> None:
     write_json(INDEX_PATH, index)
 
 
+def select_event_candidates(discovered, stored_events, *, today=None, limit=24):
+    """Bounded queue: fresh events first, then incomplete or never-checked events."""
+    if limit < 1:
+        raise ValueError("max-detail-events must be positive")
+    day = today or datetime.now(JST).date()
+    cutoff = (day - timedelta(days=2)).isoformat()
+    chosen = []
+    for candidate in discovered:
+        event_date = candidate.get("date") or ""
+        if not event_date or event_date > day.isoformat():
+            continue
+        old = stored_events.get(candidate["event_id"])
+        old_rows = (old or {}).get("placements") or []
+        captured = sum(8 < p.get("rank", 0) <= 16 for p in old_rows)
+        outstanding = bool(old and (old.get("top16_observed_rows") or 0) > captured)
+        recent = event_date >= cutoff
+        if not (recent or old is None or not old.get("top16_checked_at") or outstanding):
+            continue
+        missing_core = old is None or not any(p.get("rank", 99) <= 8 for p in old_rows)
+        # Always finish unfinished recent events before polling already-complete ones.
+        priority = (0 if recent and missing_core else
+                    1 if recent and (outstanding or not old.get("top16_checked_at")) else
+                    2 if recent else 3 if missing_core else 4)
+        chosen.append((priority, -int(event_date.replace("-", "")), candidate["event_id"], candidate))
+    chosen.sort()
+    return [x[3] for x in chosen[:limit]]
+
+
 def main() -> int:
     global DATA, TMP, CITY_PATH, DECKS_PATH, INDEX_PATH, PARTIAL_CITY_PATH, PARTIAL_DECKS_PATH, CHANGED_FLAG
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-pages", type=int, default=100)
     parser.add_argument("--deck-workers", type=int, default=8)
+    parser.add_argument("--max-detail-events", type=int, default=24)
+    parser.add_argument("--max-top16-decks", type=int, default=32)
     parser.add_argument("--data-dir", type=Path)
     parser.add_argument("--tmp-dir", type=Path)
     args = parser.parse_args()
@@ -423,14 +453,14 @@ def main() -> int:
     ]
     floor_date = city.get("season_start", "2026-09-26")
     discovered = discover_recent_city_events(floor_date, args.max_pages)
-    print(f"Discovered {len(discovered)} official City League events; checking published rows", flush=True)
-    # Recheck known IDs too: empty or partially published records are not complete.
     stored_events = {str(e["event_id"]): e for e in event_rows}
+    selected = select_event_candidates(discovered, stored_events, limit=args.max_detail_events)
+    print(f"Discovered {len(discovered)} official City League events; checking {len(selected)} priority events", flush=True)
     new_events = []
     checked_events = []
     errors = {}
     with ThreadPoolExecutor(max_workers=max(1, args.deck_workers)) as pool:
-        futures = {pool.submit(result_event_from_api, row["event_id"]): row for row in discovered}
+        futures = {pool.submit(result_event_from_api, row["event_id"]): row for row in selected}
         for future in as_completed(futures):
             candidate = futures[future]
             try:
@@ -441,7 +471,7 @@ def main() -> int:
             checked_events.append({**candidate, "official_placement_count": len(event["placements"]) if event else 0,
                                    "status": "published" if event else "result unpublished/empty"})
             if len(checked_events) % 20 == 0:
-                print(f"Checked official results: {len(checked_events)}/{len(discovered)}", flush=True)
+                print(f"Checked official results: {len(checked_events)}/{len(selected)}", flush=True)
             if event is None:
                 print(f"Skip unpublished/empty result: {candidate['event_id']}")
                 continue
@@ -459,6 +489,9 @@ def main() -> int:
                                  for p in event["placements"]})
                 event["placements"] = list(old_rows.values())
                 event["placement_count"] = len(event["placements"])
+                event["top16_observed_rows"] = max(
+                    old.get("top16_observed_rows") or 0, event["top16_observed_rows"])
+                event["top16_checked_at"] = old.get("top16_checked_at") or event["top16_checked_at"]
                 event = {**old, **event}
                 same_rows = (
                     sorted(old.get("placements", []), key=lambda p: str(p.get("player_id")))
@@ -468,11 +501,13 @@ def main() -> int:
                     old.get(key) == event.get(key)
                     for key in ("date", "category", "venue_name", "venue_prefecture")
                 )
-                if same_rows and same_metadata:
+                if same_rows and same_metadata and old.get("top16_checked_at"):
                     continue
             new_events.append(event)
     write_json(TMP / "official_audit.json", {"checked_at": now_jst(), "floor_date": floor_date,
-               "events": sorted(checked_events, key=lambda e: (e["date"], e["event_id"])), "fetch_errors": errors})
+               "events": sorted(checked_events, key=lambda e: (e["date"], e["event_id"])),
+               "selected_event_count": len(selected), "discovered_event_count": len(discovered),
+               "fetch_errors": errors})
     print(f"Official discovery: {len(discovered)} city events on/after {floor_date}; {len(new_events)} new/updated")
     if errors and not new_events:
         raise RuntimeError(f"Official detail fetch failure without usable updates; no main files written: {errors}")
@@ -482,36 +517,62 @@ def main() -> int:
         print("No official backfill needed")
         return 0
 
+    # Top8 lists are mandatory; 9-16 are bounded and best-effort.
+    mandatory_codes, optional_codes = set(), set()
+    for event in new_events:
+        for placement in event["placements"]:
+            code = placement.get("deck_code")
+            if code:
+                (mandatory_codes if placement["rank"] <= 8 else optional_codes).add(code)
+    required = sorted(mandatory_codes - deck_map.keys())
+    optional = sorted(optional_codes - deck_map.keys() - mandatory_codes)
+    if args.max_top16_decks < 0:
+        raise ValueError("max-top16-decks must be nonnegative")
+    optional_now = optional[:args.max_top16_decks]
+    deferred = set(optional[args.max_top16_decks:])
+
+    def fetch_decks(codes):
+        parsed, failures = {}, {}
+        with ThreadPoolExecutor(max_workers=max(1, args.deck_workers)) as pool:
+            futures = {pool.submit(parse_deck, code): code for code in codes}
+            for future in as_completed(futures):
+                code = futures[future]
+                try:
+                    parsed[code] = future.result()
+                except Exception as exc:
+                    failures[code] = str(exc)
+        return parsed, failures
+
+    core_parsed, core_errors = fetch_decks(required)
+    if core_errors:
+        detail = "; ".join(f"{code}: {reason}" for code, reason in sorted(core_errors.items()))
+        raise RuntimeError(f"Top8 deck collection failed; stored DB preserved: {detail}")
+    extra_parsed, extra_errors = fetch_decks(optional_now)
+    parsed_decks = {**core_parsed, **extra_parsed}
+    deferred.update(extra_errors)
+    available = set(deck_map) | set(parsed_decks)
+    for event in new_events:
+        event["placements"] = [
+            p for p in event["placements"]
+            if p["rank"] <= 8 or not p.get("deck_code") or p["deck_code"] in available
+        ]
+        event["placement_count"] = len(event["placements"])
+        event["top16_captured_rows"] = sum(8 < p["rank"] <= 16 for p in event["placements"])
     needed_codes = {}
     for event in new_events:
         for placement in event["placements"]:
             code = placement.get("deck_code")
             if code:
                 needed_codes.setdefault(code, []).append(usage_from(event, placement))
-
-    missing_codes = sorted(code for code in needed_codes if code not in deck_map)
-    print(
-        f"New events: {len(new_events)}; placements: {sum(e['placement_count'] for e in new_events)}; "
-        f"missing decks: {len(missing_codes)}"
-    )
-
-    parsed_decks = {}
-    if missing_codes:
-        errors = {}
-        with ThreadPoolExecutor(max_workers=max(1, args.deck_workers)) as pool:
-            futures = {pool.submit(parse_deck, code): code for code in missing_codes}
-            for future in as_completed(futures):
-                code = futures[future]
-                try:
-                    parsed_decks[code] = future.result()
-                except Exception as exc:
-                    errors[code] = str(exc)
-        if errors:
-            detail = "; ".join(f"{code}: {message}" for code, message in sorted(errors.items()))
-            raise RuntimeError(f"Deck backfill failed; no files written. {detail}")
+    print(f"Top8 new decks: {len(required)}, Top16 fetched: {len(extra_parsed)}, "
+          f"Top16 deferred/failed: {len(deferred)}", flush=True)
 
     audit = read_json(TMP / 'official_audit.json')
     audit['new_deck_codes'] = sorted(parsed_decks)
+    audit['top16_deferred_codes'] = sorted(deferred)
+    audit['top16_fetch_errors'] = extra_errors
+    audit['top16_observed_rows'] = sum(e.get("top16_observed_rows", 0) for e in new_events)
+    audit['top16_captured_rows'] = sum(e.get("top16_captured_rows", 0) for e in new_events)
     write_json(TMP / 'official_audit.json', audit)
 
     for code, usages in needed_codes.items():
