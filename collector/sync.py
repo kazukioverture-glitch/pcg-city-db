@@ -123,13 +123,17 @@ def sync(root=ROOT, base_url=None):
             (stage / name).write_bytes(content)
         print('::warning::Official coverage unavailable; no completeness claim', flush=True)
     official_errors = {}
+    official_deferred = []
     if official_ok:
         audit = read(work / 'official/official_audit.json')
         official_errors = audit.get('fetch_errors', {})
+        official_deferred = audit.get('top16_deferred_codes', [])
     report = dict(termux_configured=bool(url), termux_accepted=termux_ok,
                   schedule_accepted=schedule_accepted, schedule_updates=schedule_updates,
-                  official_accepted=official_ok, official_complete=official_ok and not official_errors,
-                  official_failed_event_ids=sorted(official_errors), published=False)
+                  official_accepted=official_ok,
+                  official_complete=official_ok and not official_errors and not official_deferred,
+                  official_failed_event_ids=sorted(official_errors),
+                  top16_deferred_deck_count=len(official_deferred), published=False)
     report_path = work / 'sync_report.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
     if not (termux_ok or official_ok):
