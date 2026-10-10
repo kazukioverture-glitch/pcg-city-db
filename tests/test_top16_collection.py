@@ -48,6 +48,27 @@ class ResultPaginationTests(unittest.TestCase):
         self.assertEqual(result["top16_observed_rows"], 8)
         self.assertEqual(calls, [0, 8, 16])
 
+    def test_unchecked_older_event_not_starved_by_checked_recent_events(self):
+        sources = [{"event_id": f"recent-{i}", "date": "2026-10-10"}
+                   for i in range(24)]
+        sources.append({"event_id": "old-unchecked", "date": "2026-10-01"})
+        stored = {
+            candidate["event_id"]: {
+                "event_id": candidate["event_id"], "date": candidate["date"],
+                "placements": [{"rank": rank} for rank in range(1, 9)],
+                "top16_checked_at": "2026-10-10T20:00:00+09:00"
+            }
+            for candidate in sources[:-1]
+        }
+        stored["old-unchecked"] = {
+            "event_id": "old-unchecked", "date": "2026-10-01",
+            "placements": [{"rank": rank} for rank in range(1, 9)],
+        }
+        selected = select_event_candidates(
+            sources, stored, today=date(2026, 10, 10), limit=24)
+        self.assertIn("old-unchecked", [e["event_id"] for e in selected])
+        self.assertEqual(selected[0]["event_id"], "old-unchecked")
+
     def test_does_not_skip_recent_event_or_repeat_completed_old(self):
         sources = [
             {"event_id": "recent", "date": "2026-10-09"},
