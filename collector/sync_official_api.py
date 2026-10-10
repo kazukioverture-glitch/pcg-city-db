@@ -401,9 +401,12 @@ def select_event_candidates(discovered, stored_events, *, today=None, limit=24):
             continue
         missing_core = old is None or not any(p.get("rank", 99) <= 8 for p in old_rows)
         # Always finish unfinished recent events before polling already-complete ones.
+        # During backfill, unverified older events must outrank already-checked
+        # recent events; otherwise a busy weekend starves historical Top16.
         priority = (0 if recent and missing_core else
                     1 if recent and (outstanding or not old.get("top16_checked_at")) else
-                    2 if recent else 3 if missing_core else 4)
+                    2 if missing_core else
+                    3 if outstanding or not old.get("top16_checked_at") else 4)
         chosen.append((priority, -int(event_date.replace("-", "")), candidate["event_id"], candidate))
     chosen.sort()
     return [x[3] for x in chosen[:limit]]
