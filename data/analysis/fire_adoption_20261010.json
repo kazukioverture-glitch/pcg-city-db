@@ -1,0 +1,308 @@
+{
+  "method": "Count distinct ranked deck list usages containing the exact Japanese card name. The ANY column is a per-list union, not sum of variant counts. Validated 60-card deck rows are the denominator.",
+  "data_updated_at": "2026-10-10T22:48:50+09:00",
+  "observed_event_count": 221,
+  "observed_rank_rows": 3084,
+  "validated_unique_deck_codes": 3067,
+  "name_filter": "ファイヤー",
+  "exact_card_names": [
+    "ファイヤー",
+    "ファイヤーM2014/080"
+  ],
+  "week_category_scope": [
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "オープン",
+      "scope": "Top8",
+      "event_count": 67,
+      "observed_rank_rows": 536,
+      "validated_60_deck_rows": 536,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 67,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 67
+      }
+    },
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "オープン",
+      "scope": "complete_Top16",
+      "event_count": 66,
+      "observed_rank_rows": 1056,
+      "validated_60_deck_rows": 1056,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 120,
+      "matching_exact_card_names": {
+        "ファイヤー": 54,
+        "ファイヤーM2014/080": 66
+      }
+    },
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "ジュニア",
+      "scope": "Top8",
+      "event_count": 3,
+      "observed_rank_rows": 20,
+      "validated_60_deck_rows": 20,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 4,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 4
+      }
+    },
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "ジュニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "シニア",
+      "scope": "Top8",
+      "event_count": 3,
+      "observed_rank_rows": 20,
+      "validated_60_deck_rows": 20,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 1,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 1
+      }
+    },
+    {
+      "week": "W01",
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-29",
+      "category": "シニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "オープン",
+      "scope": "Top8",
+      "event_count": 77,
+      "observed_rank_rows": 616,
+      "validated_60_deck_rows": 614,
+      "not_validated_or_no_code": 2,
+      "matching_any_fire_name": 93,
+      "matching_exact_card_names": {
+        "ファイヤー": 7,
+        "ファイヤーM2014/080": 86
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "オープン",
+      "scope": "complete_Top16",
+      "event_count": 75,
+      "observed_rank_rows": 1200,
+      "validated_60_deck_rows": 1197,
+      "not_validated_or_no_code": 3,
+      "matching_any_fire_name": 175,
+      "matching_exact_card_names": {
+        "ファイヤー": 90,
+        "ファイヤーM2014/080": 85
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "ジュニア",
+      "scope": "Top8",
+      "event_count": 18,
+      "observed_rank_rows": 116,
+      "validated_60_deck_rows": 116,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 12,
+      "matching_exact_card_names": {
+        "ファイヤー": 2,
+        "ファイヤーM2014/080": 10
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "ジュニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "シニア",
+      "scope": "Top8",
+      "event_count": 19,
+      "observed_rank_rows": 124,
+      "validated_60_deck_rows": 124,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 25,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 25
+      }
+    },
+    {
+      "week": "W02",
+      "period_start": "2026-09-30",
+      "period_end": "2026-10-06",
+      "category": "シニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "オープン",
+      "scope": "Top8",
+      "event_count": 33,
+      "observed_rank_rows": 260,
+      "validated_60_deck_rows": 260,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 55,
+      "matching_exact_card_names": {
+        "ファイヤー": 55,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "オープン",
+      "scope": "complete_Top16",
+      "event_count": 32,
+      "observed_rank_rows": 512,
+      "validated_60_deck_rows": 512,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 88,
+      "matching_exact_card_names": {
+        "ファイヤー": 88,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "ジュニア",
+      "scope": "Top8",
+      "event_count": 1,
+      "observed_rank_rows": 8,
+      "validated_60_deck_rows": 8,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 1,
+      "matching_exact_card_names": {
+        "ファイヤー": 1,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "ジュニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "シニア",
+      "scope": "Top8",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    },
+    {
+      "week": "W03_to_2026-10-10",
+      "period_start": "2026-10-07",
+      "period_end": "2026-10-10",
+      "category": "シニア",
+      "scope": "complete_Top16",
+      "event_count": 0,
+      "observed_rank_rows": 0,
+      "validated_60_deck_rows": 0,
+      "not_validated_or_no_code": 0,
+      "matching_any_fire_name": 0,
+      "matching_exact_card_names": {
+        "ファイヤー": 0,
+        "ファイヤーM2014/080": 0
+      }
+    }
+  ],
+  "notes": [
+    "Top8 and complete Top16 events are separate populations.",
+    "Do not treat these proportions as adoption among all tournament participants.",
+    "No deck reclassification or fresh official collection was performed.",
+    "Missing Top16 events are excluded only from complete_Top16."
+  ]
+}
