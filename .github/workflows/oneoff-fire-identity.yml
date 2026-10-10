@@ -1,4 +1,4 @@
-name: Fire card identity check
+name: Fire card rank split
 on:
   push:
     paths:
@@ -10,18 +10,52 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Print matching card IDs and labels
+      - name: Compare Top8 with ranks 9 through 16 on identical events
         shell: bash
         run: |
           python - <<'PY'
           import json
+          from pathlib import Path
           from collections import Counter
-          with open("data/city_decks.json") as f:
-              data=json.load(f)
-          totals=Counter()
-          for deck in data["decks"].values():
-              for card in deck["cards"]:
-                  if card.get("name") in ("ファイヤー", "ファイヤーM2014/080"):
-                      totals[(card.get("name"),str(card.get("card_id")),str(card.get("set_code")),str(card.get("card_number")))]+=1
-          print("IDENTITIES:", sorted([(list(k),v) for k,v in totals.items()]))
+          city=json.loads(Path("data/city_db.json").read_text(encoding="utf-8"))
+          decks=json.loads(Path("data/city_decks.json").read_text(encoding="utf-8"))["decks"]
+          assert city["event_count"]==len(city["events"])
+          assert city["placement_count"]==sum(len(e["placements"]) for e in city["events"])
+          cards={}
+          for code, deck in decks.items():
+              c=deck.get("cards") or []
+              if deck.get("total_cards")!=60 or sum(int(x.get("count",0)) for x in c)!=60:
+                  continue
+              cards[code]=any(str(x.get("card_id"))=="48354" and x.get("name") in ("ファイヤー","ファイヤーM2014/080") for x in c)
+          periods={"W01":("2026-09-23","2026-09-29"),
+                   "W02":("2026-09-30","2026-10-06"),
+                   "W03_to_Oct10":("2026-10-07","2026-10-10")}
+          summary={}
+          for name,(start,end) in periods.items():
+              all_events=[e for e in city["events"] if e.get("category")=="オープン" and start<=e.get("date","")<=end]
+              complete=[]
+              for event in all_events:
+                  extra=[p for p in event["placements"] if 8<int(p["rank"])<=16]
+                  if int(event.get("top16_observed_rows") or 0)>=8 and len(extra)==int(event["top16_observed_rows"]):
+                      complete.append(event)
+              result={"events_all":len(all_events),"events_complete_top16":len(complete),"groups":{},"days":{}}
+              groups={"Top8":lambda r:r<=8,"9-16":lambda r:8<r<=16,
+                      "Top16":lambda r:r<=16,
+                      "champion":lambda r:r==1,
+                      "finalist_1_2":lambda r:r<=2,
+                      "semifinal_3_4":lambda r:3<=r<=4,
+                      "quarterfinal_5_8":lambda r:5<=r<=8}
+              for group,pred in groups.items():
+                  rows=[p for e in complete for p in e["placements"] if pred(int(p["rank"]))]
+                  validated=[p for p in rows if p.get("deck_code") in cards]
+                  n=sum(cards[p["deck_code"]] for p in validated)
+                  result["groups"][group]={"adopted":n,"validated_decks":len(validated),"observed_rows":len(rows),"unverified":len(rows)-len(validated),
+                                             "percentage":round(100*n/len(validated),2) if validated else None}
+              for day in sorted(set(e["date"] for e in complete)):
+                  todays=[e for e in complete if e["date"]==day]
+                  match=[p for e in todays for p in e["placements"] if p.get("deck_code") in cards]
+                  result["days"][day]={"events":len(todays),"validated":len(match),"adopted":sum(cards[p["deck_code"]] for p in match)}
+              summary[name]=result
+          print("FIRE_RANK_SPLIT "+json.dumps({"source_updated_at":city["updated_at"],"target_card_id":"48354","category":"オープン",
+                           "data_classification":"same complete Top16 events only","periods":summary},ensure_ascii=False))
           PY
