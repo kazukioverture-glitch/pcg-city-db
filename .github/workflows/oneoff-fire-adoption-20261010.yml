@@ -1,0 +1,97 @@
+name: One-off Fire Adoption Audit 2026-10-10
+on:
+  push:
+    paths:
+      - ".github/workflows/oneoff-fire-adoption-20261010.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  targeted-card-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Calculate Moltres card adoption from stored validated decks
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          city = json.loads(Path("data/city_db.json").read_text())
+          decks = json.loads(Path("data/city_decks.json").read_text())
+          assert city["event_count"] == len(city["events"])
+          assert city["placement_count"] == sum(len(e["placements"]) for e in city["events"])
+          assert decks["valid_60_count"] == decks["unique_deck_count"] == len(decks["decks"])
+          weeks = {
+            "W01": ("2026-09-23", "2026-09-29"),
+            "W02": ("2026-09-30", "2026-10-06"),
+            "W03_to_2026-10-10": ("2026-10-07", "2026-10-10")
+          }
+          target_cards = {}
+          valid_codes = set()
+          for code, deck in decks["decks"].items():
+              cards = deck.get("cards") or []
+              if deck.get("total_cards") != 60 or sum(int(c.get("count") or 0) for c in cards) != 60:
+                  continue
+              valid_codes.add(code)
+              target_cards[code] = {str(c["name"]) for c in cards if "ファイヤー" in str(c.get("name") or "")}
+          names = sorted({name for value in target_cards.values() for name in value})
+          assert valid_codes, "No verified decks"
+          categories = ["オープン", "ジュニア", "シニア"]
+          result = []
+          for week, (start, end) in weeks.items():
+              for category in categories:
+                  events = [e for e in city["events"] if start <= (e.get("date") or "") <= end and e.get("category") == category]
+                  for scope in ["Top8", "complete_Top16"]:
+                      chosen = events if scope == "Top8" else [
+                          e for e in events
+                          if (int(e.get("top16_observed_rows") or 0) >= 8
+                              and sum(8 < int(p.get("rank", 0)) <= 16 for p in e.get("placements", []))
+                                  == int(e.get("top16_observed_rows") or 0))]
+                      rows = [p for e in chosen for p in e["placements"]
+                              if 1 <= int(p.get("rank") or 0) <= (8 if scope=="Top8" else 16)]
+                      codes = [p.get("deck_code") for p in rows if p.get("deck_code") in valid_codes]
+                      denominator = len(codes)
+                      variants = {name: sum(name in target_cards[code] for code in codes) for name in names}
+                      any_match = sum(bool(target_cards[code]) for code in codes)
+                      result.append({
+                          "week":week,"period_start":start,"period_end":end,"category":category,
+                          "scope":scope,"event_count":len(chosen),
+                          "observed_rank_rows":len(rows),"validated_60_deck_rows":denominator,
+                          "not_validated_or_no_code":len(rows)-denominator,
+                          "matching_any_fire_name":any_match,
+                          "matching_exact_card_names":variants
+                      })
+          output = {
+              "method":"Count distinct ranked deck list usages containing the exact Japanese card name. The ANY column is a per-list union, not sum of variant counts. Validated 60-card deck rows are the denominator.",
+              "data_updated_at":city.get("updated_at"),"observed_event_count":len(city["events"]),
+              "observed_rank_rows":city["placement_count"],"validated_unique_deck_codes":len(valid_codes),
+              "name_filter":"ファイヤー","exact_card_names":names,
+              "week_category_scope":result,
+              "notes":["Top8 and complete Top16 events are separate populations.",
+                       "Do not treat these proportions as adoption among all tournament participants.",
+                       "No deck reclassification or fresh official collection was performed.",
+                       "Missing Top16 events are excluded only from complete_Top16."]
+          }
+          dst = Path("data/analysis/fire_adoption_20261010.json")
+          dst.parent.mkdir(parents=True, exist_ok=True)
+          dst.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n")
+          print("CARD ADOPTION SUMMARY: "+json.dumps({
+              "matched_names":names,
+              "open_top8":[{"week":x["week"],"n":x["matching_any_fire_name"],
+                  "denominator":x["validated_60_deck_rows"],"variants":{k:v for k,v in x["matching_exact_card_names"].items() if v}}
+                 for x in result if x["category"]=="オープン" and x["scope"]=="Top8"]
+          },ensure_ascii=False))
+          PY
+      - name: Save compact result only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/analysis/fire_adoption_20261010.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Store targeted fire-card adoption calculation'
+            git push
+          fi
