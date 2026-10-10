@@ -1,4 +1,4 @@
-name: Fire card rank split
+name: Fire adoption by deck archetype W03
 on:
   push:
     paths:
@@ -8,54 +8,86 @@ permissions:
 jobs:
   inspect:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Compare Top8 with ranks 9 through 16 on identical events
+      - name: Evaluate W03 only, no data mutations
         shell: bash
         run: |
           python - <<'PY'
           import json
+          from collections import defaultdict,Counter
           from pathlib import Path
-          from collections import Counter
+          from analysis.classification import classify,VERSION
           city=json.loads(Path("data/city_db.json").read_text(encoding="utf-8"))
-          decks=json.loads(Path("data/city_decks.json").read_text(encoding="utf-8"))["decks"]
+          deckdoc=json.loads(Path("data/city_decks.json").read_text(encoding="utf-8"))
+          deckmap=deckdoc["decks"]
           assert city["event_count"]==len(city["events"])
           assert city["placement_count"]==sum(len(e["placements"]) for e in city["events"])
-          cards={}
-          for code, deck in decks.items():
-              c=deck.get("cards") or []
-              if deck.get("total_cards")!=60 or sum(int(x.get("count",0)) for x in c)!=60:
+          selected=[]
+          excluded=[]
+          for e in city["events"]:
+              if e.get("category")!="オープン" or not ("2026-10-07"<=e.get("date","")<="2026-10-10"):
                   continue
-              cards[code]=any(str(x.get("card_id"))=="48354" and x.get("name") in ("ファイヤー","ファイヤーM2014/080") for x in c)
-          periods={"W01":("2026-09-23","2026-09-29"),
-                   "W02":("2026-09-30","2026-10-06"),
-                   "W03_to_Oct10":("2026-10-07","2026-10-10")}
-          summary={}
-          for name,(start,end) in periods.items():
-              all_events=[e for e in city["events"] if e.get("category")=="オープン" and start<=e.get("date","")<=end]
-              complete=[]
-              for event in all_events:
-                  extra=[p for p in event["placements"] if 8<int(p["rank"])<=16]
-                  if int(event.get("top16_observed_rows") or 0)>=8 and len(extra)==int(event["top16_observed_rows"]):
-                      complete.append(event)
-              result={"events_all":len(all_events),"events_complete_top16":len(complete),"groups":{},"days":{}}
-              groups={"Top8":lambda r:r<=8,"9-16":lambda r:8<r<=16,
-                      "Top16":lambda r:r<=16,
-                      "champion":lambda r:r==1,
-                      "finalist_1_2":lambda r:r<=2,
-                      "semifinal_3_4":lambda r:3<=r<=4,
-                      "quarterfinal_5_8":lambda r:5<=r<=8}
-              for group,pred in groups.items():
-                  rows=[p for e in complete for p in e["placements"] if pred(int(p["rank"]))]
-                  validated=[p for p in rows if p.get("deck_code") in cards]
-                  n=sum(cards[p["deck_code"]] for p in validated)
-                  result["groups"][group]={"adopted":n,"validated_decks":len(validated),"observed_rows":len(rows),"unverified":len(rows)-len(validated),
-                                             "percentage":round(100*n/len(validated),2) if validated else None}
-              for day in sorted(set(e["date"] for e in complete)):
-                  todays=[e for e in complete if e["date"]==day]
-                  match=[p for e in todays for p in e["placements"] if p.get("deck_code") in cards]
-                  result["days"][day]={"events":len(todays),"validated":len(match),"adopted":sum(cards[p["deck_code"]] for p in match)}
-              summary[name]=result
-          print("FIRE_RANK_SPLIT "+json.dumps({"source_updated_at":city["updated_at"],"target_card_id":"48354","category":"オープン",
-                           "data_classification":"same complete Top16 events only","periods":summary},ensure_ascii=False))
+              extra=[p for p in e["placements"] if 8<int(p["rank"])<=16]
+              if int(e.get("top16_observed_rows") or 0)<8 or len(extra)!=int(e.get("top16_observed_rows") or 0):
+                  excluded.append(e["event_id"])
+                  continue
+              selected.append(e)
+          from analysis.cards import validate_deck
+          rows=[]
+          for e in selected:
+              for p in e["placements"]:
+                  rank=int(p["rank"])
+                  if not 1<=rank<=16: continue
+                  code=p.get("deck_code")
+                  if code not in deckmap: raise AssertionError(f"Unknown code in W03 Top16: {code}")
+                  d=deckmap[code]
+                  assert d["total_cards"]==60 and not any(x["severity"]=="ERROR" for x in validate_deck(d))
+                  present=any(str(c.get("card_id"))=="48354" and c.get("name") in ("ファイヤー","ファイヤーM2014/080") for c in d["cards"])
+                  rows.append({"rank":rank,"deck_code":code,"present":present,"date":e["date"],"event_id":e["event_id"]})
+          assert len(selected)==32 and len(rows)==512, (len(selected),len(rows))
+          # Only the 512 matching-event Top16 entries are classified in memory.
+          cache={}
+          for code in set(x["deck_code"] for x in rows):
+              result=classify(code,deckmap[code],"2026-10-10T00:00:00Z")
+              cache[code]={"parent":result.get("parent_archetype") if result.get("classification_status")=="classified" else "未分類",
+                           "status":result.get("classification_status"),"tags":result.get("variant_tags")}
+          stats=defaultdict(lambda:{"total":0,"top8":0,"top2":0,"champion":0,
+                                      "fire":0,"fire_top8":0,"fire_top2":0,"fire_champion":0,
+                                      "no_fire":0,"no_fire_top8":0,"no_fire_top2":0,"no_fire_champion":0,
+                                      "fire_deck_codes":[]})
+          byday=defaultdict(Counter)
+          for r in rows:
+              parent=cache[r["deck_code"]]["parent"]
+              s=stats[parent]
+              s["total"]+=1
+              s["top8"]+=int(r["rank"]<=8)
+              s["top2"]+=int(r["rank"]<=2)
+              s["champion"]+=int(r["rank"]==1)
+              key="fire" if r["present"] else "no_fire"
+              s[key]+=1
+              s[key+"_top8"]+=int(r["rank"]<=8)
+              s[key+"_top2"]+=int(r["rank"]<=2)
+              s[key+"_champion"]+=int(r["rank"]==1)
+              if r["present"]:
+                  s["fire_deck_codes"].append(r["deck_code"])
+              byday[r["date"]][key]+=1
+          for value in stats.values():
+              value["fire_deck_codes"]=sorted(set(value["fire_deck_codes"]))[:3]
+          outcomes=dict(sorted(stats.items(),key=lambda pair:(-pair[1]["fire"],-pair[1]["total"],pair[0])))
+          overall={"n":len(rows),"fire_n":sum(x["present"] for x in rows),
+                   "fire_top8":sum(x["present"] and x["rank"]<=8 for x in rows),
+                   "fire_top2":sum(x["present"] and x["rank"]<=2 for x in rows),
+                   "fire_champions":sum(x["present"] and x["rank"]==1 for x in rows),
+                   "nonfire_top8":sum(not x["present"] and x["rank"]<=8 for x in rows),
+                   "nonfire_champions":sum(not x["present"] and x["rank"]==1 for x in rows),
+                   "validated_rows":len(rows),"event_count":len(selected)}
+          assert overall["fire_n"]==88 and overall["fire_top8"]==53 and overall["fire_champions"]==11,overall
+          assert sum(s["fire"] for s in outcomes.values())==88
+          assert sum(s["total"] for s in outcomes.values())==512
+          print("W03 FIRE BREAKDOWN:"+json.dumps({"db_updated_at":city.get("updated_at"),"rules_version":VERSION,
+             "category":"オープン","date_from":"2026-10-07","date_to":"2026-10-10",
+             "excluded_incomplete_event_ids":excluded,"overall":overall,"by_archetype":outcomes,
+             "by_day":dict(byday)},ensure_ascii=False,separators=(",",":")))
           PY
