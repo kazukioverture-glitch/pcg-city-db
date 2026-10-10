@@ -1,0 +1,27 @@
+name: Fire card identity check
+on:
+  push:
+    paths:
+      - ".github/workflows/oneoff-fire-identity.yml"
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print matching card IDs and labels
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          with open("data/city_decks.json") as f:
+              data=json.load(f)
+          totals=Counter()
+          for deck in data["decks"].values():
+              for card in deck["cards"]:
+                  if card.get("name") in ("ファイヤー", "ファイヤーM2014/080"):
+                      totals[(card.get("name"),str(card.get("card_id")),str(card.get("set_code")),str(card.get("card_number")))]+=1
+          print("IDENTITIES:", sorted([(list(k),v) for k,v in totals.items()]))
+          PY
