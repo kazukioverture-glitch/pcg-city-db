@@ -96,7 +96,9 @@ def restate(root: Path, output_dir: Path, weeks: list[str],
             compare_end=previous[1].isoformat() if previous else None,
             generated_at=generated_at,
         )
-        if previous:\n            report["trend"]["historical_basis"] = ("recomputed_from_same_pinned_git_revision_captured_city_data")\n        report["provenance"].update({
+        if previous:
+            report["trend"]["historical_basis"] = ("recomputed_from_same_pinned_git_revision_captured_city_data")
+        report["provenance"].update({
             "calendar_id": CALENDAR_ID,
             "source_files_sha256": hashes,
             "source_event_data_updated_at": source_updated,
@@ -155,7 +157,18 @@ def restate(root: Path, output_dir: Path, weeks: list[str],
             f"> 再集計版 / {CALENDAR_ID} / source commit {head} / "
             "旧FINALはそのまま保存。全参加者使用率ではありません。\n\n"
         )
-        markdown = render_markdown(report)\n        markdown = markdown.replace(\n            f"- snapshot: \`{report['snapshot_id']}\`",\n            f"- 再集計ID: \`{report['snapshot_id']}\`（旧FINAL入力snapshotとは別物）")\n        markdown = markdown.replace(\n            "snapshot内60枚リストからのpost-snapshot派生分析を含む。",\n            "固定Git版の60枚リストからの派生分析を含む。")\n        markdown = markdown.replace(\n            "W01当時の固定snapshotではなく、同じFINAL入力の過去週データを再計算。",\n            "同一Git版の公開結果から、以前の月曜〜日曜を再計算。")\n        _exclusive(base / week_id / "report.md",\n                   (heading + markdown).encode("utf-8"))
+        markdown = render_markdown(report)
+        markdown = markdown.replace(
+            f"- snapshot: `{report['snapshot_id']}`",
+            f"- 再集計ID: `{report['snapshot_id']}`（旧FINAL入力snapshotとは別物）")
+        markdown = markdown.replace(
+            "snapshot内60枚リストからのpost-snapshot派生分析を含む。",
+            "固定Git版の60枚リストからの派生分析を含む。")
+        markdown = markdown.replace(
+            "W01当時の固定snapshotではなく、同じFINAL入力の過去週データを再計算。",
+            "同一Git版の公開結果から、以前の月曜〜日曜を再計算。")
+        _exclusive(base / week_id / "report.md",
+                   (heading + markdown).encode("utf-8"))
     _exclusive(base / "manifest.json", _json_bytes(manifest))
     return manifest
 
