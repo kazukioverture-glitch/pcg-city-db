@@ -1,0 +1,46 @@
+{
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "category": "オープン",
+  "forecast_log_mutated": false,
+  "generated_at": "2026-10-11T09:08:05.236967+00:00",
+  "input_git_commit_sha": "48fd28eb01c9234f5780289e0648b5e78e17eb5d",
+  "input_sha256": {
+    "data/analysis/deck_classifications.json": "2b73ff6a3079616e5e7fe640d8413dac25d5b722c41bba442486c7fb3e1c009c",
+    "data/city_db.json": "9bc4c7b9931e2787ae63f50672a49a5cb358abc74e02927c870ec96b3a984067",
+    "data/city_decks.json": "6b5a3a4ceb68a6e2e8fbd345ce276eb2aa77b92bea7f7dcee775bcb7bb7053f5",
+    "data/index.json": "21d743aa1ff5ea8b12ebc60af110a7085639d153a3ff5517b59924212afd3df8"
+  },
+  "legacy_snapshot_mutated": false,
+  "region": "愛知県",
+  "schema_version": "calendar-restatement-v1",
+  "source_updated_at": "2026-10-10T22:48:50+09:00",
+  "status": "restated_not_FINAL",
+  "weeks": [
+    {
+      "audit": "WARN",
+      "captured_matched_top8_open": 488,
+      "captured_top16_in_complete_events_open": 976,
+      "captured_top8_open": 496,
+      "end": "2026-09-27",
+      "result_events_open": 62,
+      "scheduled_event_coverage": "not_assessed",
+      "start": "2026-09-21",
+      "top16_complete_events_open": 61,
+      "top16_status": "observed_complete_event_subset",
+      "week_id": "W01"
+    },
+    {
+      "audit": "WARN",
+      "captured_matched_top8_open": 592,
+      "captured_top16_in_complete_events_open": 1184,
+      "captured_top8_open": 608,
+      "end": "2026-10-04",
+      "result_events_open": 76,
+      "scheduled_event_coverage": "not_assessed",
+      "start": "2026-09-28",
+      "top16_complete_events_open": 74,
+      "top16_status": "observed_complete_event_subset",
+      "week_id": "W02"
+    }
+  ]
+}
