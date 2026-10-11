@@ -1,0 +1,80 @@
+name: W03 Interim Environment Report
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - work/w03-interim-report-20261011
+    paths:
+      - "analysis/preview_w03.py"
+      - ".github/workflows/w03-interim-report.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: city-db-sync
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Install analysis requirements
+        run: python -m pip install -r requirements-analysis.txt
+      - name: Targeted validation
+        run: |
+          python -m unittest discover -s tests -p "test_week*.py" -v
+          python -m unittest discover -s tests -p "test_top16_collection.py" -v
+      - name: Produce audited W03 preview
+        run: python -m analysis.preview_w03
+      - name: Inspect report and guard historical data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          items=list(Path("data/analysis/weekly_previews/2027-s1-mon-sun-v1").glob("*/W03/summary.json"))
+          assert len(items)==1, items
+          summ=json.loads(items[0].read_text(encoding="utf-8"))
+          report=json.loads(items[0].with_name("report.json").read_text(encoding="utf-8"))
+          assert summ["stage"]=="INTERIM"
+          assert summ["full_week_coverage_verified"] is False
+          assert summ["source_updated_at"]=="2026-10-10T22:48:50+09:00" or summ["source_updated_at"] > "2026-10-10T22:48:50+09:00"
+          assert summ["week_start"]=="2026-10-05" and summ["week_end"]=="2026-10-11"
+          assert summ["top8_rows_open"]>0 and summ["result_events_open"]>0
+          assert summ["top16_matched_top8_open"] <= summ["top8_rows_open"]
+          assert summ["top16_rows_complete_open"] >= summ["top16_matched_top8_open"]
+          assert report["audit"]["status"]!="FAIL"
+          assert report["trend"]["comparison_period"]=={"start":"2026-09-28","end":"2026-10-04"}
+          assert "full_week_coverage_verified" in report["provenance"]
+          print(json.dumps(summ, ensure_ascii=False))
+          PY
+          if git status --porcelain -- data/city_db.json data/city_decks.json data/analysis/weekly_snapshots data/analysis/forecast_log.json | grep -q .; then
+            echo 'Existing data altered'; exit 1
+          fi
+      - name: Archive preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: W03-interim-${{ github.run_id }}
+          path: data/analysis/weekly_previews
+          retention-days: 30
+          if-no-files-found: error
+      - name: Publish preview on main
+        if: github.ref_name == 'main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/analysis/weekly_previews
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish W03 interim weekly analysis preview'
+            git push
+          fi
