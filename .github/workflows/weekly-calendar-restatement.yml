@@ -1,0 +1,86 @@
+name: Restate City League Weekly Calendar
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - work/weekly-monday-sunday-20261011
+    paths:
+      - "analysis/week_calendar.py"
+      - "analysis/restate_calendar.py"
+      - "tests/test_week_calendar.py"
+      - ".github/workflows/weekly-calendar-restatement.yml"
+
+permissions:
+  contents: write
+
+# Serialize with regular City DB collection; never cancel a healthy sync.
+concurrency:
+  group: city-db-sync
+  cancel-in-progress: false
+
+jobs:
+  restate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Install analysis dependencies
+        run: python -m pip install -r requirements-analysis.txt
+      - name: Run all regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Generate immutable revision outputs
+        run: python -m analysis.restate_calendar --weeks W01 W02
+      - name: Audit restated results and preserved historical snapshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from analysis.week_calendar import CALENDAR_ID
+          base = Path("data/analysis/weekly_restatements") / CALENDAR_ID
+          revisions = sorted(p for p in base.iterdir() if p.is_dir())
+          assert len(revisions) == 1, revisions
+          manifest = json.loads((revisions[0] / "manifest.json").read_text(encoding="utf-8"))
+          assert manifest["calendar_id"] == CALENDAR_ID
+          assert manifest["status"] == "restated_not_FINAL"
+          assert {r["week_id"] for r in manifest["weeks"]} == {"W01", "W02"}
+          for row in manifest["weeks"]:
+              assert row["audit"] != "FAIL", row
+              assert row["captured_top8_open"] > 0, row
+              assert row["captured_matched_top8_open"] <= row["captured_top8_open"], row
+              assert row["captured_top16_in_complete_events_open"] >= row["captured_matched_top8_open"], row
+              summary = json.loads((revisions[0] / row["week_id"] / "report.json").read_text(encoding="utf-8"))
+              assert summary["current_week"]["period_start"][:10] == row["start"]
+              assert summary["current_week"]["period_end"][:10] == row["end"]
+              assert summary["audit"]["status"] != "FAIL"
+          legacy = Path("data/analysis/weekly_snapshots/W02/FINAL/c2931ef42b944a3e86536742089d0c3f/metadata.json")
+          assert json.loads(legacy.read_text(encoding="utf-8"))["period_start"][:10] == "2026-09-30"
+          print(json.dumps(manifest["weeks"], ensure_ascii=False))
+          PY
+          if git status --porcelain -- data/analysis/weekly_snapshots data/analysis/forecast_log.json | grep -q .; then
+            echo "Legacy FINAL or forecast record changed"; exit 1
+          fi
+      - name: Archive restatement reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: city-weekly-calendar-restatement-${{ github.run_id }}
+          path: data/analysis/weekly_restatements/
+          retention-days: 30
+          if-no-files-found: error
+      - name: Publish versioned outputs on main
+        if: github.ref_name == 'main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/analysis/weekly_restatements/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish Monday-Sunday W01/W02 restatements (legacy FINAL preserved)'
+            git push
+          fi
