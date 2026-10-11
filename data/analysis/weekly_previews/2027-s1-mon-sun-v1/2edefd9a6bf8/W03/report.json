@@ -1,0 +1,5559 @@
+{
+  "engine_version": "weekly-analysis-v1",
+  "generated_at": "2026-10-11T13:26:00.057889+00:00",
+  "week_id": "W03",
+  "analysis_stage": "INTERIM",
+  "snapshot_id": "interim-2edefd9a6bf8-w03",
+  "category": "オープン",
+  "terminology": {
+    "top8_share": "captured Top8 composition share; never participant usage rate",
+    "card_adoption_rate": "share among captured Top8 rows with a valid 60-card list",
+    "top16_context": "Top16 upper-placing rows among complete captured Top16 event subset",
+    "top16_to_top8": "observed proportion advancing to Top8 within matched event subset; not match win rate"
+  },
+  "provenance": {
+    "snapshot_git_commit_sha": "2edefd9a6bf832b3fb437359f64a5db9be345e86",
+    "snapshot_retrieved_at": "2026-10-10T22:48:50+09:00",
+    "snapshot_cutoff_datetime": "2026-10-10T22:48:50+09:00",
+    "classifier_version": "JP-2026-W02-v4.1",
+    "classifier_market": "JP",
+    "classifier_card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
+    "external_taxonomy_reference": {
+      "name": "LimitlessTCG",
+      "role": "classification-engine design reference only",
+      "rules_imported": false,
+      "card_pool_equivalent": false,
+      "known_gap": "ストームエメラルダ is not yet released in the overseas card pool used by Limitless at this point"
+    },
+    "classification_mode": "snapshot_sidecar_when_compatible_else_post_snapshot_derivation",
+    "calendar_id": "2027-s1-mon-sun-v1",
+    "restatement_kind": "versioned_interim_preview_not_final",
+    "source_files_sha256": {
+      "data/city_db.json": "9bc4c7b9931e2787ae63f50672a49a5cb358abc74e02927c870ec96b3a984067",
+      "data/city_decks.json": "6b5a3a4ceb68a6e2e8fbd345ce276eb2aa77b92bea7f7dcee775bcb7bb7053f5",
+      "data/analysis/deck_classifications.json": "2b73ff6a3079616e5e7fe640d8413dac25d5b722c41bba442486c7fb3e1c009c",
+      "data/index.json": "21d743aa1ff5ea8b12ebc60af110a7085639d153a3ff5517b59924212afd3df8"
+    },
+    "source_event_data_updated_at": "2026-10-10T22:48:50+09:00",
+    "last_observed_event_day": "2026-10-10",
+    "full_week_coverage_verified": false,
+    "scheduled_event_coverage": "not_assessed"
+  },
+  "current_week": {
+    "period_start": "2026-10-05T00:00:00+09:00",
+    "period_end": "2026-10-11T23:59:59+09:00",
+    "national": {
+      "target_coverage": null,
+      "analysis": {
+        "coverage": {
+          "result_events": 39,
+          "captured_top8_rows": 308,
+          "known_top8_deck_lists": 308
+        },
+        "stage_composition": {
+          "top8": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 96,
+              "top_stage_share": {
+                "numerator": 96,
+                "denominator": 308,
+                "value": 0.3116883116883117
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 79,
+              "top_stage_share": {
+                "numerator": 79,
+                "denominator": 308,
+                "value": 0.2564935064935065
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 22,
+              "top_stage_share": {
+                "numerator": 22,
+                "denominator": 308,
+                "value": 0.07142857142857142
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 14,
+              "top_stage_share": {
+                "numerator": 14,
+                "denominator": 308,
+                "value": 0.045454545454545456
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 13,
+              "top_stage_share": {
+                "numerator": 13,
+                "denominator": 308,
+                "value": 0.04220779220779221
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 12,
+              "top_stage_share": {
+                "numerator": 12,
+                "denominator": 308,
+                "value": 0.03896103896103896
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 10,
+              "top_stage_share": {
+                "numerator": 10,
+                "denominator": 308,
+                "value": 0.032467532467532464
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 308,
+                "value": 0.02922077922077922
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 308,
+                "value": 0.02922077922077922
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 7,
+              "top_stage_share": {
+                "numerator": 7,
+                "denominator": 308,
+                "value": 0.022727272727272728
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 308,
+                "value": 0.01948051948051948
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 308,
+                "value": 0.01948051948051948
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 308,
+                "value": 0.016233766233766232
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 308,
+                "value": 0.012987012987012988
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 308,
+                "value": 0.012987012987012988
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 308,
+                "value": 0.00974025974025974
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 308,
+                "value": 0.006493506493506494
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 308,
+                "value": 0.006493506493506494
+              }
+            },
+            {
+              "parent_archetype": "オリーヴァex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 308,
+                "value": 0.003246753246753247
+              }
+            },
+            {
+              "parent_archetype": "シロナのガブリアスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 308,
+                "value": 0.003246753246753247
+              }
+            },
+            {
+              "parent_archetype": "ブリジュラスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 308,
+                "value": 0.003246753246753247
+              }
+            },
+            {
+              "parent_archetype": "メガスターミーex／メガユキメノコex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 308,
+                "value": 0.003246753246753247
+              }
+            },
+            {
+              "parent_archetype": "ロケット団のワナイダー",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 308,
+                "value": 0.003246753246753247
+              }
+            }
+          ],
+          "top4": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 53,
+              "top_stage_share": {
+                "numerator": 53,
+                "denominator": 156,
+                "value": 0.33974358974358976
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 36,
+              "top_stage_share": {
+                "numerator": 36,
+                "denominator": 156,
+                "value": 0.23076923076923078
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 10,
+              "top_stage_share": {
+                "numerator": 10,
+                "denominator": 156,
+                "value": 0.0641025641025641
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 7,
+              "top_stage_share": {
+                "numerator": 7,
+                "denominator": 156,
+                "value": 0.04487179487179487
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 156,
+                "value": 0.038461538461538464
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 156,
+                "value": 0.038461538461538464
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 156,
+                "value": 0.03205128205128205
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 156,
+                "value": 0.03205128205128205
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 156,
+                "value": 0.03205128205128205
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 156,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 156,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 156,
+                "value": 0.019230769230769232
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 156,
+                "value": 0.019230769230769232
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 156,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 156,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 156,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 156,
+                "value": 0.00641025641025641
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 156,
+                "value": 0.00641025641025641
+              }
+            },
+            {
+              "parent_archetype": "ロケット団のワナイダー",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 156,
+                "value": 0.00641025641025641
+              }
+            }
+          ],
+          "top2": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 35,
+              "top_stage_share": {
+                "numerator": 35,
+                "denominator": 78,
+                "value": 0.44871794871794873
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 10,
+              "top_stage_share": {
+                "numerator": 10,
+                "denominator": 78,
+                "value": 0.1282051282051282
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 78,
+                "value": 0.0641025641025641
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 78,
+                "value": 0.05128205128205128
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 78,
+                "value": 0.038461538461538464
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 78,
+                "value": 0.038461538461538464
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 78,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 78,
+                "value": 0.01282051282051282
+              }
+            }
+          ],
+          "champion": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 22,
+              "top_stage_share": {
+                "numerator": 22,
+                "denominator": 39,
+                "value": 0.5641025641025641
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 39,
+                "value": 0.10256410256410256
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 39,
+                "value": 0.05128205128205128
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 39,
+                "value": 0.05128205128205128
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 39,
+                "value": 0.05128205128205128
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 39,
+                "value": 0.05128205128205128
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 39,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 39,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 39,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 39,
+                "value": 0.02564102564102564
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 39,
+                "value": 0.02564102564102564
+              }
+            }
+          ]
+        },
+        "variant_prevalence_top8": [
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "アズマオウ型",
+            "count": 2,
+            "within_parent_prevalence": {
+              "numerator": 2,
+              "denominator": 9,
+              "value": 0.2222222222222222
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "カミッチュ型",
+            "count": 5,
+            "within_parent_prevalence": {
+              "numerator": 5,
+              "denominator": 9,
+              "value": 0.5555555555555556
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "オリーヴァex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "count": 11,
+            "within_parent_prevalence": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "count": 4,
+            "within_parent_prevalence": {
+              "numerator": 4,
+              "denominator": 6,
+              "value": 0.6666666666666666
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "variant_tag": "メガガルーラex採用",
+            "count": 4,
+            "within_parent_prevalence": {
+              "numerator": 4,
+              "denominator": 6,
+              "value": 0.6666666666666666
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ノココッチ型",
+            "count": 38,
+            "within_parent_prevalence": {
+              "numerator": 38,
+              "denominator": 96,
+              "value": 0.3958333333333333
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ヨノワール型",
+            "count": 34,
+            "within_parent_prevalence": {
+              "numerator": 34,
+              "denominator": 96,
+              "value": 0.3541666666666667
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ブリジュラスex",
+            "variant_tag": "ノココッチ型",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "count": 3,
+            "within_parent_prevalence": {
+              "numerator": 3,
+              "denominator": 4,
+              "value": 0.75
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "ヒビキのホウオウex採用",
+            "count": 9,
+            "within_parent_prevalence": {
+              "numerator": 9,
+              "denominator": 9,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "メガガルーラex採用",
+            "count": 9,
+            "within_parent_prevalence": {
+              "numerator": 9,
+              "denominator": 9,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "variant_tag": "メガドリュウズex型",
+            "count": 2,
+            "within_parent_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "ドロンチ型",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 14,
+              "value": 0.07142857142857142
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "メガガルーラex採用",
+            "count": 13,
+            "within_parent_prevalence": {
+              "numerator": 13,
+              "denominator": 14,
+              "value": 0.9285714285714286
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ロケット団のワナイダー",
+            "variant_tag": "ロケット団のミュウツーex採用",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          }
+        ],
+        "conversion": [
+          {
+            "parent_archetype": "Nのゾロアークex",
+            "stage_counts": {
+              "top8": 22,
+              "top4": 6,
+              "top2": 2,
+              "champion": 1
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 6,
+                "denominator": 22,
+                "value": 0.2727272727272727,
+                "ci95_wilson": [
+                  0.13150760287989469,
+                  0.4815173401240238
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 6,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.09677141110578041,
+                  0.700006684861608
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 1,
+                "denominator": 22,
+                "value": 0.045454545454545456,
+                "ci95_wilson": [
+                  0.00806942762126385,
+                  0.21798045838657332
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "stage_counts": {
+              "top8": 9,
+              "top4": 5,
+              "top2": 2,
+              "champion": 2
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 5,
+                "denominator": 9,
+                "value": 0.5555555555555556,
+                "ci95_wilson": [
+                  0.26665129349549305,
+                  0.8112214789023355
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 5,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.11762077423264783,
+                  0.769275718723987
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 2,
+                "denominator": 2,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.34238022750665303,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 2,
+                "denominator": 9,
+                "value": 0.2222222222222222,
+                "ci95_wilson": [
+                  0.06322510711784671,
+                  0.5474110308930111
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "オリーヴァex",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 0,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "stage_counts": {
+              "top8": 13,
+              "top4": 6,
+              "top2": 5,
+              "champion": 2
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 6,
+                "denominator": 13,
+                "value": 0.46153846153846156,
+                "ci95_wilson": [
+                  0.23206067809538303,
+                  0.7085620428549398
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 5,
+                "denominator": 6,
+                "value": 0.8333333333333334,
+                "ci95_wilson": [
+                  0.43649717781352987,
+                  0.9699466302516935
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 2,
+                "denominator": 5,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.11762077423264783,
+                  0.769275718723987
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 2,
+                "denominator": 13,
+                "value": 0.15384615384615385,
+                "ci95_wilson": [
+                  0.043258178358081184,
+                  0.4223463101948254
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ゲッコウガex",
+            "stage_counts": {
+              "top8": 3,
+              "top4": 3,
+              "top2": 1,
+              "champion": 1
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 3,
+                "denominator": 3,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.4385029682449546,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 3,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.06149194472039621,
+                  0.7923403991979522
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 1,
+                "denominator": 3,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.06149194472039621,
+                  0.7923403991979522
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "シロナのガブリアスex",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 0,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ジュペッタ／ダダリン",
+            "stage_counts": {
+              "top8": 5,
+              "top4": 2,
+              "top2": 2,
+              "champion": 1
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 2,
+                "denominator": 5,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.11762077423264783,
+                  0.769275718723987
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 2,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.34238022750665303,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 1,
+                "denominator": 5,
+                "value": 0.2,
+                "ci95_wilson": [
+                  0.03622410863243014,
+                  0.6244653702374747
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "stage_counts": {
+              "top8": 6,
+              "top4": 3,
+              "top2": 1,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 3,
+                "denominator": 6,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.1876163064826506,
+                  0.8123836935173494
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 3,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.06149194472039621,
+                  0.7923403991979522
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 6,
+                "value": 0.0,
+                "ci95_wilson": [
+                  2.7755575615628914e-17,
+                  0.3903342879021653
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "stage_counts": {
+              "top8": 96,
+              "top4": 53,
+              "top2": 35,
+              "champion": 22
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 53,
+                "denominator": 96,
+                "value": 0.5520833333333334,
+                "ci95_wilson": [
+                  0.4525163859774741,
+                  0.6476424069540183
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 35,
+                "denominator": 53,
+                "value": 0.660377358490566,
+                "ci95_wilson": [
+                  0.5259478663754829,
+                  0.7731296089867581
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 22,
+                "denominator": 35,
+                "value": 0.6285714285714286,
+                "ci95_wilson": [
+                  0.4633693684359532,
+                  0.7683418049663429
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 22,
+                "denominator": 96,
+                "value": 0.22916666666666666,
+                "ci95_wilson": [
+                  0.1564891714560027,
+                  0.3226851053002383
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "フーディン",
+            "stage_counts": {
+              "top8": 10,
+              "top4": 5,
+              "top2": 1,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 5,
+                "denominator": 10,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.236593090512564,
+                  0.7634069094874361
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 5,
+                "value": 0.2,
+                "ci95_wilson": [
+                  0.03622410863243014,
+                  0.6244653702374747
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 10,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.2775327998628892
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ブリジュラスex",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 0,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "マリィのオーロンゲex",
+            "stage_counts": {
+              "top8": 6,
+              "top4": 2,
+              "top2": 2,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 2,
+                "denominator": 6,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.09677141110578041,
+                  0.700006684861608
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 2,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.34238022750665303,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 2,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.6576197724933469
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 6,
+                "value": 0.0,
+                "ci95_wilson": [
+                  2.7755575615628914e-17,
+                  0.3903342879021653
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガガルーラex",
+            "stage_counts": {
+              "top8": 12,
+              "top4": 10,
+              "top2": 4,
+              "champion": 1
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 10,
+                "denominator": 12,
+                "value": 0.8333333333333334,
+                "ci95_wilson": [
+                  0.5519691377470266,
+                  0.9530348578161463
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 4,
+                "denominator": 10,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.16818032970623614,
+                  0.6873262302663417
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 1,
+                "denominator": 4,
+                "value": 0.25,
+                "ci95_wilson": [
+                  0.04558726080970055,
+                  0.6993581574175981
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 1,
+                "denominator": 12,
+                "value": 0.08333333333333333,
+                "ci95_wilson": [
+                  0.014865094404917095,
+                  0.35387991114111694
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガガルーラ・オーガポンバレット",
+            "stage_counts": {
+              "top8": 2,
+              "top4": 1,
+              "top2": 1,
+              "champion": 1
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガスターミーex／メガユキメノコex",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 0,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "stage_counts": {
+              "top8": 4,
+              "top4": 4,
+              "top2": 2,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 4,
+                "denominator": 4,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.5101091635454027,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 4,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.15003898915214947,
+                  0.8499610108478506
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 2,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.6576197724933469
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 4,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.4898908364545973
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガミミロップex",
+            "stage_counts": {
+              "top8": 4,
+              "top4": 2,
+              "top2": 1,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 2,
+                "denominator": 4,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.15003898915214947,
+                  0.8499610108478506
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 4,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.4898908364545973
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガルカリオex",
+            "stage_counts": {
+              "top8": 7,
+              "top4": 4,
+              "top2": 3,
+              "champion": 2
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 4,
+                "denominator": 7,
+                "value": 0.5714285714285714,
+                "ci95_wilson": [
+                  0.2504583645276572,
+                  0.8417801447485302
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 3,
+                "denominator": 4,
+                "value": 0.75,
+                "ci95_wilson": [
+                  0.30064184258240184,
+                  0.9544127391902995
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 2,
+                "denominator": 3,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.2076596008020477,
+                  0.9385080552796037
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 2,
+                "denominator": 7,
+                "value": 0.2857142857142857,
+                "ci95_wilson": [
+                  0.08221892400405678,
+                  0.6410655481673808
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "stage_counts": {
+              "top8": 9,
+              "top4": 5,
+              "top2": 3,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 5,
+                "denominator": 9,
+                "value": 0.5555555555555556,
+                "ci95_wilson": [
+                  0.26665129349549305,
+                  0.8112214789023355
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 3,
+                "denominator": 5,
+                "value": 0.6,
+                "ci95_wilson": [
+                  0.2307242812760128,
+                  0.882379225767352
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 3,
+                "value": 0.0,
+                "ci95_wilson": [
+                  5.551115123125783e-17,
+                  0.5614970317550454
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 9,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.2991450484195441
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "stage_counts": {
+              "top8": 2,
+              "top4": 1,
+              "top2": 1,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 2,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.6576197724933469
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "stage_counts": {
+              "top8": 14,
+              "top4": 7,
+              "top2": 2,
+              "champion": 2
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 7,
+                "denominator": 14,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.26799202452413634,
+                  0.7320079754758637
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 2,
+                "denominator": 7,
+                "value": 0.2857142857142857,
+                "ci95_wilson": [
+                  0.08221892400405678,
+                  0.6410655481673808
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 2,
+                "denominator": 2,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.34238022750665303,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 2,
+                "denominator": 14,
+                "value": 0.14285714285714285,
+                "ci95_wilson": [
+                  0.040093921271464966,
+                  0.39941379496970353
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ロケット団のワナイダー",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 1,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "未分類",
+            "stage_counts": {
+              "top8": 79,
+              "top4": 36,
+              "top2": 10,
+              "champion": 4
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 36,
+                "denominator": 79,
+                "value": 0.45569620253164556,
+                "ci95_wilson": [
+                  0.3504845759399334,
+                  0.565016670662313
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 10,
+                "denominator": 36,
+                "value": 0.2777777777777778,
+                "ci95_wilson": [
+                  0.1584833794013461,
+                  0.43992489997397105
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 4,
+                "denominator": 10,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.16818032970623614,
+                  0.6873262302663417
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 4,
+                "denominator": 79,
+                "value": 0.05063291139240506,
+                "ci95_wilson": [
+                  0.019864042780018548,
+                  0.12307717275705116
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            }
+          }
+        ],
+        "classification_coverage_top8": {
+          "parent_classified": {
+            "numerator": 229,
+            "denominator": 308,
+            "value": 0.7435064935064936
+          },
+          "parent_classified_among_valid_60_lists": {
+            "numerator": 229,
+            "denominator": 308,
+            "value": 0.7435064935064936
+          },
+          "valid_60_deck_lists": 308,
+          "statuses": {
+            "classified": 229,
+            "unknown": 79
+          },
+          "sources": {
+            "derived_post_snapshot": 260,
+            "derived_post_snapshot_rule_upgrade": 48
+          },
+          "unclassified_count": 79
+        },
+        "card_analysis_top8": {
+          "exact_identities": {
+            "known_deck_lists": 308,
+            "identity_rule": "exact_card_id_and_exact_display_name; no cross-printing inference",
+            "top_exact_identities": [
+              {
+                "card_id": "49694",
+                "display_name": "ニャースex",
+                "section": "ポケモン (21)",
+                "adopting_lists": 116,
+                "adoption_rate": {
+                  "numerator": 116,
+                  "denominator": 308,
+                  "value": 0.37662337662337664
+                },
+                "average_copies_when_present": 1.3275862068965518
+              },
+              {
+                "card_id": "50156",
+                "display_name": "スペシャルレッドカード",
+                "section": "グッズ (17)",
+                "adopting_lists": 83,
+                "adoption_rate": {
+                  "numerator": 83,
+                  "denominator": 308,
+                  "value": 0.2694805194805195
+                },
+                "average_copies_when_present": 1.144578313253012
+              },
+              {
+                "card_id": "49386",
+                "display_name": "夜のタンカ",
+                "section": "グッズ (18)",
+                "adopting_lists": 81,
+                "adoption_rate": {
+                  "numerator": 81,
+                  "denominator": 308,
+                  "value": 0.262987012987013
+                },
+                "average_copies_when_present": 1.8518518518518519
+              },
+              {
+                "card_id": "50205",
+                "display_name": "スペシャルレッドカード",
+                "section": "グッズ (12)",
+                "adopting_lists": 79,
+                "adoption_rate": {
+                  "numerator": 79,
+                  "denominator": 308,
+                  "value": 0.2564935064935065
+                },
+                "average_copies_when_present": 1.0632911392405062
+              },
+              {
+                "card_id": "49976",
+                "display_name": "ハイパーボール",
+                "section": "グッズ (18)",
+                "adopting_lists": 72,
+                "adoption_rate": {
+                  "numerator": 72,
+                  "denominator": 308,
+                  "value": 0.23376623376623376
+                },
+                "average_copies_when_present": 3.2222222222222223
+              },
+              {
+                "card_id": "49349",
+                "display_name": "アンフェアスタンプ(ACE SPEC)",
+                "section": "グッズ (18)",
+                "adopting_lists": 68,
+                "adoption_rate": {
+                  "numerator": 68,
+                  "denominator": 308,
+                  "value": 0.22077922077922077
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "48440",
+                "display_name": "夜のタンカ",
+                "section": "グッズ (18)",
+                "adopting_lists": 66,
+                "adoption_rate": {
+                  "numerator": 66,
+                  "denominator": 308,
+                  "value": 0.21428571428571427
+                },
+                "average_copies_when_present": 1.6666666666666667
+              },
+              {
+                "card_id": "49205",
+                "display_name": "キチキギスex",
+                "section": "ポケモン (27)",
+                "adopting_lists": 65,
+                "adoption_rate": {
+                  "numerator": 65,
+                  "denominator": 308,
+                  "value": 0.21103896103896103
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "50070",
+                "display_name": "ポケパッド",
+                "section": "グッズ (17)",
+                "adopting_lists": 63,
+                "adoption_rate": {
+                  "numerator": 63,
+                  "denominator": 308,
+                  "value": 0.20454545454545456
+                },
+                "average_copies_when_present": 3.380952380952381
+              },
+              {
+                "card_id": "48443",
+                "display_name": "リーリエの決心",
+                "section": "サポート (9)",
+                "adopting_lists": 63,
+                "adoption_rate": {
+                  "numerator": 63,
+                  "denominator": 308,
+                  "value": 0.20454545454545456
+                },
+                "average_copies_when_present": 3.6507936507936507
+              },
+              {
+                "card_id": "49364",
+                "display_name": "なかよしポフィン",
+                "section": "グッズ (18)",
+                "adopting_lists": 62,
+                "adoption_rate": {
+                  "numerator": 62,
+                  "denominator": 308,
+                  "value": 0.2012987012987013
+                },
+                "average_copies_when_present": 3.564516129032258
+              },
+              {
+                "card_id": "48354",
+                "display_name": "ファイヤー",
+                "section": "ポケモン (21)",
+                "adopting_lists": 61,
+                "adoption_rate": {
+                  "numerator": 61,
+                  "denominator": 308,
+                  "value": 0.19805194805194806
+                },
+                "average_copies_when_present": 1.0163934426229508
+              },
+              {
+                "card_id": "47796",
+                "display_name": "危ない廃墟",
+                "section": "スタジアム (3)",
+                "adopting_lists": 55,
+                "adoption_rate": {
+                  "numerator": 55,
+                  "denominator": 308,
+                  "value": 0.17857142857142858
+                },
+                "average_copies_when_present": 1.6363636363636365
+              },
+              {
+                "card_id": "48711",
+                "display_name": "ロケット団の監視塔",
+                "section": "スタジアム (2)",
+                "adopting_lists": 53,
+                "adoption_rate": {
+                  "numerator": 53,
+                  "denominator": 308,
+                  "value": 0.17207792207792208
+                },
+                "average_copies_when_present": 1.3396226415094339
+              },
+              {
+                "card_id": "49412",
+                "display_name": "アカマツ",
+                "section": "サポート (9)",
+                "adopting_lists": 51,
+                "adoption_rate": {
+                  "numerator": 51,
+                  "denominator": 308,
+                  "value": 0.16558441558441558
+                },
+                "average_copies_when_present": 2.196078431372549
+              },
+              {
+                "card_id": "45640",
+                "display_name": "アンフェアスタンプ(ACE SPEC)",
+                "section": "グッズ (17)",
+                "adopting_lists": 49,
+                "adoption_rate": {
+                  "numerator": 49,
+                  "denominator": 308,
+                  "value": 0.1590909090909091
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "49712",
+                "display_name": "テレパス超エネルギー",
+                "section": "エネルギー (8)",
+                "adopting_lists": 49,
+                "adoption_rate": {
+                  "numerator": 49,
+                  "denominator": 308,
+                  "value": 0.1590909090909091
+                },
+                "average_copies_when_present": 3.7142857142857144
+              },
+              {
+                "card_id": "45849",
+                "display_name": "マシマシラ",
+                "section": "ポケモン (19)",
+                "adopting_lists": 49,
+                "adoption_rate": {
+                  "numerator": 49,
+                  "denominator": 308,
+                  "value": 0.1590909090909091
+                },
+                "average_copies_when_present": 1.653061224489796
+              },
+              {
+                "card_id": "49708",
+                "display_name": "メイのはげまし",
+                "section": "サポート (9)",
+                "adopting_lists": 49,
+                "adoption_rate": {
+                  "numerator": 49,
+                  "denominator": 308,
+                  "value": 0.1590909090909091
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "48467",
+                "display_name": "なかよしポフィン",
+                "section": "グッズ (18)",
+                "adopting_lists": 42,
+                "adoption_rate": {
+                  "numerator": 42,
+                  "denominator": 308,
+                  "value": 0.13636363636363635
+                },
+                "average_copies_when_present": 3.380952380952381
+              }
+            ]
+          },
+          "watch_cards": {
+            "status": "not_configured",
+            "known_deck_lists": 308,
+            "cards": [],
+            "note": "logical-card adoption is not inferred from display-name substrings"
+          }
+        },
+        "top16_context": {
+          "status": "observed_complete_event_subset",
+          "scope": "Top16 event subset only; not participant usage or match win rate",
+          "coverage": {
+            "result_events": 39,
+            "complete_top16_events": 38,
+            "excluded_events": 1,
+            "captured_top16_rows": 608,
+            "captured_matched_top8_rows": 304
+          },
+          "top16_composition": [
+            {
+              "parent_archetype": "未分類",
+              "count": 178,
+              "top_stage_share": {
+                "numerator": 178,
+                "denominator": 608,
+                "value": 0.29276315789473684
+              }
+            },
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 175,
+              "top_stage_share": {
+                "numerator": 175,
+                "denominator": 608,
+                "value": 0.2878289473684211
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 37,
+              "top_stage_share": {
+                "numerator": 37,
+                "denominator": 608,
+                "value": 0.06085526315789474
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 28,
+              "top_stage_share": {
+                "numerator": 28,
+                "denominator": 608,
+                "value": 0.046052631578947366
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 25,
+              "top_stage_share": {
+                "numerator": 25,
+                "denominator": 608,
+                "value": 0.04111842105263158
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 23,
+              "top_stage_share": {
+                "numerator": 23,
+                "denominator": 608,
+                "value": 0.03782894736842105
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 22,
+              "top_stage_share": {
+                "numerator": 22,
+                "denominator": 608,
+                "value": 0.03618421052631579
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 21,
+              "top_stage_share": {
+                "numerator": 21,
+                "denominator": 608,
+                "value": 0.03453947368421053
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "count": 19,
+              "top_stage_share": {
+                "numerator": 19,
+                "denominator": 608,
+                "value": 0.03125
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "count": 13,
+              "top_stage_share": {
+                "numerator": 13,
+                "denominator": 608,
+                "value": 0.02138157894736842
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 11,
+              "top_stage_share": {
+                "numerator": 11,
+                "denominator": 608,
+                "value": 0.018092105263157895
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 10,
+              "top_stage_share": {
+                "numerator": 10,
+                "denominator": 608,
+                "value": 0.01644736842105263
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 608,
+                "value": 0.014802631578947368
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 8,
+              "top_stage_share": {
+                "numerator": 8,
+                "denominator": 608,
+                "value": 0.013157894736842105
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "count": 7,
+              "top_stage_share": {
+                "numerator": 7,
+                "denominator": 608,
+                "value": 0.011513157894736841
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 608,
+                "value": 0.009868421052631578
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 608,
+                "value": 0.008223684210526315
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 608,
+                "value": 0.004934210526315789
+              }
+            },
+            {
+              "parent_archetype": "メガスターミーex／メガユキメノコex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 608,
+                "value": 0.004934210526315789
+              }
+            },
+            {
+              "parent_archetype": "オリーヴァex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 608,
+                "value": 0.001644736842105263
+              }
+            },
+            {
+              "parent_archetype": "シロナのガブリアスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 608,
+                "value": 0.001644736842105263
+              }
+            },
+            {
+              "parent_archetype": "ブリジュラスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 608,
+                "value": 0.001644736842105263
+              }
+            },
+            {
+              "parent_archetype": "ブースターex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 608,
+                "value": 0.001644736842105263
+              }
+            },
+            {
+              "parent_archetype": "ロケット団のワナイダー",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 608,
+                "value": 0.001644736842105263
+              }
+            }
+          ],
+          "matched_top8_composition": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 94,
+              "top_stage_share": {
+                "numerator": 94,
+                "denominator": 304,
+                "value": 0.3092105263157895
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 78,
+              "top_stage_share": {
+                "numerator": 78,
+                "denominator": 304,
+                "value": 0.2565789473684211
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "count": 22,
+              "top_stage_share": {
+                "numerator": 22,
+                "denominator": 304,
+                "value": 0.07236842105263158
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 14,
+              "top_stage_share": {
+                "numerator": 14,
+                "denominator": 304,
+                "value": 0.046052631578947366
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "count": 13,
+              "top_stage_share": {
+                "numerator": 13,
+                "denominator": 304,
+                "value": 0.04276315789473684
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "count": 12,
+              "top_stage_share": {
+                "numerator": 12,
+                "denominator": 304,
+                "value": 0.039473684210526314
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 10,
+              "top_stage_share": {
+                "numerator": 10,
+                "denominator": 304,
+                "value": 0.03289473684210526
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 304,
+                "value": 0.029605263157894735
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 304,
+                "value": 0.029605263157894735
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 7,
+              "top_stage_share": {
+                "numerator": 7,
+                "denominator": 304,
+                "value": 0.023026315789473683
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 304,
+                "value": 0.019736842105263157
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 304,
+                "value": 0.019736842105263157
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 304,
+                "value": 0.01644736842105263
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 304,
+                "value": 0.013157894736842105
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 304,
+                "value": 0.013157894736842105
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 304,
+                "value": 0.009868421052631578
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 304,
+                "value": 0.006578947368421052
+              }
+            },
+            {
+              "parent_archetype": "オリーヴァex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            },
+            {
+              "parent_archetype": "シロナのガブリアスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            },
+            {
+              "parent_archetype": "ブリジュラスex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            },
+            {
+              "parent_archetype": "メガスターミーex／メガユキメノコex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            },
+            {
+              "parent_archetype": "ロケット団のワナイダー",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 304,
+                "value": 0.003289473684210526
+              }
+            }
+          ],
+          "top16_to_top8": [
+            {
+              "parent_archetype": "未分類",
+              "top16_count": 178,
+              "top8_count_in_same_events": 78,
+              "observed_top16_to_top8": {
+                "numerator": 78,
+                "denominator": 178,
+                "value": 0.43820224719101125,
+                "ci95_wilson": [
+                  0.367380376037628,
+                  0.5116351128246053
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ドラパルトex",
+              "top16_count": 175,
+              "top8_count_in_same_events": 94,
+              "observed_top16_to_top8": {
+                "numerator": 94,
+                "denominator": 175,
+                "value": 0.5371428571428571,
+                "ci95_wilson": [
+                  0.46326340478742495,
+                  0.6094266754977832
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "Nのゾロアークex",
+              "top16_count": 37,
+              "top8_count_in_same_events": 22,
+              "observed_top16_to_top8": {
+                "numerator": 22,
+                "denominator": 37,
+                "value": 0.5945945945945946,
+                "ci95_wilson": [
+                  0.43485964730229365,
+                  0.7365348180798572
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "top16_count": 28,
+              "top8_count_in_same_events": 14,
+              "observed_top16_to_top8": {
+                "numerator": 14,
+                "denominator": 28,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.32633127457293465,
+                  0.6736687254270654
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "top16_count": 25,
+              "top8_count_in_same_events": 10,
+              "observed_top16_to_top8": {
+                "numerator": 10,
+                "denominator": 25,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.23403302377747973,
+                  0.5926054264103301
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラex",
+              "top16_count": 23,
+              "top8_count_in_same_events": 12,
+              "observed_top16_to_top8": {
+                "numerator": 12,
+                "denominator": 23,
+                "value": 0.5217391304347826,
+                "ci95_wilson": [
+                  0.32962737336427406,
+                  0.7076284258335335
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "top16_count": 22,
+              "top8_count_in_same_events": 9,
+              "observed_top16_to_top8": {
+                "numerator": 9,
+                "denominator": 22,
+                "value": 0.4090909090909091,
+                "ci95_wilson": [
+                  0.2325581619647187,
+                  0.6126518152368488
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "カミツオロチex",
+              "top16_count": 21,
+              "top8_count_in_same_events": 13,
+              "observed_top16_to_top8": {
+                "numerator": 13,
+                "denominator": 21,
+                "value": 0.6190476190476191,
+                "ci95_wilson": [
+                  0.4087865377511576,
+                  0.7924898863143551
+                ],
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガレックウザex",
+              "top16_count": 19,
+              "top8_count_in_same_events": 9,
+              "observed_top16_to_top8": {
+                "numerator": 9,
+                "denominator": 19,
+                "value": 0.47368421052631576,
+                "ci95_wilson": [
+                  0.2732980516117956,
+                  0.6829219075488682
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "タケルライコex",
+              "top16_count": 13,
+              "top8_count_in_same_events": 6,
+              "observed_top16_to_top8": {
+                "numerator": 6,
+                "denominator": 13,
+                "value": 0.46153846153846156,
+                "ci95_wilson": [
+                  0.23206067809538303,
+                  0.7085620428549398
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "top16_count": 11,
+              "top8_count_in_same_events": 7,
+              "observed_top16_to_top8": {
+                "numerator": 7,
+                "denominator": 11,
+                "value": 0.6363636363636364,
+                "ci95_wilson": [
+                  0.35380117450784887,
+                  0.8483352890463243
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ゲッコウガex",
+              "top16_count": 10,
+              "top8_count_in_same_events": 3,
+              "observed_top16_to_top8": {
+                "numerator": 3,
+                "denominator": 10,
+                "value": 0.3,
+                "ci95_wilson": [
+                  0.10779126740630099,
+                  0.6032218525388546
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "top16_count": 9,
+              "top8_count_in_same_events": 6,
+              "observed_top16_to_top8": {
+                "numerator": 6,
+                "denominator": 9,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.3542021355803963,
+                  0.879416181613089
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ジュペッタ／ダダリン",
+              "top16_count": 8,
+              "top8_count_in_same_events": 5,
+              "observed_top16_to_top8": {
+                "numerator": 5,
+                "denominator": 8,
+                "value": 0.625,
+                "ci95_wilson": [
+                  0.30574239460262737,
+                  0.8631557141764026
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガフシギバナex",
+              "top16_count": 7,
+              "top8_count_in_same_events": 4,
+              "observed_top16_to_top8": {
+                "numerator": 4,
+                "denominator": 7,
+                "value": 0.5714285714285714,
+                "ci95_wilson": [
+                  0.2504583645276572,
+                  0.8417801447485302
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガミミロップex",
+              "top16_count": 6,
+              "top8_count_in_same_events": 4,
+              "observed_top16_to_top8": {
+                "numerator": 4,
+                "denominator": 6,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.299993315138392,
+                  0.9032285888942195
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メタング／ゲノセクトex",
+              "top16_count": 5,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 5,
+                "value": 0.2,
+                "ci95_wilson": [
+                  0.03622410863243014,
+                  0.6244653702374747
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガガルーラ・オーガポンバレット",
+              "top16_count": 3,
+              "top8_count_in_same_events": 2,
+              "observed_top16_to_top8": {
+                "numerator": 2,
+                "denominator": 3,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.2076596008020477,
+                  0.9385080552796037
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガスターミーex／メガユキメノコex",
+              "top16_count": 3,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 3,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.06149194472039621,
+                  0.7923403991979522
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "オリーヴァex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "シロナのガブリアスex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ブリジュラスex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ブースターex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 0,
+              "observed_top16_to_top8": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ロケット団のワナイダー",
+              "top16_count": 1,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          ],
+          "top16_classification": {
+            "parent_classified": {
+              "numerator": 430,
+              "denominator": 608,
+              "value": 0.7072368421052632
+            },
+            "parent_classified_among_valid_60_lists": {
+              "numerator": 430,
+              "denominator": 608,
+              "value": 0.7072368421052632
+            },
+            "valid_60_deck_lists": 608,
+            "statuses": {
+              "classified": 430,
+              "unknown": 178
+            },
+            "sources": {
+              "derived_post_snapshot": 560,
+              "derived_post_snapshot_rule_upgrade": 48
+            },
+            "unclassified_count": 178
+          },
+          "top16_watch_cards": {
+            "status": "not_configured",
+            "known_deck_lists": 608,
+            "cards": [],
+            "note": "logical-card adoption is not inferred from display-name substrings"
+          }
+        }
+      }
+    },
+    "regional": {
+      "region": "愛知県",
+      "selection_basis": "venue_prefecture",
+      "target_coverage": null,
+      "analysis": {
+        "coverage": {
+          "result_events": 2,
+          "captured_top8_rows": 16,
+          "known_top8_deck_lists": 16
+        },
+        "stage_composition": {
+          "top8": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 16,
+                "value": 0.375
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 16,
+                "value": 0.375
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 16,
+                "value": 0.125
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 16,
+                "value": 0.0625
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 16,
+                "value": 0.0625
+              }
+            }
+          ],
+          "top4": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 4,
+              "top_stage_share": {
+                "numerator": 4,
+                "denominator": 8,
+                "value": 0.5
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 8,
+                "value": 0.25
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 8,
+                "value": 0.125
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 8,
+                "value": 0.125
+              }
+            }
+          ],
+          "top2": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 3,
+              "top_stage_share": {
+                "numerator": 3,
+                "denominator": 4,
+                "value": 0.75
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 4,
+                "value": 0.25
+              }
+            }
+          ],
+          "champion": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 2,
+                "value": 1.0
+              }
+            }
+          ]
+        },
+        "variant_prevalence_top8": [
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "アズマオウ型",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ノココッチ型",
+            "count": 3,
+            "within_parent_prevalence": {
+              "numerator": 3,
+              "denominator": 6,
+              "value": 0.5
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ヨノワール型",
+            "count": 1,
+            "within_parent_prevalence": {
+              "numerator": 1,
+              "denominator": 6,
+              "value": 0.16666666666666666
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "メガガルーラex採用",
+            "count": 2,
+            "within_parent_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "note": "tags_are_not_mutually_exclusive"
+          }
+        ],
+        "conversion": [
+          {
+            "parent_archetype": "おまつりおんど",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 1,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "stage_counts": {
+              "top8": 6,
+              "top4": 4,
+              "top2": 3,
+              "champion": 2
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 4,
+                "denominator": 6,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.299993315138392,
+                  0.9032285888942195
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 3,
+                "denominator": 4,
+                "value": 0.75,
+                "ci95_wilson": [
+                  0.30064184258240184,
+                  0.9544127391902995
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 2,
+                "denominator": 3,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.2076596008020477,
+                  0.9385080552796037
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 2,
+                "denominator": 6,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.09677141110578041,
+                  0.700006684861608
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "メガルカリオex",
+            "stage_counts": {
+              "top8": 1,
+              "top4": 0,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "stage_counts": {
+              "top8": 2,
+              "top4": 1,
+              "top2": 0,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 0,
+                "value": null,
+                "ci95_wilson": null,
+                "small_sample_warning": false,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 2,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.6576197724933469
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          },
+          {
+            "parent_archetype": "未分類",
+            "stage_counts": {
+              "top8": 6,
+              "top4": 2,
+              "top2": 1,
+              "champion": 0
+            },
+            "conversion": {
+              "top8_to_top4": {
+                "numerator": 2,
+                "denominator": 6,
+                "value": 0.3333333333333333,
+                "ci95_wilson": [
+                  0.09677141110578041,
+                  0.700006684861608
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top4_to_top2": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top2_to_champion": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              },
+              "top8_to_champion": {
+                "numerator": 0,
+                "denominator": 6,
+                "value": 0.0,
+                "ci95_wilson": [
+                  2.7755575615628914e-17,
+                  0.3903342879021653
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          }
+        ],
+        "classification_coverage_top8": {
+          "parent_classified": {
+            "numerator": 10,
+            "denominator": 16,
+            "value": 0.625
+          },
+          "parent_classified_among_valid_60_lists": {
+            "numerator": 10,
+            "denominator": 16,
+            "value": 0.625
+          },
+          "valid_60_deck_lists": 16,
+          "statuses": {
+            "classified": 10,
+            "unknown": 6
+          },
+          "sources": {
+            "derived_post_snapshot": 16
+          },
+          "unclassified_count": 6
+        },
+        "card_analysis_top8": {
+          "exact_identities": {
+            "known_deck_lists": 16,
+            "identity_rule": "exact_card_id_and_exact_display_name; no cross-printing inference",
+            "top_exact_identities": [
+              {
+                "card_id": "50067",
+                "display_name": "ニャースex",
+                "section": "ポケモン (17)",
+                "adopting_lists": 6,
+                "adoption_rate": {
+                  "numerator": 6,
+                  "denominator": 16,
+                  "value": 0.375
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "49694",
+                "display_name": "ニャースex",
+                "section": "ポケモン (20)",
+                "adopting_lists": 5,
+                "adoption_rate": {
+                  "numerator": 5,
+                  "denominator": 16,
+                  "value": 0.3125
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "49364",
+                "display_name": "なかよしポフィン",
+                "section": "グッズ (19)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 4.0
+              },
+              {
+                "card_id": "48705",
+                "display_name": "グラビティーマウンテン",
+                "section": "スタジアム (2)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 1.25
+              },
+              {
+                "card_id": "50205",
+                "display_name": "スペシャルレッドカード",
+                "section": "グッズ (13)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "48354",
+                "display_name": "ファイヤー",
+                "section": "ポケモン (17)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "43300",
+                "display_name": "ボスの指令",
+                "section": "サポート (10)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 2.75
+              },
+              {
+                "card_id": "45849",
+                "display_name": "マシマシラ",
+                "section": "ポケモン (20)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 1.5
+              },
+              {
+                "card_id": "47796",
+                "display_name": "危ない廃墟",
+                "section": "スタジアム (2)",
+                "adopting_lists": 4,
+                "adoption_rate": {
+                  "numerator": 4,
+                  "denominator": 16,
+                  "value": 0.25
+                },
+                "average_copies_when_present": 1.5
+              },
+              {
+                "card_id": "46058",
+                "display_name": "キチキギスex",
+                "section": "ポケモン (17)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "49205",
+                "display_name": "キチキギスex",
+                "section": "ポケモン (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "47384",
+                "display_name": "ジャッジマン",
+                "section": "サポート (10)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.6666666666666667
+              },
+              {
+                "card_id": "48533",
+                "display_name": "スボミー",
+                "section": "ポケモン (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.3333333333333333
+              },
+              {
+                "card_id": "49712",
+                "display_name": "テレパス超エネルギー",
+                "section": "エネルギー (11)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 4.0
+              },
+              {
+                "card_id": "49290",
+                "display_name": "ノコッチ",
+                "section": "ポケモン (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.3333333333333333
+              },
+              {
+                "card_id": "49976",
+                "display_name": "ハイパーボール",
+                "section": "グッズ (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 3.3333333333333335
+              },
+              {
+                "card_id": "49378",
+                "display_name": "ポケパッド",
+                "section": "グッズ (14)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 3.6666666666666665
+              },
+              {
+                "card_id": "50070",
+                "display_name": "ポケパッド",
+                "section": "グッズ (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 3.6666666666666665
+              },
+              {
+                "card_id": "48508",
+                "display_name": "ポケモンいれかえ",
+                "section": "グッズ (20)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.0
+              },
+              {
+                "card_id": "50074",
+                "display_name": "メイのはげまし",
+                "section": "サポート (12)",
+                "adopting_lists": 3,
+                "adoption_rate": {
+                  "numerator": 3,
+                  "denominator": 16,
+                  "value": 0.1875
+                },
+                "average_copies_when_present": 1.0
+              }
+            ]
+          },
+          "watch_cards": {
+            "status": "not_configured",
+            "known_deck_lists": 16,
+            "cards": [],
+            "note": "logical-card adoption is not inferred from display-name substrings"
+          }
+        },
+        "top16_context": {
+          "status": "observed_complete_event_subset",
+          "scope": "Top16 event subset only; not participant usage or match win rate",
+          "coverage": {
+            "result_events": 2,
+            "complete_top16_events": 2,
+            "excluded_events": 0,
+            "captured_top16_rows": 32,
+            "captured_matched_top8_rows": 16
+          },
+          "top16_composition": [
+            {
+              "parent_archetype": "未分類",
+              "count": 12,
+              "top_stage_share": {
+                "numerator": 12,
+                "denominator": 32,
+                "value": 0.375
+              }
+            },
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 9,
+              "top_stage_share": {
+                "numerator": 9,
+                "denominator": 32,
+                "value": 0.28125
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 5,
+              "top_stage_share": {
+                "numerator": 5,
+                "denominator": 32,
+                "value": 0.15625
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 32,
+                "value": 0.0625
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 32,
+                "value": 0.03125
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 32,
+                "value": 0.03125
+              }
+            },
+            {
+              "parent_archetype": "ブースターex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 32,
+                "value": 0.03125
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 32,
+                "value": 0.03125
+              }
+            }
+          ],
+          "matched_top8_composition": [
+            {
+              "parent_archetype": "ドラパルトex",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 16,
+                "value": 0.375
+              }
+            },
+            {
+              "parent_archetype": "未分類",
+              "count": 6,
+              "top_stage_share": {
+                "numerator": 6,
+                "denominator": 16,
+                "value": 0.375
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "count": 2,
+              "top_stage_share": {
+                "numerator": 2,
+                "denominator": 16,
+                "value": 0.125
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 16,
+                "value": 0.0625
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "count": 1,
+              "top_stage_share": {
+                "numerator": 1,
+                "denominator": 16,
+                "value": 0.0625
+              }
+            }
+          ],
+          "top16_to_top8": [
+            {
+              "parent_archetype": "未分類",
+              "top16_count": 12,
+              "top8_count_in_same_events": 6,
+              "observed_top16_to_top8": {
+                "numerator": 6,
+                "denominator": 12,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.2537815976337061,
+                  0.7462184023662939
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ドラパルトex",
+              "top16_count": 9,
+              "top8_count_in_same_events": 6,
+              "observed_top16_to_top8": {
+                "numerator": 6,
+                "denominator": 9,
+                "value": 0.6666666666666666,
+                "ci95_wilson": [
+                  0.3542021355803963,
+                  0.879416181613089
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ヤドキング",
+              "top16_count": 5,
+              "top8_count_in_same_events": 2,
+              "observed_top16_to_top8": {
+                "numerator": 2,
+                "denominator": 5,
+                "value": 0.4,
+                "ci95_wilson": [
+                  0.11762077423264783,
+                  0.769275718723987
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "メガルカリオex",
+              "top16_count": 2,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 2,
+                "value": 0.5,
+                "ci95_wilson": [
+                  0.09453120573423074,
+                  0.9054687942657693
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "おまつりおんど",
+              "top16_count": 1,
+              "top8_count_in_same_events": 1,
+              "observed_top16_to_top8": {
+                "numerator": 1,
+                "denominator": 1,
+                "value": 1.0,
+                "ci95_wilson": [
+                  0.20654931437723745,
+                  1.0
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "フーディン",
+              "top16_count": 1,
+              "top8_count_in_same_events": 0,
+              "observed_top16_to_top8": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "ブースターex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 0,
+              "observed_top16_to_top8": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            },
+            {
+              "parent_archetype": "マリィのオーロンゲex",
+              "top16_count": 1,
+              "top8_count_in_same_events": 0,
+              "observed_top16_to_top8": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0,
+                "ci95_wilson": [
+                  0.0,
+                  0.7934506856227626
+                ],
+                "small_sample_warning": true,
+                "small_sample_threshold": 20
+              }
+            }
+          ],
+          "top16_classification": {
+            "parent_classified": {
+              "numerator": 20,
+              "denominator": 32,
+              "value": 0.625
+            },
+            "parent_classified_among_valid_60_lists": {
+              "numerator": 20,
+              "denominator": 32,
+              "value": 0.625
+            },
+            "valid_60_deck_lists": 32,
+            "statuses": {
+              "classified": 20,
+              "unknown": 12
+            },
+            "sources": {
+              "derived_post_snapshot": 32
+            },
+            "unclassified_count": 12
+          },
+          "top16_watch_cards": {
+            "status": "not_configured",
+            "known_deck_lists": 32,
+            "cards": [],
+            "note": "logical-card adoption is not inferred from display-name substrings"
+          }
+        }
+      }
+    }
+  },
+  "trend": {
+    "status": "available",
+    "historical_basis": "recomputed_from_same_pinned_git_revision_captured_city_data",
+    "comparison_period": {
+      "start": "2026-09-28",
+      "end": "2026-10-04"
+    },
+    "national": {
+      "previous_coverage": {
+        "result_events": 76,
+        "captured_top8_rows": 608,
+        "known_top8_deck_lists": 606
+      },
+      "comparison": {
+        "parent_top8_share": [
+          {
+            "parent_archetype": "Nのゾロアークex",
+            "previous_top8_share": {
+              "numerator": 44,
+              "denominator": 608,
+              "value": 0.07236842105263158
+            },
+            "current_top8_share": {
+              "numerator": 22,
+              "denominator": 308,
+              "value": 0.07142857142857142
+            },
+            "delta": -0.0009398496240601573
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "previous_top8_share": {
+              "numerator": 34,
+              "denominator": 608,
+              "value": 0.05592105263157895
+            },
+            "current_top8_share": {
+              "numerator": 9,
+              "denominator": 308,
+              "value": 0.02922077922077922
+            },
+            "delta": -0.026700273410799728
+          },
+          {
+            "parent_archetype": "イイネイヌ／ガメノデス",
+            "previous_top8_share": {
+              "numerator": 3,
+              "denominator": 608,
+              "value": 0.004934210526315789
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.004934210526315789
+          },
+          {
+            "parent_archetype": "オリーヴァex",
+            "previous_top8_share": {
+              "numerator": 6,
+              "denominator": 608,
+              "value": 0.009868421052631578
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 308,
+              "value": 0.003246753246753247
+            },
+            "delta": -0.006621667805878331
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "previous_top8_share": {
+              "numerator": 19,
+              "denominator": 608,
+              "value": 0.03125
+            },
+            "current_top8_share": {
+              "numerator": 13,
+              "denominator": 308,
+              "value": 0.04220779220779221
+            },
+            "delta": 0.010957792207792208
+          },
+          {
+            "parent_archetype": "ゲッコウガex",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 3,
+              "denominator": 308,
+              "value": 0.00974025974025974
+            },
+            "delta": -0.0034176349965823645
+          },
+          {
+            "parent_archetype": "シロナのガブリアスex",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 308,
+              "value": 0.003246753246753247
+            },
+            "delta": -0.009911141490088857
+          },
+          {
+            "parent_archetype": "ジュペッタ／ダダリン",
+            "previous_top8_share": {
+              "numerator": 29,
+              "denominator": 608,
+              "value": 0.047697368421052634
+            },
+            "current_top8_share": {
+              "numerator": 5,
+              "denominator": 308,
+              "value": 0.016233766233766232
+            },
+            "delta": -0.0314636021872864
+          },
+          {
+            "parent_archetype": "ストリンダー",
+            "previous_top8_share": {
+              "numerator": 4,
+              "denominator": 608,
+              "value": 0.006578947368421052
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.006578947368421052
+          },
+          {
+            "parent_archetype": "ソウブレイズex",
+            "previous_top8_share": {
+              "numerator": 6,
+              "denominator": 608,
+              "value": 0.009868421052631578
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.009868421052631578
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "previous_top8_share": {
+              "numerator": 20,
+              "denominator": 608,
+              "value": 0.03289473684210526
+            },
+            "current_top8_share": {
+              "numerator": 6,
+              "denominator": 308,
+              "value": 0.01948051948051948
+            },
+            "delta": -0.013414217361585781
+          },
+          {
+            "parent_archetype": "ドデカバシ",
+            "previous_top8_share": {
+              "numerator": 3,
+              "denominator": 608,
+              "value": 0.004934210526315789
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.004934210526315789
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "previous_top8_share": {
+              "numerator": 164,
+              "denominator": 608,
+              "value": 0.26973684210526316
+            },
+            "current_top8_share": {
+              "numerator": 96,
+              "denominator": 308,
+              "value": 0.3116883116883117
+            },
+            "delta": 0.04195146958304852
+          },
+          {
+            "parent_archetype": "ドラパルトex／ドデカバシ",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 608,
+              "value": 0.003289473684210526
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.003289473684210526
+          },
+          {
+            "parent_archetype": "フーディン",
+            "previous_top8_share": {
+              "numerator": 24,
+              "denominator": 608,
+              "value": 0.039473684210526314
+            },
+            "current_top8_share": {
+              "numerator": 10,
+              "denominator": 308,
+              "value": 0.032467532467532464
+            },
+            "delta": -0.007006151742993849
+          },
+          {
+            "parent_archetype": "ブリジュラスex",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 608,
+              "value": 0.003289473684210526
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 308,
+              "value": 0.003246753246753247
+            },
+            "delta": -4.2720437457279166e-05
+          },
+          {
+            "parent_archetype": "ブースターex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "ホルード",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "ボムノココッチ／ドータクン",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "マリィのオーロンゲex",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 6,
+              "denominator": 308,
+              "value": 0.01948051948051948
+            },
+            "delta": 0.0063226247436773755
+          },
+          {
+            "parent_archetype": "ミュウバレット",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "メガガルーラex",
+            "previous_top8_share": {
+              "numerator": 15,
+              "denominator": 608,
+              "value": 0.024671052631578948
+            },
+            "current_top8_share": {
+              "numerator": 12,
+              "denominator": 308,
+              "value": 0.03896103896103896
+            },
+            "delta": 0.014289986329460012
+          },
+          {
+            "parent_archetype": "メガガルーラ・オーガポンバレット",
+            "previous_top8_share": {
+              "numerator": 18,
+              "denominator": 608,
+              "value": 0.029605263157894735
+            },
+            "current_top8_share": {
+              "numerator": 2,
+              "denominator": 308,
+              "value": 0.006493506493506494
+            },
+            "delta": -0.023111756664388243
+          },
+          {
+            "parent_archetype": "メガゲッコウガex",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.013157894736842105
+          },
+          {
+            "parent_archetype": "メガサメハダーex",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.013157894736842105
+          },
+          {
+            "parent_archetype": "メガシャンデラex",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 608,
+              "value": 0.003289473684210526
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.003289473684210526
+          },
+          {
+            "parent_archetype": "メガスターミーex／メガユキメノコex",
+            "previous_top8_share": {
+              "numerator": 4,
+              "denominator": 608,
+              "value": 0.006578947368421052
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 308,
+              "value": 0.003246753246753247
+            },
+            "delta": -0.0033321941216678053
+          },
+          {
+            "parent_archetype": "メガディアンシーex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "previous_top8_share": {
+              "numerator": 10,
+              "denominator": 608,
+              "value": 0.01644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 4,
+              "denominator": 308,
+              "value": 0.012987012987012988
+            },
+            "delta": -0.003460355434039643
+          },
+          {
+            "parent_archetype": "メガミミロップex",
+            "previous_top8_share": {
+              "numerator": 14,
+              "denominator": 608,
+              "value": 0.023026315789473683
+            },
+            "current_top8_share": {
+              "numerator": 4,
+              "denominator": 308,
+              "value": 0.012987012987012988
+            },
+            "delta": -0.010039302802460695
+          },
+          {
+            "parent_archetype": "メガライボルトex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 608,
+              "value": 0.001644736842105263
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.001644736842105263
+          },
+          {
+            "parent_archetype": "メガルカリオex",
+            "previous_top8_share": {
+              "numerator": 46,
+              "denominator": 608,
+              "value": 0.0756578947368421
+            },
+            "current_top8_share": {
+              "numerator": 7,
+              "denominator": 308,
+              "value": 0.022727272727272728
+            },
+            "delta": -0.05293062200956938
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "previous_top8_share": {
+              "numerator": 22,
+              "denominator": 608,
+              "value": 0.03618421052631579
+            },
+            "current_top8_share": {
+              "numerator": 9,
+              "denominator": 308,
+              "value": 0.02922077922077922
+            },
+            "delta": -0.006963431305536571
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "previous_top8_share": {
+              "numerator": 22,
+              "denominator": 608,
+              "value": 0.03618421052631579
+            },
+            "current_top8_share": {
+              "numerator": 2,
+              "denominator": 308,
+              "value": 0.006493506493506494
+            },
+            "delta": -0.029690704032809295
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "previous_top8_share": {
+              "numerator": 27,
+              "denominator": 608,
+              "value": 0.044407894736842105
+            },
+            "current_top8_share": {
+              "numerator": 14,
+              "denominator": 308,
+              "value": 0.045454545454545456
+            },
+            "delta": 0.0010466507177033513
+          },
+          {
+            "parent_archetype": "ロケット団のドンカラス",
+            "previous_top8_share": {
+              "numerator": 3,
+              "denominator": 608,
+              "value": 0.004934210526315789
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.004934210526315789
+          },
+          {
+            "parent_archetype": "ロケット団のワナイダー",
+            "previous_top8_share": {
+              "numerator": 8,
+              "denominator": 608,
+              "value": 0.013157894736842105
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 308,
+              "value": 0.003246753246753247
+            },
+            "delta": -0.009911141490088857
+          },
+          {
+            "parent_archetype": "宝石バレット",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 608,
+              "value": 0.003289473684210526
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 308,
+              "value": 0.0
+            },
+            "delta": -0.003289473684210526
+          },
+          {
+            "parent_archetype": "未分類",
+            "previous_top8_share": {
+              "numerator": 9,
+              "denominator": 608,
+              "value": 0.014802631578947368
+            },
+            "current_top8_share": {
+              "numerator": 79,
+              "denominator": 308,
+              "value": 0.2564935064935065
+            },
+            "delta": 0.24169087491455912
+          }
+        ],
+        "variant_prevalence": [
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "アズマオウ型",
+            "previous_prevalence": {
+              "numerator": 7,
+              "denominator": 34,
+              "value": 0.20588235294117646
+            },
+            "current_prevalence": {
+              "numerator": 2,
+              "denominator": 9,
+              "value": 0.2222222222222222
+            },
+            "delta": 0.01633986928104575
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "カミッチュ型",
+            "previous_prevalence": {
+              "numerator": 26,
+              "denominator": 34,
+              "value": 0.7647058823529411
+            },
+            "current_prevalence": {
+              "numerator": 5,
+              "denominator": 9,
+              "value": 0.5555555555555556
+            },
+            "delta": -0.20915032679738554
+          },
+          {
+            "parent_archetype": "オリーヴァex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 6,
+              "denominator": 6,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "delta": 0.0
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 19,
+              "denominator": 19,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "delta": -0.15384615384615385
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 20,
+              "denominator": 20,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 4,
+              "denominator": 6,
+              "value": 0.6666666666666666
+            },
+            "delta": -0.33333333333333337
+          },
+          {
+            "parent_archetype": "タケルライコex",
+            "variant_tag": "メガガルーラex採用",
+            "previous_prevalence": {
+              "numerator": 19,
+              "denominator": 20,
+              "value": 0.95
+            },
+            "current_prevalence": {
+              "numerator": 4,
+              "denominator": 6,
+              "value": 0.6666666666666666
+            },
+            "delta": -0.2833333333333333
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ノココッチ型",
+            "previous_prevalence": {
+              "numerator": 67,
+              "denominator": 164,
+              "value": 0.40853658536585363
+            },
+            "current_prevalence": {
+              "numerator": 38,
+              "denominator": 96,
+              "value": 0.3958333333333333
+            },
+            "delta": -0.012703252032520318
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ヨノワール型",
+            "previous_prevalence": {
+              "numerator": 64,
+              "denominator": 164,
+              "value": 0.3902439024390244
+            },
+            "current_prevalence": {
+              "numerator": 34,
+              "denominator": 96,
+              "value": 0.3541666666666667
+            },
+            "delta": -0.03607723577235772
+          },
+          {
+            "parent_archetype": "ブリジュラスex",
+            "variant_tag": "ノココッチ型",
+            "previous_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "delta": 0.0
+          },
+          {
+            "parent_archetype": "メガゲッコウガex",
+            "variant_tag": "ゲッコウガex採用",
+            "previous_prevalence": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メガサメハダーex",
+            "variant_tag": "ストリンダー型",
+            "previous_prevalence": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メガディアンシーex",
+            "variant_tag": "ヨノワール型",
+            "previous_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 10,
+              "denominator": 10,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 3,
+              "denominator": 4,
+              "value": 0.75
+            },
+            "delta": -0.25
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "ヒビキのホウオウex採用",
+            "previous_prevalence": {
+              "numerator": 22,
+              "denominator": 22,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 9,
+              "denominator": 9,
+              "value": 1.0
+            },
+            "delta": 0.0
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "メガガルーラex採用",
+            "previous_prevalence": {
+              "numerator": 22,
+              "denominator": 22,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 9,
+              "denominator": 9,
+              "value": 1.0
+            },
+            "delta": 0.0
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "variant_tag": "メガドリュウズex型",
+            "previous_prevalence": {
+              "numerator": 19,
+              "denominator": 22,
+              "value": 0.8636363636363636
+            },
+            "current_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "delta": 0.13636363636363635
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "ドロンチ型",
+            "previous_prevalence": {
+              "numerator": 0,
+              "denominator": 27,
+              "value": 0.0
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 14,
+              "value": 0.07142857142857142
+            },
+            "delta": 0.07142857142857142
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "メガガルーラex採用",
+            "previous_prevalence": {
+              "numerator": 27,
+              "denominator": 27,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 13,
+              "denominator": 14,
+              "value": 0.9285714285714286
+            },
+            "delta": -0.0714285714285714
+          },
+          {
+            "parent_archetype": "ロケット団のワナイダー",
+            "variant_tag": "ロケット団のミュウツーex採用",
+            "previous_prevalence": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "delta": 0.125
+          }
+        ],
+        "watch_card_adoption": {
+          "status": "not_configured",
+          "cards": []
+        }
+      }
+    },
+    "regional": {
+      "region": "愛知県",
+      "previous_coverage": {
+        "result_events": 6,
+        "captured_top8_rows": 48,
+        "known_top8_deck_lists": 48
+      },
+      "comparison": {
+        "parent_top8_share": [
+          {
+            "parent_archetype": "Nのゾロアークex",
+            "previous_top8_share": {
+              "numerator": 4,
+              "denominator": 48,
+              "value": 0.08333333333333333
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.08333333333333333
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 16,
+              "value": 0.0625
+            },
+            "delta": 0.04166666666666667
+          },
+          {
+            "parent_archetype": "イイネイヌ／ガメノデス",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 48,
+              "value": 0.041666666666666664
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.041666666666666664
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.020833333333333332
+          },
+          {
+            "parent_archetype": "シロナのガブリアスex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.020833333333333332
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "previous_top8_share": {
+              "numerator": 13,
+              "denominator": 48,
+              "value": 0.2708333333333333
+            },
+            "current_top8_share": {
+              "numerator": 6,
+              "denominator": 16,
+              "value": 0.375
+            },
+            "delta": 0.10416666666666669
+          },
+          {
+            "parent_archetype": "フーディン",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 48,
+              "value": 0.041666666666666664
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.041666666666666664
+          },
+          {
+            "parent_archetype": "マリィのオーロンゲex",
+            "previous_top8_share": {
+              "numerator": 4,
+              "denominator": 48,
+              "value": 0.08333333333333333
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.08333333333333333
+          },
+          {
+            "parent_archetype": "メガガルーラex",
+            "previous_top8_share": {
+              "numerator": 3,
+              "denominator": 48,
+              "value": 0.0625
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.0625
+          },
+          {
+            "parent_archetype": "メガガルーラ・オーガポンバレット",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.020833333333333332
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "previous_top8_share": {
+              "numerator": 3,
+              "denominator": 48,
+              "value": 0.0625
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.0625
+          },
+          {
+            "parent_archetype": "メガミミロップex",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.020833333333333332
+          },
+          {
+            "parent_archetype": "メガルカリオex",
+            "previous_top8_share": {
+              "numerator": 7,
+              "denominator": 48,
+              "value": 0.14583333333333334
+            },
+            "current_top8_share": {
+              "numerator": 1,
+              "denominator": 16,
+              "value": 0.0625
+            },
+            "delta": -0.08333333333333334
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 48,
+              "value": 0.041666666666666664
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.041666666666666664
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "previous_top8_share": {
+              "numerator": 2,
+              "denominator": 48,
+              "value": 0.041666666666666664
+            },
+            "current_top8_share": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "delta": -0.041666666666666664
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "previous_top8_share": {
+              "numerator": 1,
+              "denominator": 48,
+              "value": 0.020833333333333332
+            },
+            "current_top8_share": {
+              "numerator": 2,
+              "denominator": 16,
+              "value": 0.125
+            },
+            "delta": 0.10416666666666667
+          },
+          {
+            "parent_archetype": "未分類",
+            "previous_top8_share": {
+              "numerator": 0,
+              "denominator": 48,
+              "value": 0.0
+            },
+            "current_top8_share": {
+              "numerator": 6,
+              "denominator": 16,
+              "value": 0.375
+            },
+            "delta": 0.375
+          }
+        ],
+        "variant_prevalence": [
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "アズマオウ型",
+            "previous_prevalence": {
+              "numerator": 0,
+              "denominator": 1,
+              "value": 0.0
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "delta": 1.0
+          },
+          {
+            "parent_archetype": "おまつりおんど",
+            "variant_tag": "カミッチュ型",
+            "previous_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 1,
+              "value": 0.0
+            },
+            "delta": -1.0
+          },
+          {
+            "parent_archetype": "カミツオロチex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ノココッチ型",
+            "previous_prevalence": {
+              "numerator": 6,
+              "denominator": 13,
+              "value": 0.46153846153846156
+            },
+            "current_prevalence": {
+              "numerator": 3,
+              "denominator": 6,
+              "value": 0.5
+            },
+            "delta": 0.038461538461538436
+          },
+          {
+            "parent_archetype": "ドラパルトex",
+            "variant_tag": "ヨノワール型",
+            "previous_prevalence": {
+              "numerator": 3,
+              "denominator": 13,
+              "value": 0.23076923076923078
+            },
+            "current_prevalence": {
+              "numerator": 1,
+              "denominator": 6,
+              "value": 0.16666666666666666
+            },
+            "delta": -0.06410256410256412
+          },
+          {
+            "parent_archetype": "メガフシギバナex",
+            "variant_tag": "オーガポン みどりのめんex型",
+            "previous_prevalence": {
+              "numerator": 3,
+              "denominator": 3,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "ヒビキのホウオウex採用",
+            "previous_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メガレックウザex",
+            "variant_tag": "メガガルーラex採用",
+            "previous_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "メタング／ゲノセクトex",
+            "variant_tag": "メガドリュウズex型",
+            "previous_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "delta": null
+          },
+          {
+            "parent_archetype": "ヤドキング",
+            "variant_tag": "メガガルーラex採用",
+            "previous_prevalence": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "current_prevalence": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "delta": 0.0
+          }
+        ],
+        "watch_card_adoption": {
+          "status": "not_configured",
+          "cards": []
+        }
+      }
+    }
+  },
+  "external_analysis": {
+    "status": "not_provided",
+    "source_count": 0,
+    "records": []
+  },
+  "limitations": [
+    "Parent archetype coverage is incomplete; unsupported decks remain 未分類.",
+    "Watch-card logical identities are not configured; exact card IDs are shown separately.",
+    "No processed external source analysis for this week was joined.",
+    "W03 INTERIM. The data source is last updated at 2026-10-10T22:48:50+09:00; not all results through 2026-10-11 are confirmed, and no zero-result inference is allowed."
+  ],
+  "audit": {
+    "status": "WARN",
+    "findings": [
+      {
+        "level": "WARN",
+        "code": "CLASSIFICATION_INCOMPLETE",
+        "message": "national: 79 captured Top8 rows remain unclassified; no inference fill applied"
+      },
+      {
+        "level": "WARN",
+        "code": "WATCH_CARDS_UNCONFIGURED",
+        "message": "national: logical watch-card identities are not configured"
+      },
+      {
+        "level": "WARN",
+        "code": "CLASSIFICATION_INCOMPLETE",
+        "message": "regional: 6 captured Top8 rows remain unclassified; no inference fill applied"
+      },
+      {
+        "level": "WARN",
+        "code": "WATCH_CARDS_UNCONFIGURED",
+        "message": "regional: logical watch-card identities are not configured"
+      },
+      {
+        "level": "WARN",
+        "code": "EXTERNAL_ANALYSIS_ABSENT",
+        "message": "No processed external analysis was joined"
+      }
+    ]
+  }
+}
