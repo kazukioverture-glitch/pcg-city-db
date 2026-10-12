@@ -57,6 +57,26 @@ def refresh_local_schedule(root, work):
         return None
     return output
 
+def source_health(city, now=None):
+    """Observe source age; transport success alone is not fresh result coverage."""
+    now = now or datetime.now(timezone.utc)
+    updated = city.get('updated_at')
+    latest = max((e.get('date') or '' for e in city.get('events', [])
+                  if isinstance(e, dict)), default=None)
+    lag = None
+    if isinstance(updated, str):
+        try:
+            stamp = datetime.fromisoformat(updated)
+            if stamp.tzinfo is not None:
+                lag = round(max(0.0, (now - stamp).total_seconds()) / 3600, 1)
+        except ValueError:
+            pass
+    return dict(source_updated_at=updated, source_age_hours=lag,
+                latest_observed_event_date=latest,
+                source_stale_24h=lag is None or lag >= 24)
+
+
+
 def sync(root=ROOT, base_url=None):
     deadline = time.monotonic() + 900
     root = Path(root)
@@ -134,6 +154,18 @@ def sync(root=ROOT, base_url=None):
                   official_complete=official_ok and not official_errors and not official_deferred,
                   official_failed_event_ids=sorted(official_errors),
                   top16_deferred_deck_count=len(official_deferred), published=False)
+    health = source_health(read(stage / 'city_db.json'))
+    report.update(health)
+    if health['source_stale_24h']:
+        print('::warning::Published City DB source is stale or undated: '
+              f"updated_at={health['source_updated_at']}, "
+              f"age_hours={health['source_age_hours']}, "
+              f"latest_event_date={health['latest_observed_event_date']}; "
+              'a successful transfer does NOT confirm result completeness', flush=True)
+    if termux_ok and not official_ok and health['source_stale_24h']:
+        print('::warning::ACTION REQUIRED on Android/Termux: refresh the original '
+              'official-source DB. Re-running GitHub alone only re-downloads the '
+              'same snapshot (scripts/termux_refresh.sh).', flush=True)
     report_path = work / 'sync_report.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
     if not (termux_ok or official_ok):
