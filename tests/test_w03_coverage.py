@@ -2,6 +2,7 @@ import unittest
 from datetime import date
 
 from analysis.w03_coverage import audit_week_coverage
+from analysis.weekly import audit_report
 
 
 class WeekCoverageAuditTests(unittest.TestCase):
@@ -72,6 +73,34 @@ class WeekCoverageAuditTests(unittest.TestCase):
             ["only-four-source-rows"],
         )
         self.assertIn("actual entrants", got["top16_exclusion_reason_caveat"])
+
+    def test_full_week_unverified_never_passes_audit(self):
+        # All other audited dimensions pass; coverage alone must keep WARN.
+        report = {
+            "current_week": {
+                "national": {
+                    "analysis": {
+                        "conversion": [],
+                        "classification_coverage_top8": {"unclassified_count": 0},
+                        "card_analysis_top8": {"watch_cards": {"status": "configured"}},
+                    },
+                },
+            },
+            "trend": {"status": "not_requested"},
+            "external_analysis": {"status": "available"},
+            "coverage_gate": {
+                "full_week_coverage_verified": False,
+                "scheduled_only_all_categories": 12,
+            },
+        }
+        result = audit_report(report)
+        self.assertEqual(result["status"], "WARN")
+        self.assertIn("FULL_WEEK_COVERAGE_UNVERIFIED",
+                      [finding["code"] for finding in result["findings"]])
+        report["coverage_gate"]["full_week_coverage_verified"] = True
+        self.assertEqual(audit_report(report)["status"], "PASS")
+        del report["coverage_gate"]
+        self.assertEqual(audit_report(report)["status"], "PASS")
 
     def test_duplicate_event_ids_rejected(self):
         city = {"events": [
