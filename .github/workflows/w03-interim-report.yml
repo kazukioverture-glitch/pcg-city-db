@@ -39,11 +39,15 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           import json
+          import subprocess
           from pathlib import Path
-          items=list(Path("data/analysis/weekly_previews/2027-s1-mon-sun-v1").glob("*/W03/summary.json"))
-          assert len(items)==1, items
-          summ=json.loads(items[0].read_text(encoding="utf-8"))
-          report=json.loads(items[0].with_name("report.json").read_text(encoding="utf-8"))
+          head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          summary_path = (Path("data/analysis/weekly_previews/2027-s1-mon-sun-v1")
+                          / head[:12] / "W03" / "summary.json")
+          assert summary_path.is_file(), summary_path
+          summ=json.loads(summary_path.read_text(encoding="utf-8"))
+          report=json.loads(summary_path.with_name("report.json").read_text(encoding="utf-8"))
+          assert summ["input_commit"] == head
           assert summ["stage"]=="INTERIM"
           assert summ["full_week_coverage_verified"] is False
           assert summ["source_updated_at"]=="2026-10-10T22:48:50+09:00" or summ["source_updated_at"] > "2026-10-10T22:48:50+09:00"
