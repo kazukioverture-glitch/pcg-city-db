@@ -43,6 +43,36 @@ class WeekCoverageAuditTests(unittest.TestCase):
         self.assertEqual(got["top16_incomplete_result_events_category"], 1)
         self.assertEqual(got["observed_daily_results_category"]["2026-10-11"]["top16_complete_events"], 1)
 
+    def test_excluded_top16_causes_do_not_assume_small_attendance_or_fetch_failure(self):
+        def event(event_id, observed, captured, checked):
+            return {
+                "event_id": event_id, "date": "2026-10-11", "category": "オープン",
+                "placements": ([{"rank": i} for i in range(1, 9)]
+                               + [{"rank": i} for i in range(9, 9 + captured)]),
+                "top16_observed_rows": observed,
+                "top16_checked_at": "2026-10-12T10:00:00+09:00" if checked else None,
+            }
+        city = {"events": [
+            event("not-checked", 0, 0, False),
+            event("only-four-source-rows", 4, 4, True),
+            event("fetch-pending", 8, 4, True),
+            event("complete", 8, 8, True),
+        ]}
+        got = audit_week_coverage(city, {"records": []}, date(2026, 10, 5), date(2026, 10, 11))
+        reasons = got["top16_excluded_reason_counts"]
+        self.assertEqual(got["top16_complete_result_events_category"], 1)
+        self.assertEqual(got["top16_incomplete_result_events_category"], 3)
+        self.assertEqual(reasons["not_checked"], 1)
+        self.assertEqual(reasons["source_fewer_than_eight_rows_reason_unknown"], 1)
+        self.assertEqual(reasons["observed_rows_not_captured"], 1)
+        self.assertEqual(reasons["observation_inconsistent_or_unknown"], 0)
+        self.assertEqual(sum(reasons.values()), 3)
+        self.assertEqual(
+            got["top16_excluded_event_ids_by_reason"]["source_fewer_than_eight_rows_reason_unknown"],
+            ["only-four-source-rows"],
+        )
+        self.assertIn("actual entrants", got["top16_exclusion_reason_caveat"])
+
     def test_duplicate_event_ids_rejected(self):
         city = {"events": [
             {"event_id": "1", "date": "2026-10-11"},
