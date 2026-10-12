@@ -5,9 +5,11 @@ on:
   push:
     branches:
       - main
-      - work/w03-interim-report-20261011
+      - "work/**"
     paths:
       - "analysis/preview_w03.py"
+      - "analysis/w03_coverage.py"
+      - "tests/test_w03_coverage.py"
       - ".github/workflows/w03-interim-report.yml"
 
 permissions:
@@ -31,6 +33,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p "test_week*.py" -v
           python -m unittest discover -s tests -p "test_top16_collection.py" -v
+          python -m unittest discover -s tests -p "test_w03_coverage.py" -v
       - name: Produce audited W03 preview
         run: python -m analysis.preview_w03
       - name: Inspect report and guard historical data
@@ -56,6 +59,15 @@ jobs:
           assert summ["top16_matched_top8_open"] <= summ["top8_rows_open"]
           assert summ["top16_rows_complete_open"] >= summ["top16_matched_top8_open"]
           assert report["audit"]["status"]!="FAIL"
+          c=report["coverage_gate"]
+          assert summ["scheduled_only_events_all_categories"] == c["scheduled_only_all_categories"]
+          assert summ["scheduled_only_events_unknown_category"] == c["scheduled_only_unknown_category"]
+          assert summ["top16_incomplete_events_open"] == c["top16_incomplete_result_events_category"]
+          assert summ["result_events_open"] == c["observed_result_events_category"]
+          assert summ["top8_rows_open"] == c["observed_top8_rows_category"]
+          assert c["scheduled_only_are_unknown_not_zero"] is True
+          assert c["full_week_coverage_verified"] is False
+          assert summary_path.with_name("coverage_audit.json").is_file()
           assert report["trend"]["comparison_period"]=={"start":"2026-09-28","end":"2026-10-04"}
           assert "full_week_coverage_verified" in report["provenance"]
           print(json.dumps(summ, ensure_ascii=False))

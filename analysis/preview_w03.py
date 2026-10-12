@@ -14,6 +14,7 @@ from pathlib import Path
 from .state import ROOT
 from .week_calendar import CALENDAR_ID, week_period, week_event_ids
 from .weekly import build_weekly_report, render_markdown, audit_report
+from .w03_coverage import audit_week_coverage
 
 
 def main() -> int:
@@ -23,11 +24,12 @@ def main() -> int:
         "decks": repo / "data/city_decks.json",
         "classifications": repo / "data/analysis/deck_classifications.json",
         "index": repo / "data/index.json",
+        "ledger": repo / "data/analysis/event_ledger.json",
     }
     raw = {k: path.read_bytes() for k, path in source_paths.items()}
     documents = {k: json.loads(b) for k, b in raw.items()}
-    city, decks, classes, index = (documents[k] for k in
-                                   ("city", "decks", "classifications", "index"))
+    city, decks, classes, index, ledger = (documents[k] for k in
+        ("city", "decks", "classifications", "index", "ledger"))
     if city.get("updated_at") != index.get("source_updated_at"):
         raise ValueError("Unmatched City DB and index timestamps")
     if len(city.get("events", [])) != index.get("event_count"):
@@ -40,6 +42,7 @@ def main() -> int:
         raise ValueError("No W03 results; cannot generate INTERIM")
     events = [e for e in city["events"] if e["event_id"] in set(event_ids)]
     observed_max_day = max(e["date"] for e in events)
+    coverage_gate = audit_week_coverage(city, ledger, start, end)
     cutoff = index["source_updated_at"]
     now = datetime.now(timezone.utc).isoformat()
     metadata = {
@@ -59,6 +62,7 @@ def main() -> int:
         generated_at=now)
     hashes = {str(path.relative_to(repo)): hashlib.sha256(raw[k]).hexdigest()
               for k, path in source_paths.items()}
+    report["coverage_gate"] = coverage_gate
     report["trend"]["historical_basis"] = (
         "recomputed_from_same_pinned_git_revision_captured_city_data")
     report["provenance"].update({
@@ -74,6 +78,15 @@ def main() -> int:
         "W03 INTERIM. The data source is last updated at " + cutoff +
         "; full scheduled-event and Top16 coverage have not been independently "
         "verified, and missing results must not be counted as zero.")
+    report["limitations"].append(
+        "Captured W03 result events: "
+        + str(coverage_gate["observed_result_events_all_categories"])
+        + "; schedule-only events without captured results: "
+        + str(coverage_gate["scheduled_only_all_categories"])
+        + " (category unknown: "
+        + str(coverage_gate["scheduled_only_unknown_category"])
+        + "). Neither cancellation nor unpublished status is inferred."
+    )
     report["audit"] = audit_report(report)
     if report["audit"]["status"] == "FAIL":
         raise RuntimeError("W03 audit FAIL")
@@ -98,6 +111,10 @@ def main() -> int:
         "audit": report["audit"]["status"],
         "full_week_coverage_verified": False,
         "legacy_final_mutated": False,
+        "scheduled_only_events_all_categories": coverage_gate["scheduled_only_all_categories"],
+        "scheduled_only_events_unknown_category": coverage_gate["scheduled_only_unknown_category"],
+        "top16_incomplete_events_open": coverage_gate["top16_incomplete_result_events_category"],
+        "unclassified_top8_rows_open": scope["classification_coverage_top8"]["unclassified_count"],
     }
     base = (repo / "data/analysis/weekly_previews" / CALENDAR_ID
             / head[:12] / week_id)
@@ -117,6 +134,8 @@ def main() -> int:
         "snapshot内60枚リストからのpost-snapshot派生分析を含む。",
         "Git固定版の公開60枚リストから分類を再計算。")
     (base / "report.md").write_text(markdown, encoding="utf-8")
+    (base / "coverage_audit.json").write_text(
+        json.dumps(coverage_gate, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
     (base / "summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
