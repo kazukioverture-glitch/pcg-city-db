@@ -67,7 +67,7 @@ jobs:
           assert summ["top8_rows_open"] == c["observed_top8_rows_category"]
           assert c["scheduled_only_are_unknown_not_zero"] is True
           assert c["full_week_coverage_verified"] is False
-          assert items[0].with_name("coverage_audit.json").is_file()
+          assert summary_path.with_name("coverage_audit.json").is_file()
           assert report["trend"]["comparison_period"]=={"start":"2026-09-28","end":"2026-10-04"}
           assert "full_week_coverage_verified" in report["provenance"]
           print(json.dumps(summ, ensure_ascii=False))
