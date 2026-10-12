@@ -16,6 +16,11 @@ The official results collector uses the **same** 08:00, 18:00, 20:00, 22:00 and 
 - If that criterion cannot be established, the event is excluded. The result is an **observed complete-event subset**, not all City League participants, not a nationwide usage rate, and not a claim that every tournament publishes Top16.
 - Top16 and Top8 composition are compared only on the **same eligible events**. Top16->Top8 is an observed advancement fraction with Wilson 95% interval and small-N flag, **not** game win rate.
 - The status `insufficient_coverage` is a valid result: never fill missing rankings or infer usage.
+- **Do not label every Top16-excluded event a retrieval failure.** Official 2027 rules explicitly accommodate fewer than 16 players. Fewer than eight published ranks 9-16 may therefore be legitimate; source publishing scope is also not necessarily complete.
+- The W03 coverage audit splits excluded events into: `not_checked`, `observed_rows_not_captured`, `source_fewer_than_eight_rows_reason_unknown`, and `observation_inconsistent_or_unknown`. `top16_incomplete_result_events_category` remains for backward compatibility but denotes *comparison-excluded*, not confirmed missing rank rows.
+- Never infer actual participant count from the result API `count`, number of published placements, 60-card registered decks, venue capacity, or observed ranks. Verify actual participation and published range from an authoritative event source before assigning an exclusion to a small event or nonpublication.
+- Top8 FINAL readiness is evaluated from the official result and schedule ledger separately; a legitimate absence of a Top16 comparison set is not itself evidence of missing Top8 results.
+
 - The prior W01/W02 FINAL immutable snapshots are not modified. HISTORICAL/TREND Top8 remains independent.
 
 ## Operational checks
