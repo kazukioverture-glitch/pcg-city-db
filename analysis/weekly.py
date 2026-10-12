@@ -632,6 +632,15 @@ def audit_report(report):
 
     if "current_week" not in report or "trend" not in report:
         add("FAIL", "CURRENT_TREND_MISSING", "CURRENT_WEEK and TREND must be separate")
+    # Not every report has a schedule ledger. When an explicit coverage audit
+    # accompanies a report, its unverified scope must block an audit PASS even
+    # if deck classification, watch-card and external-source checks all pass.
+    coverage_gate = report.get("coverage_gate")
+    if coverage_gate is not None:
+        if not isinstance(coverage_gate, dict) or coverage_gate.get("full_week_coverage_verified") is not True:
+            add("WARN", "FULL_WEEK_COVERAGE_UNVERIFIED",
+                "Official event status and published-result coverage were not fully verified; "
+                "schedule-only events are unknown rather than zero or cancelled.")
     current = report.get("current_week", {})
     trend = report.get("trend", {})
     if trend.get("status") == "available":
