@@ -1,0 +1,27 @@
+{
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "week_id": "W03",
+  "stage": "INTERIM",
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "source_updated_at": "2026-10-12T13:26:21+09:00",
+  "last_observed_event_day": "2026-10-11",
+  "input_commit": "b29f19dd9d932b43b4a420be54226169a3b310b5",
+  "input_sha256": {
+    "data/city_db.json": "21c4e8cdb9a079f749794fcfe60147f4bfa3892e97e89c3192ee6ce12980c96e",
+    "data/city_decks.json": "b6a4cbbe89dd22eefbd0ffc39476ad23a001d55fac8a9ed21164b12bdb60b75c",
+    "data/analysis/deck_classifications.json": "2b73ff6a3079616e5e7fe640d8413dac25d5b722c41bba442486c7fb3e1c009c",
+    "data/index.json": "0d38273615f625484abe57bfdad302a3f38cca005abc922752e755b73542bcea"
+  },
+  "result_events_open": 63,
+  "top8_rows_open": 500,
+  "top8_deck_lists_known": 500,
+  "top16_complete_events_open": 38,
+  "top16_rows_complete_open": 608,
+  "top16_matched_top8_open": 304,
+  "aichi_events": 3,
+  "aichi_top8_rows": 24,
+  "audit": "WARN",
+  "full_week_coverage_verified": false,
+  "legacy_final_mutated": false
+}
