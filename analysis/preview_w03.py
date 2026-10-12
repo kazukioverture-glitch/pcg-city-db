@@ -72,8 +72,8 @@ def main() -> int:
     })
     report["limitations"].append(
         "W03 INTERIM. The data source is last updated at " + cutoff +
-        "; not all results through " + end.isoformat() +
-        " are confirmed, and no zero-result inference is allowed.")
+        "; full scheduled-event and Top16 coverage have not been independently "
+        "verified, and missing results must not be counted as zero.")
     report["audit"] = audit_report(report)
     if report["audit"]["status"] == "FAIL":
         raise RuntimeError("W03 audit FAIL")
@@ -105,7 +105,8 @@ def main() -> int:
     (base / "report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     markdown = (
-        "> **W03 INTERIM**: 10月11日の結果は未確定です。"
+        "> **W03 INTERIM**: 10月11日分のオープンTop8は捕捉しましたが、"
+        "Top16補完と全開催カテゴリの検収は未完了です。"
         "旧W02 FINALと予測原文には変更を加えていません。"
         f" DB最終更新: {cutoff}。\n\n" + render_markdown(report)
     )
