@@ -290,7 +290,7 @@ class WorkflowCompatibilityTests(unittest.TestCase):
         current = (ROOT / ".github/workflows/collect.yml").read_text(encoding="utf-8")
         self.assertIn("python -m collector.sync", current)
         self.assertIn("cancel-in-progress: false", current)
-        self.assertIn('cron: "10,40 0-14,23 * * *"', current)
+        self.assertIn('cron: "0 9,11,13,14,23 * * *"', current)
         self.assertIn("ref: main", current)
         commit_step = current.split("- name: Commit only when changed", 1)[1].split("- name:", 1)[0]
         self.assertNotIn("always()", commit_step)
