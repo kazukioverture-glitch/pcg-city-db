@@ -1,5 +1,14 @@
 {
   "schema_version": "1.2.1",
   "kind": "research_requests",
-  "records": []
+  "records": [
+    {
+      "request_id": "W03-COVERAGE-20261013-01",
+      "requested_at": "2026-10-13T07:29:29+09:00",
+      "question": "[W03: 2026-10-05..10-11 / calendar_id=2027-s1-mon-sun-v1 / priority=HIGH / max_additional_research_rounds=1] 公式大会結果と台帳の照合。既知: 入力コミット116689c0346e2232c88537a134d062914967c115、データ更新2026-10-12T22:35:52+09:00、OPEN取得63大会・Top8=500行(60枚判明500)・Top16完全38/63大会・不完全25大会(10/10=1,10/11=24)。全カテゴリの台帳/結果和集合76イベントのうち12イベントが台帳にのみ存在、カテゴリ不明。対象event_id=1115345,1115346,1115347,1115348,1115349,1115350,1115351,1115352,1115470,1115608,1115624,1115625。不足: 12件の実開催/中止/未開催、公開状態/結果の取得可否と、未完全25大会の公式Top16公開範囲及び欠損順位・デッキ。結論への影響: W03 FINALの公開結果カバレッジ検収と完全取得Top16比較を阻む。次回は既存通常同期で確認可能な増分を優先し、公式確認不能ならunknownを維持。未公開・欠損をゼロや中止としない。",
+      "status": "completed",
+      "snapshot_ids": [],
+      "result": "2026-10-13 JSTの追加調査1回は検証不能で終了。直近Sync City League DB run 38262150205 はTermux 200/同期成功だが公式API event_search がHTTP 403、official_complete=false。公式個別結果URLの閲覧は取得不可、通常の個別ページもJavaScriptを要する。代替スクレイピングは利用上限で実行できず。確認済みW03 INTERIM coverage_auditは full_week_coverage_verified=false, all_scheduled_events_checked=false, audit=WARN。12件は状態不明、25件はTop16未完全のまま。追加の重い再収集は行わず、次の通常収集後にカバレッジ差分を監査する。FINALは確定しない。"
+    }
+  ]
 }
