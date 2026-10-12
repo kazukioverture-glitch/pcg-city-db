@@ -62,7 +62,8 @@ class OfficialSyncTests(unittest.TestCase):
                     {'count': 12, 'results': [row(8, 5), row(9, 5), row(10, 9), row(11, 9)]}]
         with patch.object(official, 'fetch_json', side_effect=payloads) as fetch:
             result = official.result_event_from_api('1')
-        self.assertEqual(result['placement_count'], 10)
+        self.assertEqual(result['placement_count'], 12)
+        self.assertEqual(sum(p['rank'] <= 8 for p in result['placements']), 10)
         self.assertEqual(fetch.call_args_list[1].args[1]['offset'], 8)
 
     def test_unpublished_result_is_empty(self):
@@ -119,6 +120,6 @@ class OfficialSyncTests(unittest.TestCase):
                  patch.object(official, 'discover_recent_city_events', return_value=[{'event_id': '2', 'date': '2026-10-04', 'category': 'オープン'}]), \
                  patch.object(official, 'result_event_from_api', return_value=event), \
                  patch.object(official, 'parse_deck', side_effect=ValueError('59 cards')):
-                with self.assertRaisesRegex(RuntimeError, 'no files written'):
+                with self.assertRaisesRegex(RuntimeError, 'stored DB preserved'):
                     official.main()
             self.assertEqual([p.read_bytes() for p in paths], before)
