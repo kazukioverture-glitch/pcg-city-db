@@ -29,8 +29,9 @@ def observation(**changes):
 class StateTests(unittest.TestCase):
     def test_schema_and_checked_in_state(self):
         Draft202012Validator.check_schema(read_json(ROOT / "schemas/analysis-state.schema.json"))
-        for path in (ROOT / "data/analysis").glob("*.json"):
-            read_state(path)
+        for filename in ("event_ledger.json", "deck_classifications.json",
+                         "processed_sources.json", "research_requests.json", "forecast_log.json"):
+            read_state(ROOT / "data/analysis" / filename)
 
     def test_import_preserves_unknown_venue_and_status(self):
         event = ledger()["records"][0]
