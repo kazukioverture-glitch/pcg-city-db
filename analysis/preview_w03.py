@@ -135,7 +135,7 @@ def main() -> int:
         "Git固定版の公開60枚リストから分類を再計算。")
     (base / "report.md").write_text(markdown, encoding="utf-8")
     (base / "coverage_audit.json").write_text(
-        json.dumps(coverage_gate, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        json.dumps(coverage_gate, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
     (base / "summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
