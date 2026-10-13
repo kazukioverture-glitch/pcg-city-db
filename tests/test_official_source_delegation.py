@@ -81,6 +81,23 @@ class OfficialDelegationTests(unittest.TestCase):
         self.run_sync(success=False)
         self.assertEqual(before, {name: (data / name).read_bytes() for name in names})
 
+    def test_repeated_accepted_feed_does_not_replace_unchanged_db(self):
+        self.run_sync()
+        report = self.run_sync()
+        self.assertEqual(report['changed_files'], [])
+        self.assertEqual(report['db_bytes_written'], 0)
+        self.assertEqual(report['result_coverage_status'], 'not_verified')
+        self.assertEqual(report['final_status'], 'not_evaluated')
+
+    def test_stale_feed_is_visible_even_when_stored_db_is_newer(self):
+        self.run_sync()
+        self.city['updated_at'] = '2000-01-01T00:00:00+09:00'
+        self.decks['updated_at'] = self.city['updated_at']
+        report = self.run_sync()
+        self.assertTrue(report['termux_source_health']['source_stale_24h'])
+        self.assertEqual(report['termux_source_health']['source_updated_at'], self.city['updated_at'])
+        self.assertNotEqual(report['source_updated_at'], self.city['updated_at'])
+
     def test_pinned_manifest_checks_exactly_one_batch(self):
         from collector import sync_official_api as official
         from unittest.mock import patch

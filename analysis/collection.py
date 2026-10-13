@@ -5,6 +5,7 @@ Missing events or failed feed downloads never imply cancellation/non-publication
 """
 
 import hashlib
+import copy
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,7 +16,8 @@ from .state import import_legacy, read_json, read_state, validate, write_state
 
 
 def sync_ledger(ledger_path, *, city_path=None, decks_path=None, fetch_status,
-                coverage_scope, source_url, observed_at=None, parse_status=None):
+                coverage_scope, source_url, observed_at=None, parse_status=None,
+                deduplicate=False):
     ledger_path = Path(ledger_path)
     ledger = read_state(ledger_path) if ledger_path.exists() else {
         "schema_version": "1.2.2", "kind": "event_ledger", "records": []}
@@ -84,6 +86,7 @@ def sync_ledger(ledger_path, *, city_path=None, decks_path=None, fetch_status,
             ledger["records"].append(record)
             current[event_id] = record
         record = current[event_id]
+        prior_metadata = {k: copy.deepcopy(v) for k, v in record.items() if k != 'observations'} if deduplicate else None
         if city is not None:
             for source_key, destination_key in (("date", "event_date"), ("category", "category"),
                                                  ("venue_name", "venue_name"), ("venue_prefecture", "venue_prefecture")):
@@ -127,12 +130,21 @@ def sync_ledger(ledger_path, *, city_path=None, decks_path=None, fetch_status,
                            published_rank_slots_total=None, top8_slots_published=None,
                            top8_slots_retrieved=retrieved, top8_decks_known=known, notes=notes,
                            source_sha256=source_sha, source_updated_at=updated_at)
-        # Each collection attempt is recorded. Explicit upstream publication
+        # Opt-in for repeated feed ingestion only. Preserve default per-attempt
+        # history and all existing observations; changed evidence is always kept.
+        latest = record['observations'][-1] if record['observations'] else None
+        if (deduplicate and latest is not None and city is not None
+                and prior_metadata == {k: v for k, v in record.items() if k != 'observations'}
+                and {k: v for k, v in latest.items() if k != 'observed_at'}
+                == {k: v for k, v in observation.items() if k != 'observed_at'}):
+            continue
+        # Each changed observation is recorded. Explicit upstream publication
         # counts are not reconstructed from the number of parsed rows.
         record["observations"].append(observation)
         added += 1
     validate(ledger)
-    write_state(ledger_path, ledger)
+    if added or not deduplicate:
+        write_state(ledger_path, ledger)
     return added
 
 

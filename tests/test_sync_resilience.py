@@ -42,12 +42,20 @@ class DownloadTests(unittest.TestCase):
         self.assertTrue(result['success'])
         self.assertEqual(len(calls), 2)
 
-    def test_404_is_retried_but_never_adopted(self):
+    def test_404_stops_without_adopting_or_inventing_empty_results(self):
         result, target, calls = self.run_download([(22, '404', b'ngrok offline')] * 3)
         self.assertFalse(result['success'])
         self.assertFalse(target.exists())
-        self.assertEqual(len(calls), 3)
+        self.assertEqual(len(calls), 1)
         self.assertFalse(target.with_suffix('.json.part').exists())
+
+    def test_feed_forbidden_or_rate_limited_stops_after_one_request(self):
+        for status in ('403', '429'):
+            with self.subTest(status=status):
+                result, target, calls = self.run_download([(22, status, b'unavailable')])
+                self.assertFalse(result['success'])
+                self.assertFalse(target.exists())
+                self.assertEqual(len(calls), 1)
 
     def test_truncated_json_retry(self):
         result, target, calls = self.run_download([(0, '200', b'{'), (0, '200', b'{}')])
@@ -133,7 +141,7 @@ class TransactionTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        env = patch.dict(os.environ, {'TERMUX_BASE_URL': 'https://example.test'})
+        env = patch.dict(os.environ, {'TERMUX_BASE_URL': 'https://example.test', 'GITHUB_ACTIONS': 'false'})
         env.start()
         self.addCleanup(env.stop)
         self.root = Path(self.tmp.name)
@@ -247,6 +255,10 @@ class TransactionTests(unittest.TestCase):
         self.assertFalse(result['termux_accepted'])
         self.assertTrue(result['official_accepted'])
 
+        self.assertTrue(result['official_batch_complete'])
+        self.assertFalse(result['official_complete'])
+        self.assertEqual(result['result_coverage_status'], 'not_verified')
+
     def test_unconfigured_termux_is_skipped_when_official_succeeds(self):
         def official_ok(stage, work, **kwargs):
             work.mkdir(parents=True)
@@ -297,12 +309,17 @@ class TransactionTests(unittest.TestCase):
         self.assertEqual(self.contents(), self.before)
 
     def test_publish_write_failure_rolls_back_every_file(self):
+        def update(directory):
+            path = directory / 'city_decks.json'
+            value = read(path)
+            value['updated_at'] = '2099-01-01T00:00:00+09:00'
+            path.write_text(json.dumps(value))
         real_copy = shutil.copyfile
         def copy_fail(source, destination, **kwargs):
             if str(destination) == str(self.root / 'data/city_decks.json.part'):
                 raise OSError('disk full')
             return real_copy(source, destination, **kwargs)
-        with self.acquire(), patch.object(transaction, 'run_official', return_value=False), \
+        with self.acquire(mutate=update), patch.object(transaction, 'run_official', return_value=False), \
              patch.object(transaction.shutil, 'copyfile', side_effect=copy_fail):
             with self.assertRaisesRegex(OSError, 'disk full'):
                 transaction.sync(self.root)

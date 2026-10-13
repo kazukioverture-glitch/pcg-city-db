@@ -24,7 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 16
     env:
-      TERMUX_BASE_URL: https://forwarding-compaq-spam-cape.trycloudflare.com # temporary recovery; quick tunnel URL rotates on restart
+      # Override without code push; retain working fallback during migration.
+      TERMUX_BASE_URL: ${{ vars.TERMUX_BASE_URL || secrets.TERMUX_BASE_URL || 'https://forwarding-compaq-spam-cape.trycloudflare.com' }}
     steps:
       - uses: actions/checkout@v4
         with:

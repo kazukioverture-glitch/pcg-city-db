@@ -13,10 +13,10 @@ from analysis.state import read_state
 from collector.download_termux import download_one, download_pair
 from collector.merge_termux_snapshot import merge_snapshot
 from collector.validate_snapshot import read, validate_snapshot, write_candidate
+from collector.transaction import DATA_FILES, collection_lock, publish, recover
 
 ROOT = Path(__file__).resolve().parents[1]
 JST = timezone(timedelta(hours=9))
-DATA_FILES = ('city_db.json', 'city_decks.json', 'index.json', 'analysis/event_ledger.json')
 
 
 def run_official(stage, work, timeout=720):
@@ -85,6 +85,13 @@ def source_health(city, now=None):
 
 
 def sync(root=ROOT, base_url=None):
+    with collection_lock(root):
+        recovered = recover(root)
+        return _sync(root, base_url, recovered=recovered)
+
+
+def _sync(root, base_url, *, recovered=False):
+    started = time.monotonic()
     deadline = time.monotonic() + 900
     root = Path(root)
     data = root / 'data'
@@ -101,6 +108,8 @@ def sync(root=ROOT, base_url=None):
     validate_snapshot(old_city, old_decks)
     configured_url = base_url if base_url is not None else os.environ.get('TERMUX_BASE_URL')
     url = configured_url.strip().rstrip('/') if configured_url else ''
+    if os.environ.get('GITHUB_ACTIONS') == 'true' and not url:
+        raise RuntimeError('TERMUX_BASE_URL is required on GitHub Actions; official acquisition belongs to Android')
     schedule_from_termux = base_url is None and bool(os.environ.get('TERMUX_BASE_URL'))
     ledger = stage / 'analysis/event_ledger.json'
     schedule_accepted = False
@@ -167,18 +176,30 @@ def sync(root=ROOT, base_url=None):
                   official_source_mode=official_source_mode,
                   schedule_accepted=schedule_accepted, schedule_updates=schedule_updates,
                   official_accepted=official_ok,
-                  official_complete=official_ok and not official_errors and not official_deferred,
+                  # A bounded selected batch is not proof of season/week coverage.
+                  official_complete=False,
+                  official_batch_complete=official_ok and not official_errors and not official_deferred,
                   official_failed_event_ids=sorted(official_errors),
-                  top16_deferred_deck_count=len(official_deferred), published=False)
+                  top16_deferred_deck_count=len(official_deferred), published=False,
+                  recovered_interrupted_publication=recovered,
+                  result_coverage_status='not_verified', final_status='not_evaluated')
     health = source_health(read(stage / 'city_db.json'))
     report.update(health)
+    if termux_ok:
+        incoming_health = source_health(read(work / 'termux/city_db.json'))
+        report['termux_source_health'] = incoming_health
+        # The retained DB may be newer than the feed. Report the feed itself,
+        # rather than hiding a stale upstream behind the monotonic merge.
+        if incoming_health['source_stale_24h']:
+            print('::warning::Incoming Termux feed is stale or undated: '
+                  + json.dumps(incoming_health), flush=True)
     if health['source_stale_24h']:
         print('::warning::Published City DB source is stale or undated: '
               f"updated_at={health['source_updated_at']}, "
               f"age_hours={health['source_age_hours']}, "
               f"latest_event_date={health['latest_observed_event_date']}; "
               'a successful transfer does NOT confirm result completeness', flush=True)
-    if termux_ok and not official_ok and health['source_stale_24h']:
+    if termux_ok and not official_ok and incoming_health['source_stale_24h']:
         print('::warning::ACTION REQUIRED on Android/Termux: refresh the original '
               'official-source DB. Re-running GitHub alone only re-downloads the '
               'same snapshot (scripts/termux_refresh.sh).', flush=True)
@@ -198,23 +219,16 @@ def sync(root=ROOT, base_url=None):
         sync_ledger(ledger, city_path=work / 'termux/city_db.json', decks_path=work / 'termux/city_decks.json',
                     fetch_status='success' if downloads['city-db.json']['success'] else 'failed',
                     parse_status=None if termux_ok else 'failed', coverage_scope='collection_feed',
-                    source_url=url + '/city-db.json')
+                    source_url=url + '/city-db.json', deduplicate=True)
     if official_ok and (work / 'official/official_backfill.changed').exists():
         sync_ledger(ledger, city_path=work / 'official/official_backfill_city.json',
                     decks_path=work / 'official/official_backfill_decks.json', fetch_status='success',
                     coverage_scope='top8', source_url='https://players.pokemon-card.com/event/result/list')
     read_state(ledger)  # schema validation before any production write
-    before = {name: (data / name).read_bytes() for name in DATA_FILES}
-    try:
-        for name in DATA_FILES:
-            temp = (data / name).with_suffix('.json.part')
-            shutil.copyfile(stage / name, temp)
-            temp.replace(data / name)
-    except BaseException:
-        for name, content in before.items():
-            (data / name).write_bytes(content)
-        raise
-    report.update(published=True, **counts)
+    changed = publish(root, stage)
+    report.update(published=True, changed_files=changed,
+                  db_bytes_written=sum((data / name).stat().st_size for name in changed),
+                  elapsed_seconds=round(time.monotonic() - started, 3), **counts)
     report_path.write_text(json.dumps(report, indent=2) + '\n')
     print('SYNC RESULT: ' + json.dumps(report), flush=True)
     return report
