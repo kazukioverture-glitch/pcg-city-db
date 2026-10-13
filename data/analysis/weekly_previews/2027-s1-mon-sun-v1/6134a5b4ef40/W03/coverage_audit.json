@@ -1,0 +1,218 @@
+{
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "category": "オープン",
+  "scheduled_and_result_ledger_event_ids": 76,
+  "observed_result_events_all_categories": 64,
+  "observed_result_events_category": 63,
+  "observed_top8_rows_category": 500,
+  "scheduled_only_all_categories": 12,
+  "scheduled_only_unknown_category": 12,
+  "scheduled_only_known_category": 0,
+  "scheduled_only_event_ids": [
+    "1115345",
+    "1115346",
+    "1115347",
+    "1115348",
+    "1115349",
+    "1115350",
+    "1115351",
+    "1115352",
+    "1115470",
+    "1115608",
+    "1115624",
+    "1115625"
+  ],
+  "scheduled_only_event_details": [
+    {
+      "event_id": "1115345",
+      "event_date": "2026-10-11",
+      "venue_name": "カードボックス京都店",
+      "venue_prefecture": "京都府",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115346",
+      "event_date": "2026-10-11",
+      "venue_name": "トレカワールド　小倉駅前店",
+      "venue_prefecture": "福岡県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115347",
+      "event_date": "2026-10-11",
+      "venue_name": "トレカワールド　小倉駅前店",
+      "venue_prefecture": "福岡県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115348",
+      "event_date": "2026-10-11",
+      "venue_name": "BOOKOFF奈良法華寺店",
+      "venue_prefecture": "奈良県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115349",
+      "event_date": "2026-10-11",
+      "venue_name": "GIRAFULL 広島ドンキ店",
+      "venue_prefecture": "広島県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115350",
+      "event_date": "2026-10-11",
+      "venue_name": "カードショップ彩々 国分店",
+      "venue_prefecture": "鹿児島県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115351",
+      "event_date": "2026-10-11",
+      "venue_name": "竜星の嵐　名古屋店",
+      "venue_prefecture": "愛知県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115352",
+      "event_date": "2026-10-11",
+      "venue_name": "カードショップホビビ 豊田VITS店",
+      "venue_prefecture": "愛知県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115470",
+      "event_date": "2026-10-11",
+      "venue_name": "BOOKOFF SUPER BAZAAR 西友大森店",
+      "venue_prefecture": "東京都",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115608",
+      "event_date": "2026-10-11",
+      "venue_name": "秋葉原チェルモ",
+      "venue_prefecture": "東京都",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115624",
+      "event_date": "2026-10-11",
+      "venue_name": "竜星のPAO　大宮店",
+      "venue_prefecture": "埼玉県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    },
+    {
+      "event_id": "1115625",
+      "event_date": "2026-10-11",
+      "venue_name": "トーナメントセンターバトロコ　川崎駅前",
+      "venue_prefecture": "神奈川県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    }
+  ],
+  "top16_complete_result_events_category": 38,
+  "top16_incomplete_result_events_category": 25,
+  "top16_excluded_reason_counts": {
+    "not_checked": 0,
+    "observed_rows_not_captured": 24,
+    "source_fewer_than_eight_rows_reason_unknown": 1,
+    "observation_inconsistent_or_unknown": 0
+  },
+  "top16_excluded_event_ids_by_reason": {
+    "not_checked": [],
+    "observed_rows_not_captured": [
+      "1115344",
+      "1115343",
+      "1115342",
+      "1115341",
+      "1115340",
+      "1115339",
+      "1115338",
+      "1115194",
+      "1115193",
+      "1115192",
+      "1115191",
+      "1115190",
+      "1115189",
+      "1115188",
+      "1115187",
+      "1115055",
+      "1115054",
+      "1115053",
+      "1115052",
+      "1115051",
+      "1115050",
+      "1115049",
+      "1115048",
+      "1115047"
+    ],
+    "source_fewer_than_eight_rows_reason_unknown": [
+      "1115332"
+    ],
+    "observation_inconsistent_or_unknown": []
+  },
+  "top16_exclusion_reason_caveat": "A source showing fewer than eight ranks 9-16 can reflect fewer than 16 actual entrants, limited publication, or another cause. Neither published ranking row counts nor event capacity prove attendance.",
+  "observed_daily_results_category": {
+    "2026-10-05": {
+      "result_events": 1,
+      "top8_rows": 8,
+      "top16_complete_events": 1
+    },
+    "2026-10-06": {
+      "result_events": 5,
+      "top8_rows": 40,
+      "top16_complete_events": 5
+    },
+    "2026-10-07": {
+      "result_events": 3,
+      "top8_rows": 24,
+      "top16_complete_events": 3
+    },
+    "2026-10-08": {
+      "result_events": 4,
+      "top8_rows": 32,
+      "top16_complete_events": 4
+    },
+    "2026-10-09": {
+      "result_events": 3,
+      "top8_rows": 24,
+      "top16_complete_events": 3
+    },
+    "2026-10-10": {
+      "result_events": 23,
+      "top8_rows": 180,
+      "top16_complete_events": 22
+    },
+    "2026-10-11": {
+      "result_events": 24,
+      "top8_rows": 192,
+      "top16_complete_events": 0
+    }
+  },
+  "scheduled_only_are_unknown_not_zero": true,
+  "all_scheduled_events_checked": false,
+  "full_week_coverage_verified": false
+}
