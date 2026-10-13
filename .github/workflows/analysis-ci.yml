@@ -2,16 +2,33 @@ name: Analysis CI
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     paths:
       - "analysis/**"
+      - "collector/**"
+      - "scripts/**"
+      - "requirements*.txt"
+      - "tests/**"
+      - "schemas/**"
+      - ".github/workflows/**"
+  push:
+    branches: [main]
+    paths:
+      - "analysis/**"
+      - "collector/**"
+      - "scripts/**"
+      - "requirements*.txt"
       - "tests/**"
       - "schemas/**"
       - "docs/**"
-      - ".github/workflows/analysis-ci.yml"
+      - ".github/workflows/**"
 
 permissions:
   contents: read
+
+concurrency:
+  group: analysis-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:

@@ -1,32 +1,50 @@
 # 定期収集の運用
 
-検収基準：Actions #257 / 37320205230。10/4は55大会・412結果行、対応412デッキすべて実枚数60枚。基準版mainは `1d0806e0616ab996e3316188486e944033a5205e`。
+## 取得元とスケジュール
 
-## 処理と保存条件
+公式API取得はAndroid/Termuxが担当する。GitHub ActionsはTermux配信を受信・検証する。GitHubでURL未設定の場合は安全停止し、公式直接取得へ戻さない。Androidは `TERMUX_BASE_URL` を解除して公式取得する。
 
-`python -m collector.sync` が取得・作業領域での検証・保存を管理する。
+ActionsはJST 18:00、20:00、22:00、23:00、翌08:00の1日5回。Androidの任意ループは07:30、17:30、19:30、21:30、22:30。定刻実行・Android再起動後の自動復帰・省電力制限下の継続は保証しない。
 
-1. `TERMUX_BASE_URL` が設定されている場合のみTermuxの2ファイルを同時取得する。未設定時は停止済みの固定ngrok URLへ接続せず、公式単独で取得する。HTTP/1.1、最大3回、各ファイル合計540秒。完全なJSONオブジェクトだけを `.part` から採用する。
-2. イベント・選手・デッキの識別子で履歴をマージする。古いスナップショットで新しい保存レコードを巻き戻さない。
-3. 公式補完を別プロセスで実行する（最大720秒、Termux取得を含む合計900秒以内）。公式の公開APIとデッキページには `curl_cffi` のブラウザ互換HTTPセッションを使う（スレッドごとに独立）。全ワーカー合計で毎秒1件までに制限する。通信例外・一時的な5xxのみ最大4回再試行し、401/403・429やその他の恒久エラーは即終了する。429では次の定期実行まで待つ。大会詳細の一部だけが取得不能でも、新規・更新大会を取得できていれば成功した大会だけを採用し、取得不能大会の旧レコードを保持する。必要な新規デッキが1つでも検証不能なら公式候補全体を採用しない。取得不能があり有効な更新もない場合は失敗する。
-4. イベント・結果行・デッキの欠落、更新日時の後退、参照先デッキ欠落、実枚数60枚、index件数・SHA256を確認する。公式取得成功時は従来の公開結果カバレッジ検査も実行する。
-5. 台帳を更新・スキーマ検証する。全検証の成功後にだけDB3ファイルと台帳を保存する。保存時の例外では旧内容へ戻す。
-6. 成功時のみGitへcommit/pushする。Gitのコミットで4ファイルを一緒に公開する。ジョブ強制終了でローカルに一部が残っても、失敗・中断したジョブはcommitしない。
+URLの優先順位はRepository Variable `CITY_TERMUX_BASE_URL` → 同名Secret → 移行用の現行URL。Settings → Secrets and variables → Actions → Variablesから変更でき、コードpushも臨時同期も不要。Quick TunnelのURLは再起動で変わる。設定登録を確認するまでfallbackを消さない。旧 `TERMUX_BASE_URL` 設定を誤って再有効化しないよう、新しい設定名を使用する。Pythonプロセスへは従来通り `TERMUX_BASE_URL` として渡す。新規サービスは使用しない。
 
-Termuxの片方だけ成功した場合、そのペアは採用しない。公式単独成功は従来どおり許可する。Termux成功・公式不能時は警告付きで更新するが、公式網羅性を保証しない。両取得元失敗時は明示失敗し、保存DBと台帳は変更しない。
+## 検証と保存
 
-## スケジュールと競合
+`python -m collector.sync` が以下を担当する。
 
-既存スケジュール `10,40 0-14,23 * * *` を維持する（JST 08:10〜23:40、稼働時間帯は30分ごと）。24時間実行へ変更していない。GitHubのscheduleは定刻実行を保証せず、遅延する場合がある。
+1. OSの排他ロックを取得する。二重実行は待たず失敗し、進行中の作業領域を消さない。プロセス終了でロックは解放される。
+2. 前回の保存中断があれば `.tmp/publication.pending` の検証済みバックアップから旧ファイルを戻す。復旧が済むまで通常収集へ進まない。バックアップ不整合は停止する。
+3. TermuxのDB2ファイルを同時取得する。完全なJSONだけ採用。HTTP/1.1、各ファイル最大540秒・3回。401/403/404/429は1回で止め、次の定期実行を待つ。404から開催・中止・公開件数を推定しない。
+4. 片側欠損・不正な60枚リスト・参照欠落を拒否する。識別子と時刻でマージし、保存済みイベント・結果・デッキの減少や後退を防ぐ。配信元の鮮度とマージ後DBの鮮度は別記録。
+5. 台帳・indexの件数/SHA256・スキーマを検証する。同じ配信内容・状態・大会属性の再受信は観測履歴へ重複追加しない。取得試行そのものは毎回の診断artifactに残す。既存の観測履歴は削除しない。汎用 `sync_ledger` は従来通り、重複抑制はcollectorの明示指定時だけ。
+6. 変更ファイルだけ保存する。変更前のバイト列とSHA256を永続ジャーナルへ保存してから置換。通常例外はロールバックし、強制終了時は次の起動で復旧する。`.tmp/publication.pending` を手作業で消さない。
+7. 成功・差分ありの場合のみ4ファイルを一括commit/pushする。push競合はforceしない。次の定期同期で再取得・マージする。
 
-`cancel-in-progress: false` で実行中の転送を保護する。待機後は `main` の最新をcheckoutする。GitHubのconcurrencyでは待機実行が後続で置換される場合があり、全トリガーの実行を保証するキューではない。push競合はforceせず失敗させ、次の同期で再マージする。
+複数パスの同時読み取り原子性は保証しない。Android HTTP配信中の世代混在、端末電源断・ストレージ故障まで保証する仕組みではない。受信側の検証で拒否し、完全な世代の配信については残留リスクとして扱う。
 
-## 診断
+Actionsの収集concurrencyは `cancel-in-progress: false` を維持。Analysis CIだけは同じPR/branchの古い検査を中断し、最新版を検査する。
 
-ログにはファイル名、試行回数、HTTPステータス、curl終了コード、JSON解析結果、エラー、失敗レスポンスの主要ヘッダーと本文先頭1000byteを出す。
+## 成功の意味
 
-Actionsの `sync-diagnostics-<run_id>` にダウンロード診断・採用結果・取得できた公式監査結果を14日保存する。結果の `published: false` は未保存を意味する。入力本体・プレイヤー情報を診断artifactに複製しない。
+- `termux_accepted`：転送後のDB候補を採用できた。
+- `termux_source_health`：受信した配信元そのものの更新日時・24時間経過判定。
+- `source_updated_at` 等：マージ後DBの情報。配信が最新であることとは別。
+- `official_batch_complete`：この実行で選んだ公式取得バッチに報告済みエラー・繰越デッキがない。全大会取得完了ではない。
+- `official_complete=false` / `result_coverage_status=not_verified`：収集だけでは全開催台帳との網羅性を認定しない。
+- `final_status=not_evaluated`：監査とFINAL確定は別工程。
+- `published=true`：検証済み候補の保存処理が成功（変更なしを含む）。Git push完了の意味ではない。
+- `changed_files` / `db_bytes_written`：本番保存先へ実際に置換したファイルとバイト数。作業領域・バックアップのI/Oは含まない。
 
-Termuxは任意の取得元。未設定でも公式単独成功時は保存できる。設定済みのTermuxで404が継続する場合はサーバーとngrokトンネルを確認する。公開先が変わったときはRepository Variable `TERMUX_BASE_URL` を更新する。コードの再試行は停止した公開元を復旧できない。公式403のときは該当大会を取得不能として記録する。一部取得成功時は `sync_report.json` の `official_complete=false` と `official_failed_event_ids`、`official_audit.json` の `fetch_errors` で未取得範囲を明示する。部分取得を完全取得と扱わない。
+## 診断・復旧・検証
 
-検証：`python -m unittest discover -s tests -q`、`python -m analysis validate-state`、`python collector/check_sync.py --official-unavailable`。
+`sync-diagnostics-<run_id>` に同期報告、ダウンロード試行、取得できた公式監査を14日保存する。ダウンロード診断は応答本文バイト数・所要秒を含む。公開DBや選手情報の全件ZIPは作らない。
+
+403/429は繰り返し手動実行しない。配信404ならAndroid側のHTTPサーバーとトンネルを確認し、URL変更時のみVariableを更新する。古い配信の再受信では鮮度は改善しない。必要時のみAndroidで `bash scripts/termux_refresh.sh once`。シェル側の旧mkdirロックが強制終了で残る場合は、稼働プロセスがないことを確認してから `.tmp/termux-refresh.lock` だけを `rmdir` する（publicationジャーナルは消さない）。
+
+開発時の小さな検査（模擬データ・HTTPモックのみ）:
+
+```sh
+PYTHONPATH=tests:. python -m unittest test_transaction_recovery test_v122.CollectionTests test_sync_resilience.DownloadTests test_termux_source_freshness test_official_source_delegation -v
+```
+
+統合検収はAnalysis CIと同じ `python -m unittest discover -s tests -v`、`python -m analysis validate-state`、旧W02 FINALスモーク・回答インデックス生成・カード候補検査。旧FINAL/予測を変更せず、出力は `.tmp/analysis-ci` に限定する。

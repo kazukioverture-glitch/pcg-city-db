@@ -17,6 +17,7 @@ def download_one(base_url, filename, destination, *, budget=540, attempts=3):
     headers = destination.with_suffix('.headers')
     deadline = time.monotonic() + budget
     records = []
+    started = time.monotonic()
     for attempt in range(1, attempts + 1):
         remaining = deadline - time.monotonic()
         if remaining <= 0:
@@ -42,22 +43,29 @@ def download_one(base_url, filename, destination, *, budget=540, attempts=3):
             except (OSError, ValueError) as exc:
                 error = f'Invalid/incomplete JSON: {exc}'
         record = dict(file=filename, attempt=attempt, http_status=status, curl_exit=code,
-                      parse_success=parsed, error=error)
+                      parse_success=parsed, error=error,
+                      received_bytes=part.stat().st_size if part.exists() else 0)
         records.append(record)
         print(json.dumps(record), flush=True)
         if parsed:
             part.replace(destination)
-            return dict(success=True, attempts=records)
+            return dict(success=True, attempts=records,
+                        elapsed_seconds=round(time.monotonic() - started, 3))
         if headers.exists():
             safe_headers = [line for line in headers.read_text(errors='replace').splitlines()
                             if line.lower().startswith(('http/', 'content-type:', 'ngrok-error-code:', 'retry-after:'))]
             print('Response headers: ' + ' | '.join(safe_headers), flush=True)
         if part.exists():
-            print('Response body prefix: ' + repr(part.read_bytes()[:1000].decode('utf-8', errors='replace')), flush=True)
+            with part.open('rb') as handle:
+                prefix = handle.read(1000)
+            print('Response body prefix: ' + repr(prefix.decode('utf-8', errors='replace')), flush=True)
+        if status in ('401', '403', '404', '429'):
+            break  # unavailable feed/rate limit: wait for the next scheduled run
         if attempt < attempts:
             time.sleep(min(2 ** attempt, max(0, deadline - time.monotonic())))
     part.unlink(missing_ok=True)
-    return dict(success=False, attempts=records)
+    return dict(success=False, attempts=records,
+                elapsed_seconds=round(time.monotonic() - started, 3))
 
 
 def download_pair(base_url, directory, **kwargs):

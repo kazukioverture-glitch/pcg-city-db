@@ -64,6 +64,24 @@ class CollectionTests(unittest.TestCase):
         self.assertIsNone(record["venue_prefecture"])
         self.assertEqual(record["players"][0]["player_prefecture"], "愛知県")
 
+    def test_identical_feed_is_noop_only_when_opted_in(self):
+        self.sync(deduplicate=True)
+        before = self.path.read_bytes()
+        self.assertEqual(self.sync(deduplicate=True, observed_at="2026-10-04T12:00:00+09:00"), 0)
+        self.assertEqual(before, self.path.read_bytes())
+        self.assertEqual(self.sync(), 1)  # legacy per-attempt contract unchanged
+
+    def test_changed_deck_coverage_and_failure_are_not_deduplicated(self):
+        self.sync(deduplicate=True)
+        first = read_state(self.path)['records'][0]['observations'][0]
+        self.decks_path.write_text(json.dumps({'decks': {}}))
+        self.assertEqual(self.sync(deduplicate=True), 1)
+        self.assertEqual(self.sync(deduplicate=True, fetch_status='failed'), 1)
+        records = read_state(self.path)['records'][0]['observations']
+        self.assertEqual(records[0], first)
+        self.assertEqual(records[1]['top8_decks_known'], 0)
+        self.assertEqual(records[2]['fetch_status'], 'failed')
+
     def test_parse_failure_and_validation_rejection_preserve_previous_records(self):
         self.sync()
         self.city_path.write_text("not json", encoding="utf-8")
