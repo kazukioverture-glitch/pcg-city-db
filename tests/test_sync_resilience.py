@@ -241,7 +241,7 @@ class TransactionTests(unittest.TestCase):
             work.mkdir(parents=True)
             (work / 'official_audit.json').write_text(json.dumps({'events': [], 'fetch_errors': {}}))
             return True
-        with self.acquire(False, False), patch.object(transaction, 'run_official', side_effect=official_ok):
+        with patch.dict(os.environ, {'TERMUX_BASE_URL': ''}), self.acquire(False, False), patch.object(transaction, 'run_official', side_effect=official_ok):
             result = transaction.sync(self.root)
         self.assertTrue(result['published'])
         self.assertFalse(result['termux_accepted'])
@@ -276,7 +276,7 @@ class TransactionTests(unittest.TestCase):
             (work / 'official_audit.json').write_text(json.dumps({
                 'events': [], 'fetch_errors': {'failed-id': 'HTTP 403'}}))
             return True
-        with self.acquire(False, False), patch.object(transaction, 'run_official', side_effect=official_partial):
+        with patch.dict(os.environ, {'TERMUX_BASE_URL': ''}), self.acquire(False, False), patch.object(transaction, 'run_official', side_effect=official_partial):
             result = transaction.sync(self.root)
         self.assertTrue(result['published'])
         self.assertTrue(result['official_accepted'])
@@ -291,7 +291,7 @@ class TransactionTests(unittest.TestCase):
             (work / 'official_audit.json').write_text(json.dumps({'events': [], 'fetch_errors': {}}))
             (stage / 'index.json').write_text('{}')
             return True
-        with self.acquire(), patch.object(transaction, 'run_official', side_effect=official_bad):
+        with patch.dict(os.environ, {'TERMUX_BASE_URL': ''}), self.acquire(), patch.object(transaction, 'run_official', side_effect=official_bad):
             with self.assertRaises(subprocess.CalledProcessError):
                 transaction.sync(self.root)
         self.assertEqual(self.contents(), self.before)
