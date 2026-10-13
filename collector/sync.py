@@ -137,11 +137,19 @@ def sync(root=ROOT, base_url=None):
     # A failed official run may have written candidate files; restore the accepted
     # Termux candidate (or baseline) before continuing.
     backup = {name: (stage / name).read_bytes() for name in DATA_FILES[:3]}
-    official_ok = run_official(stage, work / 'official', timeout=min(720, max(1, deadline - time.monotonic())))
+    # Android/Termux owns official acquisition when an upstream feed is configured.
+    # A GitHub runner should validate and merge that feed, not retry its blocked API.
+    official_source_mode = 'termux' if url else 'direct'
+    if url:
+        official_ok = False
+        print('::notice::Official API delegated to Termux; GitHub direct fetch skipped', flush=True)
+    else:
+        official_ok = run_official(stage, work / 'official', timeout=min(720, max(1, deadline - time.monotonic())))
     if not official_ok:
         for name, content in backup.items():
             (stage / name).write_bytes(content)
-        print('::warning::Official coverage unavailable; no completeness claim', flush=True)
+        if not url:
+            print('::warning::Official coverage unavailable; no completeness claim', flush=True)
     official_errors = {}
     official_deferred = []
     if official_ok:
@@ -149,6 +157,7 @@ def sync(root=ROOT, base_url=None):
         official_errors = audit.get('fetch_errors', {})
         official_deferred = audit.get('top16_deferred_codes', [])
     report = dict(termux_configured=bool(url), termux_accepted=termux_ok,
+                  official_source_mode=official_source_mode,
                   schedule_accepted=schedule_accepted, schedule_updates=schedule_updates,
                   official_accepted=official_ok,
                   official_complete=official_ok and not official_errors and not official_deferred,
