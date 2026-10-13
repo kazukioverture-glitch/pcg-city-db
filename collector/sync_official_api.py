@@ -457,6 +457,7 @@ def main() -> int:
         if isinstance(event, dict) and isinstance(event.get("date"), str)
     ]
     floor_date = city.get("season_start", "2026-09-26")
+    stored_events = {str(e["event_id"]): e for e in event_rows}
     if args.discovery_file:
         # A fixed manifest prevents offset skips if publication changes during the run.
         discovered = read_json(args.discovery_file)
@@ -473,7 +474,6 @@ def main() -> int:
         selected = discovered[args.batch_offset:args.batch_offset + args.max_detail_events]
     else:
         discovered = discover_recent_city_events(floor_date, args.max_pages)
-        stored_events = {str(e["event_id"]): e for e in event_rows}
         selected = select_event_candidates(discovered, stored_events, limit=args.max_detail_events)
     print(f"Discovered {len(discovered)} official City League events; checking {len(selected)} priority events", flush=True)
     new_events = []
