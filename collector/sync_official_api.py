@@ -419,6 +419,8 @@ def main() -> int:
     parser.add_argument("--deck-workers", type=int, default=8)
     parser.add_argument("--max-detail-events", type=int, default=24)
     parser.add_argument("--max-top16-decks", type=int, default=32)
+    parser.add_argument("--discovery-file", type=Path, help="Pinned official event discovery manifest for one-time reconciliation")
+    parser.add_argument("--batch-offset", type=int, default=0)
     parser.add_argument("--data-dir", type=Path)
     parser.add_argument("--tmp-dir", type=Path)
     args = parser.parse_args()
@@ -455,9 +457,24 @@ def main() -> int:
         if isinstance(event, dict) and isinstance(event.get("date"), str)
     ]
     floor_date = city.get("season_start", "2026-09-26")
-    discovered = discover_recent_city_events(floor_date, args.max_pages)
-    stored_events = {str(e["event_id"]): e for e in event_rows}
-    selected = select_event_candidates(discovered, stored_events, limit=args.max_detail_events)
+    if args.discovery_file:
+        # A fixed manifest prevents offset skips if publication changes during the run.
+        discovered = read_json(args.discovery_file)
+        if not isinstance(discovered, list):
+            raise ValueError("Discovery manifest must be a list")
+        identifiers = [str(e.get("event_id", "")) for e in discovered if isinstance(e, dict)]
+        if (len(identifiers) != len(discovered) or not all(identifiers)
+                or len(identifiers) != len(set(identifiers))
+                or any(not isinstance(e.get("date"), str) or not e["date"]
+                       for e in discovered)):
+            raise ValueError("Invalid/duplicate discovery manifest events")
+        if args.batch_offset < 0 or args.max_detail_events < 1:
+            raise ValueError("Invalid reconciliation batch range")
+        selected = discovered[args.batch_offset:args.batch_offset + args.max_detail_events]
+    else:
+        discovered = discover_recent_city_events(floor_date, args.max_pages)
+        stored_events = {str(e["event_id"]): e for e in event_rows}
+        selected = select_event_candidates(discovered, stored_events, limit=args.max_detail_events)
     print(f"Discovered {len(discovered)} official City League events; checking {len(selected)} priority events", flush=True)
     new_events = []
     checked_events = []
