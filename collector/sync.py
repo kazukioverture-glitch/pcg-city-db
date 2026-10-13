@@ -20,10 +20,17 @@ DATA_FILES = ('city_db.json', 'city_decks.json', 'index.json', 'analysis/event_l
 
 
 def run_official(stage, work, timeout=720):
+    command = [sys.executable, str(ROOT / 'collector/sync_official_api.py'),
+               '--data-dir', str(stage), '--tmp-dir', str(work)]
+    manifest = os.environ.get('CITY_OFFICIAL_DISCOVERY_FILE')
+    if manifest:
+        # Explicit one-time Android reconciliation only; normal runs stay bounded.
+        command += ['--discovery-file', manifest,
+                    '--batch-offset', os.environ.get('CITY_OFFICIAL_BATCH_OFFSET', '0'),
+                    '--max-detail-events', os.environ.get('CITY_OFFICIAL_BATCH_SIZE', '12'),
+                    '--max-top16-decks', '128']
     try:
-        result = subprocess.run([sys.executable, str(ROOT / 'collector/sync_official_api.py'),
-                                 '--data-dir', str(stage), '--tmp-dir', str(work)],
-                                timeout=timeout)
+        result = subprocess.run(command, timeout=timeout)
         return result.returncode == 0
     except subprocess.TimeoutExpired:
         print(f'::warning::Official collection exceeded {timeout:.0f}-second budget', flush=True)
