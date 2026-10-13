@@ -94,6 +94,21 @@ def audit_week_coverage(city, ledger, week_start, week_end, category="オープ�
         "scheduled_only_unknown_category": len(category_unknown),
         "scheduled_only_known_category": len(category_known_missing),
         "scheduled_only_event_ids": sorted(e["event_id"] for e in scheduled_only),
+        # Ledger facts are scheduled observations, not evidence that an event
+        # was held or that official results were published.
+        "scheduled_only_event_details": [
+            {
+                "event_id": str(e["event_id"]),
+                "event_date": e.get("event_date"),
+                "venue_name": e.get("venue_name"),
+                "venue_prefecture": e.get("venue_prefecture"),
+                "category": e.get("category"),
+                "event_status_recorded": e.get("event_status"),
+                "result_publication_verified": False,
+            }
+            for e in sorted(scheduled_only,
+                            key=lambda e: (e.get("event_date") or "", str(e["event_id"])))
+        ],
         "top16_complete_result_events_category": top16_complete,
         "top16_incomplete_result_events_category": top16_incomplete,
         # Read this legacy key as comparison-excluded, not confirmed fetch failures.
