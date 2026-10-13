@@ -1,13 +1,15 @@
 {
   "engine_version": "weekly-analysis-v1",
-  "generated_at": "2026-10-07T13:16:37.503693+00:00",
+  "generated_at": "2026-10-13T15:28:50.749800+00:00",
   "week_id": "W02",
   "analysis_stage": "FINAL",
   "snapshot_id": "c2931ef42b944a3e86536742089d0c3f",
   "category": "オープン",
   "terminology": {
     "top8_share": "captured Top8 composition share; never participant usage rate",
-    "card_adoption_rate": "share among captured Top8 rows with a valid 60-card list"
+    "card_adoption_rate": "share among captured Top8 rows with a valid 60-card list",
+    "top16_context": "Top16 upper-placing rows among complete captured Top16 event subset",
+    "top16_to_top8": "observed proportion advancing to Top8 within matched event subset; not match win rate"
   },
   "provenance": {
     "snapshot_git_commit_sha": "5a80b0b93854b2fb412bdd982abd53f5e582890c",
@@ -3671,6 +3673,20 @@
             "cards": [],
             "note": "logical-card adoption is not inferred from display-name substrings"
           }
+        },
+        "top16_context": {
+          "status": "insufficient_coverage",
+          "scope": "Top16 event subset only; full participant usage is not observable",
+          "coverage": {
+            "result_events": 76,
+            "complete_top16_events": 0,
+            "excluded_events": 76,
+            "captured_top16_rows": 0,
+            "captured_matched_top8_rows": 0
+          },
+          "top16_composition": [],
+          "matched_top8_composition": [],
+          "top16_to_top8": []
         }
       }
     },
@@ -5212,6 +5228,20 @@
             "cards": [],
             "note": "logical-card adoption is not inferred from display-name substrings"
           }
+        },
+        "top16_context": {
+          "status": "insufficient_coverage",
+          "scope": "Top16 event subset only; full participant usage is not observable",
+          "coverage": {
+            "result_events": 6,
+            "complete_top16_events": 0,
+            "excluded_events": 6,
+            "captured_top16_rows": 0,
+            "captured_matched_top8_rows": 0
+          },
+          "top16_composition": [],
+          "matched_top8_composition": [],
+          "top16_to_top8": []
         }
       }
     }
