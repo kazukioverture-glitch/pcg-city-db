@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 16
     env:
       # Override without code push; retain working fallback during migration.
-      TERMUX_BASE_URL: ${{ vars.TERMUX_BASE_URL || secrets.TERMUX_BASE_URL || 'https://forwarding-compaq-spam-cape.trycloudflare.com' }}
+      TERMUX_BASE_URL: ${{ vars.CITY_TERMUX_BASE_URL || secrets.CITY_TERMUX_BASE_URL || 'https://forwarding-compaq-spam-cape.trycloudflare.com' }}
     steps:
       - uses: actions/checkout@v4
         with:

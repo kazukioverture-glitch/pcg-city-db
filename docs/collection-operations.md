@@ -6,7 +6,7 @@
 
 ActionsはJST 18:00、20:00、22:00、23:00、翌08:00の1日5回。Androidの任意ループは07:30、17:30、19:30、21:30、22:30。定刻実行・Android再起動後の自動復帰・省電力制限下の継続は保証しない。
 
-URLの優先順位はRepository Variable `TERMUX_BASE_URL` → 同名Secret → 移行用の現行URL。Settings → Secrets and variables → Actions → Variablesから変更でき、コードpushも臨時同期も不要。Quick TunnelのURLは再起動で変わる。設定登録を確認するまでfallbackを消さない。新規サービスは使用しない。
+URLの優先順位はRepository Variable `CITY_TERMUX_BASE_URL` → 同名Secret → 移行用の現行URL。Settings → Secrets and variables → Actions → Variablesから変更でき、コードpushも臨時同期も不要。Quick TunnelのURLは再起動で変わる。設定登録を確認するまでfallbackを消さない。旧 `TERMUX_BASE_URL` 設定を誤って再有効化しないよう、新しい設定名を使用する。Pythonプロセスへは従来通り `TERMUX_BASE_URL` として渡す。新規サービスは使用しない。
 
 ## 検証と保存
 
