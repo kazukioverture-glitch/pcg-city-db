@@ -25,6 +25,13 @@ class WeekCoverageAuditTests(unittest.TestCase):
         self.assertEqual(got["scheduled_only_all_categories"], 2)
         self.assertEqual(got["scheduled_only_unknown_category"], 1)
         self.assertEqual(got["scheduled_only_known_category"], 1)
+        self.assertEqual(
+            [e["event_id"] for e in got["scheduled_only_event_details"]],
+            ["3", "4"],
+        )
+        self.assertTrue(all(e["result_publication_verified"] is False
+                            for e in got["scheduled_only_event_details"]))
+        self.assertEqual(got["scheduled_only_event_details"][0]["event_date"], "2026-10-11")
         self.assertEqual(got["observed_result_events_category"], 1)
         self.assertEqual(got["observed_top8_rows_category"], 8)
         self.assertEqual(got["top16_incomplete_result_events_category"], 1)
