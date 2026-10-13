@@ -81,6 +81,40 @@ class OfficialDelegationTests(unittest.TestCase):
         self.run_sync(success=False)
         self.assertEqual(before, {name: (data / name).read_bytes() for name in names})
 
+    def test_pinned_manifest_checks_exactly_one_batch(self):
+        from collector import sync_official_api as official
+        from unittest.mock import patch
+        manifest = self.root / "manifest.json"
+        candidates = [
+            {"event_id": "batch-a", "date": "2026-10-05", "category": "オープン"},
+            {"event_id": "batch-b", "date": "2026-10-06", "category": "オープン"},
+        ]
+        manifest.write_text(json.dumps(candidates), encoding="utf-8")
+        old_paths = {name: getattr(official, name)
+                     for name in ("DATA", "TMP", "CITY_PATH", "DECKS_PATH",
+                                  "INDEX_PATH", "PARTIAL_CITY_PATH",
+                                  "PARTIAL_DECKS_PATH", "CHANGED_FLAG")}
+        args = ["sync_official_api", "--data-dir", str(self.root / "data"),
+                "--tmp-dir", str(self.root / "audit"),
+                "--discovery-file", str(manifest),
+                "--batch-offset", "1", "--max-detail-events", "1"]
+        with (patch.multiple(official, **old_paths),
+              patch("sys.argv", args),
+              patch.object(official, "discover_recent_city_events",
+                           side_effect=AssertionError("Manifest must suppress re-discovery")),
+              patch.object(official, "result_event_from_api", return_value=None) as result):
+            self.assertEqual(official.main(), 0)
+            result.assert_called_once_with("batch-b")
+        audit = json.loads((self.root / "audit/official_audit.json").read_text())
+        self.assertEqual(audit["discovered_event_count"], 2)
+        self.assertEqual(audit["selected_event_count"], 1)
+        self.assertEqual([r["event_id"] for r in audit["events"]], ["batch-b"])
+
+    def test_one_time_reconciliation_driver_imports(self):
+        import scripts.termux_reconcile_w03 as driver
+        self.assertEqual(driver.END, "2026-10-11")
+        self.assertEqual(driver.START, "2026-09-21")
+
     def test_validator_rejects_invalid_cards_and_duplicate_events(self):
         broken = copy.deepcopy(self.decks)
         broken["decks"]["test-deck"]["cards"][0]["count"] = 59
