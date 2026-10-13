@@ -32,6 +32,20 @@ def _build_identity_lookup():
 
 IDENTITY_LOOKUP = _build_identity_lookup()
 
+def _build_known_id_plain_names():
+    """Permit unsuffixed names only for existing, unambiguous card IDs."""
+    by_id = {}
+    for logical_name, identities in IDENTITIES["cards"].items():
+        for card_id in identities:
+            if card_id not in by_id:
+                by_id[card_id] = logical_name
+            elif by_id[card_id] != logical_name:
+                by_id[card_id] = None
+    return by_id
+
+
+KNOWN_ID_PLAIN_NAMES = _build_known_id_plain_names()
+
 
 def _validate_rules():
     if RULES.get("market") != "JP":
@@ -87,6 +101,10 @@ def _logical_counts(deck):
     counts = Counter()
     for card in deck["cards"]:
         logical_name = IDENTITY_LOOKUP.get((card.get("card_id"), card.get("name")))
+        if logical_name is None:
+            known_name = KNOWN_ID_PLAIN_NAMES.get(card.get("card_id"))
+            if known_name is not None and card.get("name") == known_name:
+                logical_name = known_name
         if logical_name is not None:
             counts[logical_name] += card["count"]
     return counts

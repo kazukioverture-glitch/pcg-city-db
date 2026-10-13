@@ -240,6 +240,17 @@ class ClassificationTests(unittest.TestCase):
         d["cards"][1]["name"] = "別のカード"
         self.assertIsNone(classify("code", d, NOW)["parent_archetype"])
 
+    def test_registered_card_id_plain_name_only(self):
+        d = deck(**{"メガルカリオex": 3})
+        registered_id = d["cards"][0]["card_id"]
+        d["cards"][0]["name"] = "メガルカリオex"
+        self.assertEqual(classify("code", d, NOW)["parent_archetype"], "メガルカリオex")
+        d["cards"][0]["card_id"] = "unregistered-card-id"
+        self.assertIsNone(classify("code", d, NOW)["parent_archetype"])
+        d["cards"][0]["card_id"] = registered_id
+        d["cards"][0]["name"] = "メガルカリオex別カード"
+        self.assertIsNone(classify("code", d, NOW)["parent_archetype"])
+
     def test_invalid_deck_and_no_input_mutation(self):
         d = deck(**{"ドラパルトex": 3})
         original = copy.deepcopy(d)
