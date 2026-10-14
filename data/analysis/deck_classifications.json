@@ -13860,6 +13860,161 @@
       "classified_at": "2026-10-06T17:13:06.606596+00:00",
       "classifier_version": "city-classifier-v1",
       "evidence": "{\"counts\":{},\"deck_sha256\":\"3a9cc6e6d4da845778cfbbe61f878763d7f212d24a9d4c0e4ebd92a30afff193\",\"reason\":\"outside_supported_parents\"}"
+    },
+    {
+      "deck_code": "8Kcc48-mZBXJP-GcxcxG",
+      "parent_archetype": "多色バレット",
+      "variant_tags": [
+        "メガガルーラex採用",
+        "リーリエのピッピex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"B\",\"event_id\":\"1115331\",\"event_date\":\"2026-10-10\",\"card_anchors\":[{\"card\":\"メガガルーラex\",\"minimum_copies\":2,\"observed_copies\":2},{\"card\":\"リーリエのピッピex\",\"minimum_copies\":2,\"observed_copies\":2},{\"card\":\"ラティアスex\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "8cxccK-4UrzP3-x8Gcxx",
+      "parent_archetype": "ゲンガーex",
+      "variant_tags": [
+        "メガゲンガーex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115052\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ゴース\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ゲンガーex\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"メガゲンガーex\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "FVkbFv-GbLKgo-wwVFkV",
+      "parent_archetype": "メガヤンマex",
+      "variant_tags": [
+        "ノココッチ採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115051\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ヤンヤンマ\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"メガヤンマex\",\"minimum_copies\":3,\"observed_copies\":3}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "FkkVkb-FavYA4-VfwdbF",
+      "parent_archetype": "ホップのオーロット",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115330\",\"event_date\":\"2026-10-10\",\"card_anchors\":[{\"card\":\"ホップのボクレー\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ホップのオーロット\",\"minimum_copies\":3,\"observed_copies\":3}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "FvFbf1-bRJd32-kVvbVv",
+      "parent_archetype": "オーガポン みどりのめんex／メガニウム",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115324\",\"event_date\":\"2026-10-07\",\"card_anchors\":[{\"card\":\"オーガポン みどりのめんex\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"メガニウム\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "JDx8cK-HhY1bK-cxGxx4",
+      "parent_archetype": "ホップのオーロット",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115054\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ホップのボクレー\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ホップのオーロット\",\"minimum_copies\":3,\"observed_copies\":3}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "Lg9LLg-XAjwlk-6Lning",
+      "parent_archetype": "ヒビキのバクフーン",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115051\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ヒビキのヒノアラシ\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ヒビキのマグマラシ\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ヒビキのバクフーン\",\"minimum_copies\":3,\"observed_copies\":3}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "MyEp2p-LS9fFS-yRppSy",
+      "parent_archetype": "ゲンガーex",
+      "variant_tags": [
+        "メガゲンガーex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115623\",\"event_date\":\"2026-10-10\",\"card_anchors\":[{\"card\":\"ゴース\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ゲンガーex\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"メガゲンガーex\",\"minimum_copies\":1,\"observed_copies\":1}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "SpUpyR-V8LfHv-ppMyMM",
+      "parent_archetype": "スピアーex",
+      "variant_tags": [
+        "ノココッチ採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115625\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ビードル\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"スピアーex\",\"minimum_copies\":4,\"observed_copies\":4}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "Vd1Ffw-VCrSye-kFVFbV",
+      "parent_archetype": "ダイゴのメタグロスex",
+      "variant_tags": [
+        "ゲノセクトex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115338\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ダイゴのダンバル\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ダイゴのメタグロスex\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"ゲノセクトex\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "cDx8GD-iXHP0m-c8cxYx",
+      "parent_archetype": "ダイゴのメタグロスex",
+      "variant_tags": [
+        "ゲノセクトex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115348\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"ダイゴのダンバル\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"ダイゴのメタグロスex\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"ゲノセクトex\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "fwkfbd-3kVII3-FVFkkF",
+      "parent_archetype": "ホップのオーロット",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115336\",\"event_date\":\"2026-10-10\",\"card_anchors\":[{\"card\":\"ホップのボクレー\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"ホップのオーロット\",\"minimum_copies\":4,\"observed_copies\":4}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "gP9ngH-RzOnVS-n6nn6g",
+      "parent_archetype": "オーガポン みどりのめんex／メガニウム",
+      "variant_tags": [],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115344\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"オーガポン みどりのめんex\",\"minimum_copies\":4,\"observed_copies\":4},{\"card\":\"メガニウム\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "xc8YYc-hRUwO9-axGcYx",
+      "parent_archetype": "多色バレット",
+      "variant_tags": [
+        "メガガルーラex採用",
+        "リーリエのピッピex採用"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"B\",\"event_id\":\"1115350\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"メガガルーラex\",\"minimum_copies\":2,\"observed_copies\":2},{\"card\":\"リーリエのピッピex\",\"minimum_copies\":2,\"observed_copies\":2},{\"card\":\"ラティアスex\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
+    },
+    {
+      "deck_code": "yRyM2p-6G0xLQ-3MpM2X",
+      "parent_archetype": "リーリエのピッピex",
+      "variant_tags": [
+        "ヨノワール型"
+      ],
+      "classification_status": "classified",
+      "classified_at": "2026-10-14T14:11:46.498Z",
+      "classifier_version": "manual",
+      "evidence": "{\"review\":\"W03 targeted manual review; card-list evidence, not player intent\",\"confidence\":\"A\",\"event_id\":\"1115625\",\"event_date\":\"2026-10-11\",\"card_anchors\":[{\"card\":\"リーリエのピッピex\",\"minimum_copies\":3,\"observed_copies\":3},{\"card\":\"ヨノワール\",\"minimum_copies\":2,\"observed_copies\":2}],\"source_city_sha256\":\"870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159\",\"source_decks_sha256\":\"8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0\",\"source_updated_at\":\"2026-10-14T22:31:28+09:00\",\"calendar_id\":\"2027-s1-mon-sun-v1\"}"
     }
   ]
 }
