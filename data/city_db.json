@@ -1,9 +1,9 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-10-15T17:30:47+09:00",
+  "updated_at": "2026-10-15T19:30:20+09:00",
   "event_count": 306,
-  "placement_count": 4299,
+  "placement_count": 4301,
   "events": [
     {
       "event_id": "1115370",
@@ -4714,7 +4714,7 @@
       "date": "2026-10-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115355/result",
-      "placement_count": 15,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -4880,14 +4880,25 @@
           "deck_code": "pyXRpp-5YAy9I-ppMU3p",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pyXRpp-5YAy9I-ppMU3p",
           "raw_text": "9 位 15pt\nアキ\nプレイヤーID：0065943197\n愛媛県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "サトウ",
+          "player_id": "0077450610",
+          "prefecture": "愛媛県",
+          "player_url": null,
+          "deck_code": "yMyS3S-5Y5AmS-pSRpMy",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMyS3S-5Y5AmS-pSRpMy",
+          "raw_text": "9 位 15pt\nサトウ\nプレイヤーID：0077450610\n愛媛県 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-10-12T22:32:54+09:00",
-      "collected_at": "2026-10-15T07:30:35+09:00",
+      "collected_at": "2026-10-15T19:30:16+09:00",
       "venue_name": "TCG桜華",
       "venue_prefecture": "愛媛県",
-      "top16_captured_rows": 7
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115354",
@@ -6422,7 +6433,7 @@
       "date": "2026-10-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115063/result",
-      "placement_count": 15,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -6588,14 +6599,25 @@
           "deck_code": "pyMyRX-HMrA1L-yMSMyM",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/pyMyRX-HMrA1L-yMSMyM",
           "raw_text": "9 位 15pt\nぬい\nプレイヤーID：0001096567\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "りき",
+          "player_id": "0035984784",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0035984784",
+          "deck_code": "yMp3Mp-o9XI0u-MyyMMR",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMp3Mp-o9XI0u-MyyMMR",
+          "raw_text": "9 位 15pt\nりき\nプレイヤーID：0035984784\n埼玉県 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-10-14T07:02:20+09:00",
-      "collected_at": "2026-10-15T07:30:22+09:00",
+      "collected_at": "2026-10-15T19:30:15+09:00",
       "venue_name": "トーナメントセンターバトロコ　川越駅前",
       "venue_prefecture": "埼玉県",
-      "top16_captured_rows": 7
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115062",
