@@ -10,6 +10,14 @@ from analysis.classification import classify
 from analysis.state import ROOT, read_state
 from analysis.weekly import _classification_resolver
 
+# Immutable review input: 12d46b0b8ceddc66342029cc27d0f1acf0a0b047:data/index.json.
+# The whole live DB hash changes whenever unrelated new decks are collected.
+REVIEW_SOURCE = {
+    "source_updated_at": "2026-10-14T22:31:28+09:00",
+    "source_city_sha256": "870eaf4babb660a86425fd9530ef280687944664fb4b0efa35b079df80386159",
+    "source_decks_sha256": "8a34c89a29ba5fb2e3aeb0d397843f7b1bc5c7d3036b7ad4bd84e77e3a1b66a0",
+}
+
 MANUAL_EXPECTED = {
     "FvFbf1-bRJd32-kVvbVv": "オーガポン みどりのめんex／メガニウム",
     "gP9ngH-RzOnVS-n6nn6g": "オーガポン みどりのめんex／メガニウム",
@@ -69,7 +77,8 @@ class W03ManualReviewTests(unittest.TestCase):
                 self.assertEqual(deck["total_cards"], 60)
                 self.assertEqual(sum(card["count"] for card in deck["cards"]), 60)
                 proof = json.loads(record["evidence"])
-                self.assertEqual(proof["source_decks_sha256"], self.index["decks_sha256"])
+                for key, expected in REVIEW_SOURCE.items():
+                    self.assertEqual(proof[key], expected)
                 self.assertEqual(proof["calendar_id"], "2027-s1-mon-sun-v1")
                 for anchor in proof["card_anchors"]:
                     observed = sum(card["count"] for card in deck["cards"]

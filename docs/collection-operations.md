@@ -48,3 +48,7 @@ PYTHONPATH=tests:. python -m unittest test_transaction_recovery test_v122.Collec
 ```
 
 統合検収はAnalysis CIと同じ `python -m unittest discover -s tests -v`、`python -m analysis validate-state`、旧W02 FINALスモーク・回答インデックス生成・カード候補検査。旧FINAL/予測を変更せず、出力は `.tmp/analysis-ci` に限定する。
+
+## 週次の定時出力
+
+毎週の分析発行、欠測の影響評価、補完の打切り、最小復旧は[週次運用](weekly-delivery-operations.md)を参照。取得の完全性と資料の定時発行は別に判定する。
