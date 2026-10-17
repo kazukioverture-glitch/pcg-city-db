@@ -72,6 +72,11 @@ def missingness(city, ledger, week_id, scope, category="オープン"):
             "archetype_sensitivity": sensitivity}
 
 
+def render_public_markdown(report):
+    """Reader-facing results; operational findings remain in JSON diagnostics."""
+    return render_markdown(report, include_internal=False)
+
+
 def generate(repo, output_root, week_id, now=None):
     repo = Path(repo).resolve()
     output_root = Path(output_root).resolve()
@@ -142,12 +147,7 @@ def generate(repo, output_root, week_id, now=None):
                "source_updated_after_week_end": source_time.astimezone(JST).date() > end,
                "full_week_coverage_verified": False, "mdm_external_axes": "not_assessed",
                "coverage": scope["coverage"], "missingness": impact}
-    intro = (f"> **{week_id} 定時版 / INTERIM / {report['audit']['status']}**\n> 取得済み公開結果の分析。全大会取得完了・FINAL・MDM全工程完了を意味しません。\n"
-             f"> 入力更新: {source_time.isoformat()}。24時間超の古い入力: {summary['source_stale_24h']}。\n"
-             f"> 台帳の網羅性は未検証。全国の欠測影響の上限は不明。\n"
-             f"> 台帳内・1大会8枠を仮定した感度分析: 潜在欠測{impact['conditional_potential_missing_top8_slots']}枠、"
-             f"取得済み未分類{impact['unclassified_observed_top8_rows']}行。\n\n")
-    content = render_markdown(report).replace("同じFINAL入力の過去週データを再計算。", "同一Git版の月〜日を再計算。")
+    content = render_public_markdown(report)
     analyzer_revision = subprocess.check_output(
         ["git", "log", "-1", "--format=%H", "--", "analysis", "collector/validate_snapshot.py",
          "collector/merge_termux_snapshot.py"], cwd=repo, text=True).strip()
@@ -165,7 +165,7 @@ def generate(repo, output_root, week_id, now=None):
     try:
         for name, doc in (("report.json", report), ("summary.json", summary)):
             (temp / name).write_text(json.dumps(doc, ensure_ascii=False, indent=2, allow_nan=False)+"\n", encoding="utf-8")
-        (temp / "report.md").write_text(intro + content, encoding="utf-8")
+        (temp / "report.md").write_text(content, encoding="utf-8")
         os.rename(temp, base)
     finally:
         if temp.exists():

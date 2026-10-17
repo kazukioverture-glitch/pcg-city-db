@@ -834,7 +834,7 @@ def analyze_snapshot(snapshot_dir, *, category="オープン", region="愛知県
     return report
 
 
-def render_markdown(report):
+def render_markdown(report, *, include_internal=True):
     def pct(ratio):
         return "n/a" if ratio["value"] is None else f"{ratio['value'] * 100:.1f}%"
 
@@ -842,10 +842,10 @@ def render_markdown(report):
     regional_block = report["current_week"]["regional"]
     regional = regional_block["analysis"]
     lines = [
-        f"# シティリーグ {report['week_id']} {report['analysis_stage']} 環境分析",
+        f"# シティリーグ {report['week_id']}" + (f" {report['analysis_stage']}" if include_internal else "") + " 環境分析",
         "",
         f"- 対象: {report['category']}",
-        f"- CURRENT_WEEK: {report['current_week']['period_start']} ～ {report['current_week']['period_end']}",
+        f"- {'CURRENT_WEEK' if include_internal else '対象期間'}: {report['current_week']['period_start']} ～ {report['current_week']['period_end']}",
         f"- snapshot: `{report['snapshot_id']}`",
         "- 比率は公開Top8捕捉行ベース。全参加者の使用率ではない。",
         f"- 分類provenance: `{report['provenance']['classification_mode']}`。snapshot内60枚リストからのpost-snapshot派生分析を含む。",
@@ -860,6 +860,8 @@ def render_markdown(report):
         "| 親アーキタイプ | 件数 | Top8占有率 |",
         "|---|---:|---:|",
     ]
+    if not include_internal:
+        lines = [line for line in lines if not line.startswith(("- snapshot:", "- 分類provenance:", "- 分類器:"))]
     for row in national["stage_composition"]["top8"]:
         lines.append(f"| {row['parent_archetype']} | {row['count']} | {pct(row['top_stage_share'])} |")
     lines += ["", "## CURRENT_WEEK｜勝ち上がり", ""]
@@ -887,7 +889,7 @@ def render_markdown(report):
             lines.append(
                 f"- {card['label']}: {card['adopting_lists']}/{watch['known_deck_lists']} "
                 f"= {pct(card['adoption_rate'])}、採用時平均 {avg}枚")
-    else:
+    elif include_internal:
         lines.append("- 監視カード: exact ID辞書未設定。論理カード単位の採用率は判断不能。")
     lines += ["", f"## 全国 vs {regional_block['region']}"]
     lines.append(
@@ -941,16 +943,24 @@ def render_markdown(report):
             for row in scope["comparison"]["variant_prevalence"]:
                 delta = "n/a" if row["delta"] is None else f"{row['delta']*100:+.1f}pt"
                 lines.append(f"- {row['parent_archetype']} / {row['variant_tag']}: 親内構成比 {pct(row['previous_prevalence'])} → {pct(row['current_prevalence'])} ({delta})")
-    lines += ["", "## 外部考察", ""]
     external = report["external_analysis"]
-    if external["status"] != "available":
+    if include_internal or external["status"] == "available":
+        lines += ["", "## 外部考察", ""]
+    if external["status"] != "available" and include_internal:
         lines.append(f"- {report['week_id']}対象の処理済み外部考察は未結合。")
-    else:
+    elif external["status"] == "available":
         for source in external["records"]:
             lines.append(f"- {source['source_id']}: 確認事実 {len(source.get('confirmed_facts') or [])}件、作者考察 {len(source.get('author_analysis') or [])}件")
-    lines += ["", "## 未解決事項", ""]
-    lines.extend(f"- {item}" for item in report["limitations"])
-    lines += ["", "## 監査", f"- status: **{report['audit']['status']}**"]
-    for finding in report["audit"]["findings"]:
-        lines.append(f"- {finding['level']} {finding['code']}: {finding['message']}")
+    if include_internal:
+        lines += ["", "## 未解決事項", ""]
+        lines.extend(f"- {item}" for item in report["limitations"])
+        lines += ["", "## 監査", f"- status: **{report['audit']['status']}**"]
+        for finding in report["audit"]["findings"]:
+            lines.append(f"- {finding['level']} {finding['code']}: {finding['message']}")
+    else:
+        # Keep numerical definitions and statistical uncertainty in public output.
+        lines = [line for line in lines if not line.startswith((
+            "- historical_basis:", "- 親分類判明:", "- 有効60枚リスト内の親分類カバレッジ:"))
+                 and not (line == "## 構築・採用カード" and watch["status"] != "configured")]
+        lines = [line.replace("未分類", "その他").replace("95%CI", "95%信頼区間") for line in lines]
     return "\n".join(lines) + "\n"

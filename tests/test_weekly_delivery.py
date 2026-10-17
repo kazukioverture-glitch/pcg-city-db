@@ -63,6 +63,15 @@ class WeeklyDeliveryTests(unittest.TestCase):
             self.assertEqual(summary['stage'], 'INTERIM')
             self.assertTrue(summary['source_stale_24h'])
             self.assertEqual(summary['audit_status'], 'WARN')
+            public = (output/'report.md').read_text()
+            for internal_term in ('WARN', 'INTERIM', '未検証', '未結合', '未設定', '未解決', '監査', 'FAIL', 'できていない'):
+                self.assertNotIn(internal_term, public)
+            self.assertIn('対象期間:', public)
+            self.assertIn('分母:', public)
+            self.assertIn('95%信頼区間', public)
+            internal = json.loads((output/'report.json').read_text())
+            self.assertEqual(internal['audit']['status'], 'WARN')
+            self.assertFalse(internal['coverage_gate']['full_week_coverage_verified'])
             self.assertEqual(before, {p: Path(p).read_bytes() for p in before})
 
     def test_corrupted_input_and_protected_output_stop(self):
