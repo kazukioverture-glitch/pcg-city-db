@@ -1,0 +1,29 @@
+{
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "week_id": "W03",
+  "stage": "FINAL",
+  "release_scope": "captured_published_results_only",
+  "full_week_coverage_verified": false,
+  "source_commit": "8a70796bcd96b0820c4bea357fa450e120802580",
+  "snapshot_id": "observed-8a70796bcd96-w03",
+  "source_updated_at": "2026-10-17T17:32:38+09:00",
+  "accepted_schedule_only_event_ids": [
+    "1115351"
+  ],
+  "top16_excluded_event_ids_by_reason": {
+    "not_checked": [],
+    "observed_rows_not_captured": [],
+    "source_fewer_than_eight_rows_reason_unknown": [
+      "1115332"
+    ],
+    "observation_inconsistent_or_unknown": []
+  },
+  "result_events_open": 73,
+  "top8_rows_open": 580,
+  "top8_60_lists_known": 580,
+  "top16_complete_events_open": 72,
+  "unclassified_top8_rows_open": 2,
+  "audit_status": "WARN",
+  "period_start": "2026-10-05",
+  "period_end": "2026-10-11"
+}

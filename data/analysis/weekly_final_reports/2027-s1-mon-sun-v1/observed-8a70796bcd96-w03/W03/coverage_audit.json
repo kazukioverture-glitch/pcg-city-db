@@ -1,0 +1,83 @@
+{
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "category": "オープン",
+  "scheduled_and_result_ledger_event_ids": 77,
+  "observed_result_events_all_categories": 76,
+  "observed_result_events_category": 73,
+  "observed_top8_rows_category": 580,
+  "scheduled_only_all_categories": 1,
+  "scheduled_only_unknown_category": 1,
+  "scheduled_only_known_category": 0,
+  "scheduled_only_event_ids": [
+    "1115351"
+  ],
+  "scheduled_only_event_details": [
+    {
+      "event_id": "1115351",
+      "event_date": "2026-10-11",
+      "venue_name": "竜星の嵐　名古屋店",
+      "venue_prefecture": "愛知県",
+      "category": null,
+      "event_status_recorded": "scheduled",
+      "result_publication_verified": false
+    }
+  ],
+  "top16_complete_result_events_category": 72,
+  "top16_incomplete_result_events_category": 1,
+  "top16_excluded_reason_counts": {
+    "not_checked": 0,
+    "observed_rows_not_captured": 0,
+    "source_fewer_than_eight_rows_reason_unknown": 1,
+    "observation_inconsistent_or_unknown": 0
+  },
+  "top16_excluded_event_ids_by_reason": {
+    "not_checked": [],
+    "observed_rows_not_captured": [],
+    "source_fewer_than_eight_rows_reason_unknown": [
+      "1115332"
+    ],
+    "observation_inconsistent_or_unknown": []
+  },
+  "top16_exclusion_reason_caveat": "A source showing fewer than eight ranks 9-16 can reflect fewer than 16 actual entrants, limited publication, or another cause. Neither published ranking row counts nor event capacity prove attendance.",
+  "observed_daily_results_category": {
+    "2026-10-05": {
+      "result_events": 1,
+      "top8_rows": 8,
+      "top16_complete_events": 1
+    },
+    "2026-10-06": {
+      "result_events": 5,
+      "top8_rows": 40,
+      "top16_complete_events": 5
+    },
+    "2026-10-07": {
+      "result_events": 3,
+      "top8_rows": 24,
+      "top16_complete_events": 3
+    },
+    "2026-10-08": {
+      "result_events": 4,
+      "top8_rows": 32,
+      "top16_complete_events": 4
+    },
+    "2026-10-09": {
+      "result_events": 3,
+      "top8_rows": 24,
+      "top16_complete_events": 3
+    },
+    "2026-10-10": {
+      "result_events": 24,
+      "top8_rows": 188,
+      "top16_complete_events": 23
+    },
+    "2026-10-11": {
+      "result_events": 33,
+      "top8_rows": 264,
+      "top16_complete_events": 33
+    }
+  },
+  "scheduled_only_are_unknown_not_zero": true,
+  "all_scheduled_events_checked": false,
+  "full_week_coverage_verified": false
+}
