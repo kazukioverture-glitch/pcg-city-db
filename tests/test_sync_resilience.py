@@ -144,6 +144,13 @@ class TransactionTests(unittest.TestCase):
         env = patch.dict(os.environ, {'TERMUX_BASE_URL': 'https://example.test', 'GITHUB_ACTIONS': 'false'})
         env.start()
         self.addCleanup(env.stop)
+        # Transaction tests exercise mocked DB acquisition. Keep schedule I/O
+        # offline too; dedicated schedule tests cover those integrations.
+        for name, result in [('download_one', {'success': False}),
+                             ('refresh_local_schedule', None)]:
+            schedule = patch.object(transaction, name, return_value=result)
+            schedule.start()
+            self.addCleanup(schedule.stop)
         self.root = Path(self.tmp.name)
         for name in transaction.DATA_FILES:
             path = self.root / 'data' / name

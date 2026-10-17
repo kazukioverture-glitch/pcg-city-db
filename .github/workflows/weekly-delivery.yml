@@ -1,0 +1,81 @@
+name: Weekly observed-results delivery
+
+on:
+  schedule:
+    # Tuesday 10:00 JST, after the regular 08:00 transfer. No extra collection.
+    - cron: "0 1 * * 2"
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Closed week (W04 etc); blank selects latest closed JST week"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: city-db-sync
+  cancel-in-progress: false
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Install analysis requirements
+        run: python -m pip install -r requirements-analysis.txt
+      - name: Generate pinned weekly results
+        id: report
+        env:
+          REQUESTED_WEEK: ${{ inputs.week }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .tmp
+          args=()
+          if [[ -n "$REQUESTED_WEEK" ]]; then args+=(--week "$REQUESTED_WEEK"); fi
+          if ! python -m analysis.weekly_delivery "${args[@]}" > .tmp/weekly-path.txt 2> .tmp/weekly-error.txt; then
+            echo '### Weekly delivery FAIL' >> "$GITHUB_STEP_SUMMARY"
+            echo 'No new analysis published. Previous reports and DB preserved. See diagnostics.' >> "$GITHUB_STEP_SUMMARY"
+            cat .tmp/weekly-error.txt >&2
+            exit 1
+          fi
+          result="$(cat .tmp/weekly-path.txt)"
+          echo "path=$result" >> "$GITHUB_OUTPUT"
+          cat "$result/report.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Archive weekly results
+        if: steps.report.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-results-${{ github.run_id }}
+          path: ${{ steps.report.outputs.path }}
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish derivative only
+        if: steps.report.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "$(git status --porcelain -- data/city_db.json data/city_decks.json data/index.json data/analysis/event_ledger.json data/analysis/weekly_snapshots data/analysis/forecast_log.json data/analysis/deck_classifications.json)" ]]; then
+            echo 'Protected data changed'; exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/analysis/weekly_deliveries
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish weekly observed-results analysis'
+            git push origin HEAD:main
+          fi
+      - name: Retain failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-delivery-failure-${{ github.run_id }}
+          path: .tmp/weekly-*.txt
+          if-no-files-found: warn
+          retention-days: 14
