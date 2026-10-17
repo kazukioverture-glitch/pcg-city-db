@@ -1,0 +1,32 @@
+{
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "week_id": "W03",
+  "stage": "INTERIM",
+  "week_start": "2026-10-05",
+  "week_end": "2026-10-11",
+  "source_updated_at": "2026-10-17T07:30:31+09:00",
+  "last_observed_event_day": "2026-10-11",
+  "input_commit": "3d632c90aa6997bd2ace3cf9b8455cc99e422999",
+  "input_sha256": {
+    "data/city_db.json": "193edf77b290147a146693d22d2ccb0c175090be4fd559affd2ac1e0c5031d94",
+    "data/city_decks.json": "542b52ad5b4f4ecd162782ff86c9c5753a1b2f9e5307932a089fb9a533d42a78",
+    "data/analysis/deck_classifications.json": "ee8af1d72d8da9299605d57b7f0881a3bd327689e5c20b91d1b0fe9ec858f787",
+    "data/index.json": "48012c4795763938f2ec1e899926fdd4826c6b6502a52863357b5fa8942615e9",
+    "data/analysis/event_ledger.json": "64f20366b3c5994c528198515ff9ef042caa9af85b6f09d3950c552dc7335955"
+  },
+  "result_events_open": 73,
+  "top8_rows_open": 580,
+  "top8_deck_lists_known": 580,
+  "top16_complete_events_open": 72,
+  "top16_rows_complete_open": 1152,
+  "top16_matched_top8_open": 576,
+  "aichi_events": 4,
+  "aichi_top8_rows": 32,
+  "audit": "WARN",
+  "full_week_coverage_verified": false,
+  "legacy_final_mutated": false,
+  "scheduled_only_events_all_categories": 1,
+  "scheduled_only_events_unknown_category": 1,
+  "top16_incomplete_events_open": 1,
+  "unclassified_top8_rows_open": 2
+}
