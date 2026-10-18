@@ -1,10 +1,11 @@
 """Tests for evidence limits and baseline-relative card factors."""
 import unittest
 
-from analysis.dhelmise_card_factors import analyze, bh_adjust, counts
+from analysis.dhelmise_card_factors import analyze, bh_adjust, counts, stratified_cmh
 
 BASE = {
     "source_decks_sha256": "decks",
+    "source_city_sha256": "city",
     "reference": {
         "card_count": 2,
         "copy_count": 5,
@@ -67,11 +68,22 @@ class FactorTests(unittest.TestCase):
         self.assertEqual(
             [x for x in groups if x["kichi_adopted"] and not x["shaymin_adopted"]][0]["results"]["top4"], 1)
         self.assertEqual(len(result["exploratory_feature_tests"]), 12)
+        self.assertEqual(result["exploratory_feature_tests"][0]["adjusted_for_week"]["strata"], 1)
 
     def test_wrong_source_rejected(self):
         invalid = dict(BASE, source_decks_sha256="wrong")
         with self.assertRaises(ValueError):
             analyze([], [], invalid, MANIFEST, ["W01"])
+
+    def test_stratified_cmh_handles_sparse_strata(self):
+        rows = [{"rank": r, "yes": yes, "group": g}
+                for r, yes, g in [(3, True, "a"), (5, False, "a"),
+                                  (3, False, "a"), (9, False, "a"),
+                                  (5, True, "b"), (3, False, "b")]]
+        result = stratified_cmh(rows, lambda r: r["yes"], lambda r: r["group"])
+        self.assertEqual(result["strata"], 2)
+        self.assertEqual(result["informative_strata"], 2)
+        self.assertIsNotNone(result["normal_approx_two_sided_p"])
 
     def test_printings_merge(self):
         cards = [

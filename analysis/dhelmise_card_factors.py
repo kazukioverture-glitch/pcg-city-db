@@ -99,6 +99,41 @@ def _contingency(rows, predicate):
     }
 
 
+def stratified_cmh(rows, predicate, stratifier):
+    """Exploratory Cochran-Mantel-Haenszel normal approximation.
+
+    Controls only for declared discrete strata; it does not identify
+    independent causal effects, and sparse strata can remain unstable.
+    """
+    strata = defaultdict(list)
+    for r in rows:
+        strata[stratifier(r)].append(r)
+    residual, variance, odds_num, odds_den, informative = 0.0, 0.0, 0.0, 0.0, 0
+    for group in strata.values():
+        a = sum(predicate(r) and top4(r) for r in group)
+        b = sum(predicate(r) and not top4(r) for r in group)
+        c = sum(not predicate(r) and top4(r) for r in group)
+        d = len(group) - a - b - c
+        n, selected, successes = a + b + c + d, a + b, a + c
+        if n > 1 and 0 < selected < n and 0 < successes < n:
+            residual += a - selected * successes / n
+            variance += (selected * (n - selected) * successes *
+                         (n - successes) / (n * n * (n - 1)))
+            informative += 1
+        if n:
+            odds_num += a * d / n
+            odds_den += b * c / n
+    z = residual / math.sqrt(variance) if variance else None
+    return {
+        "strata": len(strata),
+        "informative_strata": informative,
+        "common_odds_ratio": round(odds_num / odds_den, 6) if odds_den else None,
+        "normal_approx_two_sided_p": round(math.erfc(abs(z) / math.sqrt(2)), 6)
+        if z is not None else None,
+        "method": "CMH without continuity correction; sparse-data exploratory",
+    }
+
+
 def _week_summary(rows, predicate, weeks):
     return {
         w: _contingency([r for r in rows if r["_week"] == w], predicate)
@@ -108,7 +143,8 @@ def _week_summary(rows, predicate, weeks):
 
 def analyze(top16, dhelmise, baseline, manifest, weeks):
     source_sha = manifest["source_decks_sha256"]
-    if baseline["source_decks_sha256"] != source_sha:
+    if (baseline["source_decks_sha256"] != source_sha or
+            baseline["source_city_sha256"] != manifest["source_city_sha256"]):
         raise ValueError("Baseline/source provenance mismatch")
     complete = defaultdict(list)
     for row in top16:
@@ -123,6 +159,8 @@ def analyze(top16, dhelmise, baseline, manifest, weeks):
         row["_week"] = row.get("_week_source")
         if row["_week"] is None:
             raise ValueError("Unexpected date outside known weeks")
+    if set(weeks) != {r["_week"] for r in universe}:
+        raise ValueError("Cohort weeks mismatch")
     eligible = [r for r in universe if r["event_id"] in eligible_events]
     refs = baseline["reference"]["cards"]
     if baseline["population"] != len(universe):
@@ -158,6 +196,10 @@ def analyze(top16, dhelmise, baseline, manifest, weeks):
             "feature": {"mode": spec[2], "count": spec[3]},
             "overall": overall,
             "by_week": _week_summary(eligible, predicate, weeks),
+            "adjusted_for_week": stratified_cmh(eligible, predicate, lambda r: r["_week"]),
+            "adjusted_for_week_and_dudunsparce_ex": stratified_cmh(
+                eligible, predicate, lambda r: (
+                    r["_week"], r["_counts"].get("ノココッチex", 0) > 0)),
         })
     ps = [item["overall"]["fisher_two_sided"] for item in tests]
     qvalues = bh_adjust([p if p is not None else 1 for p in ps])
@@ -218,9 +260,8 @@ def build(root):
     root = Path(root)
     manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
     baseline = json.loads((root / "dhelmise_consensus.json").read_text(encoding="utf-8"))
-    t, d, weeks = [], [], []
+    t, d = [], []
     for w in manifest["weeks"]:
-        weeks.append((w["week_id"],))
         for key, arr in (("top16_index_path", t), ("dhelmise_lists_path", d)):
             path = root / w[key].replace("data/deck_library/", "")
             doc = json.loads(path.read_text(encoding="utf-8"))
