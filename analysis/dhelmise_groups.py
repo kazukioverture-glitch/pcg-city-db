@@ -18,7 +18,7 @@ PRINTING_SUFFIX = re.compile(r"[A-Z][A-Za-z0-9-]*[0-9]+/[A-Za-z0-9-]+")
 def pokemon_count(cards, name):
     total = 0
     for card in cards:
-        if not str(card.get("section", "")).startswith("ポケモン"):
+        if not str(card.get("section", "")).startswith("ポケモン ("):
             continue
         actual = card.get("name")
         if not isinstance(actual, str) or not actual.startswith(name):
