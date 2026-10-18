@@ -30,3 +30,19 @@ python -m unittest tests.test_deck_library -v
 \`\`\`
 
 GitHub Actions「Build Top16 deck library」は原本\`data/index.json\`が更新された時に自動で派生キャッシュを再生成し、手動起動にも対応。元データ自体の収集処理や対象大会は変更しません。
+
+## ダダリンの構造別分類
+
+デッキ内のポケモンを元に、互いに重複しない主分類タグを全リストに付与します。
+
+- ヤバソチャ採用型：ヤバソチャを1枚以上含むもの。
+- フーディン併用型：ヤバソチャなし・フーディンを1枚以上含むもの。
+- ヤバソチャ・フーディン非採用型：両方含まないもの（チャデスのみの場合も含む）。
+
+別軸でノココッチex併用型・通常ノココッチ型（exなし）・ノココッチ非採用の3タグを付けます。
+
+- 週別60枚データ：`dhelmise/Wxx.json` の各行に `archetype_group` と `dunsparce_engine_group` を追加。
+- 集計結果：`data/deck_library/dhelmise_groups.json`。元DBのSHA256と週単位件数を保持。
+- 再生成：`python -m analysis.deck_library && python -m analysis.dhelmise_groups`。
+
+デッキ分類は採用カードの構造的な分類であり、プレイスタイルや対戦勝率の認定ではありません。入賞枠を単位として集計し、同じデッキコードが別大会で使われた場合は別件です。

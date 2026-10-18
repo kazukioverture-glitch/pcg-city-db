@@ -7,6 +7,7 @@ on:
     paths:
       - "data/index.json"
       - "analysis/deck_library.py"
+      - "analysis/dhelmise_groups.py"
       - "analysis/classification_cards.json"
       - ".github/workflows/build-deck-library.yml"
 
@@ -26,7 +27,9 @@ jobs:
         with:
           ref: main
       - name: Validate and materialize read-only deck library
-        run: python -m analysis.deck_library
+        run: |
+          python -m analysis.deck_library
+          python -m analysis.dhelmise_groups
       - name: Commit derived index only when changed
         shell: bash
         run: |
