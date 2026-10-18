@@ -17,8 +17,8 @@
       "row_count": 1024,
       "valid_60_rows": 1024,
       "missing_deck_rows": 0,
-      "dhelmise_rows": 36,
-      "banette_dhelmise_pattern_rows": 33
+      "dhelmise_rows": 53,
+      "banette_dhelmise_pattern_rows": 49
     },
     {
       "week_id": "W02",
@@ -29,8 +29,8 @@
       "row_count": 1440,
       "valid_60_rows": 1437,
       "missing_deck_rows": 3,
-      "dhelmise_rows": 44,
-      "banette_dhelmise_pattern_rows": 43
+      "dhelmise_rows": 60,
+      "banette_dhelmise_pattern_rows": 59
     },
     {
       "week_id": "W03",
@@ -41,8 +41,8 @@
       "row_count": 1180,
       "valid_60_rows": 1180,
       "missing_deck_rows": 0,
-      "dhelmise_rows": 19,
-      "banette_dhelmise_pattern_rows": 18
+      "dhelmise_rows": 56,
+      "banette_dhelmise_pattern_rows": 55
     },
     {
       "week_id": "W04",
@@ -53,8 +53,8 @@
       "row_count": 1151,
       "valid_60_rows": 1148,
       "missing_deck_rows": 3,
-      "dhelmise_rows": 26,
-      "banette_dhelmise_pattern_rows": 26
+      "dhelmise_rows": 51,
+      "banette_dhelmise_pattern_rows": 51
     }
   ]
 }
