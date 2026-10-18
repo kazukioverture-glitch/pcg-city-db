@@ -1,0 +1,135 @@
+{
+  "schema_version": "dhelmise-holdout-v1",
+  "training_source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "training_base_copies_frozen": 52,
+  "training_base_cards_frozen": [
+    {
+      "card": "カゲボウズ",
+      "copies": 4
+    },
+    {
+      "card": "ダダリン",
+      "copies": 4
+    },
+    {
+      "card": "ジュペッタ",
+      "copies": 3
+    },
+    {
+      "card": "ノコッチ",
+      "copies": 3
+    },
+    {
+      "card": "チャデス",
+      "copies": 2
+    },
+    {
+      "card": "ノココッチ",
+      "copies": 2
+    },
+    {
+      "card": "リーリエのピッピex",
+      "copies": 2
+    },
+    {
+      "card": "ガチグマ アカツキex",
+      "copies": 1
+    },
+    {
+      "card": "ヤバソチャ",
+      "copies": 1
+    },
+    {
+      "card": "ハイパーボール",
+      "copies": 4
+    },
+    {
+      "card": "ポケパッド",
+      "copies": 4
+    },
+    {
+      "card": "夜のタンカ",
+      "copies": 2
+    },
+    {
+      "card": "リーリエの決心",
+      "copies": 4
+    },
+    {
+      "card": "ボスの指令",
+      "copies": 3
+    },
+    {
+      "card": "ムク",
+      "copies": 3
+    },
+    {
+      "card": "プリズムタワー",
+      "copies": 3
+    },
+    {
+      "card": "テレパス超エネルギー",
+      "copies": 4
+    },
+    {
+      "card": "基本超エネルギー",
+      "copies": 2
+    },
+    {
+      "card": "レガシーエネルギー",
+      "copies": 1
+    }
+  ],
+  "new_source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "new_source_updated_at": "2026-10-18T07:31:27+09:00",
+  "validation_weeks": [
+    "W05",
+    "W06",
+    "W07",
+    "W08"
+  ],
+  "available_weeks": [],
+  "status": "not_started",
+  "complete_event_count": 0,
+  "eligible_common_engine_decks": {
+    "placements": 0,
+    "top4": 0,
+    "top4_rate": null,
+    "wilson95": null,
+    "unique_codes": 0
+  },
+  "exclusive_comparison": {
+    "kichi_only": {
+      "placements": 0,
+      "top4": 0,
+      "top4_rate": null,
+      "wilson95": null,
+      "unique_codes": 0
+    },
+    "shaymin_only": {
+      "placements": 0,
+      "top4": 0,
+      "top4_rate": null,
+      "wilson95": null,
+      "unique_codes": 0
+    },
+    "fisher_two_sided_p": null,
+    "week_and_dudunsparce_ex_stratified": {
+      "strata": 0,
+      "informative_strata": 0,
+      "common_odds_ratio": null,
+      "normal_approx_two_sided_p": null,
+      "method": "CMH without continuity correction; sparse-data exploratory"
+    },
+    "sufficient_group_size": false,
+    "positive_direction_observed": null,
+    "exploratory_replication_criterion_met": false
+  },
+  "notes": [
+    "Not an estimate of win rate among all tournament entrants.",
+    "Out-of-training validation reduces overfitting but does not remove player, matchup or card-composition confounding.",
+    "Future weekly published-event coverage may remain incomplete; do not declare confirmation without separate completeness audit.",
+    "The training baseline and primary comparison come from an immutable protocol, not recalculated after future data.",
+    "The controlled 59-card A/B swap requires independent head-to-head battle records."
+  ]
+}
