@@ -39,11 +39,11 @@ class ConsensusTests(unittest.TestCase):
         # 90% same card, 80% same count, 20% alternative copy count
         arr = [
             row(str(i), {"ダダリン": 4, "ジュペッタ": 3, "ハイパーボール": 4,
-                         "夜のタンカ": 2, "基本超エネルギー": 47})
+                         "夜のタンカ": 2, "variations_"+str(i): 47})
             for i in range(8)
         ] + [
             row(str(i), {"ダダリン": 4, "ジュペッタ": 4, "ハイパーボール": 4,
-                         "夜のタンカ": 2, "基本超エネルギー": 46})
+                         "夜のタンカ": 2, "variations_"+str(i): 46})
             for i in range(8, 10)
         ]
         report = consensus(arr, META)
