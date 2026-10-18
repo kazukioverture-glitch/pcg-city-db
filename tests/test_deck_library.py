@@ -35,6 +35,26 @@ class LibraryTests(unittest.TestCase):
         self.assertTrue(_valid_60(deck()))
         self.assertEqual(_identity_count(deck(), ALIASES, "ダダリン"), 3)
         self.assertEqual(_identity_count(deck(bad_name=True), ALIASES, "ダダリン"), 0)
+        # Same approved ID with an unsuffixed display name is valid when
+        # no second logical card shares that card ID.
+        plain = deck()
+        plain["cards"][0]["card_id"] = "50256"
+        expanded = {
+            **ALIASES,
+            "cards": {
+                **ALIASES["cards"],
+                "ダダリン": {
+                    **ALIASES["cards"]["ダダリン"],
+                    "50256": ["ダダリンM5037/081"],
+                },
+            },
+        }
+        self.assertEqual(_identity_count(plain, expanded, "ダダリン"), 3)
+        ambiguous = {
+            **expanded,
+            "cards": {**expanded["cards"], "別カード": {"50256": ["別カード"]}},
+        }
+        self.assertEqual(_identity_count(plain, ambiguous, "ダダリン"), 0)
         self.assertFalse(_valid_60({**deck(), "total_cards": 59}))
 
     def test_weekly_top16_and_full_dhelmise_cards(self):
