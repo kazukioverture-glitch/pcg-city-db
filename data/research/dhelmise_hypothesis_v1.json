@@ -1,0 +1,152 @@
+{
+  "schema_version": "dhelmise-holdout-hypotheses-v1",
+  "created_before_validation": "2026-10-18",
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "training": {
+    "weeks": [
+      "W01",
+      "W02",
+      "W03",
+      "W04"
+    ],
+    "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+    "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+    "snapshot_updated_at": "2026-10-18T07:31:27+09:00",
+    "reference_placements": 144,
+    "complete_event_placements": 119,
+    "reference_cards": 19,
+    "reference_copies": 52,
+    "strict_core_copies": 28,
+    "modal_reference": [
+      {
+        "card": "カゲボウズ",
+        "copies": 4
+      },
+      {
+        "card": "ダダリン",
+        "copies": 4
+      },
+      {
+        "card": "ジュペッタ",
+        "copies": 3
+      },
+      {
+        "card": "ノコッチ",
+        "copies": 3
+      },
+      {
+        "card": "チャデス",
+        "copies": 2
+      },
+      {
+        "card": "ノココッチ",
+        "copies": 2
+      },
+      {
+        "card": "リーリエのピッピex",
+        "copies": 2
+      },
+      {
+        "card": "ガチグマ アカツキex",
+        "copies": 1
+      },
+      {
+        "card": "ヤバソチャ",
+        "copies": 1
+      },
+      {
+        "card": "ハイパーボール",
+        "copies": 4
+      },
+      {
+        "card": "ポケパッド",
+        "copies": 4
+      },
+      {
+        "card": "夜のタンカ",
+        "copies": 2
+      },
+      {
+        "card": "リーリエの決心",
+        "copies": 4
+      },
+      {
+        "card": "ボスの指令",
+        "copies": 3
+      },
+      {
+        "card": "ムク",
+        "copies": 3
+      },
+      {
+        "card": "プリズムタワー",
+        "copies": 3
+      },
+      {
+        "card": "テレパス超エネルギー",
+        "copies": 4
+      },
+      {
+        "card": "基本超エネルギー",
+        "copies": 2
+      },
+      {
+        "card": "レガシーエネルギー",
+        "copies": 1
+      }
+    ]
+  },
+  "validation": {
+    "weeks": [
+      "W05",
+      "W06",
+      "W07",
+      "W08"
+    ],
+    "population_profiles": [
+      "ヤバソチャ少数・ノココッチex併用",
+      "ヤバソチャ少数・通常ノココッチ"
+    ],
+    "require_complete_16_slot_events": true,
+    "unit": "recorded_top16_placements",
+    "outcome": "rank_1_to_3",
+    "primary_comparison": {
+      "name": "Kichi-ex-only versus Shaymin-only",
+      "treatment": {
+        "card": "キチキギスex",
+        "count_min": 1,
+        "exclude_card": "シェイミ"
+      },
+      "control": {
+        "card": "シェイミ",
+        "count_min": 1,
+        "exclude_card": "キチキギスex"
+      },
+      "statistic": "two_sided_Fisher_exact",
+      "type": "exploratory_association_validation_not_causation",
+      "alpha": 0.05,
+      "minimum_each_group": 10,
+      "direction": "treatment_top4_rate_greater_than_control"
+    },
+    "sensitivity": [
+      "stratify_by_week",
+      "stratify_by_dudunsparce_ex",
+      "remove_repeated_deck_codes",
+      "report_52_card_reference_shortfall"
+    ],
+    "evaluation": "Report after all W05-W08 results are available; interim numbers descriptive only; insufficient group size means inconclusive."
+  },
+  "warnings": [
+    "The frozen modal reference must never be overwritten by newer weeks.",
+    "Top4 among Top16 placements is not win rate among all entrants.",
+    "Observational association, not proof of any single card effect.",
+    "Do not retroactively change the primary hypothesis after seeing W05-W08 outcomes.",
+    "A/B controlled 59-card deck swap needs its own randomized matchup-balanced battle records."
+  ],
+  "experimental_deck": {
+    "source_deck_code": "cccYxG-QTTCAJ-88x8Da",
+    "original_variant": "シェイミ",
+    "test_variant": "キチキギスex",
+    "other_cards_identical_count": 59
+  }
+}
