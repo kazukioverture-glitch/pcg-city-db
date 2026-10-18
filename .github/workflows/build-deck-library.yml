@@ -12,6 +12,8 @@ on:
       - "analysis/dhelmise_performance.py"
       - "analysis/dhelmise_consensus.py"
       - "analysis/dhelmise_card_factors.py"
+      - "analysis/dhelmise_holdout.py"
+      - "data/research/dhelmise_hypothesis_v1.json"
       - "analysis/classification_cards.json"
       - ".github/workflows/build-deck-library.yml"
 
@@ -38,6 +40,7 @@ jobs:
           python -m analysis.dhelmise_performance
           python -m analysis.dhelmise_consensus
           python -m analysis.dhelmise_card_factors
+          python -m analysis.dhelmise_holdout
       - name: Commit derived index only when changed
         shell: bash
         run: |
