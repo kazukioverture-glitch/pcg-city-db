@@ -58,7 +58,7 @@ def profile(cards):
     mislabeled = sorted({
         norm(card.get("name"))
         for card in cards
-        if str(card.get("section", "")).startswith("ポケモン")
+        if str(card.get("section", "")).startswith("ポケモン (")
         and norm(card.get("name")) in NON_POKEMON_NAMES
     })
     return {
@@ -138,7 +138,7 @@ def build(root):
         "weeks": week_reports,
         "note": (
             "These are mutually exclusive deck-structure labels, not deck win rates. "
-            "The core data may have item/tool cards mislabeled as Pokemon by the source. "
+             "Tool cards have their own category and must not count as Pokemon. "
             "Normalize card identities and sections before averaging card totals."
         ),
     }
