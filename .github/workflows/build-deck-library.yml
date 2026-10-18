@@ -8,6 +8,7 @@ on:
       - "data/index.json"
       - "analysis/deck_library.py"
       - "analysis/dhelmise_groups.py"
+      - "analysis/dhelmise_profiles.py"
       - "analysis/classification_cards.json"
       - ".github/workflows/build-deck-library.yml"
 
@@ -30,6 +31,7 @@ jobs:
         run: |
           python -m analysis.deck_library
           python -m analysis.dhelmise_groups
+          python -m analysis.dhelmise_profiles
       - name: Commit derived index only when changed
         shell: bash
         run: |

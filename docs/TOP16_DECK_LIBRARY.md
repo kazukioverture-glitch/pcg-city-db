@@ -46,3 +46,14 @@ GitHub Actions「Build Top16 deck library」は原本\`data/index.json\`が更�
 - 再生成：`python -m analysis.deck_library && python -m analysis.dhelmise_groups`。
 
 デッキ分類は採用カードの構造的な分類であり、プレイスタイルや対戦勝率の認定ではありません。入賞枠を単位として集計し、同じデッキコードが別大会で使われた場合は別件です。
+
+## 平均60枚のための追加分類（ミカルゲ対応）
+
+`python -m analysis.dhelmise_profiles` は既存の週別ダダリン60枚リストを参照し、元の大会DB・デッキDBを変更せずに平均構築向けの細分類を付けます。
+
+- `data/deck_library/dhelmise_profiles.json`: 件数、週別件数、ミカルゲ採用数、参照データのハッシュ
+- `data/deck_library/dhelmise/Wxx.json`: `average_profile`, `spiritomb_count`, `chadesu_count`, `yabasoucha_count`, `dudunsparce_count`, `dudunsparce_ex_count`, `alakazam_count`, `section_mismatch_tool_names` を追加
+
+平均用の排他的分類：ミカルゲ採用＋ヤバソチャ3枚以上、ミカルゲ非採用＋ヤバソチャ3枚以上、ヤバソチャ1〜2枚＋ノココッチex、ヤバソチャ1〜2枚＋通常ノココッチ、ヤバソチャ1〜2枚＋ノココッチなし、フーディン併用、ヤバソチャ・フーディンともなし。将来ミカルゲ採用でヤバソチャ2枚以下の構築は「例外」として記録し、誤って厚め型に組み込みません。
+
+**注意**: 一部公式デッキ解析結果では、ポケモンの分類セクションに`ふうせん`等のグッズ／ポケモンのどうぐが含まれています。この疑義は`section_mismatch_tool_names`に記録し、平均60枚のカテゴリ配分ではカードマスター等を確認してから補正してください。60枚の合計自体を変更するものではありません。
