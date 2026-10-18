@@ -1,0 +1,60 @@
+{
+  "schema_version": "city-deck-library-v1",
+  "season": "2027-S1",
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "identity_dictionary_version": "city-classifier-v1",
+  "scope_note": "Top16 means published ranks 1-16; unchecked/partial events are included as observed rows but must not be treated as complete coverage. Missing deck codes are retained in index, never imputed. Raw complete 60-card decks remain in data/city_decks.json.",
+  "weeks": [
+    {
+      "week_id": "W01",
+      "top16_index_path": "data/deck_library/top16/W01.json",
+      "dhelmise_lists_path": "data/deck_library/dhelmise/W01.json",
+      "observed_event_count": 68,
+      "confirmed_top16_observation_event_count": 61,
+      "row_count": 1024,
+      "valid_60_rows": 1024,
+      "missing_deck_rows": 0,
+      "dhelmise_rows": 36,
+      "banette_dhelmise_pattern_rows": 33
+    },
+    {
+      "week_id": "W02",
+      "top16_index_path": "data/deck_library/top16/W02.json",
+      "dhelmise_lists_path": "data/deck_library/dhelmise/W02.json",
+      "observed_event_count": 113,
+      "confirmed_top16_observation_event_count": 74,
+      "row_count": 1440,
+      "valid_60_rows": 1437,
+      "missing_deck_rows": 3,
+      "dhelmise_rows": 44,
+      "banette_dhelmise_pattern_rows": 43
+    },
+    {
+      "week_id": "W03",
+      "top16_index_path": "data/deck_library/top16/W03.json",
+      "dhelmise_lists_path": "data/deck_library/dhelmise/W03.json",
+      "observed_event_count": 76,
+      "confirmed_top16_observation_event_count": 72,
+      "row_count": 1180,
+      "valid_60_rows": 1180,
+      "missing_deck_rows": 0,
+      "dhelmise_rows": 19,
+      "banette_dhelmise_pattern_rows": 18
+    },
+    {
+      "week_id": "W04",
+      "top16_index_path": "data/deck_library/top16/W04.json",
+      "dhelmise_lists_path": "data/deck_library/dhelmise/W04.json",
+      "observed_event_count": 87,
+      "confirmed_top16_observation_event_count": 42,
+      "row_count": 1151,
+      "valid_60_rows": 1148,
+      "missing_deck_rows": 3,
+      "dhelmise_rows": 26,
+      "banette_dhelmise_pattern_rows": 26
+    }
+  ]
+}
