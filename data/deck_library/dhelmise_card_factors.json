@@ -1,0 +1,2237 @@
+{
+  "schema_version": "dhelmise-card-factors-exploratory-v1",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "population": {
+    "reference_decks": 144,
+    "rank_complete_events": 248,
+    "eligible_decks": 119,
+    "top4": 27,
+    "unique_deck_codes": 117
+  },
+  "reference_cards": 19,
+  "reference_slots": 52,
+  "strict_core_slots": 28,
+  "reference_card_deviations": [
+    {
+      "card": "カゲボウズ",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.923611,
+      "results": {
+        "below_modal": {
+          "n": 10,
+          "top4": 1,
+          "rate": 0.1,
+          "wilson95": [
+            0.017876,
+            0.40415
+          ]
+        },
+        "at_modal": {
+          "n": 109,
+          "top4": 26,
+          "rate": 0.238532,
+          "wilson95": [
+            0.168297,
+            0.32657
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ダダリン",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 1.0,
+      "results": {
+        "below_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "at_modal": {
+          "n": 119,
+          "top4": 27,
+          "rate": 0.226891,
+          "wilson95": [
+            0.160877,
+            0.309986
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ジュペッタ",
+      "modal_copies": 3,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.604167,
+      "results": {
+        "below_modal": {
+          "n": 1,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.793451
+          ]
+        },
+        "at_modal": {
+          "n": 73,
+          "top4": 15,
+          "rate": 0.205479,
+          "wilson95": [
+            0.12867,
+            0.311737
+          ]
+        },
+        "above_modal": {
+          "n": 45,
+          "top4": 12,
+          "rate": 0.266667,
+          "wilson95": [
+            0.159649,
+            0.410388
+          ]
+        }
+      }
+    },
+    {
+      "card": "ノコッチ",
+      "modal_copies": 3,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.756944,
+      "results": {
+        "below_modal": {
+          "n": 26,
+          "top4": 5,
+          "rate": 0.192308,
+          "wilson95": [
+            0.085071,
+            0.378763
+          ]
+        },
+        "at_modal": {
+          "n": 91,
+          "top4": 22,
+          "rate": 0.241758,
+          "wilson95": [
+            0.165418,
+            0.339018
+          ]
+        },
+        "above_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        }
+      }
+    },
+    {
+      "card": "チャデス",
+      "modal_copies": 2,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.597222,
+      "results": {
+        "below_modal": {
+          "n": 40,
+          "top4": 10,
+          "rate": 0.25,
+          "wilson95": [
+            0.141871,
+            0.40194
+          ]
+        },
+        "at_modal": {
+          "n": 73,
+          "top4": 16,
+          "rate": 0.219178,
+          "wilson95": [
+            0.139661,
+            0.326773
+          ]
+        },
+        "above_modal": {
+          "n": 6,
+          "top4": 1,
+          "rate": 0.166667,
+          "wilson95": [
+            0.030053,
+            0.563503
+          ]
+        }
+      }
+    },
+    {
+      "card": "ノココッチ",
+      "modal_copies": 2,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.965278,
+      "results": {
+        "below_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        },
+        "at_modal": {
+          "n": 115,
+          "top4": 27,
+          "rate": 0.234783,
+          "wilson95": [
+            0.166669,
+            0.320042
+          ]
+        },
+        "above_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        }
+      }
+    },
+    {
+      "card": "リーリエのピッピex",
+      "modal_copies": 2,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.618056,
+      "results": {
+        "below_modal": {
+          "n": 43,
+          "top4": 8,
+          "rate": 0.186047,
+          "wilson95": [
+            0.097418,
+            0.32617
+          ]
+        },
+        "at_modal": {
+          "n": 76,
+          "top4": 19,
+          "rate": 0.25,
+          "wilson95": [
+            0.166289,
+            0.357768
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ガチグマ アカツキex",
+      "modal_copies": 1,
+      "adoption_rate_all_decks": 0.923611,
+      "modal_agreement_all_decks": 0.923611,
+      "results": {
+        "below_modal": {
+          "n": 10,
+          "top4": 2,
+          "rate": 0.2,
+          "wilson95": [
+            0.056682,
+            0.509838
+          ]
+        },
+        "at_modal": {
+          "n": 109,
+          "top4": 25,
+          "rate": 0.229358,
+          "wilson95": [
+            0.160455,
+            0.316687
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ヤバソチャ",
+      "modal_copies": 1,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.868056,
+      "results": {
+        "below_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "at_modal": {
+          "n": 103,
+          "top4": 23,
+          "rate": 0.223301,
+          "wilson95": [
+            0.153658,
+            0.312842
+          ]
+        },
+        "above_modal": {
+          "n": 16,
+          "top4": 4,
+          "rate": 0.25,
+          "wilson95": [
+            0.101821,
+            0.494983
+          ]
+        }
+      }
+    },
+    {
+      "card": "ハイパーボール",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.993056,
+      "results": {
+        "below_modal": {
+          "n": 1,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.793451
+          ]
+        },
+        "at_modal": {
+          "n": 118,
+          "top4": 27,
+          "rate": 0.228814,
+          "wilson95": [
+            0.162287,
+            0.31244
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ポケパッド",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.986111,
+      "results": {
+        "below_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        },
+        "at_modal": {
+          "n": 117,
+          "top4": 27,
+          "rate": 0.230769,
+          "wilson95": [
+            0.163722,
+            0.314934
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "夜のタンカ",
+      "modal_copies": 2,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.638889,
+      "results": {
+        "below_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "at_modal": {
+          "n": 77,
+          "top4": 20,
+          "rate": 0.25974,
+          "wilson95": [
+            0.174892,
+            0.367422
+          ]
+        },
+        "above_modal": {
+          "n": 42,
+          "top4": 7,
+          "rate": 0.166667,
+          "wilson95": [
+            0.083159,
+            0.30604
+          ]
+        }
+      }
+    },
+    {
+      "card": "リーリエの決心",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.944444,
+      "results": {
+        "below_modal": {
+          "n": 7,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.35433
+          ]
+        },
+        "at_modal": {
+          "n": 112,
+          "top4": 27,
+          "rate": 0.241071,
+          "wilson95": [
+            0.171295,
+            0.328021
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "ボスの指令",
+      "modal_copies": 3,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.604167,
+      "results": {
+        "below_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        },
+        "at_modal": {
+          "n": 73,
+          "top4": 14,
+          "rate": 0.191781,
+          "wilson95": [
+            0.117824,
+            0.296555
+          ]
+        },
+        "above_modal": {
+          "n": 44,
+          "top4": 13,
+          "rate": 0.295455,
+          "wilson95": [
+            0.181555,
+            0.442202
+          ]
+        }
+      }
+    },
+    {
+      "card": "ムク",
+      "modal_copies": 3,
+      "adoption_rate_all_decks": 0.951389,
+      "modal_agreement_all_decks": 0.618056,
+      "results": {
+        "below_modal": {
+          "n": 19,
+          "top4": 5,
+          "rate": 0.263158,
+          "wilson95": [
+            0.118064,
+            0.487916
+          ]
+        },
+        "at_modal": {
+          "n": 77,
+          "top4": 19,
+          "rate": 0.246753,
+          "wilson95": [
+            0.164041,
+            0.353534
+          ]
+        },
+        "above_modal": {
+          "n": 23,
+          "top4": 3,
+          "rate": 0.130435,
+          "wilson95": [
+            0.045377,
+            0.321275
+          ]
+        }
+      }
+    },
+    {
+      "card": "プリズムタワー",
+      "modal_copies": 3,
+      "adoption_rate_all_decks": 0.993056,
+      "modal_agreement_all_decks": 0.638889,
+      "results": {
+        "below_modal": {
+          "n": 40,
+          "top4": 9,
+          "rate": 0.225,
+          "wilson95": [
+            0.123161,
+            0.375031
+          ]
+        },
+        "at_modal": {
+          "n": 77,
+          "top4": 18,
+          "rate": 0.233766,
+          "wilson95": [
+            0.153296,
+            0.339538
+          ]
+        },
+        "above_modal": {
+          "n": 2,
+          "top4": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.65762
+          ]
+        }
+      }
+    },
+    {
+      "card": "テレパス超エネルギー",
+      "modal_copies": 4,
+      "adoption_rate_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.986111,
+      "results": {
+        "below_modal": {
+          "n": 2,
+          "top4": 1,
+          "rate": 0.5,
+          "wilson95": [
+            0.094531,
+            0.905469
+          ]
+        },
+        "at_modal": {
+          "n": 117,
+          "top4": 26,
+          "rate": 0.222222,
+          "wilson95": [
+            0.156404,
+            0.305701
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    },
+    {
+      "card": "基本超エネルギー",
+      "modal_copies": 2,
+      "adoption_rate_all_decks": 0.993056,
+      "modal_agreement_all_decks": 0.791667,
+      "results": {
+        "below_modal": {
+          "n": 3,
+          "top4": 1,
+          "rate": 0.333333,
+          "wilson95": [
+            0.061492,
+            0.79234
+          ]
+        },
+        "at_modal": {
+          "n": 93,
+          "top4": 21,
+          "rate": 0.225806,
+          "wilson95": [
+            0.152702,
+            0.320665
+          ]
+        },
+        "above_modal": {
+          "n": 23,
+          "top4": 5,
+          "rate": 0.217391,
+          "wilson95": [
+            0.09664,
+            0.419035
+          ]
+        }
+      }
+    },
+    {
+      "card": "レガシーエネルギー",
+      "modal_copies": 1,
+      "adoption_rate_all_decks": 0.9375,
+      "modal_agreement_all_decks": 0.9375,
+      "results": {
+        "below_modal": {
+          "n": 9,
+          "top4": 1,
+          "rate": 0.111111,
+          "wilson95": [
+            0.019891,
+            0.435
+          ]
+        },
+        "at_modal": {
+          "n": 110,
+          "top4": 26,
+          "rate": 0.236364,
+          "wilson95": [
+            0.166712,
+            0.323808
+          ]
+        },
+        "above_modal": {
+          "n": 0,
+          "top4": 0,
+          "rate": null,
+          "wilson95": null
+        }
+      }
+    }
+  ],
+  "reference_shortfall_results": {
+    "0": {
+      "n": 15,
+      "top4": 4,
+      "rate": 0.266667,
+      "wilson95": [
+        0.108975,
+        0.519504
+      ]
+    },
+    "1": {
+      "n": 31,
+      "top4": 8,
+      "rate": 0.258065,
+      "wilson95": [
+        0.137017,
+        0.432461
+      ]
+    },
+    "2": {
+      "n": 39,
+      "top4": 10,
+      "rate": 0.25641,
+      "wilson95": [
+        0.145688,
+        0.410817
+      ]
+    },
+    "3": {
+      "n": 20,
+      "top4": 3,
+      "rate": 0.15,
+      "wilson95": [
+        0.052369,
+        0.360419
+      ]
+    },
+    "4": {
+      "n": 8,
+      "top4": 2,
+      "rate": 0.25,
+      "wilson95": [
+        0.071479,
+        0.590725
+      ]
+    },
+    "5": {
+      "n": 2,
+      "top4": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.65762
+      ]
+    },
+    "6": {
+      "n": 3,
+      "top4": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0.0,
+        0.561497
+      ]
+    },
+    "7": {
+      "n": 1,
+      "top4": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.793451
+      ]
+    }
+  },
+  "exploratory_feature_tests": [
+    {
+      "hypothesis": "キチキギスex採用",
+      "card": "キチキギスex",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 33,
+          "top4": 12,
+          "rate": 0.363636,
+          "wilson95": [
+            0.221872,
+            0.533838
+          ]
+        },
+        "not_adopted": {
+          "n": 86,
+          "top4": 15,
+          "rate": 0.174419,
+          "wilson95": [
+            0.108648,
+            0.268032
+          ]
+        },
+        "rate_difference": 0.189218,
+        "fisher_two_sided": 0.04831
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 9,
+            "top4": 2,
+            "rate": 0.222222,
+            "wilson95": [
+              0.063225,
+              0.547411
+            ]
+          },
+          "not_adopted": {
+            "n": 20,
+            "top4": 8,
+            "rate": 0.4,
+            "wilson95": [
+              0.218807,
+              0.613418
+            ]
+          },
+          "rate_difference": -0.177778,
+          "fisher_two_sided": 0.431082
+        },
+        "W02": {
+          "adopted": {
+            "n": 6,
+            "top4": 5,
+            "rate": 0.833333,
+            "wilson95": [
+              0.436497,
+              0.969947
+            ]
+          },
+          "not_adopted": {
+            "n": 20,
+            "top4": 2,
+            "rate": 0.1,
+            "wilson95": [
+              0.027866,
+              0.301034
+            ]
+          },
+          "rate_difference": 0.733333,
+          "fisher_two_sided": 0.001763
+        },
+        "W03": {
+          "adopted": {
+            "n": 11,
+            "top4": 3,
+            "rate": 0.272727,
+            "wilson95": [
+              0.097461,
+              0.565645
+            ]
+          },
+          "not_adopted": {
+            "n": 30,
+            "top4": 3,
+            "rate": 0.1,
+            "wilson95": [
+              0.0346,
+              0.256211
+            ]
+          },
+          "rate_difference": 0.172727,
+          "fisher_two_sided": 0.316153
+        },
+        "W04": {
+          "adopted": {
+            "n": 7,
+            "top4": 2,
+            "rate": 0.285714,
+            "wilson95": [
+              0.082219,
+              0.641066
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 2,
+            "rate": 0.125,
+            "wilson95": [
+              0.034977,
+              0.360228
+            ]
+          },
+          "rate_difference": 0.160714,
+          "fisher_two_sided": 0.557312
+        }
+      },
+      "bh_adjusted_q": 0.421344
+    },
+    {
+      "hypothesis": "シェイミ採用",
+      "card": "シェイミ",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 67,
+          "top4": 11,
+          "rate": 0.164179,
+          "wilson95": [
+            0.094226,
+            0.270553
+          ]
+        },
+        "not_adopted": {
+          "n": 52,
+          "top4": 16,
+          "rate": 0.307692,
+          "wilson95": [
+            0.199147,
+            0.442696
+          ]
+        },
+        "rate_difference": -0.143513,
+        "fisher_two_sided": 0.078919
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 19,
+            "top4": 5,
+            "rate": 0.263158,
+            "wilson95": [
+              0.118064,
+              0.487916
+            ]
+          },
+          "not_adopted": {
+            "n": 10,
+            "top4": 5,
+            "rate": 0.5,
+            "wilson95": [
+              0.236593,
+              0.763407
+            ]
+          },
+          "rate_difference": -0.236842,
+          "fisher_two_sided": 0.243861
+        },
+        "W02": {
+          "adopted": {
+            "n": 10,
+            "top4": 1,
+            "rate": 0.1,
+            "wilson95": [
+              0.017876,
+              0.40415
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 6,
+            "rate": 0.375,
+            "wilson95": [
+              0.184812,
+              0.61359
+            ]
+          },
+          "rate_difference": -0.275,
+          "fisher_two_sided": 0.190392
+        },
+        "W03": {
+          "adopted": {
+            "n": 28,
+            "top4": 3,
+            "rate": 0.107143,
+            "wilson95": [
+              0.037118,
+              0.271959
+            ]
+          },
+          "not_adopted": {
+            "n": 13,
+            "top4": 3,
+            "rate": 0.230769,
+            "wilson95": [
+              0.081795,
+              0.502564
+            ]
+          },
+          "rate_difference": -0.123626,
+          "fisher_two_sided": 0.360667
+        },
+        "W04": {
+          "adopted": {
+            "n": 10,
+            "top4": 2,
+            "rate": 0.2,
+            "wilson95": [
+              0.056682,
+              0.509838
+            ]
+          },
+          "not_adopted": {
+            "n": 13,
+            "top4": 2,
+            "rate": 0.153846,
+            "wilson95": [
+              0.043258,
+              0.422346
+            ]
+          },
+          "rate_difference": 0.046154,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.421344
+    },
+    {
+      "hypothesis": "グラビティーマウンテン採用",
+      "card": "グラビティーマウンテン",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 29,
+          "top4": 10,
+          "rate": 0.344828,
+          "wilson95": [
+            0.199407,
+            0.526549
+          ]
+        },
+        "not_adopted": {
+          "n": 90,
+          "top4": 17,
+          "rate": 0.188889,
+          "wilson95": [
+            0.121413,
+            0.281836
+          ]
+        },
+        "rate_difference": 0.155939,
+        "fisher_two_sided": 0.123874
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 7,
+            "top4": 4,
+            "rate": 0.571429,
+            "wilson95": [
+              0.250458,
+              0.84178
+            ]
+          },
+          "not_adopted": {
+            "n": 22,
+            "top4": 6,
+            "rate": 0.272727,
+            "wilson95": [
+              0.131508,
+              0.481517
+            ]
+          },
+          "rate_difference": 0.298701,
+          "fisher_two_sided": 0.192904
+        },
+        "W02": {
+          "adopted": {
+            "n": 7,
+            "top4": 3,
+            "rate": 0.428571,
+            "wilson95": [
+              0.15822,
+              0.749542
+            ]
+          },
+          "not_adopted": {
+            "n": 19,
+            "top4": 4,
+            "rate": 0.210526,
+            "wilson95": [
+              0.085077,
+              0.433343
+            ]
+          },
+          "rate_difference": 0.218045,
+          "fisher_two_sided": 0.340055
+        },
+        "W03": {
+          "adopted": {
+            "n": 9,
+            "top4": 2,
+            "rate": 0.222222,
+            "wilson95": [
+              0.063225,
+              0.547411
+            ]
+          },
+          "not_adopted": {
+            "n": 32,
+            "top4": 4,
+            "rate": 0.125,
+            "wilson95": [
+              0.049701,
+              0.280683
+            ]
+          },
+          "rate_difference": 0.097222,
+          "fisher_two_sided": 0.596924
+        },
+        "W04": {
+          "adopted": {
+            "n": 6,
+            "top4": 1,
+            "rate": 0.166667,
+            "wilson95": [
+              0.030053,
+              0.563503
+            ]
+          },
+          "not_adopted": {
+            "n": 17,
+            "top4": 3,
+            "rate": 0.176471,
+            "wilson95": [
+              0.061911,
+              0.410295
+            ]
+          },
+          "rate_difference": -0.009804,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.421344
+    },
+    {
+      "hypothesis": "スペシャルレッドカード採用",
+      "card": "スペシャルレッドカード",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 32,
+          "top4": 4,
+          "rate": 0.125,
+          "wilson95": [
+            0.049701,
+            0.280683
+          ]
+        },
+        "not_adopted": {
+          "n": 87,
+          "top4": 23,
+          "rate": 0.264368,
+          "wilson95": [
+            0.1831,
+            0.365564
+          ]
+        },
+        "rate_difference": -0.139368,
+        "fisher_two_sided": 0.140448
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 10,
+            "top4": 1,
+            "rate": 0.1,
+            "wilson95": [
+              0.017876,
+              0.40415
+            ]
+          },
+          "not_adopted": {
+            "n": 19,
+            "top4": 9,
+            "rate": 0.473684,
+            "wilson95": [
+              0.273298,
+              0.682922
+            ]
+          },
+          "rate_difference": -0.373684,
+          "fisher_two_sided": 0.097568
+        },
+        "W02": {
+          "adopted": {
+            "n": 10,
+            "top4": 1,
+            "rate": 0.1,
+            "wilson95": [
+              0.017876,
+              0.40415
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 6,
+            "rate": 0.375,
+            "wilson95": [
+              0.184812,
+              0.61359
+            ]
+          },
+          "rate_difference": -0.275,
+          "fisher_two_sided": 0.190392
+        },
+        "W03": {
+          "adopted": {
+            "n": 10,
+            "top4": 1,
+            "rate": 0.1,
+            "wilson95": [
+              0.017876,
+              0.40415
+            ]
+          },
+          "not_adopted": {
+            "n": 31,
+            "top4": 5,
+            "rate": 0.16129,
+            "wilson95": [
+              0.070926,
+              0.326344
+            ]
+          },
+          "rate_difference": -0.06129,
+          "fisher_two_sided": 1.0
+        },
+        "W04": {
+          "adopted": {
+            "n": 2,
+            "top4": 1,
+            "rate": 0.5,
+            "wilson95": [
+              0.094531,
+              0.905469
+            ]
+          },
+          "not_adopted": {
+            "n": 21,
+            "top4": 3,
+            "rate": 0.142857,
+            "wilson95": [
+              0.04981,
+              0.346361
+            ]
+          },
+          "rate_difference": 0.357143,
+          "fisher_two_sided": 0.324111
+        }
+      },
+      "bh_adjusted_q": 0.421344
+    },
+    {
+      "hypothesis": "ノココッチex採用",
+      "card": "ノココッチex",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 84,
+          "top4": 19,
+          "rate": 0.22619,
+          "wilson95": [
+            0.14986,
+            0.326469
+          ]
+        },
+        "not_adopted": {
+          "n": 35,
+          "top4": 8,
+          "rate": 0.228571,
+          "wilson95": [
+            0.120659,
+            0.390173
+          ]
+        },
+        "rate_difference": -0.002381,
+        "fisher_two_sided": 1.0
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 22,
+            "top4": 7,
+            "rate": 0.318182,
+            "wilson95": [
+              0.163606,
+              0.526814
+            ]
+          },
+          "not_adopted": {
+            "n": 7,
+            "top4": 3,
+            "rate": 0.428571,
+            "wilson95": [
+              0.15822,
+              0.749542
+            ]
+          },
+          "rate_difference": -0.11039,
+          "fisher_two_sided": 0.664745
+        },
+        "W02": {
+          "adopted": {
+            "n": 22,
+            "top4": 6,
+            "rate": 0.272727,
+            "wilson95": [
+              0.131508,
+              0.481517
+            ]
+          },
+          "not_adopted": {
+            "n": 4,
+            "top4": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.045587,
+              0.699358
+            ]
+          },
+          "rate_difference": 0.022727,
+          "fisher_two_sided": 1.0
+        },
+        "W03": {
+          "adopted": {
+            "n": 28,
+            "top4": 3,
+            "rate": 0.107143,
+            "wilson95": [
+              0.037118,
+              0.271959
+            ]
+          },
+          "not_adopted": {
+            "n": 13,
+            "top4": 3,
+            "rate": 0.230769,
+            "wilson95": [
+              0.081795,
+              0.502564
+            ]
+          },
+          "rate_difference": -0.123626,
+          "fisher_two_sided": 0.360667
+        },
+        "W04": {
+          "adopted": {
+            "n": 12,
+            "top4": 3,
+            "rate": 0.25,
+            "wilson95": [
+              0.088942,
+              0.532305
+            ]
+          },
+          "not_adopted": {
+            "n": 11,
+            "top4": 1,
+            "rate": 0.090909,
+            "wilson95": [
+              0.016232,
+              0.377358
+            ]
+          },
+          "rate_difference": 0.159091,
+          "fisher_two_sided": 0.590062
+        }
+      },
+      "bh_adjusted_q": 1.0
+    },
+    {
+      "hypothesis": "ラティアスex採用",
+      "card": "ラティアスex",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 73,
+          "top4": 19,
+          "rate": 0.260274,
+          "wilson95": [
+            0.173422,
+            0.371095
+          ]
+        },
+        "not_adopted": {
+          "n": 46,
+          "top4": 8,
+          "rate": 0.173913,
+          "wilson95": [
+            0.090858,
+            0.307234
+          ]
+        },
+        "rate_difference": 0.086361,
+        "fisher_two_sided": 0.369385
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 15,
+            "top4": 5,
+            "rate": 0.333333,
+            "wilson95": [
+              0.151763,
+              0.582865
+            ]
+          },
+          "not_adopted": {
+            "n": 14,
+            "top4": 5,
+            "rate": 0.357143,
+            "wilson95": [
+              0.163447,
+              0.612356
+            ]
+          },
+          "rate_difference": -0.02381,
+          "fisher_two_sided": 1.0
+        },
+        "W02": {
+          "adopted": {
+            "n": 16,
+            "top4": 5,
+            "rate": 0.3125,
+            "wilson95": [
+              0.141646,
+              0.555956
+            ]
+          },
+          "not_adopted": {
+            "n": 10,
+            "top4": 2,
+            "rate": 0.2,
+            "wilson95": [
+              0.056682,
+              0.509838
+            ]
+          },
+          "rate_difference": 0.1125,
+          "fisher_two_sided": 0.667984
+        },
+        "W03": {
+          "adopted": {
+            "n": 28,
+            "top4": 6,
+            "rate": 0.214286,
+            "wilson95": [
+              0.102125,
+              0.395386
+            ]
+          },
+          "not_adopted": {
+            "n": 13,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.228095
+            ]
+          },
+          "rate_difference": 0.214286,
+          "fisher_two_sided": 0.152292
+        },
+        "W04": {
+          "adopted": {
+            "n": 14,
+            "top4": 3,
+            "rate": 0.214286,
+            "wilson95": [
+              0.075714,
+              0.475892
+            ]
+          },
+          "not_adopted": {
+            "n": 9,
+            "top4": 1,
+            "rate": 0.111111,
+            "wilson95": [
+              0.019891,
+              0.435
+            ]
+          },
+          "rate_difference": 0.103175,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.554078
+    },
+    {
+      "hypothesis": "ジャミングタワー採用",
+      "card": "ジャミングタワー",
+      "feature": {
+        "mode": "present",
+        "count": 1
+      },
+      "overall": {
+        "adopted": {
+          "n": 31,
+          "top4": 7,
+          "rate": 0.225806,
+          "wilson95": [
+            0.113951,
+            0.398124
+          ]
+        },
+        "not_adopted": {
+          "n": 88,
+          "top4": 20,
+          "rate": 0.227273,
+          "wilson95": [
+            0.152217,
+            0.325143
+          ]
+        },
+        "rate_difference": -0.001466,
+        "fisher_two_sided": 1.0
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 10,
+            "top4": 3,
+            "rate": 0.3,
+            "wilson95": [
+              0.107791,
+              0.603222
+            ]
+          },
+          "not_adopted": {
+            "n": 19,
+            "top4": 7,
+            "rate": 0.368421,
+            "wilson95": [
+              0.191495,
+              0.589605
+            ]
+          },
+          "rate_difference": -0.068421,
+          "fisher_two_sided": 1.0
+        },
+        "W02": {
+          "adopted": {
+            "n": 9,
+            "top4": 3,
+            "rate": 0.333333,
+            "wilson95": [
+              0.120584,
+              0.645798
+            ]
+          },
+          "not_adopted": {
+            "n": 17,
+            "top4": 4,
+            "rate": 0.235294,
+            "wilson95": [
+              0.09555,
+              0.472618
+            ]
+          },
+          "rate_difference": 0.098039,
+          "fisher_two_sided": 0.661344
+        },
+        "W03": {
+          "adopted": {
+            "n": 11,
+            "top4": 1,
+            "rate": 0.090909,
+            "wilson95": [
+              0.016232,
+              0.377358
+            ]
+          },
+          "not_adopted": {
+            "n": 30,
+            "top4": 5,
+            "rate": 0.166667,
+            "wilson95": [
+              0.073365,
+              0.335644
+            ]
+          },
+          "rate_difference": -0.075758,
+          "fisher_two_sided": 1.0
+        },
+        "W04": {
+          "adopted": {
+            "n": 1,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.793451
+            ]
+          },
+          "not_adopted": {
+            "n": 22,
+            "top4": 4,
+            "rate": 0.181818,
+            "wilson95": [
+              0.073069,
+              0.385166
+            ]
+          },
+          "rate_difference": -0.181818,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 1.0
+    },
+    {
+      "hypothesis": "ジュペッタ4枚",
+      "card": "ジュペッタ",
+      "feature": {
+        "mode": "at_least",
+        "count": 4
+      },
+      "overall": {
+        "adopted": {
+          "n": 45,
+          "top4": 12,
+          "rate": 0.266667,
+          "wilson95": [
+            0.159649,
+            0.410388
+          ]
+        },
+        "not_adopted": {
+          "n": 74,
+          "top4": 15,
+          "rate": 0.202703,
+          "wilson95": [
+            0.126871,
+            0.307878
+          ]
+        },
+        "rate_difference": 0.063964,
+        "fisher_two_sided": 0.499803
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 9,
+            "top4": 4,
+            "rate": 0.444444,
+            "wilson95": [
+              0.188779,
+              0.733349
+            ]
+          },
+          "not_adopted": {
+            "n": 20,
+            "top4": 6,
+            "rate": 0.3,
+            "wilson95": [
+              0.145477,
+              0.518973
+            ]
+          },
+          "rate_difference": 0.144444,
+          "fisher_two_sided": 0.674904
+        },
+        "W02": {
+          "adopted": {
+            "n": 10,
+            "top4": 3,
+            "rate": 0.3,
+            "wilson95": [
+              0.107791,
+              0.603222
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 4,
+            "rate": 0.25,
+            "wilson95": [
+              0.101821,
+              0.494983
+            ]
+          },
+          "rate_difference": 0.05,
+          "fisher_two_sided": 1.0
+        },
+        "W03": {
+          "adopted": {
+            "n": 15,
+            "top4": 2,
+            "rate": 0.133333,
+            "wilson95": [
+              0.037361,
+              0.37882
+            ]
+          },
+          "not_adopted": {
+            "n": 26,
+            "top4": 4,
+            "rate": 0.153846,
+            "wilson95": [
+              0.0615,
+              0.335312
+            ]
+          },
+          "rate_difference": -0.020513,
+          "fisher_two_sided": 1.0
+        },
+        "W04": {
+          "adopted": {
+            "n": 11,
+            "top4": 3,
+            "rate": 0.272727,
+            "wilson95": [
+              0.097461,
+              0.565645
+            ]
+          },
+          "not_adopted": {
+            "n": 12,
+            "top4": 1,
+            "rate": 0.083333,
+            "wilson95": [
+              0.014865,
+              0.35388
+            ]
+          },
+          "rate_difference": 0.189394,
+          "fisher_two_sided": 0.31677
+        }
+      },
+      "bh_adjusted_q": 0.599764
+    },
+    {
+      "hypothesis": "ボスの指令4枚",
+      "card": "ボスの指令",
+      "feature": {
+        "mode": "at_least",
+        "count": 4
+      },
+      "overall": {
+        "adopted": {
+          "n": 44,
+          "top4": 13,
+          "rate": 0.295455,
+          "wilson95": [
+            0.181555,
+            0.442202
+          ]
+        },
+        "not_adopted": {
+          "n": 75,
+          "top4": 14,
+          "rate": 0.186667,
+          "wilson95": [
+            0.114581,
+            0.289286
+          ]
+        },
+        "rate_difference": 0.108788,
+        "fisher_two_sided": 0.181979
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 9,
+            "top4": 3,
+            "rate": 0.333333,
+            "wilson95": [
+              0.120584,
+              0.645798
+            ]
+          },
+          "not_adopted": {
+            "n": 20,
+            "top4": 7,
+            "rate": 0.35,
+            "wilson95": [
+              0.181192,
+              0.567146
+            ]
+          },
+          "rate_difference": -0.016667,
+          "fisher_two_sided": 1.0
+        },
+        "W02": {
+          "adopted": {
+            "n": 8,
+            "top4": 4,
+            "rate": 0.5,
+            "wilson95": [
+              0.215216,
+              0.784784
+            ]
+          },
+          "not_adopted": {
+            "n": 18,
+            "top4": 3,
+            "rate": 0.166667,
+            "wilson95": [
+              0.058366,
+              0.39222
+            ]
+          },
+          "rate_difference": 0.333333,
+          "fisher_two_sided": 0.149018
+        },
+        "W03": {
+          "adopted": {
+            "n": 18,
+            "top4": 4,
+            "rate": 0.222222,
+            "wilson95": [
+              0.090009,
+              0.452146
+            ]
+          },
+          "not_adopted": {
+            "n": 23,
+            "top4": 2,
+            "rate": 0.086957,
+            "wilson95": [
+              0.02418,
+              0.26796
+            ]
+          },
+          "rate_difference": 0.135266,
+          "fisher_two_sided": 0.377289
+        },
+        "W04": {
+          "adopted": {
+            "n": 9,
+            "top4": 2,
+            "rate": 0.222222,
+            "wilson95": [
+              0.063225,
+              0.547411
+            ]
+          },
+          "not_adopted": {
+            "n": 14,
+            "top4": 2,
+            "rate": 0.142857,
+            "wilson95": [
+              0.040094,
+              0.399414
+            ]
+          },
+          "rate_difference": 0.079365,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.43675
+    },
+    {
+      "hypothesis": "夜のタンカ3枚以上",
+      "card": "夜のタンカ",
+      "feature": {
+        "mode": "at_least",
+        "count": 3
+      },
+      "overall": {
+        "adopted": {
+          "n": 42,
+          "top4": 7,
+          "rate": 0.166667,
+          "wilson95": [
+            0.083159,
+            0.30604
+          ]
+        },
+        "not_adopted": {
+          "n": 77,
+          "top4": 20,
+          "rate": 0.25974,
+          "wilson95": [
+            0.174892,
+            0.367422
+          ]
+        },
+        "rate_difference": -0.093074,
+        "fisher_two_sided": 0.35971
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 11,
+            "top4": 2,
+            "rate": 0.181818,
+            "wilson95": [
+              0.051368,
+              0.476981
+            ]
+          },
+          "not_adopted": {
+            "n": 18,
+            "top4": 8,
+            "rate": 0.444444,
+            "wilson95": [
+              0.245595,
+              0.662836
+            ]
+          },
+          "rate_difference": -0.262626,
+          "fisher_two_sided": 0.234374
+        },
+        "W02": {
+          "adopted": {
+            "n": 7,
+            "top4": 1,
+            "rate": 0.142857,
+            "wilson95": [
+              0.02568,
+              0.513128
+            ]
+          },
+          "not_adopted": {
+            "n": 19,
+            "top4": 6,
+            "rate": 0.315789,
+            "wilson95": [
+              0.153644,
+              0.539896
+            ]
+          },
+          "rate_difference": -0.172932,
+          "fisher_two_sided": 0.628781
+        },
+        "W03": {
+          "adopted": {
+            "n": 17,
+            "top4": 3,
+            "rate": 0.176471,
+            "wilson95": [
+              0.061911,
+              0.410295
+            ]
+          },
+          "not_adopted": {
+            "n": 24,
+            "top4": 3,
+            "rate": 0.125,
+            "wilson95": [
+              0.043443,
+              0.310039
+            ]
+          },
+          "rate_difference": 0.051471,
+          "fisher_two_sided": 0.678601
+        },
+        "W04": {
+          "adopted": {
+            "n": 7,
+            "top4": 1,
+            "rate": 0.142857,
+            "wilson95": [
+              0.02568,
+              0.513128
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 3,
+            "rate": 0.1875,
+            "wilson95": [
+              0.065916,
+              0.430089
+            ]
+          },
+          "rate_difference": -0.044643,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.554078
+    },
+    {
+      "hypothesis": "なかよしポフィン2枚以上",
+      "card": "なかよしポフィン",
+      "feature": {
+        "mode": "at_least",
+        "count": 2
+      },
+      "overall": {
+        "adopted": {
+          "n": 84,
+          "top4": 22,
+          "rate": 0.261905,
+          "wilson95": [
+            0.179785,
+            0.364849
+          ]
+        },
+        "not_adopted": {
+          "n": 35,
+          "top4": 5,
+          "rate": 0.142857,
+          "wilson95": [
+            0.062602,
+            0.293756
+          ]
+        },
+        "rate_difference": 0.119048,
+        "fisher_two_sided": 0.229576
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 22,
+            "top4": 9,
+            "rate": 0.409091,
+            "wilson95": [
+              0.232558,
+              0.612652
+            ]
+          },
+          "not_adopted": {
+            "n": 7,
+            "top4": 1,
+            "rate": 0.142857,
+            "wilson95": [
+              0.02568,
+              0.513128
+            ]
+          },
+          "rate_difference": 0.266234,
+          "fisher_two_sided": 0.36674
+        },
+        "W02": {
+          "adopted": {
+            "n": 17,
+            "top4": 6,
+            "rate": 0.352941,
+            "wilson95": [
+              0.173097,
+              0.586996
+            ]
+          },
+          "not_adopted": {
+            "n": 9,
+            "top4": 1,
+            "rate": 0.111111,
+            "wilson95": [
+              0.019891,
+              0.435
+            ]
+          },
+          "rate_difference": 0.24183,
+          "fisher_two_sided": 0.357422
+        },
+        "W03": {
+          "adopted": {
+            "n": 28,
+            "top4": 5,
+            "rate": 0.178571,
+            "wilson95": [
+              0.078785,
+              0.355914
+            ]
+          },
+          "not_adopted": {
+            "n": 13,
+            "top4": 1,
+            "rate": 0.076923,
+            "wilson95": [
+              0.01371,
+              0.33314
+            ]
+          },
+          "rate_difference": 0.101648,
+          "fisher_two_sided": 0.644815
+        },
+        "W04": {
+          "adopted": {
+            "n": 17,
+            "top4": 2,
+            "rate": 0.117647,
+            "wilson95": [
+              0.03288,
+              0.343364
+            ]
+          },
+          "not_adopted": {
+            "n": 6,
+            "top4": 2,
+            "rate": 0.333333,
+            "wilson95": [
+              0.096771,
+              0.700007
+            ]
+          },
+          "rate_difference": -0.215686,
+          "fisher_two_sided": 0.270469
+        }
+      },
+      "bh_adjusted_q": 0.459152
+    },
+    {
+      "hypothesis": "リーリエのピッピex2枚",
+      "card": "リーリエのピッピex",
+      "feature": {
+        "mode": "at_least",
+        "count": 2
+      },
+      "overall": {
+        "adopted": {
+          "n": 76,
+          "top4": 19,
+          "rate": 0.25,
+          "wilson95": [
+            0.166289,
+            0.357768
+          ]
+        },
+        "not_adopted": {
+          "n": 43,
+          "top4": 8,
+          "rate": 0.186047,
+          "wilson95": [
+            0.097418,
+            0.32617
+          ]
+        },
+        "rate_difference": 0.063953,
+        "fisher_two_sided": 0.49893
+      },
+      "by_week": {
+        "W01": {
+          "adopted": {
+            "n": 17,
+            "top4": 6,
+            "rate": 0.352941,
+            "wilson95": [
+              0.173097,
+              0.586996
+            ]
+          },
+          "not_adopted": {
+            "n": 12,
+            "top4": 4,
+            "rate": 0.333333,
+            "wilson95": [
+              0.13812,
+              0.609378
+            ]
+          },
+          "rate_difference": 0.019608,
+          "fisher_two_sided": 1.0
+        },
+        "W02": {
+          "adopted": {
+            "n": 18,
+            "top4": 5,
+            "rate": 0.277778,
+            "wilson95": [
+              0.124998,
+              0.508727
+            ]
+          },
+          "not_adopted": {
+            "n": 8,
+            "top4": 2,
+            "rate": 0.25,
+            "wilson95": [
+              0.071479,
+              0.590725
+            ]
+          },
+          "rate_difference": 0.027778,
+          "fisher_two_sided": 1.0
+        },
+        "W03": {
+          "adopted": {
+            "n": 25,
+            "top4": 5,
+            "rate": 0.2,
+            "wilson95": [
+              0.088606,
+              0.39131
+            ]
+          },
+          "not_adopted": {
+            "n": 16,
+            "top4": 1,
+            "rate": 0.0625,
+            "wilson95": [
+              0.011119,
+              0.283287
+            ]
+          },
+          "rate_difference": 0.1375,
+          "fisher_two_sided": 0.375944
+        },
+        "W04": {
+          "adopted": {
+            "n": 16,
+            "top4": 3,
+            "rate": 0.1875,
+            "wilson95": [
+              0.065916,
+              0.430089
+            ]
+          },
+          "not_adopted": {
+            "n": 7,
+            "top4": 1,
+            "rate": 0.142857,
+            "wilson95": [
+              0.02568,
+              0.513128
+            ]
+          },
+          "rate_difference": 0.044643,
+          "fisher_two_sided": 1.0
+        }
+      },
+      "bh_adjusted_q": 0.599764
+    }
+  ],
+  "joint_hypothesis_kichi_shaymin": [
+    {
+      "kichi_adopted": false,
+      "shaymin_adopted": false,
+      "results": {
+        "n": 31,
+        "top4": 6,
+        "rate": 0.193548,
+        "wilson95": [
+          0.09187,
+          0.362803
+        ]
+      }
+    },
+    {
+      "kichi_adopted": false,
+      "shaymin_adopted": true,
+      "results": {
+        "n": 55,
+        "top4": 9,
+        "rate": 0.163636,
+        "wilson95": [
+          0.088554,
+          0.282637
+        ]
+      }
+    },
+    {
+      "kichi_adopted": true,
+      "shaymin_adopted": false,
+      "results": {
+        "n": 21,
+        "top4": 10,
+        "rate": 0.47619,
+        "wilson95": [
+          0.28344,
+          0.676305
+        ]
+      }
+    },
+    {
+      "kichi_adopted": true,
+      "shaymin_adopted": true,
+      "results": {
+        "n": 12,
+        "top4": 2,
+        "rate": 0.166667,
+        "wilson95": [
+          0.046965,
+          0.448031
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    "The decklists selected for these hypotheses informed which hypotheses were tested: statistical significance is exploratory, not confirmatory.",
+    "The primary outcome is Top4 conditional on an already recorded Top16 placement, not the win probability of event entrants.",
+    "Multiple card effects are coupled by the fixed 60-card composition; individual card presence cannot be interpreted as independent treatment.",
+    "Players, matchups, skill, other card choices and event clustering were not fully adjusted.",
+    "W04 may include partially collected events; only events with complete sixteen rank placements contribute to outcome comparisons.",
+    "All 4 weeks are considered. Validation must use newly observed weeks or randomized controlled deck-swaps."
+  ]
+}
