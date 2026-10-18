@@ -838,6 +838,20 @@
           "fisher_two_sided": 0.557312
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 2.470893,
+        "normal_approx_two_sided_p": 0.028956,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 7,
+        "common_odds_ratio": 2.520455,
+        "normal_approx_two_sided_p": 0.027334,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 0.421344
     },
     {
@@ -958,6 +972,20 @@
           "rate_difference": 0.046154,
           "fisher_two_sided": 1.0
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 0.418339,
+        "normal_approx_two_sided_p": 0.061919,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 7,
+        "common_odds_ratio": 0.368511,
+        "normal_approx_two_sided_p": 0.057431,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.421344
     },
@@ -1080,6 +1108,20 @@
           "fisher_two_sided": 1.0
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 2.299421,
+        "normal_approx_two_sided_p": 0.088814,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 6,
+        "common_odds_ratio": 2.693575,
+        "normal_approx_two_sided_p": 0.055132,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 0.421344
     },
     {
@@ -1200,6 +1242,20 @@
           "rate_difference": 0.357143,
           "fisher_two_sided": 0.324111
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 0.35195,
+        "normal_approx_two_sided_p": 0.049136,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 6,
+        "common_odds_ratio": 0.328066,
+        "normal_approx_two_sided_p": 0.060476,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.421344
     },
@@ -1322,6 +1378,20 @@
           "fisher_two_sided": 0.590062
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 0.841875,
+        "normal_approx_two_sided_p": 0.726488,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 0,
+        "common_odds_ratio": null,
+        "normal_approx_two_sided_p": null,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 1.0
     },
     {
@@ -1442,6 +1512,20 @@
           "rate_difference": 0.103175,
           "fisher_two_sided": 1.0
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 1.97999,
+        "normal_approx_two_sided_p": 0.177716,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 8,
+        "common_odds_ratio": 2.034029,
+        "normal_approx_two_sided_p": 0.182089,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.554078
     },
@@ -1564,6 +1648,20 @@
           "fisher_two_sided": 1.0
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 0.836496,
+        "normal_approx_two_sided_p": 0.740495,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 5,
+        "common_odds_ratio": 0.919488,
+        "normal_approx_two_sided_p": 0.878967,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 1.0
     },
     {
@@ -1684,6 +1782,20 @@
           "rate_difference": 0.189394,
           "fisher_two_sided": 0.31677
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 1.562325,
+        "normal_approx_two_sided_p": 0.338281,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 8,
+        "common_odds_ratio": 1.58106,
+        "normal_approx_two_sided_p": 0.344938,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.599764
     },
@@ -1806,6 +1918,20 @@
           "fisher_two_sided": 1.0
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 2.106797,
+        "normal_approx_two_sided_p": 0.102222,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 7,
+        "common_odds_ratio": 2.20398,
+        "normal_approx_two_sided_p": 0.096545,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 0.43675
     },
     {
@@ -1926,6 +2052,20 @@
           "rate_difference": -0.044643,
           "fisher_two_sided": 1.0
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 0.580057,
+        "normal_approx_two_sided_p": 0.269133,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 8,
+        "common_odds_ratio": 0.541276,
+        "normal_approx_two_sided_p": 0.219029,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.554078
     },
@@ -2048,6 +2188,20 @@
           "fisher_two_sided": 0.270469
         }
       },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 2.016849,
+        "normal_approx_two_sided_p": 0.177042,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 7,
+        "common_odds_ratio": 2.347722,
+        "normal_approx_two_sided_p": 0.163557,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
       "bh_adjusted_q": 0.459152
     },
     {
@@ -2168,6 +2322,20 @@
           "rate_difference": 0.044643,
           "fisher_two_sided": 1.0
         }
+      },
+      "adjusted_for_week": {
+        "strata": 4,
+        "informative_strata": 4,
+        "common_odds_ratio": 1.518346,
+        "normal_approx_two_sided_p": 0.396302,
+        "method": "CMH without continuity correction; sparse-data exploratory"
+      },
+      "adjusted_for_week_and_dudunsparce_ex": {
+        "strata": 8,
+        "informative_strata": 7,
+        "common_odds_ratio": 1.503893,
+        "normal_approx_two_sided_p": 0.456838,
+        "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 0.599764
     }
