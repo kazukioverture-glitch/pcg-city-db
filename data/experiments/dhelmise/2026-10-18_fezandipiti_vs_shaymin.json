@@ -1,0 +1,399 @@
+{
+  "schema_version": "dhelmise-controlled-deck-test-v1",
+  "experiment_id": "dhelmise_fezandipiti_vs_shaymin_20261018",
+  "source": {
+    "repository": "kazukioverture-glitch/pcg-city-db",
+    "path": "data/deck_library/dhelmise/W02.json",
+    "date": "2026-10-04",
+    "rank": 3,
+    "event_id": "1115585",
+    "prefecture": "広島県",
+    "deck_code": "cccYxG-QTTCAJ-88x8Da",
+    "official_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/cccYxG-QTTCAJ-88x8Da"
+  },
+  "hypothesis": "Compare a Fezandipiti ex 1 copy vs a Shaymin 1 copy, holding all other 59 cards constant.",
+  "protocol": {
+    "design": "matched A/B one-card exchange",
+    "intervention": "Shaymin -1, Fezandipiti ex +1",
+    "order": "alternate A/B; balance first/second and opponent archetype",
+    "metrics": [
+      "win_loss",
+      "first_second",
+      "opponent_archetype",
+      "side_taken",
+      "side_lost",
+      "draw_ability_uses",
+      "bench_damage_prevented",
+      "log"
+    ],
+    "caveats": [
+      "Original control achieved Top4, but modified A has no tournament result.",
+      "Comparison cannot guarantee causal improvement without sufficient controlled matches.",
+      "Deck list uses Japanese names; converting to PTCGL import text needs English prints/set numbers."
+    ]
+  },
+  "variants": {
+    "A_fezandipiti_ex": {
+      "status": "hypothetical",
+      "total_cards": 60,
+      "cards": [
+        {
+          "name": "ダダリン",
+          "printed_name": "ダダリンM5037/081",
+          "card_id": "50256",
+          "count": 4,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ジュペッタ",
+          "printed_name": "ジュペッタM5032/081",
+          "card_id": "50251",
+          "count": 3,
+          "category": "ポケモン"
+        },
+        {
+          "name": "カゲボウズ",
+          "printed_name": "カゲボウズM5031/081",
+          "card_id": "50250",
+          "count": 4,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ヤバソチャ",
+          "printed_name": "ヤバソチャM5006/081",
+          "card_id": "50225",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "チャデス",
+          "printed_name": "チャデスM5005/081",
+          "card_id": "50224",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノコッチ",
+          "printed_name": "ノコッチMC574/742",
+          "card_id": "49290",
+          "count": 3,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノココッチ",
+          "printed_name": "ノココッチSV8a130/187",
+          "card_id": "46791",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "リーリエのピッピex",
+          "printed_name": "リーリエのピッピexMC287/742",
+          "card_id": "49521",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ハバタクカミ",
+          "printed_name": "ハバタクカミMC355/742",
+          "card_id": "49071",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ラティアスex",
+          "printed_name": "ラティアスexMC312/742",
+          "card_id": "49524",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ガチグマ アカツキex",
+          "printed_name": "ガチグマ アカツキexMC625/742",
+          "card_id": "49341",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノココッチex",
+          "printed_name": "ノココッチexMC575/742",
+          "card_id": "49291",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "キチキギスex",
+          "printed_name": "キチキギスexSV6a038/064",
+          "card_id": "45913",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ポケパッド",
+          "printed_name": "ポケパッド",
+          "card_id": "50463",
+          "count": 4,
+          "category": "グッズ"
+        },
+        {
+          "name": "ハイパーボール",
+          "printed_name": "ハイパーボール",
+          "card_id": "50461",
+          "count": 4,
+          "category": "グッズ"
+        },
+        {
+          "name": "夜のタンカ",
+          "printed_name": "夜のタンカ",
+          "card_id": "49386",
+          "count": 3,
+          "category": "グッズ"
+        },
+        {
+          "name": "なかよしポフィン",
+          "printed_name": "なかよしポフィン",
+          "card_id": "49364",
+          "count": 1,
+          "category": "グッズ"
+        },
+        {
+          "name": "リーリエの決心",
+          "printed_name": "リーリエの決心",
+          "card_id": "50468",
+          "count": 4,
+          "category": "サポート"
+        },
+        {
+          "name": "ボスの指令",
+          "printed_name": "ボスの指令",
+          "card_id": "50467",
+          "count": 4,
+          "category": "サポート"
+        },
+        {
+          "name": "ムク",
+          "printed_name": "ムク",
+          "card_id": "50297",
+          "count": 3,
+          "category": "サポート"
+        },
+        {
+          "name": "からておうの稽古",
+          "printed_name": "からておうの稽古",
+          "card_id": "49420",
+          "count": 1,
+          "category": "サポート"
+        },
+        {
+          "name": "プリズムタワー",
+          "printed_name": "プリズムタワー",
+          "card_id": "50164",
+          "count": 3,
+          "category": "スタジアム"
+        },
+        {
+          "name": "テレパス超エネルギー",
+          "printed_name": "テレパス超エネルギー",
+          "card_id": "49712",
+          "count": 4,
+          "category": "エネルギー"
+        },
+        {
+          "name": "基本超エネルギー",
+          "printed_name": "基本超エネルギー",
+          "card_id": "48307",
+          "count": 2,
+          "category": "エネルギー"
+        },
+        {
+          "name": "レガシーエネルギー",
+          "printed_name": "レガシーエネルギー",
+          "card_id": "49457",
+          "count": 1,
+          "category": "エネルギー"
+        }
+      ]
+    },
+    "B_shaymin": {
+      "status": "observed_top4_original",
+      "total_cards": 60,
+      "cards": [
+        {
+          "name": "ダダリン",
+          "printed_name": "ダダリンM5037/081",
+          "card_id": "50256",
+          "count": 4,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ジュペッタ",
+          "printed_name": "ジュペッタM5032/081",
+          "card_id": "50251",
+          "count": 3,
+          "category": "ポケモン"
+        },
+        {
+          "name": "カゲボウズ",
+          "printed_name": "カゲボウズM5031/081",
+          "card_id": "50250",
+          "count": 4,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ヤバソチャ",
+          "printed_name": "ヤバソチャM5006/081",
+          "card_id": "50225",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "チャデス",
+          "printed_name": "チャデスM5005/081",
+          "card_id": "50224",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノコッチ",
+          "printed_name": "ノコッチMC574/742",
+          "card_id": "49290",
+          "count": 3,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノココッチ",
+          "printed_name": "ノココッチSV8a130/187",
+          "card_id": "46791",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "リーリエのピッピex",
+          "printed_name": "リーリエのピッピexMC287/742",
+          "card_id": "49521",
+          "count": 2,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ハバタクカミ",
+          "printed_name": "ハバタクカミMC355/742",
+          "card_id": "49071",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ラティアスex",
+          "printed_name": "ラティアスexMC312/742",
+          "card_id": "49524",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ガチグマ アカツキex",
+          "printed_name": "ガチグマ アカツキexMC625/742",
+          "card_id": "49341",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ノココッチex",
+          "printed_name": "ノココッチexMC575/742",
+          "card_id": "49291",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "シェイミ",
+          "printed_name": "シェイミM2a012/193",
+          "card_id": "48534",
+          "count": 1,
+          "category": "ポケモン"
+        },
+        {
+          "name": "ポケパッド",
+          "printed_name": "ポケパッド",
+          "card_id": "50463",
+          "count": 4,
+          "category": "グッズ"
+        },
+        {
+          "name": "ハイパーボール",
+          "printed_name": "ハイパーボール",
+          "card_id": "50461",
+          "count": 4,
+          "category": "グッズ"
+        },
+        {
+          "name": "夜のタンカ",
+          "printed_name": "夜のタンカ",
+          "card_id": "49386",
+          "count": 3,
+          "category": "グッズ"
+        },
+        {
+          "name": "なかよしポフィン",
+          "printed_name": "なかよしポフィン",
+          "card_id": "49364",
+          "count": 1,
+          "category": "グッズ"
+        },
+        {
+          "name": "リーリエの決心",
+          "printed_name": "リーリエの決心",
+          "card_id": "50468",
+          "count": 4,
+          "category": "サポート"
+        },
+        {
+          "name": "ボスの指令",
+          "printed_name": "ボスの指令",
+          "card_id": "50467",
+          "count": 4,
+          "category": "サポート"
+        },
+        {
+          "name": "ムク",
+          "printed_name": "ムク",
+          "card_id": "50297",
+          "count": 3,
+          "category": "サポート"
+        },
+        {
+          "name": "からておうの稽古",
+          "printed_name": "からておうの稽古",
+          "card_id": "49420",
+          "count": 1,
+          "category": "サポート"
+        },
+        {
+          "name": "プリズムタワー",
+          "printed_name": "プリズムタワー",
+          "card_id": "50164",
+          "count": 3,
+          "category": "スタジアム"
+        },
+        {
+          "name": "テレパス超エネルギー",
+          "printed_name": "テレパス超エネルギー",
+          "card_id": "49712",
+          "count": 4,
+          "category": "エネルギー"
+        },
+        {
+          "name": "基本超エネルギー",
+          "printed_name": "基本超エネルギー",
+          "card_id": "48307",
+          "count": 2,
+          "category": "エネルギー"
+        },
+        {
+          "name": "レガシーエネルギー",
+          "printed_name": "レガシーエネルギー",
+          "card_id": "49457",
+          "count": 1,
+          "category": "エネルギー"
+        }
+      ]
+    }
+  }
+}
