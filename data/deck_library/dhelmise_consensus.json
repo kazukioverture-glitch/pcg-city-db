@@ -1,0 +1,373 @@
+{
+  "schema_version": "dhelmise-consensus-baseline-v1",
+  "scope": "Dhelmise light-Yabasoucha + standard Dudunsparce, regardless of ex",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "unit": "recorded_top16_placements; repeated deck codes count as repeated results",
+  "population": 144,
+  "unique_deck_codes": 141,
+  "adoption_threshold": 0.9,
+  "strict_modal_agreement_threshold": 0.9,
+  "reference": {
+    "card_count": 19,
+    "copy_count": 52,
+    "nominal_remainder_to_60": 8,
+    "cards": [
+      {
+        "card": "カゲボウズ",
+        "category": "ポケモン",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 133,
+        "modal_agreement": 0.923611,
+        "average_copies": 3.923611,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 11,
+          "4": 133
+        }
+      },
+      {
+        "card": "ダダリン",
+        "category": "ポケモン",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 144,
+        "modal_agreement": 1.0,
+        "average_copies": 4.0,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 144
+        }
+      },
+      {
+        "card": "ジュペッタ",
+        "category": "ポケモン",
+        "mode_copies": 3,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 87,
+        "modal_agreement": 0.604167,
+        "average_copies": 3.375,
+        "count_distribution": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 87,
+          "4": 56
+        }
+      },
+      {
+        "card": "ノコッチ",
+        "category": "ポケモン",
+        "mode_copies": 3,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 109,
+        "modal_agreement": 0.756944,
+        "average_copies": 2.777778,
+        "count_distribution": {
+          "0": 0,
+          "1": 1,
+          "2": 32,
+          "3": 109,
+          "4": 2
+        }
+      },
+      {
+        "card": "チャデス",
+        "category": "ポケモン",
+        "mode_copies": 2,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 86,
+        "modal_agreement": 0.597222,
+        "average_copies": 1.694444,
+        "count_distribution": {
+          "0": 0,
+          "1": 51,
+          "2": 86,
+          "3": 7,
+          "4": 0
+        }
+      },
+      {
+        "card": "ノココッチ",
+        "category": "ポケモン",
+        "mode_copies": 2,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 139,
+        "modal_agreement": 0.965278,
+        "average_copies": 1.993056,
+        "count_distribution": {
+          "0": 0,
+          "1": 3,
+          "2": 139,
+          "3": 2,
+          "4": 0
+        }
+      },
+      {
+        "card": "リーリエのピッピex",
+        "category": "ポケモン",
+        "mode_copies": 2,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 89,
+        "modal_agreement": 0.618056,
+        "average_copies": 1.618056,
+        "count_distribution": {
+          "0": 0,
+          "1": 55,
+          "2": 89,
+          "3": 0,
+          "4": 0
+        }
+      },
+      {
+        "card": "ガチグマ アカツキex",
+        "category": "ポケモン",
+        "mode_copies": 1,
+        "adopters": 133,
+        "adoption_rate": 0.923611,
+        "matching_mode": 133,
+        "modal_agreement": 0.923611,
+        "average_copies": 0.923611,
+        "count_distribution": {
+          "0": 11,
+          "1": 133,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      },
+      {
+        "card": "ヤバソチャ",
+        "category": "ポケモン",
+        "mode_copies": 1,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 125,
+        "modal_agreement": 0.868056,
+        "average_copies": 1.131944,
+        "count_distribution": {
+          "0": 0,
+          "1": 125,
+          "2": 19,
+          "3": 0,
+          "4": 0
+        }
+      },
+      {
+        "card": "ハイパーボール",
+        "category": "グッズ",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 143,
+        "modal_agreement": 0.993056,
+        "average_copies": 3.993056,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 143
+        }
+      },
+      {
+        "card": "ポケパッド",
+        "category": "グッズ",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 142,
+        "modal_agreement": 0.986111,
+        "average_copies": 3.986111,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 142
+        }
+      },
+      {
+        "card": "夜のタンカ",
+        "category": "グッズ",
+        "mode_copies": 2,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 92,
+        "modal_agreement": 0.638889,
+        "average_copies": 2.388889,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 92,
+          "3": 48,
+          "4": 4
+        }
+      },
+      {
+        "card": "リーリエの決心",
+        "category": "サポート",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 136,
+        "modal_agreement": 0.944444,
+        "average_copies": 3.923611,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 3,
+          "3": 5,
+          "4": 136
+        }
+      },
+      {
+        "card": "ボスの指令",
+        "category": "サポート",
+        "mode_copies": 3,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 87,
+        "modal_agreement": 0.604167,
+        "average_copies": 3.340278,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 4,
+          "3": 87,
+          "4": 53
+        }
+      },
+      {
+        "card": "ムク",
+        "category": "サポート",
+        "mode_copies": 3,
+        "adopters": 137,
+        "adoption_rate": 0.951389,
+        "matching_mode": 89,
+        "modal_agreement": 0.618056,
+        "average_copies": 2.916667,
+        "count_distribution": {
+          "0": 7,
+          "1": 3,
+          "2": 15,
+          "3": 89,
+          "4": 30
+        }
+      },
+      {
+        "card": "プリズムタワー",
+        "category": "スタジアム",
+        "mode_copies": 3,
+        "adopters": 143,
+        "adoption_rate": 0.993056,
+        "matching_mode": 92,
+        "modal_agreement": 0.638889,
+        "average_copies": 2.645833,
+        "count_distribution": {
+          "0": 1,
+          "1": 1,
+          "2": 48,
+          "3": 92,
+          "4": 2
+        }
+      },
+      {
+        "card": "テレパス超エネルギー",
+        "category": "エネルギー",
+        "mode_copies": 4,
+        "adopters": 144,
+        "adoption_rate": 1.0,
+        "matching_mode": 142,
+        "modal_agreement": 0.986111,
+        "average_copies": 3.986111,
+        "count_distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 142
+        }
+      },
+      {
+        "card": "基本超エネルギー",
+        "category": "エネルギー",
+        "mode_copies": 2,
+        "adopters": 143,
+        "adoption_rate": 0.993056,
+        "matching_mode": 114,
+        "modal_agreement": 0.791667,
+        "average_copies": 2.152778,
+        "count_distribution": {
+          "0": 1,
+          "1": 3,
+          "2": 114,
+          "3": 25,
+          "4": 1
+        }
+      },
+      {
+        "card": "レガシーエネルギー",
+        "category": "エネルギー",
+        "mode_copies": 1,
+        "adopters": 135,
+        "adoption_rate": 0.9375,
+        "matching_mode": 135,
+        "modal_agreement": 0.9375,
+        "average_copies": 0.9375,
+        "count_distribution": {
+          "0": 9,
+          "1": 135,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      }
+    ]
+  },
+  "strict_modal_core": {
+    "card_count": 9,
+    "copy_count": 28,
+    "cards": [
+      "カゲボウズ",
+      "ダダリン",
+      "ノココッチ",
+      "ガチグマ アカツキex",
+      "ハイパーボール",
+      "ポケパッド",
+      "リーリエの決心",
+      "テレパス超エネルギー",
+      "レガシーエネルギー"
+    ]
+  },
+  "reference_coverage": {
+    "decks_with_all_reference_copies": 17,
+    "average_shortfall": 2.055556,
+    "shortfall_histogram": {
+      "0": 17,
+      "1": 34,
+      "2": 49,
+      "3": 26,
+      "4": 9,
+      "5": 5,
+      "6": 3,
+      "7": 1
+    }
+  },
+  "interpretation": "The 52-card modal template is a comparator, not a 52-card subset actually present in most decklists. Card copies differ by a few slots. Do not infer card efficacy without controls."
+}
