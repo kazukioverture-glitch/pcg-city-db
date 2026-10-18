@@ -38,13 +38,23 @@ def _valid_60(deck: dict) -> bool:
 def _identity_count(deck: dict, identities: dict, logical_name: str) -> int:
     """Match exact approved (card_id, display-name) pairs, not substrings."""
     known = identities["cards"][logical_name]
-    return sum(
-        card["count"]
-        for card in deck["cards"]
-        if str(card.get("card_id")) in known
-        and card.get("name") in known[str(card.get("card_id"))]
-        and str(card.get("section", "")).startswith("ポケモン")
-    )
+    total = 0
+    for card in deck["cards"]:
+        card_id = str(card.get("card_id"))
+        if card_id not in known or not str(card.get("section", "")).startswith("ポケモン"):
+            continue
+        name = card.get("name")
+        if name in known[card_id]:
+            total += card["count"]
+        elif name == logical_name and all(
+            card_id not in aliases
+            for other_name, aliases in identities["cards"].items()
+            if other_name != logical_name
+        ):
+            # Match the repository classifier's approved plain-name fallback:
+            # a known ID may use the unsuffixed name only when unambiguous.
+            total += card["count"]
+    return total
 
 
 def build_library(city: dict, decks_document: dict, source_index: dict,
