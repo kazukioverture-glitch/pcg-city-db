@@ -43,8 +43,9 @@ class DhelmiseProfilesTests(unittest.TestCase):
             PROFILES[7])
 
     def test_suspected_source_tool_section_error_is_explicit(self):
-        item = profile([mon("ふうせん", 2), mon("ジュペッタ")])
-        self.assertEqual(item["section_mismatch_tool_names"], ["ふうせん"])
+        item = profile([mon("ふうせん", 2, section="ポケモンのどうぐ (2)"), mon("ジュペッタ")])
+        self.assertEqual(item["section_mismatch_tool_names"], [])
+        self.assertEqual(profile([mon("ふうせん", 2)])["section_mismatch_tool_names"], ["ふうせん"])
 
 
 if __name__ == "__main__":
