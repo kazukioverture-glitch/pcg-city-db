@@ -1,0 +1,85 @@
+{
+  "schema_version": "dhelmise-average-profiles-v1",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "unit": "recorded_top16_placements; may reuse same deck code",
+  "total": 220,
+  "unique_deck_codes": 217,
+  "profiles": {
+    "ミカルゲ採用・ヤバソチャ厚め": 28,
+    "ミカルゲ非採用・ヤバソチャ厚め": 6,
+    "ヤバソチャ少数・ノココッチex併用": 106,
+    "ヤバソチャ少数・通常ノココッチ": 38,
+    "ヤバソチャ少数・ノココッチなし": 5,
+    "フーディン併用": 8,
+    "ヤバソチャ・フーディン非採用": 29,
+    "ミカルゲ採用・例外構築": 0
+  },
+  "spiritomb_adoption": 28,
+  "suspected_wrong_card_sections": 70,
+  "weeks": [
+    {
+      "week_id": "W01",
+      "total": 53,
+      "profiles": {
+        "ミカルゲ採用・ヤバソチャ厚め": 9,
+        "ミカルゲ非採用・ヤバソチャ厚め": 0,
+        "ヤバソチャ少数・ノココッチex併用": 24,
+        "ヤバソチャ少数・通常ノココッチ": 7,
+        "ヤバソチャ少数・ノココッチなし": 0,
+        "フーディン併用": 3,
+        "ヤバソチャ・フーディン非採用": 10,
+        "ミカルゲ採用・例外構築": 0
+      },
+      "spiritomb_adoption": 9
+    },
+    {
+      "week_id": "W02",
+      "total": 60,
+      "profiles": {
+        "ミカルゲ採用・ヤバソチャ厚め": 7,
+        "ミカルゲ非採用・ヤバソチャ厚め": 3,
+        "ヤバソチャ少数・ノココッチex併用": 29,
+        "ヤバソチャ少数・通常ノココッチ": 5,
+        "ヤバソチャ少数・ノココッチなし": 5,
+        "フーディン併用": 3,
+        "ヤバソチャ・フーディン非採用": 8,
+        "ミカルゲ採用・例外構築": 0
+      },
+      "spiritomb_adoption": 7
+    },
+    {
+      "week_id": "W03",
+      "total": 56,
+      "profiles": {
+        "ミカルゲ採用・ヤバソチャ厚め": 4,
+        "ミカルゲ非採用・ヤバソチャ厚め": 1,
+        "ヤバソチャ少数・ノココッチex併用": 30,
+        "ヤバソチャ少数・通常ノココッチ": 13,
+        "ヤバソチャ少数・ノココッチなし": 0,
+        "フーディン併用": 1,
+        "ヤバソチャ・フーディン非採用": 7,
+        "ミカルゲ採用・例外構築": 0
+      },
+      "spiritomb_adoption": 4
+    },
+    {
+      "week_id": "W04",
+      "total": 51,
+      "profiles": {
+        "ミカルゲ採用・ヤバソチャ厚め": 8,
+        "ミカルゲ非採用・ヤバソチャ厚め": 2,
+        "ヤバソチャ少数・ノココッチex併用": 23,
+        "ヤバソチャ少数・通常ノココッチ": 13,
+        "ヤバソチャ少数・ノココッチなし": 0,
+        "フーディン併用": 1,
+        "ヤバソチャ・フーディン非採用": 4,
+        "ミカルゲ採用・例外構築": 0
+      },
+      "spiritomb_adoption": 8
+    }
+  ],
+  "note": "These are mutually exclusive deck-structure labels, not deck win rates. The core data may have item/tool cards mislabeled as Pokemon by the source. Normalize card identities and sections before averaging card totals."
+}

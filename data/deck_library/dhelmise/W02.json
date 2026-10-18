@@ -240,7 +240,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115161:15",
@@ -468,7 +476,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ヒーローマント(ACE SPEC)"
+      ]
     },
     {
       "row_id": "1115293:7",
@@ -720,7 +738,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115604:6",
@@ -964,7 +992,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ヤバソチャ少数・ノココッチなし",
+      "spiritomb_count": 0,
+      "chadesu_count": 4,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115012:14",
@@ -1168,7 +1204,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115013:2",
@@ -1396,7 +1440,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115014:3",
@@ -1616,7 +1668,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115014:10",
@@ -1844,7 +1904,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115016:4",
@@ -2064,7 +2134,18 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ブレイブバングル",
+        "ラッキーメット"
+      ]
     },
     {
       "row_id": "1115016:10",
@@ -2276,7 +2357,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115017:15",
@@ -2488,7 +2579,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ミカルゲ非採用・ヤバソチャ厚め",
+      "spiritomb_count": 0,
+      "chadesu_count": 3,
+      "yabasoucha_count": 3,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115021:6",
@@ -2724,7 +2823,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115021:12",
@@ -2928,7 +3035,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 3,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115022:5",
@@ -3132,7 +3247,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ヤバソチャ少数・ノココッチなし",
+      "spiritomb_count": 0,
+      "chadesu_count": 3,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115023:7",
@@ -3344,7 +3467,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115023:13",
@@ -3564,7 +3697,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115024:11",
@@ -3760,7 +3901,15 @@
         }
       ],
       "archetype_group": "フーディン併用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "フーディン併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 4,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115162:7",
@@ -3972,7 +4121,17 @@
         }
       ],
       "archetype_group": "フーディン併用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "フーディン併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 2,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115162:12",
@@ -4208,7 +4367,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ少数・通常ノココッチ",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 1,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115165:11",
@@ -4428,7 +4597,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115167:0",
@@ -4656,7 +4833,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115169:4",
@@ -4908,7 +5093,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ヤバソチャ少数・ノココッチなし",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115170:0",
@@ -5152,7 +5347,18 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ミカルゲ非採用・ヤバソチャ厚め",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 3,
+      "dudunsparce_count": 1,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん",
+        "ブレイブバングル"
+      ]
     },
     {
       "row_id": "1115170:4",
@@ -5348,7 +5554,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ラッキーメット"
+      ]
     },
     {
       "row_id": "1115300:0",
@@ -5568,7 +5784,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115301:13",
@@ -5820,7 +6044,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ヤバソチャ少数・ノココッチなし",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ハンディサーキュレーター"
+      ]
     },
     {
       "row_id": "1115302:14",
@@ -6040,7 +6274,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115305:13",
@@ -6268,7 +6510,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ少数・通常ノココッチ",
+      "spiritomb_count": 0,
+      "chadesu_count": 3,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ブレイブバングル"
+      ]
     },
     {
       "row_id": "1115306:6",
@@ -6512,7 +6764,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115307:2",
@@ -6772,7 +7032,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115484:3",
@@ -6992,7 +7262,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115484:4",
@@ -7196,7 +7474,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115490:0",
@@ -7424,7 +7710,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115620:15",
@@ -7668,7 +7962,18 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ヤバソチャ少数・ノココッチなし",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん",
+        "ブレイブバングル"
+      ]
     },
     {
       "row_id": "1115025:3",
@@ -7880,7 +8185,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115025:6",
@@ -8092,7 +8405,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115026:4",
@@ -8336,7 +8659,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115030:3",
@@ -8524,7 +8855,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 4,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115030:15",
@@ -8744,7 +9083,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115032:5",
@@ -8980,7 +9327,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115033:1",
@@ -9232,7 +9589,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ少数・通常ノココッチ",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115034:4",
@@ -9476,7 +9841,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115173:5",
@@ -9712,7 +10085,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ・フーディン非採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ・フーディン非採用",
+      "spiritomb_count": 0,
+      "chadesu_count": 0,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115173:8",
@@ -9932,7 +10313,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115174:5",
@@ -10136,7 +10525,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ少数・通常ノココッチ",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115175:11",
@@ -10364,7 +10761,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115175:12",
@@ -10568,7 +10973,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ非採用"
+      "dunsparce_engine_group": "ノココッチ非採用",
+      "average_profile": "ミカルゲ採用・ヤバソチャ厚め",
+      "spiritomb_count": 1,
+      "chadesu_count": 3,
+      "yabasoucha_count": 4,
+      "dudunsparce_count": 0,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115309:10",
@@ -10812,7 +11225,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ミカルゲ非採用・ヤバソチャ厚め",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 3,
+      "dudunsparce_count": 1,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ブレイブバングル"
+      ]
     },
     {
       "row_id": "1115310:0",
@@ -11040,7 +11463,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115312:8",
@@ -11276,7 +11707,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115314:6",
@@ -11488,7 +11927,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115314:7",
@@ -11700,7 +12147,15 @@
         }
       ],
       "archetype_group": "フーディン併用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "フーディン併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 0,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 2,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115316:14",
@@ -11960,7 +12415,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ブレイブバングル"
+      ]
     },
     {
       "row_id": "1115318:7",
@@ -12188,7 +12653,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115319:8",
@@ -12424,7 +12897,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115498:4",
@@ -12660,7 +13143,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 2,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115502:5",
@@ -12880,7 +13373,17 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチ型（exなし）"
+      "dunsparce_engine_group": "ノココッチ型（exなし）",
+      "average_profile": "ヤバソチャ少数・通常ノココッチ",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 0,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": [
+        "ふうせん"
+      ]
     },
     {
       "row_id": "1115504:6",
@@ -13108,7 +13611,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 1,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115585:3",
@@ -13328,7 +13839,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     },
     {
       "row_id": "1115621:9",
@@ -13556,7 +14075,15 @@
         }
       ],
       "archetype_group": "ヤバソチャ採用型",
-      "dunsparce_engine_group": "ノココッチex併用型"
+      "dunsparce_engine_group": "ノココッチex併用型",
+      "average_profile": "ヤバソチャ少数・ノココッチex併用",
+      "spiritomb_count": 0,
+      "chadesu_count": 2,
+      "yabasoucha_count": 1,
+      "dudunsparce_count": 2,
+      "dudunsparce_ex_count": 1,
+      "alakazam_count": 0,
+      "section_mismatch_tool_names": []
     }
   ]
 }
