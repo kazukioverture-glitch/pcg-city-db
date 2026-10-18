@@ -92,6 +92,7 @@ def build_report(top16_rows, dhelmise_rows, manifest):
         if r["total_cards"] != 60 or sum(c["count"] for c in r["cards"]) != 60:
             raise ValueError("Deck is not 60 cards: " + r["deck_code"])
     report_groups = {}
+    compared_groups = len({r["average_profile"] for r in eligible})
     for group in GROUPS:
         subset = [r for r in eligible if r["average_profile"] == group]
         others = [r for r in eligible if r["average_profile"] != group]
@@ -102,7 +103,7 @@ def build_report(top16_rows, dhelmise_rows, manifest):
             c = sum(bool(METRICS[metric](r)) for r in others)
             raw_p = fisher_two_sided(a, n - a, c, m - c) if n else None
             s["metrics"][metric]["fisher_vs_other_groups"] = round(raw_p, 6) if raw_p is not None else None
-            s["metrics"][metric]["bonferroni_p_7_groups"] = round(min(1.0, raw_p * 7), 6) if raw_p is not None else None
+            s["metrics"][metric]["bonferroni_adjusted_p"] = round(min(1.0, raw_p * compared_groups), 6) if raw_p is not None else None
         sorted_rows = sorted(subset, key=lambda r: (r["rank"], r["date"], r["deck_code"]))
         s["representative_top_decks"] = [
             {
@@ -139,6 +140,7 @@ def build_report(top16_rows, dhelmise_rows, manifest):
         "excluded_incomplete_events": len(events) - len(complete_events),
         "all_recorded_dhelmise": row_stats(dhelmise_rows),
         "eligible_complete_event_dhelmise": row_stats(eligible),
+        "groups_compared": compared_groups,
         "groups": report_groups,
         "predefined_pairwise_fisher_p": {
             "comparison": "ヤバソチャ少数・通常ノココッチ vs ヤバソチャ少数・ノココッチex併用",
