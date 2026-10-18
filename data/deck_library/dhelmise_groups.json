@@ -1,0 +1,79 @@
+{
+  "schema_version": "city-dhelmise-groups-v1",
+  "season": "2027-S1",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "unit": "result_placements_not_unique_deck_codes",
+  "total": 220,
+  "unique_deck_codes": 217,
+  "archetype_group_counts": {
+    "ヤバソチャ採用型": 183,
+    "ヤバソチャ・フーディン非採用型": 29,
+    "フーディン併用型": 8
+  },
+  "dunsparce_engine_group_counts": {
+    "ノココッチex併用型": 132,
+    "ノココッチ型（exなし）": 58,
+    "ノココッチ非採用": 30
+  },
+  "weeks": [
+    {
+      "week_id": "W01",
+      "total": 53,
+      "archetype_group_counts": {
+        "ヤバソチャ採用型": 40,
+        "ヤバソチャ・フーディン非採用型": 10,
+        "フーディン併用型": 3
+      },
+      "dunsparce_engine_group_counts": {
+        "ノココッチex併用型": 34,
+        "ノココッチ型（exなし）": 13,
+        "ノココッチ非採用": 6
+      }
+    },
+    {
+      "week_id": "W02",
+      "total": 60,
+      "archetype_group_counts": {
+        "ヤバソチャ採用型": 49,
+        "ヤバソチャ・フーディン非採用型": 8,
+        "フーディン併用型": 3
+      },
+      "dunsparce_engine_group_counts": {
+        "ノココッチex併用型": 36,
+        "ノココッチ型（exなし）": 13,
+        "ノココッチ非採用": 11
+      }
+    },
+    {
+      "week_id": "W03",
+      "total": 56,
+      "archetype_group_counts": {
+        "ヤバソチャ採用型": 48,
+        "ヤバソチャ・フーディン非採用型": 7,
+        "フーディン併用型": 1
+      },
+      "dunsparce_engine_group_counts": {
+        "ノココッチex併用型": 35,
+        "ノココッチ型（exなし）": 16,
+        "ノココッチ非採用": 5
+      }
+    },
+    {
+      "week_id": "W04",
+      "total": 51,
+      "archetype_group_counts": {
+        "ヤバソチャ採用型": 46,
+        "ヤバソチャ・フーディン非採用型": 4,
+        "フーディン併用型": 1
+      },
+      "dunsparce_engine_group_counts": {
+        "ノココッチex併用型": 27,
+        "ノココッチ型（exなし）": 16,
+        "ノココッチ非採用": 8
+      }
+    }
+  ],
+  "caveat": "Structural Pokemon card groupings only, not win rates or complete Top16 coverage."
+}
