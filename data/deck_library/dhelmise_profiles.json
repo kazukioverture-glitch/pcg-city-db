@@ -18,7 +18,7 @@
     "ミカルゲ採用・例外構築": 0
   },
   "spiritomb_adoption": 28,
-  "suspected_wrong_card_sections": 70,
+  "suspected_wrong_card_sections": 0,
   "weeks": [
     {
       "week_id": "W01",
@@ -81,5 +81,5 @@
       "spiritomb_adoption": 8
     }
   ],
-  "note": "These are mutually exclusive deck-structure labels, not deck win rates. The core data may have item/tool cards mislabeled as Pokemon by the source. Normalize card identities and sections before averaging card totals."
+  "note": "These are mutually exclusive deck-structure labels, not deck win rates. Tool cards have their own category and must not count as Pokemon. Normalize card identities and sections before averaging card totals."
 }
