@@ -23,6 +23,7 @@ class VariantGroupTests(unittest.TestCase):
         cards = [{"name": "ヤバソチャM5006/081", "card_id": "x",
                   "count": 1, "section": "グッズ"}]
         self.assertEqual(pokemon_count(cards, "ヤバソチャ"), 0)
+        self.assertEqual(pokemon_count([{"name": "ヤバソチャ", "card_id": "x", "count": 2, "section": "ポケモンのどうぐ (2)"}], "ヤバソチャ"), 0)
         self.assertEqual(pokemon_count([mon("ヤバソチャ別名")], "ヤバソチャ"), 0)
 
 if __name__ == "__main__":
