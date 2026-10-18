@@ -1,0 +1,40 @@
+name: Build Top16 deck library
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/index.json"
+      - "analysis/deck_library.py"
+      - "analysis/classification_cards.json"
+      - ".github/workflows/build-deck-library.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: city-deck-library
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Validate and materialize read-only deck library
+        run: python -m analysis.deck_library
+      - name: Commit derived index only when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/deck_library/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Top16 deck library'
+            git push
+          fi
