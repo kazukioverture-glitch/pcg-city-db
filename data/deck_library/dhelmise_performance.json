@@ -1,0 +1,738 @@
+{
+  "schema_version": "dhelmise-performance-v1",
+  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
+  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "scope": "Recorded Dhelmise Top16 decklists (rank 1 to 16), not all event entrants",
+  "event_filter": "Only events with exactly 16 recorded rank slots: 1x1,2x1,3x2,5x4,9x8",
+  "observed_events": 344,
+  "complete_16_slot_events": 248,
+  "excluded_incomplete_events": 96,
+  "all_recorded_dhelmise": {
+    "placements": 220,
+    "unique_deck_codes": 217,
+    "ranks": {
+      "1": 17,
+      "2": 8,
+      "3": 28,
+      "5": 69,
+      "9": 98
+    },
+    "metrics": {
+      "top8": {
+        "count": 122,
+        "rate": 0.554545,
+        "wilson_95": [
+          0.488493,
+          0.618726
+        ]
+      },
+      "top4": {
+        "count": 53,
+        "rate": 0.240909,
+        "wilson_95": [
+          0.189158,
+          0.301553
+        ]
+      },
+      "final": {
+        "count": 25,
+        "rate": 0.113636,
+        "wilson_95": [
+          0.078166,
+          0.162368
+        ]
+      },
+      "champion": {
+        "count": 17,
+        "rate": 0.077273,
+        "wilson_95": [
+          0.048802,
+          0.120252
+        ]
+      }
+    }
+  },
+  "eligible_complete_event_dhelmise": {
+    "placements": 187,
+    "unique_deck_codes": 185,
+    "ranks": {
+      "1": 13,
+      "2": 5,
+      "3": 22,
+      "5": 56,
+      "9": 91
+    },
+    "metrics": {
+      "top8": {
+        "count": 96,
+        "rate": 0.513369,
+        "wilson_95": [
+          0.442186,
+          0.584013
+        ]
+      },
+      "top4": {
+        "count": 40,
+        "rate": 0.213904,
+        "wilson_95": [
+          0.1612,
+          0.278125
+        ]
+      },
+      "final": {
+        "count": 18,
+        "rate": 0.096257,
+        "wilson_95": [
+          0.061756,
+          0.147011
+        ]
+      },
+      "champion": {
+        "count": 13,
+        "rate": 0.069519,
+        "wilson_95": [
+          0.041074,
+          0.115294
+        ]
+      }
+    }
+  },
+  "groups_compared": 7,
+  "groups": {
+    "ミカルゲ採用・ヤバソチャ厚め": {
+      "placements": 23,
+      "unique_deck_codes": 23,
+      "ranks": {
+        "1": 1,
+        "2": 0,
+        "3": 3,
+        "5": 6,
+        "9": 13
+      },
+      "metrics": {
+        "top8": {
+          "count": 10,
+          "rate": 0.434783,
+          "wilson_95": [
+            0.256346,
+            0.631886
+          ],
+          "fisher_vs_other_groups": 0.506151,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 4,
+          "rate": 0.173913,
+          "wilson_95": [
+            0.069787,
+            0.371376
+          ],
+          "fisher_vs_other_groups": 0.788505,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 1,
+          "rate": 0.043478,
+          "wilson_95": [
+            0.007717,
+            0.209912
+          ],
+          "fisher_vs_other_groups": 0.703605,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 1,
+          "rate": 0.043478,
+          "wilson_95": [
+            0.007717,
+            0.209912
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 1,
+          "date": "2026-10-11",
+          "category": "オープン",
+          "prefecture": "福岡県",
+          "event_id": "1115346",
+          "deck_code": "xcD8JG-gzc3XW-xGcc88",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xcD8JG-gzc3XW-xGcc88"
+        },
+        {
+          "rank": 3,
+          "date": "2026-09-26",
+          "category": "オープン",
+          "prefecture": "静岡県",
+          "event_id": "1115148",
+          "deck_code": "yMpp3X-f6LCip-yRySSM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMpp3X-f6LCip-yRySSM"
+        },
+        {
+          "rank": 3,
+          "date": "2026-10-04",
+          "category": "オープン",
+          "prefecture": "宮城県",
+          "event_id": "1115030",
+          "deck_code": "x8a8cG-Afelhk-8cDcGc",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x8a8cG-Afelhk-8cDcGc"
+        }
+      ]
+    },
+    "ミカルゲ非採用・ヤバソチャ厚め": {
+      "placements": 5,
+      "unique_deck_codes": 5,
+      "ranks": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "5": 1,
+        "9": 3
+      },
+      "metrics": {
+        "top8": {
+          "count": 2,
+          "rate": 0.4,
+          "wilson_95": [
+            0.117621,
+            0.769276
+          ],
+          "fisher_vs_other_groups": 0.67595,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 1,
+          "rate": 0.2,
+          "wilson_95": [
+            0.036224,
+            0.624465
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 1,
+          "rate": 0.2,
+          "wilson_95": [
+            0.036224,
+            0.624465
+          ],
+          "fisher_vs_other_groups": 0.40061,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 1,
+          "rate": 0.2,
+          "wilson_95": [
+            0.036224,
+            0.624465
+          ],
+          "fisher_vs_other_groups": 0.305338,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 1,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "東京都",
+          "event_id": "1115170",
+          "deck_code": "FbkVV1-MURUAo-FkfffF",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FbkVV1-MURUAo-FkfffF"
+        },
+        {
+          "rank": 5,
+          "date": "2026-10-16",
+          "category": "オープン",
+          "prefecture": "東京都",
+          "event_id": "1115067",
+          "deck_code": "GcxcYY-GnANhM-Dx8D88",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/GcxcYY-GnANhM-Dx8D88"
+        },
+        {
+          "rank": 9,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "群馬県",
+          "event_id": "1115017",
+          "deck_code": "x8ccYc-olzVLt-cD8GDa",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x8ccYc-olzVLt-cD8GDa"
+        }
+      ]
+    },
+    "ヤバソチャ少数・ノココッチex併用": {
+      "placements": 84,
+      "unique_deck_codes": 83,
+      "ranks": {
+        "1": 6,
+        "2": 1,
+        "3": 12,
+        "5": 25,
+        "9": 40
+      },
+      "metrics": {
+        "top8": {
+          "count": 44,
+          "rate": 0.52381,
+          "wilson_95": [
+            0.418321,
+            0.627216
+          ],
+          "fisher_vs_other_groups": 0.883211,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 19,
+          "rate": 0.22619,
+          "wilson_95": [
+            0.14986,
+            0.326469
+          ],
+          "fisher_vs_other_groups": 0.723555,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 7,
+          "rate": 0.083333,
+          "wilson_95": [
+            0.040953,
+            0.162157
+          ],
+          "fisher_vs_other_groups": 0.627846,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 6,
+          "rate": 0.071429,
+          "wilson_95": [
+            0.033146,
+            0.147196
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 1,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "神奈川県",
+          "event_id": "1115159",
+          "deck_code": "FFwfFb-LqHWNx-kk5kV1",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/FFwfFb-LqHWNx-kk5kV1"
+        },
+        {
+          "rank": 1,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "埼玉県",
+          "event_id": "1115618",
+          "deck_code": "g9Nnn6-atrA3K-n9igLg",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/g9Nnn6-atrA3K-n9igLg"
+        },
+        {
+          "rank": 1,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "神奈川県",
+          "event_id": "1115167",
+          "deck_code": "48ccGc-hw3vHK-JDxxD8",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/48ccGc-hw3vHK-JDxxD8"
+        }
+      ]
+    },
+    "ヤバソチャ少数・通常ノココッチ": {
+      "placements": 35,
+      "unique_deck_codes": 34,
+      "ranks": {
+        "1": 4,
+        "2": 3,
+        "3": 1,
+        "5": 8,
+        "9": 19
+      },
+      "metrics": {
+        "top8": {
+          "count": 16,
+          "rate": 0.457143,
+          "wilson_95": [
+            0.30466,
+            0.618103
+          ],
+          "fisher_vs_other_groups": 0.574136,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 8,
+          "rate": 0.228571,
+          "wilson_95": [
+            0.120659,
+            0.390173
+          ],
+          "fisher_vs_other_groups": 0.820956,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 7,
+          "rate": 0.2,
+          "wilson_95": [
+            0.100424,
+            0.358916
+          ],
+          "fisher_vs_other_groups": 0.049285,
+          "bonferroni_adjusted_p": 0.344992
+        },
+        "champion": {
+          "count": 4,
+          "rate": 0.114286,
+          "wilson_95": [
+            0.045352,
+            0.259515
+          ],
+          "fisher_vs_other_groups": 0.269185,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 1,
+          "date": "2026-09-26",
+          "category": "オープン",
+          "prefecture": "栃木県",
+          "event_id": "1115603",
+          "deck_code": "k5wkbv-Jf1CC1-fFkFVb",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/k5wkbv-Jf1CC1-fFkFVb"
+        },
+        {
+          "rank": 1,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "東京都",
+          "event_id": "1115007",
+          "deck_code": "n9g9nn-v1bXW1-nPig6n",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/n9g9nn-v1bXW1-nPig6n"
+        },
+        {
+          "rank": 1,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "東京都",
+          "event_id": "1115157",
+          "deck_code": "nLg9ng-1b0Y00-gL6NPQ",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nLg9ng-1b0Y00-gL6NPQ"
+        }
+      ]
+    },
+    "ヤバソチャ少数・ノココッチなし": {
+      "placements": 5,
+      "unique_deck_codes": 5,
+      "ranks": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "5": 3,
+        "9": 2
+      },
+      "metrics": {
+        "top8": {
+          "count": 3,
+          "rate": 0.6,
+          "wilson_95": [
+            0.230724,
+            0.882379
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 0,
+          "rate": 0.0,
+          "wilson_95": [
+            0,
+            0.434482
+          ],
+          "fisher_vs_other_groups": 0.586348,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 0,
+          "rate": 0.0,
+          "wilson_95": [
+            0,
+            0.434482
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 0,
+          "rate": 0.0,
+          "wilson_95": [
+            0,
+            0.434482
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 5,
+          "date": "2026-09-29",
+          "category": "オープン",
+          "prefecture": "大阪府",
+          "event_id": "1115604",
+          "deck_code": "URypyy-VQyrBw-S3ppUM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/URypyy-VQyrBw-S3ppUM"
+        },
+        {
+          "rank": 5,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "神奈川県",
+          "event_id": "1115169",
+          "deck_code": "G8Jxxc-7bmORl-8xcc8J",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/G8Jxxc-7bmORl-8xcc8J"
+        },
+        {
+          "rank": 5,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "茨城県",
+          "event_id": "1115022",
+          "deck_code": "LnHHgg-wNxPZZ-nLLn9L",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LnHHgg-wNxPZZ-nLLn9L"
+        }
+      ]
+    },
+    "フーディン併用": {
+      "placements": 7,
+      "unique_deck_codes": 7,
+      "ranks": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "5": 3,
+        "9": 3
+      },
+      "metrics": {
+        "top8": {
+          "count": 4,
+          "rate": 0.571429,
+          "wilson_95": [
+            0.250458,
+            0.84178
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 1,
+          "rate": 0.142857,
+          "wilson_95": [
+            0.02568,
+            0.513128
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 0,
+          "rate": 0.0,
+          "wilson_95": [
+            0.0,
+            0.35433
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 0,
+          "rate": 0.0,
+          "wilson_95": [
+            0.0,
+            0.35433
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 3,
+          "date": "2026-10-10",
+          "category": "オープン",
+          "prefecture": "神奈川県",
+          "event_id": "1115185",
+          "deck_code": "RSp2pM-A8b31C-Xp2yMp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/RSp2pM-A8b31C-Xp2yMp"
+        },
+        {
+          "rank": 5,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "神奈川県",
+          "event_id": "1115159",
+          "deck_code": "888KG4-XNuzc1-cDxKxx",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/888KG4-XNuzc1-cDxKxx"
+        },
+        {
+          "rank": 5,
+          "date": "2026-10-03",
+          "category": "オープン",
+          "prefecture": "岐阜県",
+          "event_id": "1115162",
+          "deck_code": "XpRpMM-k8Zl7M-MMRyyp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/XpRpMM-k8Zl7M-MMRyyp"
+        }
+      ]
+    },
+    "ヤバソチャ・フーディン非採用": {
+      "placements": 28,
+      "unique_deck_codes": 28,
+      "ranks": {
+        "1": 1,
+        "2": 1,
+        "3": 5,
+        "5": 10,
+        "9": 11
+      },
+      "metrics": {
+        "top8": {
+          "count": 17,
+          "rate": 0.607143,
+          "wilson_95": [
+            0.42409,
+            0.764343
+          ],
+          "fisher_vs_other_groups": 0.311163,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "top4": {
+          "count": 7,
+          "rate": 0.25,
+          "wilson_95": [
+            0.126765,
+            0.433557
+          ],
+          "fisher_vs_other_groups": 0.620812,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "final": {
+          "count": 2,
+          "rate": 0.071429,
+          "wilson_95": [
+            0.019812,
+            0.226454
+          ],
+          "fisher_vs_other_groups": 1.0,
+          "bonferroni_adjusted_p": 1.0
+        },
+        "champion": {
+          "count": 1,
+          "rate": 0.035714,
+          "wilson_95": [
+            0.006333,
+            0.177122
+          ],
+          "fisher_vs_other_groups": 0.695405,
+          "bonferroni_adjusted_p": 1.0
+        }
+      },
+      "representative_top_decks": [
+        {
+          "rank": 1,
+          "date": "2026-09-26",
+          "category": "オープン",
+          "prefecture": "大阪府",
+          "event_id": "1115265",
+          "deck_code": "F11kbw-0SIzPU-dvkFkb",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/F11kbw-0SIzPU-dvkFkb"
+        },
+        {
+          "rank": 2,
+          "date": "2026-10-10",
+          "category": "オープン",
+          "prefecture": "山梨県",
+          "event_id": "1115184",
+          "deck_code": "Gx8cJD-kqxjwC-8KcY8D",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/Gx8cJD-kqxjwC-8KcY8D"
+        },
+        {
+          "rank": 3,
+          "date": "2026-09-27",
+          "category": "オープン",
+          "prefecture": "広島県",
+          "event_id": "1115276",
+          "deck_code": "K8Gxxx-2K9uO9-GGxc88",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/K8Gxxx-2K9uO9-GGxc88"
+        }
+      ]
+    },
+    "ミカルゲ採用・例外構築": {
+      "placements": 0,
+      "unique_deck_codes": 0,
+      "ranks": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "5": 0,
+        "9": 0
+      },
+      "metrics": {
+        "top8": {
+          "count": 0,
+          "rate": null,
+          "wilson_95": null,
+          "fisher_vs_other_groups": null,
+          "bonferroni_adjusted_p": null
+        },
+        "top4": {
+          "count": 0,
+          "rate": null,
+          "wilson_95": null,
+          "fisher_vs_other_groups": null,
+          "bonferroni_adjusted_p": null
+        },
+        "final": {
+          "count": 0,
+          "rate": null,
+          "wilson_95": null,
+          "fisher_vs_other_groups": null,
+          "bonferroni_adjusted_p": null
+        },
+        "champion": {
+          "count": 0,
+          "rate": null,
+          "wilson_95": null,
+          "fisher_vs_other_groups": null,
+          "bonferroni_adjusted_p": null
+        }
+      },
+      "representative_top_decks": []
+    }
+  },
+  "predefined_pairwise_fisher_p": {
+    "comparison": "ヤバソチャ少数・通常ノココッチ vs ヤバソチャ少数・ノココッチex併用",
+    "two_sided_by_metric": {
+      "top8": 0.550444,
+      "top4": 1.0,
+      "final": 0.114454,
+      "champion": 0.477575
+    }
+  },
+  "warnings": [
+    "Only conditional advancement among observed Top16 decks; not an event entrant win rate.",
+    "Incomplete event reports are removed to avoid stage-dependent selection bias.",
+    "Some deck codes are repeated across tournaments: sampling unit is placement, not distinct decklists.",
+    "Deck observations from the same event may be statistically dependent.",
+    "Within-group card-level observations are exploratory; the report does not certify card-level causation.",
+    "Weekly data may be incomplete or change; use source hashes when comparing snapshots."
+  ]
+}
