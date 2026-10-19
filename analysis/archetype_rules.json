@@ -974,6 +974,58 @@
         }
       ],
       "variants": []
+    },
+    {
+      "id": "greninja_froslass",
+      "name": "ゲッコウガex／メガユキメノコex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "ゲッコウガex",
+          "min_count": 2
+        },
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ヨノワール型",
+          "requires": [
+            {
+              "card": "ヨノワール",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mega_lopunny_froslass",
+      "name": "メガミミロップex／メガユキメノコex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガミミロップex",
+          "min_count": 2
+        },
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ノココッチ型",
+          "requires": [
+            {
+              "card": "ノココッチ",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
     }
   ]
 }
