@@ -898,6 +898,82 @@
         }
       ],
       "variants": []
+    },
+    {
+      "id": "mega_starmie_ex",
+      "name": "メガスターミーex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガスターミーex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_froslass_ex",
+      "name": "メガユキメノコex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "palafin_ex",
+      "name": "イルカマンex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "イルカマンex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_golisopod_ex",
+      "name": "メガグソクムシャex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガグソクムシャex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_absol_ex",
+      "name": "メガアブソルex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガアブソルex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "azumarill",
+      "name": "マリルリ",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "マリル",
+          "min_count": 4
+        },
+        {
+          "card": "マリルリ",
+          "min_count": 4
+        }
+      ],
+      "variants": []
     }
   ]
 }
