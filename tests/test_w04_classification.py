@@ -39,6 +39,15 @@ EXPECTED = {
     "VVFVwV-V16Plr-bFk5kV": "メガグソクムシャex",
     "9LnLgN-5oIWOm-LHL6gg": "メガアブソルex",
     "8x8Dcx-6APRrg-GGcx8D": "イルカマンex",
+    "8YJD8x-0roB5P-c8xxGc": "ゲッコウガex／メガユキメノコex",
+    "84x8JG-v6lZ3r-c8caDx": "ゲッコウガex／メガユキメノコex",
+    "9HgnLn-A0RiPX-nL9QNL": "ゲッコウガex／メガユキメノコex",
+    "MXMRME-32mWVA-MpRyyy": "メガミミロップex／メガユキメノコex",
+    "kkkFdF-tTlzGU-V1Vkbk": "メガミミロップex／メガユキメノコex",
+    "JDKG8c-OCPcoZ-xc8GGx": "メガミミロップex／メガユキメノコex",
+    "x8cGGc-kaCjcE-x848xx": "メガミミロップex／メガユキメノコex",
+    "ggLLQn-DeN1VJ-9nQLn9": "メガミミロップex／メガユキメノコex",
+    "R2MMyM-kIjjZw-UXyyMp": "メガミミロップex／メガユキメノコex",
 }
 
 AMBIGUOUS_REMAIN_UNKNOWN = {
@@ -53,6 +62,11 @@ AMBIGUOUS_REMAIN_UNKNOWN = {
     "nL9ngN-1vn6yT-g9LN6L",
     "9nLiQL-p7lwk7-LggLn9",
     "VVVVbv-HiXHF5-FVdk5F",
+    "RyU3yp-7CGSKz-pMMSU2",
+    "kkVVkv-pHXBPq-VFF5Fb",
+    "xc8GxK-Yntd0W-8xcGca",
+    "9nnNLL-ZkuVdv-gLNLLn",
+    "MyXXy2-rPVzzy-MMpRyy",
 }
 
 
