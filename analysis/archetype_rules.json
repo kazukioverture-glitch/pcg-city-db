@@ -1,8 +1,8 @@
 {
-  "version": "JP-2026-W04-v5.0",
+  "version": "JP-2026-W02-v4.1",
   "market": "JP",
-  "target_week": "W04",
-  "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W04; conservative evidence-backed extensions from repeated W03/W04 Top8 deck structures",
+  "target_week": "W02",
+  "card_pool_basis": "Japanese legal card pool observed for City League 2027 S1 W02",
   "external_taxonomy_reference": {
     "name": "LimitlessTCG",
     "role": "classification-engine design reference only",
