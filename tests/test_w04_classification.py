@@ -51,6 +51,7 @@ EXPECTED = {
     "R2MMyM-kIjjZw-UXyyMp": "メガミミロップex／メガユキメノコex",
     "GY8cx8-KvIVxj-88xYDx": "ヒビキのバクフーン",
     "RyU3yp-7CGSKz-pMMSU2": "メガライボルトex／シビビール",
+    "xGxxYK-oVVnC6-Yc488G": "メガガルーラ・オーガポンバレット",
 }
 
 AMBIGUOUS_REMAIN_UNKNOWN = {
@@ -61,7 +62,6 @@ AMBIGUOUS_REMAIN_UNKNOWN = {
     "VFVVVw-CdZbCP-VFdbkk",
     # Mixed attackers / bullets without a sufficiently supported parent.
     "5VkFw1-pFvupb-5FbfFV",
-    "xGxxYK-oVVnC6-Yc488G",
     "nL9ngN-1vn6yT-g9LN6L",
     "9nLiQL-p7lwk7-LggLn9",
     "VVVVbv-HiXHF5-FVdk5F",
@@ -111,7 +111,7 @@ class W04ClassificationTests(unittest.TestCase):
             self.sidecar, self.decks, self.index["source_updated_at"])
         unknown = {code for code in self.w04_top8 if not resolve(code)["parent"]}
         self.assertEqual(unknown, AMBIGUOUS_REMAIN_UNKNOWN)
-        self.assertEqual(len(unknown), 13)
+        self.assertEqual(len(unknown), 12)
 
 
 if __name__ == "__main__":
