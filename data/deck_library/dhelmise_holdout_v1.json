@@ -80,31 +80,39 @@
       "copies": 1
     }
   ],
-  "new_source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
-  "new_source_updated_at": "2026-10-18T07:31:27+09:00",
+  "new_source_decks_sha256": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
+  "new_source_updated_at": "2026-10-24T10:39:52+09:00",
   "validation_weeks": [
     "W05",
     "W06",
     "W07",
     "W08"
   ],
-  "available_weeks": [],
-  "status": "not_started",
-  "complete_event_count": 0,
+  "available_weeks": [
+    "W05"
+  ],
+  "status": "window_in_progress_descriptive_only",
+  "complete_event_count": 6,
   "eligible_common_engine_decks": {
-    "placements": 0,
-    "top4": 0,
-    "top4_rate": null,
-    "wilson95": null,
-    "unique_codes": 0
+    "placements": 4,
+    "top4": 1,
+    "top4_rate": 0.25,
+    "wilson95": [
+      0.045587,
+      0.699358
+    ],
+    "unique_codes": 4
   },
   "exclusive_comparison": {
     "kichi_only": {
-      "placements": 0,
+      "placements": 1,
       "top4": 0,
-      "top4_rate": null,
-      "wilson95": null,
-      "unique_codes": 0
+      "top4_rate": 0.0,
+      "wilson95": [
+        0,
+        0.793451
+      ],
+      "unique_codes": 1
     },
     "shaymin_only": {
       "placements": 0,
@@ -115,7 +123,7 @@
     },
     "fisher_two_sided_p": null,
     "week_and_dudunsparce_ex_stratified": {
-      "strata": 0,
+      "strata": 1,
       "informative_strata": 0,
       "common_odds_ratio": null,
       "normal_approx_two_sided_p": null,

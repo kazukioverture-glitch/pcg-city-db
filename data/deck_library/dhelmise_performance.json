@@ -1,100 +1,100 @@
 {
   "schema_version": "dhelmise-performance-v1",
-  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
-  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
-  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "source_city_sha256": "40e30daadbba7a9ae6ed89296c92ed8968a58f00f4dc5d7aee78f0687775116c",
+  "source_decks_sha256": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
+  "source_updated_at": "2026-10-24T10:39:52+09:00",
   "calendar_id": "2027-s1-mon-sun-v1",
   "scope": "Recorded Dhelmise Top16 decklists (rank 1 to 16), not all event entrants",
   "event_filter": "Only events with exactly 16 recorded rank slots: 1x1,2x1,3x2,5x4,9x8",
-  "observed_events": 344,
-  "complete_16_slot_events": 248,
-  "excluded_incomplete_events": 96,
+  "observed_events": 394,
+  "complete_16_slot_events": 314,
+  "excluded_incomplete_events": 80,
   "all_recorded_dhelmise": {
-    "placements": 220,
-    "unique_deck_codes": 217,
+    "placements": 255,
+    "unique_deck_codes": 251,
     "ranks": {
-      "1": 17,
-      "2": 8,
-      "3": 28,
-      "5": 69,
-      "9": 98
+      "1": 18,
+      "2": 9,
+      "3": 34,
+      "5": 77,
+      "9": 117
     },
     "metrics": {
       "top8": {
-        "count": 122,
-        "rate": 0.554545,
+        "count": 138,
+        "rate": 0.541176,
         "wilson_95": [
-          0.488493,
-          0.618726
+          0.479857,
+          0.601273
         ]
       },
       "top4": {
-        "count": 53,
-        "rate": 0.240909,
+        "count": 61,
+        "rate": 0.239216,
         "wilson_95": [
-          0.189158,
-          0.301553
+          0.190972,
+          0.2952
         ]
       },
       "final": {
-        "count": 25,
-        "rate": 0.113636,
+        "count": 27,
+        "rate": 0.105882,
         "wilson_95": [
-          0.078166,
-          0.162368
+          0.073794,
+          0.149669
         ]
       },
       "champion": {
-        "count": 17,
-        "rate": 0.077273,
+        "count": 18,
+        "rate": 0.070588,
         "wilson_95": [
-          0.048802,
-          0.120252
+          0.045114,
+          0.108809
         ]
       }
     }
   },
   "eligible_complete_event_dhelmise": {
-    "placements": 187,
-    "unique_deck_codes": 185,
+    "placements": 231,
+    "unique_deck_codes": 227,
     "ranks": {
-      "1": 13,
+      "1": 14,
       "2": 5,
-      "3": 22,
-      "5": 56,
-      "9": 91
+      "3": 29,
+      "5": 66,
+      "9": 117
     },
     "metrics": {
       "top8": {
-        "count": 96,
-        "rate": 0.513369,
+        "count": 114,
+        "rate": 0.493506,
         "wilson_95": [
-          0.442186,
-          0.584013
+          0.429669,
+          0.557556
         ]
       },
       "top4": {
-        "count": 40,
-        "rate": 0.213904,
+        "count": 48,
+        "rate": 0.207792,
         "wilson_95": [
-          0.1612,
-          0.278125
+          0.160461,
+          0.264683
         ]
       },
       "final": {
-        "count": 18,
-        "rate": 0.096257,
+        "count": 19,
+        "rate": 0.082251,
         "wilson_95": [
-          0.061756,
-          0.147011
+          0.053287,
+          0.124882
         ]
       },
       "champion": {
-        "count": 13,
-        "rate": 0.069519,
+        "count": 14,
+        "rate": 0.060606,
         "wilson_95": [
-          0.041074,
-          0.115294
+          0.036441,
+          0.099146
         ]
       }
     }
@@ -102,54 +102,54 @@
   "groups_compared": 7,
   "groups": {
     "ミカルゲ採用・ヤバソチャ厚め": {
-      "placements": 23,
-      "unique_deck_codes": 23,
+      "placements": 33,
+      "unique_deck_codes": 32,
       "ranks": {
         "1": 1,
         "2": 0,
-        "3": 3,
-        "5": 6,
-        "9": 13
+        "3": 5,
+        "5": 8,
+        "9": 19
       },
       "metrics": {
         "top8": {
-          "count": 10,
-          "rate": 0.434783,
+          "count": 14,
+          "rate": 0.424242,
           "wilson_95": [
-            0.256346,
-            0.631886
+            0.272356,
+            0.591927
           ],
-          "fisher_vs_other_groups": 0.506151,
+          "fisher_vs_other_groups": 0.453869,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
-          "count": 4,
-          "rate": 0.173913,
+          "count": 6,
+          "rate": 0.181818,
           "wilson_95": [
-            0.069787,
-            0.371376
+            0.086108,
+            0.343882
           ],
-          "fisher_vs_other_groups": 0.788505,
+          "fisher_vs_other_groups": 0.819026,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
           "count": 1,
-          "rate": 0.043478,
+          "rate": 0.030303,
           "wilson_95": [
-            0.007717,
-            0.209912
+            0.005369,
+            0.153187
           ],
-          "fisher_vs_other_groups": 0.703605,
+          "fisher_vs_other_groups": 0.324724,
           "bonferroni_adjusted_p": 1.0
         },
         "champion": {
           "count": 1,
-          "rate": 0.043478,
+          "rate": 0.030303,
           "wilson_95": [
-            0.007717,
-            0.209912
+            0.005369,
+            0.153187
           ],
-          "fisher_vs_other_groups": 1.0,
+          "fisher_vs_other_groups": 0.698708,
           "bonferroni_adjusted_p": 1.0
         }
       },
@@ -184,54 +184,54 @@
       ]
     },
     "ミカルゲ非採用・ヤバソチャ厚め": {
-      "placements": 5,
-      "unique_deck_codes": 5,
+      "placements": 6,
+      "unique_deck_codes": 6,
       "ranks": {
         "1": 1,
         "2": 0,
         "3": 0,
         "5": 1,
-        "9": 3
+        "9": 4
       },
       "metrics": {
         "top8": {
           "count": 2,
-          "rate": 0.4,
+          "rate": 0.333333,
           "wilson_95": [
-            0.117621,
-            0.769276
+            0.096771,
+            0.700007
           ],
-          "fisher_vs_other_groups": 0.67595,
+          "fisher_vs_other_groups": 0.683533,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
           "count": 1,
-          "rate": 0.2,
+          "rate": 0.166667,
           "wilson_95": [
-            0.036224,
-            0.624465
+            0.030053,
+            0.563503
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
           "count": 1,
-          "rate": 0.2,
+          "rate": 0.166667,
           "wilson_95": [
-            0.036224,
-            0.624465
+            0.030053,
+            0.563503
           ],
-          "fisher_vs_other_groups": 0.40061,
+          "fisher_vs_other_groups": 0.406018,
           "bonferroni_adjusted_p": 1.0
         },
         "champion": {
           "count": 1,
-          "rate": 0.2,
+          "rate": 0.166667,
           "wilson_95": [
-            0.036224,
-            0.624465
+            0.030053,
+            0.563503
           ],
-          "fisher_vs_other_groups": 0.305338,
+          "fisher_vs_other_groups": 0.315715,
           "bonferroni_adjusted_p": 1.0
         }
       },
@@ -266,52 +266,52 @@
       ]
     },
     "ヤバソチャ少数・ノココッチex併用": {
-      "placements": 84,
-      "unique_deck_codes": 83,
+      "placements": 101,
+      "unique_deck_codes": 99,
       "ranks": {
         "1": 6,
         "2": 1,
-        "3": 12,
-        "5": 25,
-        "9": 40
+        "3": 16,
+        "5": 29,
+        "9": 49
       },
       "metrics": {
         "top8": {
-          "count": 44,
-          "rate": 0.52381,
+          "count": 52,
+          "rate": 0.514851,
           "wilson_95": [
-            0.418321,
-            0.627216
+            0.418639,
+            0.609975
           ],
-          "fisher_vs_other_groups": 0.883211,
+          "fisher_vs_other_groups": 0.597319,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
-          "count": 19,
-          "rate": 0.22619,
+          "count": 23,
+          "rate": 0.227723,
           "wilson_95": [
-            0.14986,
-            0.326469
+            0.156808,
+            0.31859
           ],
-          "fisher_vs_other_groups": 0.723555,
+          "fisher_vs_other_groups": 0.518105,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
           "count": 7,
-          "rate": 0.083333,
+          "rate": 0.069307,
           "wilson_95": [
-            0.040953,
-            0.162157
+            0.033975,
+            0.1362
           ],
-          "fisher_vs_other_groups": 0.627846,
+          "fisher_vs_other_groups": 0.63255,
           "bonferroni_adjusted_p": 1.0
         },
         "champion": {
           "count": 6,
-          "rate": 0.071429,
+          "rate": 0.059406,
           "wilson_95": [
-            0.033146,
-            0.147196
+            0.027508,
+            0.123591
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -348,54 +348,54 @@
       ]
     },
     "ヤバソチャ少数・通常ノココッチ": {
-      "placements": 35,
-      "unique_deck_codes": 34,
+      "placements": 48,
+      "unique_deck_codes": 47,
       "ranks": {
-        "1": 4,
+        "1": 5,
         "2": 3,
-        "3": 1,
-        "5": 8,
-        "9": 19
+        "3": 2,
+        "5": 11,
+        "9": 27
       },
       "metrics": {
         "top8": {
-          "count": 16,
-          "rate": 0.457143,
+          "count": 21,
+          "rate": 0.4375,
           "wilson_95": [
-            0.30466,
-            0.618103
+            0.307013,
+            0.57725
           ],
-          "fisher_vs_other_groups": 0.574136,
+          "fisher_vs_other_groups": 0.420032,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
-          "count": 8,
-          "rate": 0.228571,
+          "count": 10,
+          "rate": 0.208333,
           "wilson_95": [
-            0.120659,
-            0.390173
+            0.117303,
+            0.342589
           ],
-          "fisher_vs_other_groups": 0.820956,
+          "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
-          "count": 7,
-          "rate": 0.2,
+          "count": 8,
+          "rate": 0.166667,
           "wilson_95": [
-            0.100424,
-            0.358916
+            0.086955,
+            0.295778
           ],
-          "fisher_vs_other_groups": 0.049285,
-          "bonferroni_adjusted_p": 0.344992
+          "fisher_vs_other_groups": 0.033149,
+          "bonferroni_adjusted_p": 0.232045
         },
         "champion": {
-          "count": 4,
-          "rate": 0.114286,
+          "count": 5,
+          "rate": 0.104167,
           "wilson_95": [
-            0.045352,
-            0.259515
+            0.045322,
+            0.221674
           ],
-          "fisher_vs_other_groups": 0.269185,
+          "fisher_vs_other_groups": 0.174852,
           "bonferroni_adjusted_p": 1.0
         }
       },
@@ -430,22 +430,22 @@
       ]
     },
     "ヤバソチャ少数・ノココッチなし": {
-      "placements": 5,
-      "unique_deck_codes": 5,
+      "placements": 6,
+      "unique_deck_codes": 6,
       "ranks": {
         "1": 0,
         "2": 0,
         "3": 0,
         "5": 3,
-        "9": 2
+        "9": 3
       },
       "metrics": {
         "top8": {
           "count": 3,
-          "rate": 0.6,
+          "rate": 0.5,
           "wilson_95": [
-            0.230724,
-            0.882379
+            0.187616,
+            0.812384
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -454,18 +454,18 @@
           "count": 0,
           "rate": 0.0,
           "wilson_95": [
-            0,
-            0.434482
+            0.0,
+            0.390334
           ],
-          "fisher_vs_other_groups": 0.586348,
+          "fisher_vs_other_groups": 0.348902,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
           "count": 0,
           "rate": 0.0,
           "wilson_95": [
-            0,
-            0.434482
+            0.0,
+            0.390334
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -474,8 +474,8 @@
           "count": 0,
           "rate": 0.0,
           "wilson_95": [
-            0,
-            0.434482
+            0.0,
+            0.390334
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -512,32 +512,32 @@
       ]
     },
     "フーディン併用": {
-      "placements": 7,
-      "unique_deck_codes": 7,
+      "placements": 8,
+      "unique_deck_codes": 8,
       "ranks": {
         "1": 0,
         "2": 0,
         "3": 1,
-        "5": 3,
+        "5": 4,
         "9": 3
       },
       "metrics": {
         "top8": {
-          "count": 4,
-          "rate": 0.571429,
+          "count": 5,
+          "rate": 0.625,
           "wilson_95": [
-            0.250458,
-            0.84178
+            0.305742,
+            0.863156
           ],
-          "fisher_vs_other_groups": 1.0,
+          "fisher_vs_other_groups": 0.49542,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
           "count": 1,
-          "rate": 0.142857,
+          "rate": 0.125,
           "wilson_95": [
-            0.02568,
-            0.513128
+            0.022417,
+            0.470888
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -546,8 +546,8 @@
           "count": 0,
           "rate": 0.0,
           "wilson_95": [
-            0.0,
-            0.35433
+            0,
+            0.324408
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -556,8 +556,8 @@
           "count": 0,
           "rate": 0.0,
           "wilson_95": [
-            0.0,
-            0.35433
+            0,
+            0.324408
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
@@ -594,54 +594,54 @@
       ]
     },
     "ヤバソチャ・フーディン非採用": {
-      "placements": 28,
-      "unique_deck_codes": 28,
+      "placements": 29,
+      "unique_deck_codes": 29,
       "ranks": {
         "1": 1,
         "2": 1,
         "3": 5,
         "5": 10,
-        "9": 11
+        "9": 12
       },
       "metrics": {
         "top8": {
           "count": 17,
-          "rate": 0.607143,
+          "rate": 0.586207,
           "wilson_95": [
-            0.42409,
-            0.764343
+            0.407378,
+            0.744868
           ],
-          "fisher_vs_other_groups": 0.311163,
+          "fisher_vs_other_groups": 0.324399,
           "bonferroni_adjusted_p": 1.0
         },
         "top4": {
           "count": 7,
-          "rate": 0.25,
+          "rate": 0.241379,
           "wilson_95": [
-            0.126765,
-            0.433557
+            0.122184,
+            0.421076
           ],
-          "fisher_vs_other_groups": 0.620812,
+          "fisher_vs_other_groups": 0.6282,
           "bonferroni_adjusted_p": 1.0
         },
         "final": {
           "count": 2,
-          "rate": 0.071429,
+          "rate": 0.068966,
           "wilson_95": [
-            0.019812,
-            0.226454
+            0.019121,
+            0.219646
           ],
           "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
         },
         "champion": {
           "count": 1,
-          "rate": 0.035714,
+          "rate": 0.034483,
           "wilson_95": [
-            0.006333,
-            0.177122
+            0.006113,
+            0.171755
           ],
-          "fisher_vs_other_groups": 0.695405,
+          "fisher_vs_other_groups": 1.0,
           "bonferroni_adjusted_p": 1.0
         }
       },
@@ -721,10 +721,10 @@
   "predefined_pairwise_fisher_p": {
     "comparison": "ヤバソチャ少数・通常ノココッチ vs ヤバソチャ少数・ノココッチex併用",
     "two_sided_by_metric": {
-      "top8": 0.550444,
-      "top4": 1.0,
-      "final": 0.114454,
-      "champion": 0.477575
+      "top8": 0.387605,
+      "top4": 0.836161,
+      "final": 0.082095,
+      "champion": 0.333188
     }
   },
   "warnings": [

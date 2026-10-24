@@ -1,21 +1,21 @@
 {
   "schema_version": "city-dhelmise-groups-v1",
   "season": "2027-S1",
-  "source_updated_at": "2026-10-18T07:31:27+09:00",
-  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
-  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "source_updated_at": "2026-10-24T10:39:52+09:00",
+  "source_city_sha256": "40e30daadbba7a9ae6ed89296c92ed8968a58f00f4dc5d7aee78f0687775116c",
+  "source_decks_sha256": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
   "unit": "result_placements_not_unique_deck_codes",
-  "total": 220,
-  "unique_deck_codes": 217,
+  "total": 255,
+  "unique_deck_codes": 251,
   "archetype_group_counts": {
-    "ヤバソチャ採用型": 183,
-    "ヤバソチャ・フーディン非採用型": 29,
+    "ヤバソチャ採用型": 217,
+    "ヤバソチャ・フーディン非採用型": 30,
     "フーディン併用型": 8
   },
   "dunsparce_engine_group_counts": {
-    "ノココッチex併用型": 132,
-    "ノココッチ型（exなし）": 58,
-    "ノココッチ非採用": 30
+    "ノココッチex併用型": 148,
+    "ノココッチ型（exなし）": 71,
+    "ノココッチ非採用": 36
   },
   "weeks": [
     {
@@ -62,16 +62,30 @@
     },
     {
       "week_id": "W04",
-      "total": 51,
+      "total": 82,
       "archetype_group_counts": {
-        "ヤバソチャ採用型": 46,
-        "ヤバソチャ・フーディン非採用型": 4,
+        "ヤバソチャ採用型": 76,
+        "ヤバソチャ・フーディン非採用型": 5,
         "フーディン併用型": 1
       },
       "dunsparce_engine_group_counts": {
-        "ノココッチex併用型": 27,
-        "ノココッチ型（exなし）": 16,
-        "ノココッチ非採用": 8
+        "ノココッチex併用型": 42,
+        "ノココッチ型（exなし）": 26,
+        "ノココッチ非採用": 14
+      }
+    },
+    {
+      "week_id": "W05",
+      "total": 4,
+      "archetype_group_counts": {
+        "ヤバソチャ採用型": 4,
+        "ヤバソチャ・フーディン非採用型": 0,
+        "フーディン併用型": 0
+      },
+      "dunsparce_engine_group_counts": {
+        "ノココッチex併用型": 1,
+        "ノココッチ型（exなし）": 3,
+        "ノココッチ非採用": 0
       }
     }
   ],

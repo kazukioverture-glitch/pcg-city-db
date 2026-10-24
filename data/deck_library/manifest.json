@@ -2,9 +2,9 @@
   "schema_version": "city-deck-library-v1",
   "season": "2027-S1",
   "calendar_id": "2027-s1-mon-sun-v1",
-  "source_updated_at": "2026-10-18T07:31:27+09:00",
-  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
-  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
+  "source_updated_at": "2026-10-24T10:39:52+09:00",
+  "source_city_sha256": "40e30daadbba7a9ae6ed89296c92ed8968a58f00f4dc5d7aee78f0687775116c",
+  "source_decks_sha256": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
   "identity_dictionary_version": "city-classifier-v1",
   "scope_note": "Top16 means published ranks 1-16; unchecked/partial events are included as observed rows but must not be treated as complete coverage. Missing deck codes are retained in index, never imputed. Raw complete 60-card decks remain in data/city_decks.json.",
   "weeks": [
@@ -36,11 +36,11 @@
       "week_id": "W03",
       "top16_index_path": "data/deck_library/top16/W03.json",
       "dhelmise_lists_path": "data/deck_library/dhelmise/W03.json",
-      "observed_event_count": 76,
-      "confirmed_top16_observation_event_count": 72,
-      "row_count": 1180,
-      "valid_60_rows": 1180,
-      "missing_deck_rows": 0,
+      "observed_event_count": 77,
+      "confirmed_top16_observation_event_count": 73,
+      "row_count": 1196,
+      "valid_60_rows": 1195,
+      "missing_deck_rows": 1,
       "dhelmise_rows": 56,
       "banette_dhelmise_pattern_rows": 55
     },
@@ -48,13 +48,25 @@
       "week_id": "W04",
       "top16_index_path": "data/deck_library/top16/W04.json",
       "dhelmise_lists_path": "data/deck_library/dhelmise/W04.json",
-      "observed_event_count": 87,
-      "confirmed_top16_observation_event_count": 42,
-      "row_count": 1151,
-      "valid_60_rows": 1148,
-      "missing_deck_rows": 3,
-      "dhelmise_rows": 51,
-      "banette_dhelmise_pattern_rows": 51
+      "observed_event_count": 130,
+      "confirmed_top16_observation_event_count": 101,
+      "row_count": 1837,
+      "valid_60_rows": 1833,
+      "missing_deck_rows": 4,
+      "dhelmise_rows": 82,
+      "banette_dhelmise_pattern_rows": 82
+    },
+    {
+      "week_id": "W05",
+      "top16_index_path": "data/deck_library/top16/W05.json",
+      "dhelmise_lists_path": "data/deck_library/dhelmise/W05.json",
+      "observed_event_count": 6,
+      "confirmed_top16_observation_event_count": 6,
+      "row_count": 96,
+      "valid_60_rows": 96,
+      "missing_deck_rows": 0,
+      "dhelmise_rows": 4,
+      "banette_dhelmise_pattern_rows": 4
     }
   ]
 }

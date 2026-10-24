@@ -1,14 +1,14 @@
 {
   "schema_version": "dhelmise-card-factors-exploratory-v1",
-  "source_city_sha256": "82e1631b3e9ec36d0e61a6230eeb313cf7b643b68fca29cde8bec4991114e5d9",
-  "source_decks_sha256": "537734531dfe244ac1b052e74ea178103942d1277aede0ad65bb6028008d4317",
-  "source_updated_at": "2026-10-18T07:31:27+09:00",
+  "source_city_sha256": "40e30daadbba7a9ae6ed89296c92ed8968a58f00f4dc5d7aee78f0687775116c",
+  "source_decks_sha256": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
+  "source_updated_at": "2026-10-24T10:39:52+09:00",
   "population": {
-    "reference_decks": 144,
-    "rank_complete_events": 248,
-    "eligible_decks": 119,
-    "top4": 27,
-    "unique_deck_codes": 117
+    "reference_decks": 169,
+    "rank_complete_events": 314,
+    "eligible_decks": 149,
+    "top4": 33,
+    "unique_deck_codes": 146
   },
   "reference_cards": 19,
   "reference_slots": 52,
@@ -18,24 +18,24 @@
       "card": "カゲボウズ",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.923611,
+      "modal_agreement_all_decks": 0.911243,
       "results": {
         "below_modal": {
-          "n": 10,
-          "top4": 1,
-          "rate": 0.1,
+          "n": 14,
+          "top4": 2,
+          "rate": 0.142857,
           "wilson95": [
-            0.017876,
-            0.40415
+            0.040094,
+            0.399414
           ]
         },
         "at_modal": {
-          "n": 109,
-          "top4": 26,
-          "rate": 0.238532,
+          "n": 135,
+          "top4": 31,
+          "rate": 0.22963,
           "wilson95": [
-            0.168297,
-            0.32657
+            0.166751,
+            0.307469
           ]
         },
         "above_modal": {
@@ -50,21 +50,24 @@
       "card": "ダダリン",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 1.0,
+      "modal_agreement_all_decks": 0.994083,
       "results": {
         "below_modal": {
-          "n": 0,
+          "n": 1,
           "top4": 0,
-          "rate": null,
-          "wilson95": null
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.793451
+          ]
         },
         "at_modal": {
-          "n": 119,
-          "top4": 27,
-          "rate": 0.226891,
+          "n": 148,
+          "top4": 33,
+          "rate": 0.222973,
           "wilson95": [
-            0.160877,
-            0.309986
+            0.163406,
+            0.296557
           ]
         },
         "above_modal": {
@@ -79,7 +82,7 @@
       "card": "ジュペッタ",
       "modal_copies": 3,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.604167,
+      "modal_agreement_all_decks": 0.556213,
       "results": {
         "below_modal": {
           "n": 1,
@@ -91,21 +94,21 @@
           ]
         },
         "at_modal": {
-          "n": 73,
-          "top4": 15,
-          "rate": 0.205479,
+          "n": 83,
+          "top4": 19,
+          "rate": 0.228916,
           "wilson95": [
-            0.12867,
-            0.311737
+            0.151734,
+            0.330081
           ]
         },
         "above_modal": {
-          "n": 45,
-          "top4": 12,
-          "rate": 0.266667,
+          "n": 65,
+          "top4": 14,
+          "rate": 0.215385,
           "wilson95": [
-            0.159649,
-            0.410388
+            0.132868,
+            0.329666
           ]
         }
       }
@@ -114,24 +117,24 @@
       "card": "ノコッチ",
       "modal_copies": 3,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.756944,
+      "modal_agreement_all_decks": 0.733728,
       "results": {
         "below_modal": {
-          "n": 26,
-          "top4": 5,
-          "rate": 0.192308,
+          "n": 37,
+          "top4": 9,
+          "rate": 0.243243,
           "wilson95": [
-            0.085071,
-            0.378763
+            0.133614,
+            0.401173
           ]
         },
         "at_modal": {
-          "n": 91,
-          "top4": 22,
-          "rate": 0.241758,
+          "n": 110,
+          "top4": 24,
+          "rate": 0.218182,
           "wilson95": [
-            0.165418,
-            0.339018
+            0.15123,
+            0.304153
           ]
         },
         "above_modal": {
@@ -149,33 +152,33 @@
       "card": "チャデス",
       "modal_copies": 2,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.597222,
+      "modal_agreement_all_decks": 0.568047,
       "results": {
         "below_modal": {
-          "n": 40,
+          "n": 55,
           "top4": 10,
-          "rate": 0.25,
+          "rate": 0.181818,
           "wilson95": [
-            0.141871,
-            0.40194
+            0.101877,
+            0.303305
           ]
         },
         "at_modal": {
-          "n": 73,
-          "top4": 16,
-          "rate": 0.219178,
+          "n": 85,
+          "top4": 21,
+          "rate": 0.247059,
           "wilson95": [
-            0.139661,
-            0.326773
+            0.167646,
+            0.348346
           ]
         },
         "above_modal": {
-          "n": 6,
-          "top4": 1,
-          "rate": 0.166667,
+          "n": 9,
+          "top4": 2,
+          "rate": 0.222222,
           "wilson95": [
-            0.030053,
-            0.563503
+            0.063225,
+            0.547411
           ]
         }
       }
@@ -184,7 +187,7 @@
       "card": "ノココッチ",
       "modal_copies": 2,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.965278,
+      "modal_agreement_all_decks": 0.970414,
       "results": {
         "below_modal": {
           "n": 2,
@@ -196,12 +199,12 @@
           ]
         },
         "at_modal": {
-          "n": 115,
-          "top4": 27,
-          "rate": 0.234783,
+          "n": 145,
+          "top4": 33,
+          "rate": 0.227586,
           "wilson95": [
-            0.166669,
-            0.320042
+            0.166894,
+            0.30234
           ]
         },
         "above_modal": {
@@ -219,24 +222,24 @@
       "card": "リーリエのピッピex",
       "modal_copies": 2,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.618056,
+      "modal_agreement_all_decks": 0.64497,
       "results": {
         "below_modal": {
-          "n": 43,
-          "top4": 8,
-          "rate": 0.186047,
+          "n": 50,
+          "top4": 10,
+          "rate": 0.2,
           "wilson95": [
-            0.097418,
-            0.32617
+            0.112438,
+            0.330371
           ]
         },
         "at_modal": {
-          "n": 76,
-          "top4": 19,
-          "rate": 0.25,
+          "n": 99,
+          "top4": 23,
+          "rate": 0.232323,
           "wilson95": [
-            0.166289,
-            0.357768
+            0.160091,
+            0.324553
           ]
         },
         "above_modal": {
@@ -250,25 +253,25 @@
     {
       "card": "ガチグマ アカツキex",
       "modal_copies": 1,
-      "adoption_rate_all_decks": 0.923611,
-      "modal_agreement_all_decks": 0.923611,
+      "adoption_rate_all_decks": 0.923077,
+      "modal_agreement_all_decks": 0.923077,
       "results": {
         "below_modal": {
-          "n": 10,
+          "n": 12,
           "top4": 2,
-          "rate": 0.2,
+          "rate": 0.166667,
           "wilson95": [
-            0.056682,
-            0.509838
+            0.046965,
+            0.448031
           ]
         },
         "at_modal": {
-          "n": 109,
-          "top4": 25,
-          "rate": 0.229358,
+          "n": 137,
+          "top4": 31,
+          "rate": 0.226277,
           "wilson95": [
-            0.160455,
-            0.316687
+            0.164238,
+            0.303248
           ]
         },
         "above_modal": {
@@ -283,7 +286,7 @@
       "card": "ヤバソチャ",
       "modal_copies": 1,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.868056,
+      "modal_agreement_all_decks": 0.852071,
       "results": {
         "below_modal": {
           "n": 0,
@@ -292,21 +295,21 @@
           "wilson95": null
         },
         "at_modal": {
-          "n": 103,
-          "top4": 23,
-          "rate": 0.223301,
+          "n": 127,
+          "top4": 27,
+          "rate": 0.212598,
           "wilson95": [
-            0.153658,
-            0.312842
+            0.150425,
+            0.291648
           ]
         },
         "above_modal": {
-          "n": 16,
-          "top4": 4,
-          "rate": 0.25,
+          "n": 22,
+          "top4": 6,
+          "rate": 0.272727,
           "wilson95": [
-            0.101821,
-            0.494983
+            0.131508,
+            0.481517
           ]
         }
       }
@@ -315,7 +318,7 @@
       "card": "ハイパーボール",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.993056,
+      "modal_agreement_all_decks": 0.994083,
       "results": {
         "below_modal": {
           "n": 1,
@@ -327,12 +330,12 @@
           ]
         },
         "at_modal": {
-          "n": 118,
-          "top4": 27,
-          "rate": 0.228814,
+          "n": 148,
+          "top4": 33,
+          "rate": 0.222973,
           "wilson95": [
-            0.162287,
-            0.31244
+            0.163406,
+            0.296557
           ]
         },
         "above_modal": {
@@ -347,7 +350,7 @@
       "card": "ポケパッド",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.986111,
+      "modal_agreement_all_decks": 0.988166,
       "results": {
         "below_modal": {
           "n": 2,
@@ -359,12 +362,12 @@
           ]
         },
         "at_modal": {
-          "n": 117,
-          "top4": 27,
-          "rate": 0.230769,
+          "n": 147,
+          "top4": 33,
+          "rate": 0.22449,
           "wilson95": [
-            0.163722,
-            0.314934
+            0.164552,
+            0.29846
           ]
         },
         "above_modal": {
@@ -379,7 +382,7 @@
       "card": "夜のタンカ",
       "modal_copies": 2,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.638889,
+      "modal_agreement_all_decks": 0.621302,
       "results": {
         "below_modal": {
           "n": 0,
@@ -388,21 +391,21 @@
           "wilson95": null
         },
         "at_modal": {
-          "n": 77,
-          "top4": 20,
-          "rate": 0.25974,
+          "n": 95,
+          "top4": 21,
+          "rate": 0.221053,
           "wilson95": [
-            0.174892,
-            0.367422
+            0.149374,
+            0.314414
           ]
         },
         "above_modal": {
-          "n": 42,
-          "top4": 7,
-          "rate": 0.166667,
+          "n": 54,
+          "top4": 12,
+          "rate": 0.222222,
           "wilson95": [
-            0.083159,
-            0.30604
+            0.131954,
+            0.349387
           ]
         }
       }
@@ -411,24 +414,24 @@
       "card": "リーリエの決心",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.944444,
+      "modal_agreement_all_decks": 0.928994,
       "results": {
         "below_modal": {
-          "n": 7,
-          "top4": 0,
-          "rate": 0.0,
+          "n": 11,
+          "top4": 1,
+          "rate": 0.090909,
           "wilson95": [
-            0.0,
-            0.35433
+            0.016232,
+            0.377358
           ]
         },
         "at_modal": {
-          "n": 112,
-          "top4": 27,
-          "rate": 0.241071,
+          "n": 138,
+          "top4": 32,
+          "rate": 0.231884,
           "wilson95": [
-            0.171295,
-            0.328021
+            0.169313,
+            0.308978
           ]
         },
         "above_modal": {
@@ -443,7 +446,7 @@
       "card": "ボスの指令",
       "modal_copies": 3,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.604167,
+      "modal_agreement_all_decks": 0.591716,
       "results": {
         "below_modal": {
           "n": 2,
@@ -455,21 +458,21 @@
           ]
         },
         "at_modal": {
-          "n": 73,
-          "top4": 14,
-          "rate": 0.191781,
+          "n": 88,
+          "top4": 18,
+          "rate": 0.204545,
           "wilson95": [
-            0.117824,
-            0.296555
+            0.133487,
+            0.30032
           ]
         },
         "above_modal": {
-          "n": 44,
-          "top4": 13,
-          "rate": 0.295455,
+          "n": 59,
+          "top4": 15,
+          "rate": 0.254237,
           "wilson95": [
-            0.181555,
-            0.442202
+            0.16056,
+            0.377961
           ]
         }
       }
@@ -477,34 +480,34 @@
     {
       "card": "ムク",
       "modal_copies": 3,
-      "adoption_rate_all_decks": 0.951389,
-      "modal_agreement_all_decks": 0.618056,
+      "adoption_rate_all_decks": 0.952663,
+      "modal_agreement_all_decks": 0.60355,
       "results": {
         "below_modal": {
-          "n": 19,
-          "top4": 5,
-          "rate": 0.263158,
+          "n": 30,
+          "top4": 6,
+          "rate": 0.2,
           "wilson95": [
-            0.118064,
-            0.487916
+            0.095051,
+            0.373057
           ]
         },
         "at_modal": {
-          "n": 77,
-          "top4": 19,
-          "rate": 0.246753,
+          "n": 92,
+          "top4": 23,
+          "rate": 0.25,
           "wilson95": [
-            0.164041,
-            0.353534
+            0.172753,
+            0.347288
           ]
         },
         "above_modal": {
-          "n": 23,
-          "top4": 3,
-          "rate": 0.130435,
+          "n": 27,
+          "top4": 4,
+          "rate": 0.148148,
           "wilson95": [
-            0.045377,
-            0.321275
+            0.059159,
+            0.324787
           ]
         }
       }
@@ -512,34 +515,34 @@
     {
       "card": "プリズムタワー",
       "modal_copies": 3,
-      "adoption_rate_all_decks": 0.993056,
-      "modal_agreement_all_decks": 0.638889,
+      "adoption_rate_all_decks": 0.994083,
+      "modal_agreement_all_decks": 0.627219,
       "results": {
         "below_modal": {
-          "n": 40,
-          "top4": 9,
-          "rate": 0.225,
+          "n": 50,
+          "top4": 12,
+          "rate": 0.24,
           "wilson95": [
-            0.123161,
-            0.375031
+            0.142974,
+            0.374127
           ]
         },
         "at_modal": {
-          "n": 77,
-          "top4": 18,
-          "rate": 0.233766,
+          "n": 96,
+          "top4": 21,
+          "rate": 0.21875,
           "wilson95": [
-            0.153296,
-            0.339538
+            0.147763,
+            0.311379
           ]
         },
         "above_modal": {
-          "n": 2,
+          "n": 3,
           "top4": 0,
           "rate": 0.0,
           "wilson95": [
-            0,
-            0.65762
+            0.0,
+            0.561497
           ]
         }
       }
@@ -548,7 +551,7 @@
       "card": "テレパス超エネルギー",
       "modal_copies": 4,
       "adoption_rate_all_decks": 1.0,
-      "modal_agreement_all_decks": 0.986111,
+      "modal_agreement_all_decks": 0.988166,
       "results": {
         "below_modal": {
           "n": 2,
@@ -560,12 +563,12 @@
           ]
         },
         "at_modal": {
-          "n": 117,
-          "top4": 26,
-          "rate": 0.222222,
+          "n": 147,
+          "top4": 32,
+          "rate": 0.217687,
           "wilson95": [
-            0.156404,
-            0.305701
+            0.15863,
+            0.291124
           ]
         },
         "above_modal": {
@@ -579,8 +582,8 @@
     {
       "card": "基本超エネルギー",
       "modal_copies": 2,
-      "adoption_rate_all_decks": 0.993056,
-      "modal_agreement_all_decks": 0.791667,
+      "adoption_rate_all_decks": 0.994083,
+      "modal_agreement_all_decks": 0.786982,
       "results": {
         "below_modal": {
           "n": 3,
@@ -592,21 +595,21 @@
           ]
         },
         "at_modal": {
-          "n": 93,
-          "top4": 21,
-          "rate": 0.225806,
+          "n": 116,
+          "top4": 25,
+          "rate": 0.215517,
           "wilson95": [
-            0.152702,
-            0.320665
+            0.150457,
+            0.298816
           ]
         },
         "above_modal": {
-          "n": 23,
-          "top4": 5,
-          "rate": 0.217391,
+          "n": 30,
+          "top4": 7,
+          "rate": 0.233333,
           "wilson95": [
-            0.09664,
-            0.419035
+            0.117924,
+            0.409283
           ]
         }
       }
@@ -614,25 +617,25 @@
     {
       "card": "レガシーエネルギー",
       "modal_copies": 1,
-      "adoption_rate_all_decks": 0.9375,
-      "modal_agreement_all_decks": 0.9375,
+      "adoption_rate_all_decks": 0.928994,
+      "modal_agreement_all_decks": 0.928994,
       "results": {
         "below_modal": {
-          "n": 9,
-          "top4": 1,
-          "rate": 0.111111,
+          "n": 12,
+          "top4": 2,
+          "rate": 0.166667,
           "wilson95": [
-            0.019891,
-            0.435
+            0.046965,
+            0.448031
           ]
         },
         "at_modal": {
-          "n": 110,
-          "top4": 26,
-          "rate": 0.236364,
+          "n": 137,
+          "top4": 31,
+          "rate": 0.226277,
           "wilson95": [
-            0.166712,
-            0.323808
+            0.164238,
+            0.303248
           ]
         },
         "above_modal": {
@@ -646,60 +649,51 @@
   ],
   "reference_shortfall_results": {
     "0": {
-      "n": 15,
+      "n": 18,
       "top4": 4,
-      "rate": 0.266667,
+      "rate": 0.222222,
       "wilson95": [
-        0.108975,
-        0.519504
+        0.090009,
+        0.452146
       ]
     },
     "1": {
-      "n": 31,
-      "top4": 8,
-      "rate": 0.258065,
+      "n": 37,
+      "top4": 10,
+      "rate": 0.27027,
       "wilson95": [
-        0.137017,
-        0.432461
+        0.153975,
+        0.429782
       ]
     },
     "2": {
-      "n": 39,
-      "top4": 10,
-      "rate": 0.25641,
+      "n": 46,
+      "top4": 11,
+      "rate": 0.23913,
       "wilson95": [
-        0.145688,
-        0.410817
+        0.139122,
+        0.379351
       ]
     },
     "3": {
-      "n": 20,
-      "top4": 3,
-      "rate": 0.15,
+      "n": 29,
+      "top4": 6,
+      "rate": 0.206897,
       "wilson95": [
-        0.052369,
-        0.360419
+        0.098461,
+        0.383901
       ]
     },
     "4": {
-      "n": 8,
+      "n": 10,
       "top4": 2,
-      "rate": 0.25,
+      "rate": 0.2,
       "wilson95": [
-        0.071479,
-        0.590725
+        0.056682,
+        0.509838
       ]
     },
     "5": {
-      "n": 2,
-      "top4": 0,
-      "rate": 0.0,
-      "wilson95": [
-        0,
-        0.65762
-      ]
-    },
-    "6": {
       "n": 3,
       "top4": 0,
       "rate": 0.0,
@@ -708,7 +702,25 @@
         0.561497
       ]
     },
+    "6": {
+      "n": 4,
+      "top4": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.489891
+      ]
+    },
     "7": {
+      "n": 1,
+      "top4": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.793451
+      ]
+    },
+    "8": {
       "n": 1,
       "top4": 0,
       "rate": 0.0,
@@ -728,25 +740,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 33,
+          "n": 44,
           "top4": 12,
-          "rate": 0.363636,
+          "rate": 0.272727,
           "wilson95": [
-            0.221872,
-            0.533838
+            0.163464,
+            0.418489
           ]
         },
         "not_adopted": {
-          "n": 86,
-          "top4": 15,
-          "rate": 0.174419,
+          "n": 105,
+          "top4": 21,
+          "rate": 0.2,
           "wilson95": [
-            0.108648,
-            0.268032
+            0.134699,
+            0.286477
           ]
         },
-        "rate_difference": 0.189218,
-        "fisher_two_sided": 0.04831
+        "rate_difference": 0.072727,
+        "fisher_two_sided": 0.388022
       },
       "by_week": {
         "W01": {
@@ -817,42 +829,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 7,
+            "n": 17,
             "top4": 2,
-            "rate": 0.285714,
+            "rate": 0.117647,
             "wilson95": [
-              0.082219,
-              0.641066
+              0.03288,
+              0.343364
             ]
           },
           "not_adopted": {
-            "n": 16,
-            "top4": 2,
-            "rate": 0.125,
+            "n": 32,
+            "top4": 7,
+            "rate": 0.21875,
             "wilson95": [
-              0.034977,
-              0.360228
+              0.110238,
+              0.38755
             ]
           },
-          "rate_difference": 0.160714,
-          "fisher_two_sided": 0.557312
+          "rate_difference": -0.101103,
+          "fisher_two_sided": 0.466776
+        },
+        "W05": {
+          "adopted": {
+            "n": 1,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.793451
+            ]
+          },
+          "not_adopted": {
+            "n": 3,
+            "top4": 1,
+            "rate": 0.333333,
+            "wilson95": [
+              0.061492,
+              0.79234
+            ]
+          },
+          "rate_difference": -0.333333,
+          "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 2.470893,
-        "normal_approx_two_sided_p": 0.028956,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.461067,
+        "normal_approx_two_sided_p": 0.318632,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
+        "strata": 10,
         "informative_strata": 7,
-        "common_odds_ratio": 2.520455,
-        "normal_approx_two_sided_p": 0.027334,
+        "common_odds_ratio": 1.733636,
+        "normal_approx_two_sided_p": 0.164612,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.421344
+      "bh_adjusted_q": 0.992249
     },
     {
       "hypothesis": "シェイミ採用",
@@ -863,25 +897,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 67,
-          "top4": 11,
-          "rate": 0.164179,
+          "n": 81,
+          "top4": 15,
+          "rate": 0.185185,
           "wilson95": [
-            0.094226,
-            0.270553
+            0.115563,
+            0.283316
           ]
         },
         "not_adopted": {
-          "n": 52,
-          "top4": 16,
-          "rate": 0.307692,
+          "n": 68,
+          "top4": 18,
+          "rate": 0.264706,
           "wilson95": [
-            0.199147,
-            0.442696
+            0.174497,
+            0.380077
           ]
         },
-        "rate_difference": -0.143513,
-        "fisher_two_sided": 0.078919
+        "rate_difference": -0.079521,
+        "fisher_two_sided": 0.322177
       },
       "by_week": {
         "W01": {
@@ -952,42 +986,61 @@
         },
         "W04": {
           "adopted": {
-            "n": 10,
-            "top4": 2,
-            "rate": 0.2,
+            "n": 24,
+            "top4": 6,
+            "rate": 0.25,
             "wilson95": [
-              0.056682,
-              0.509838
+              0.119994,
+              0.448994
             ]
           },
           "not_adopted": {
-            "n": 13,
-            "top4": 2,
-            "rate": 0.153846,
+            "n": 25,
+            "top4": 3,
+            "rate": 0.12,
             "wilson95": [
-              0.043258,
-              0.422346
+              0.041668,
+              0.299558
             ]
           },
-          "rate_difference": 0.046154,
-          "fisher_two_sided": 1.0
+          "rate_difference": 0.13,
+          "fisher_two_sided": 0.289016
+        },
+        "W05": {
+          "adopted": {
+            "n": 0,
+            "top4": 0,
+            "rate": null,
+            "wilson95": null
+          },
+          "not_adopted": {
+            "n": 4,
+            "top4": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.045587,
+              0.699358
+            ]
+          },
+          "rate_difference": null,
+          "fisher_two_sided": null
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
+        "strata": 5,
         "informative_strata": 4,
-        "common_odds_ratio": 0.418339,
-        "normal_approx_two_sided_p": 0.061919,
+        "common_odds_ratio": 0.629514,
+        "normal_approx_two_sided_p": 0.253681,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
+        "strata": 10,
         "informative_strata": 7,
-        "common_odds_ratio": 0.368511,
-        "normal_approx_two_sided_p": 0.057431,
+        "common_odds_ratio": 0.517347,
+        "normal_approx_two_sided_p": 0.161271,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.421344
+      "bh_adjusted_q": 0.992249
     },
     {
       "hypothesis": "グラビティーマウンテン採用",
@@ -998,25 +1051,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 29,
-          "top4": 10,
-          "rate": 0.344828,
+          "n": 40,
+          "top4": 13,
+          "rate": 0.325,
           "wilson95": [
-            0.199407,
-            0.526549
+            0.200845,
+            0.479823
           ]
         },
         "not_adopted": {
-          "n": 90,
-          "top4": 17,
-          "rate": 0.188889,
+          "n": 109,
+          "top4": 20,
+          "rate": 0.183486,
           "wilson95": [
-            0.121413,
-            0.281836
+            0.122037,
+            0.266486
           ]
         },
-        "rate_difference": 0.155939,
-        "fisher_two_sided": 0.123874
+        "rate_difference": 0.141514,
+        "fisher_two_sided": 0.076939
       },
       "by_week": {
         "W01": {
@@ -1087,42 +1140,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 6,
-            "top4": 1,
-            "rate": 0.166667,
+            "n": 16,
+            "top4": 4,
+            "rate": 0.25,
             "wilson95": [
-              0.030053,
-              0.563503
+              0.101821,
+              0.494983
             ]
           },
           "not_adopted": {
-            "n": 17,
-            "top4": 3,
-            "rate": 0.176471,
+            "n": 33,
+            "top4": 5,
+            "rate": 0.151515,
             "wilson95": [
-              0.061911,
-              0.410295
+              0.066505,
+              0.309199
             ]
           },
-          "rate_difference": -0.009804,
+          "rate_difference": 0.098485,
+          "fisher_two_sided": 0.448572
+        },
+        "W05": {
+          "adopted": {
+            "n": 1,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.793451
+            ]
+          },
+          "not_adopted": {
+            "n": 3,
+            "top4": 1,
+            "rate": 0.333333,
+            "wilson95": [
+              0.061492,
+              0.79234
+            ]
+          },
+          "rate_difference": -0.333333,
           "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 2.299421,
-        "normal_approx_two_sided_p": 0.088814,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 2.236409,
+        "normal_approx_two_sided_p": 0.061259,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 6,
-        "common_odds_ratio": 2.693575,
-        "normal_approx_two_sided_p": 0.055132,
+        "strata": 10,
+        "informative_strata": 7,
+        "common_odds_ratio": 2.669203,
+        "normal_approx_two_sided_p": 0.028566,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.421344
+      "bh_adjusted_q": 0.923268
     },
     {
       "hypothesis": "スペシャルレッドカード採用",
@@ -1133,25 +1208,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 32,
-          "top4": 4,
-          "rate": 0.125,
+          "n": 39,
+          "top4": 6,
+          "rate": 0.153846,
           "wilson95": [
-            0.049701,
-            0.280683
+            0.072475,
+            0.297295
           ]
         },
         "not_adopted": {
-          "n": 87,
-          "top4": 23,
-          "rate": 0.264368,
+          "n": 110,
+          "top4": 27,
+          "rate": 0.245455,
           "wilson95": [
-            0.1831,
-            0.365564
+            0.174524,
+            0.333564
           ]
         },
-        "rate_difference": -0.139368,
-        "fisher_two_sided": 0.140448
+        "rate_difference": -0.091608,
+        "fisher_two_sided": 0.270333
       },
       "by_week": {
         "W01": {
@@ -1222,42 +1297,61 @@
         },
         "W04": {
           "adopted": {
-            "n": 2,
-            "top4": 1,
-            "rate": 0.5,
+            "n": 9,
+            "top4": 3,
+            "rate": 0.333333,
             "wilson95": [
-              0.094531,
-              0.905469
+              0.120584,
+              0.645798
             ]
           },
           "not_adopted": {
-            "n": 21,
-            "top4": 3,
-            "rate": 0.142857,
+            "n": 40,
+            "top4": 6,
+            "rate": 0.15,
             "wilson95": [
-              0.04981,
-              0.346361
+              0.070612,
+              0.290723
             ]
           },
-          "rate_difference": 0.357143,
-          "fisher_two_sided": 0.324111
+          "rate_difference": 0.183333,
+          "fisher_two_sided": 0.336413
+        },
+        "W05": {
+          "adopted": {
+            "n": 0,
+            "top4": 0,
+            "rate": null,
+            "wilson95": null
+          },
+          "not_adopted": {
+            "n": 4,
+            "top4": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.045587,
+              0.699358
+            ]
+          },
+          "rate_difference": null,
+          "fisher_two_sided": null
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
+        "strata": 5,
         "informative_strata": 4,
-        "common_odds_ratio": 0.35195,
-        "normal_approx_two_sided_p": 0.049136,
+        "common_odds_ratio": 0.514037,
+        "normal_approx_two_sided_p": 0.140573,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
+        "strata": 10,
         "informative_strata": 6,
-        "common_odds_ratio": 0.328066,
-        "normal_approx_two_sided_p": 0.060476,
+        "common_odds_ratio": 0.474655,
+        "normal_approx_two_sided_p": 0.140954,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.421344
+      "bh_adjusted_q": 0.992249
     },
     {
       "hypothesis": "ノココッチex採用",
@@ -1268,25 +1362,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 84,
-          "top4": 19,
-          "rate": 0.22619,
+          "n": 101,
+          "top4": 23,
+          "rate": 0.227723,
           "wilson95": [
-            0.14986,
-            0.326469
+            0.156808,
+            0.31859
           ]
         },
         "not_adopted": {
-          "n": 35,
-          "top4": 8,
-          "rate": 0.228571,
+          "n": 48,
+          "top4": 10,
+          "rate": 0.208333,
           "wilson95": [
-            0.120659,
-            0.390173
+            0.117303,
+            0.342589
           ]
         },
-        "rate_difference": -0.002381,
-        "fisher_two_sided": 1.0
+        "rate_difference": 0.019389,
+        "fisher_two_sided": 0.836161
       },
       "by_week": {
         "W01": {
@@ -1357,36 +1451,58 @@
         },
         "W04": {
           "adopted": {
-            "n": 12,
-            "top4": 3,
+            "n": 28,
+            "top4": 7,
             "rate": 0.25,
             "wilson95": [
-              0.088942,
-              0.532305
+              0.126765,
+              0.433557
             ]
           },
           "not_adopted": {
-            "n": 11,
-            "top4": 1,
-            "rate": 0.090909,
+            "n": 21,
+            "top4": 2,
+            "rate": 0.095238,
             "wilson95": [
-              0.016232,
-              0.377358
+              0.026519,
+              0.289141
             ]
           },
-          "rate_difference": 0.159091,
-          "fisher_two_sided": 0.590062
+          "rate_difference": 0.154762,
+          "fisher_two_sided": 0.267
+        },
+        "W05": {
+          "adopted": {
+            "n": 1,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.793451
+            ]
+          },
+          "not_adopted": {
+            "n": 3,
+            "top4": 1,
+            "rate": 0.333333,
+            "wilson95": [
+              0.061492,
+              0.79234
+            ]
+          },
+          "rate_difference": -0.333333,
+          "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 0.841875,
-        "normal_approx_two_sided_p": 0.726488,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.000058,
+        "normal_approx_two_sided_p": 0.999895,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
+        "strata": 10,
         "informative_strata": 0,
         "common_odds_ratio": null,
         "normal_approx_two_sided_p": null,
@@ -1403,25 +1519,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 73,
-          "top4": 19,
-          "rate": 0.260274,
+          "n": 99,
+          "top4": 24,
+          "rate": 0.242424,
           "wilson95": [
-            0.173422,
-            0.371095
+            0.168663,
+            0.335428
           ]
         },
         "not_adopted": {
-          "n": 46,
-          "top4": 8,
-          "rate": 0.173913,
+          "n": 50,
+          "top4": 9,
+          "rate": 0.18,
           "wilson95": [
-            0.090858,
-            0.307234
+            0.097702,
+            0.307961
           ]
         },
-        "rate_difference": 0.086361,
-        "fisher_two_sided": 0.369385
+        "rate_difference": 0.062424,
+        "fisher_two_sided": 0.413437
       },
       "by_week": {
         "W01": {
@@ -1492,42 +1608,61 @@
         },
         "W04": {
           "adopted": {
-            "n": 14,
-            "top4": 3,
-            "rate": 0.214286,
+            "n": 36,
+            "top4": 7,
+            "rate": 0.194444,
             "wilson95": [
-              0.075714,
-              0.475892
+              0.097531,
+              0.35028
             ]
           },
           "not_adopted": {
-            "n": 9,
-            "top4": 1,
-            "rate": 0.111111,
+            "n": 13,
+            "top4": 2,
+            "rate": 0.153846,
             "wilson95": [
-              0.019891,
-              0.435
+              0.043258,
+              0.422346
             ]
           },
-          "rate_difference": 0.103175,
+          "rate_difference": 0.040598,
           "fisher_two_sided": 1.0
+        },
+        "W05": {
+          "adopted": {
+            "n": 4,
+            "top4": 1,
+            "rate": 0.25,
+            "wilson95": [
+              0.045587,
+              0.699358
+            ]
+          },
+          "not_adopted": {
+            "n": 0,
+            "top4": 0,
+            "rate": null,
+            "wilson95": null
+          },
+          "rate_difference": null,
+          "fisher_two_sided": null
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
+        "strata": 5,
         "informative_strata": 4,
-        "common_odds_ratio": 1.97999,
-        "normal_approx_two_sided_p": 0.177716,
+        "common_odds_ratio": 1.748565,
+        "normal_approx_two_sided_p": 0.233038,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
+        "strata": 10,
         "informative_strata": 8,
-        "common_odds_ratio": 2.034029,
-        "normal_approx_two_sided_p": 0.182089,
+        "common_odds_ratio": 1.864635,
+        "normal_approx_two_sided_p": 0.20835,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.554078
+      "bh_adjusted_q": 0.992249
     },
     {
       "hypothesis": "ジャミングタワー採用",
@@ -1538,24 +1673,24 @@
       },
       "overall": {
         "adopted": {
-          "n": 31,
-          "top4": 7,
-          "rate": 0.225806,
+          "n": 37,
+          "top4": 8,
+          "rate": 0.216216,
           "wilson95": [
-            0.113951,
-            0.398124
+            0.113865,
+            0.371951
           ]
         },
         "not_adopted": {
-          "n": 88,
-          "top4": 20,
-          "rate": 0.227273,
+          "n": 112,
+          "top4": 25,
+          "rate": 0.223214,
           "wilson95": [
-            0.152217,
-            0.325143
+            0.156012,
+            0.308774
           ]
         },
-        "rate_difference": -0.001466,
+        "rate_difference": -0.006998,
         "fisher_two_sided": 1.0
       },
       "by_week": {
@@ -1627,6 +1762,28 @@
         },
         "W04": {
           "adopted": {
+            "n": 6,
+            "top4": 1,
+            "rate": 0.166667,
+            "wilson95": [
+              0.030053,
+              0.563503
+            ]
+          },
+          "not_adopted": {
+            "n": 43,
+            "top4": 8,
+            "rate": 0.186047,
+            "wilson95": [
+              0.097418,
+              0.32617
+            ]
+          },
+          "rate_difference": -0.01938,
+          "fisher_two_sided": 1.0
+        },
+        "W05": {
+          "adopted": {
             "n": 1,
             "top4": 0,
             "rate": 0.0,
@@ -1636,30 +1793,30 @@
             ]
           },
           "not_adopted": {
-            "n": 22,
-            "top4": 4,
-            "rate": 0.181818,
+            "n": 3,
+            "top4": 1,
+            "rate": 0.333333,
             "wilson95": [
-              0.073069,
-              0.385166
+              0.061492,
+              0.79234
             ]
           },
-          "rate_difference": -0.181818,
+          "rate_difference": -0.333333,
           "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 0.836496,
-        "normal_approx_two_sided_p": 0.740495,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 0.82992,
+        "normal_approx_two_sided_p": 0.70259,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 5,
-        "common_odds_ratio": 0.919488,
-        "normal_approx_two_sided_p": 0.878967,
+        "strata": 10,
+        "informative_strata": 6,
+        "common_odds_ratio": 0.982763,
+        "normal_approx_two_sided_p": 0.971813,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "bh_adjusted_q": 1.0
@@ -1673,25 +1830,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 45,
-          "top4": 12,
-          "rate": 0.266667,
+          "n": 65,
+          "top4": 14,
+          "rate": 0.215385,
           "wilson95": [
-            0.159649,
-            0.410388
+            0.132868,
+            0.329666
           ]
         },
         "not_adopted": {
-          "n": 74,
-          "top4": 15,
-          "rate": 0.202703,
+          "n": 84,
+          "top4": 19,
+          "rate": 0.22619,
           "wilson95": [
-            0.126871,
-            0.307878
+            0.14986,
+            0.326469
           ]
         },
-        "rate_difference": 0.063964,
-        "fisher_two_sided": 0.499803
+        "rate_difference": -0.010806,
+        "fisher_two_sided": 1.0
       },
       "by_week": {
         "W01": {
@@ -1762,42 +1919,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 11,
-            "top4": 3,
-            "rate": 0.272727,
+            "n": 28,
+            "top4": 5,
+            "rate": 0.178571,
             "wilson95": [
-              0.097461,
-              0.565645
+              0.078785,
+              0.355914
             ]
           },
           "not_adopted": {
-            "n": 12,
-            "top4": 1,
-            "rate": 0.083333,
+            "n": 21,
+            "top4": 4,
+            "rate": 0.190476,
             "wilson95": [
-              0.014865,
-              0.35388
+              0.076676,
+              0.400006
             ]
           },
-          "rate_difference": 0.189394,
-          "fisher_two_sided": 0.31677
+          "rate_difference": -0.011905,
+          "fisher_two_sided": 1.0
+        },
+        "W05": {
+          "adopted": {
+            "n": 3,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.561497
+            ]
+          },
+          "not_adopted": {
+            "n": 1,
+            "top4": 1,
+            "rate": 1.0,
+            "wilson95": [
+              0.206549,
+              1
+            ]
+          },
+          "rate_difference": -1.0,
+          "fisher_two_sided": 0.25
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 1.562325,
-        "normal_approx_two_sided_p": 0.338281,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.019354,
+        "normal_approx_two_sided_p": 0.961996,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 8,
-        "common_odds_ratio": 1.58106,
-        "normal_approx_two_sided_p": 0.344938,
+        "strata": 10,
+        "informative_strata": 9,
+        "common_odds_ratio": 1.093632,
+        "normal_approx_two_sided_p": 0.834998,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.599764
+      "bh_adjusted_q": 1.0
     },
     {
       "hypothesis": "ボスの指令4枚",
@@ -1808,25 +1987,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 44,
-          "top4": 13,
-          "rate": 0.295455,
+          "n": 59,
+          "top4": 15,
+          "rate": 0.254237,
           "wilson95": [
-            0.181555,
-            0.442202
+            0.16056,
+            0.377961
           ]
         },
         "not_adopted": {
-          "n": 75,
-          "top4": 14,
-          "rate": 0.186667,
+          "n": 90,
+          "top4": 18,
+          "rate": 0.2,
           "wilson95": [
-            0.114581,
-            0.289286
+            0.130424,
+            0.294137
           ]
         },
-        "rate_difference": 0.108788,
-        "fisher_two_sided": 0.181979
+        "rate_difference": 0.054237,
+        "fisher_two_sided": 0.545503
       },
       "by_week": {
         "W01": {
@@ -1897,42 +2076,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 9,
-            "top4": 2,
-            "rate": 0.222222,
+            "n": 22,
+            "top4": 3,
+            "rate": 0.136364,
             "wilson95": [
-              0.063225,
-              0.547411
+              0.04749,
+              0.33335
             ]
           },
           "not_adopted": {
-            "n": 14,
-            "top4": 2,
-            "rate": 0.142857,
+            "n": 27,
+            "top4": 6,
+            "rate": 0.222222,
             "wilson95": [
-              0.040094,
-              0.399414
+              0.106072,
+              0.407569
             ]
           },
-          "rate_difference": 0.079365,
+          "rate_difference": -0.085859,
+          "fisher_two_sided": 0.487601
+        },
+        "W05": {
+          "adopted": {
+            "n": 2,
+            "top4": 1,
+            "rate": 0.5,
+            "wilson95": [
+              0.094531,
+              0.905469
+            ]
+          },
+          "not_adopted": {
+            "n": 2,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.65762
+            ]
+          },
+          "rate_difference": 0.5,
           "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 2.106797,
-        "normal_approx_two_sided_p": 0.102222,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.521976,
+        "normal_approx_two_sided_p": 0.293869,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 7,
-        "common_odds_ratio": 2.20398,
-        "normal_approx_two_sided_p": 0.096545,
+        "strata": 10,
+        "informative_strata": 8,
+        "common_odds_ratio": 1.678723,
+        "normal_approx_two_sided_p": 0.207221,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.43675
+      "bh_adjusted_q": 1.0
     },
     {
       "hypothesis": "夜のタンカ3枚以上",
@@ -1943,25 +2144,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 42,
-          "top4": 7,
-          "rate": 0.166667,
+          "n": 54,
+          "top4": 12,
+          "rate": 0.222222,
           "wilson95": [
-            0.083159,
-            0.30604
+            0.131954,
+            0.349387
           ]
         },
         "not_adopted": {
-          "n": 77,
-          "top4": 20,
-          "rate": 0.25974,
+          "n": 95,
+          "top4": 21,
+          "rate": 0.221053,
           "wilson95": [
-            0.174892,
-            0.367422
+            0.149374,
+            0.314414
           ]
         },
-        "rate_difference": -0.093074,
-        "fisher_two_sided": 0.35971
+        "rate_difference": 0.00117,
+        "fisher_two_sided": 1.0
       },
       "by_week": {
         "W01": {
@@ -2032,42 +2233,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 7,
-            "top4": 1,
-            "rate": 0.142857,
+            "n": 17,
+            "top4": 5,
+            "rate": 0.294118,
             "wilson95": [
-              0.02568,
-              0.513128
+              0.1328,
+              0.531331
             ]
           },
           "not_adopted": {
-            "n": 16,
-            "top4": 3,
-            "rate": 0.1875,
+            "n": 32,
+            "top4": 4,
+            "rate": 0.125,
             "wilson95": [
-              0.065916,
-              0.430089
+              0.049701,
+              0.280683
             ]
           },
-          "rate_difference": -0.044643,
+          "rate_difference": 0.169118,
+          "fisher_two_sided": 0.243964
+        },
+        "W05": {
+          "adopted": {
+            "n": 2,
+            "top4": 1,
+            "rate": 0.5,
+            "wilson95": [
+              0.094531,
+              0.905469
+            ]
+          },
+          "not_adopted": {
+            "n": 2,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.65762
+            ]
+          },
+          "rate_difference": 0.5,
           "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 0.580057,
-        "normal_approx_two_sided_p": 0.269133,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.036112,
+        "normal_approx_two_sided_p": 0.930251,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 8,
-        "common_odds_ratio": 0.541276,
-        "normal_approx_two_sided_p": 0.219029,
+        "strata": 10,
+        "informative_strata": 9,
+        "common_odds_ratio": 0.960332,
+        "normal_approx_two_sided_p": 0.922015,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.554078
+      "bh_adjusted_q": 1.0
     },
     {
       "hypothesis": "なかよしポフィン2枚以上",
@@ -2078,25 +2301,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 84,
-          "top4": 22,
-          "rate": 0.261905,
+          "n": 104,
+          "top4": 23,
+          "rate": 0.221154,
           "wilson95": [
-            0.179785,
-            0.364849
+            0.152129,
+            0.310044
           ]
         },
         "not_adopted": {
-          "n": 35,
-          "top4": 5,
-          "rate": 0.142857,
+          "n": 45,
+          "top4": 10,
+          "rate": 0.222222,
           "wilson95": [
-            0.062602,
-            0.293756
+            0.125447,
+            0.362693
           ]
         },
-        "rate_difference": 0.119048,
-        "fisher_two_sided": 0.229576
+        "rate_difference": -0.001068,
+        "fisher_two_sided": 1.0
       },
       "by_week": {
         "W01": {
@@ -2167,42 +2390,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 17,
-            "top4": 2,
-            "rate": 0.117647,
+            "n": 35,
+            "top4": 3,
+            "rate": 0.085714,
             "wilson95": [
-              0.03288,
-              0.343364
+              0.029582,
+              0.223793
             ]
           },
           "not_adopted": {
-            "n": 6,
-            "top4": 2,
-            "rate": 0.333333,
+            "n": 14,
+            "top4": 6,
+            "rate": 0.428571,
             "wilson95": [
-              0.096771,
-              0.700007
+              0.213808,
+              0.674094
             ]
           },
-          "rate_difference": -0.215686,
-          "fisher_two_sided": 0.270469
+          "rate_difference": -0.342857,
+          "fisher_two_sided": 0.010613
+        },
+        "W05": {
+          "adopted": {
+            "n": 2,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.65762
+            ]
+          },
+          "not_adopted": {
+            "n": 2,
+            "top4": 1,
+            "rate": 0.5,
+            "wilson95": [
+              0.094531,
+              0.905469
+            ]
+          },
+          "rate_difference": -0.5,
+          "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 2.016849,
-        "normal_approx_two_sided_p": 0.177042,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 0.967651,
+        "normal_approx_two_sided_p": 0.934871,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 7,
-        "common_odds_ratio": 2.347722,
-        "normal_approx_two_sided_p": 0.163557,
+        "strata": 10,
+        "informative_strata": 8,
+        "common_odds_ratio": 1.009101,
+        "normal_approx_two_sided_p": 0.984022,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.459152
+      "bh_adjusted_q": 1.0
     },
     {
       "hypothesis": "リーリエのピッピex2枚",
@@ -2213,25 +2458,25 @@
       },
       "overall": {
         "adopted": {
-          "n": 76,
-          "top4": 19,
-          "rate": 0.25,
+          "n": 99,
+          "top4": 23,
+          "rate": 0.232323,
           "wilson95": [
-            0.166289,
-            0.357768
+            0.160091,
+            0.324553
           ]
         },
         "not_adopted": {
-          "n": 43,
-          "top4": 8,
-          "rate": 0.186047,
+          "n": 50,
+          "top4": 10,
+          "rate": 0.2,
           "wilson95": [
-            0.097418,
-            0.32617
+            0.112438,
+            0.330371
           ]
         },
-        "rate_difference": 0.063953,
-        "fisher_two_sided": 0.49893
+        "rate_difference": 0.032323,
+        "fisher_two_sided": 0.834752
       },
       "by_week": {
         "W01": {
@@ -2302,42 +2547,64 @@
         },
         "W04": {
           "adopted": {
-            "n": 16,
-            "top4": 3,
-            "rate": 0.1875,
+            "n": 36,
+            "top4": 6,
+            "rate": 0.166667,
             "wilson95": [
-              0.065916,
-              0.430089
+              0.078704,
+              0.318908
             ]
           },
           "not_adopted": {
-            "n": 7,
-            "top4": 1,
-            "rate": 0.142857,
+            "n": 13,
+            "top4": 3,
+            "rate": 0.230769,
             "wilson95": [
-              0.02568,
-              0.513128
+              0.081795,
+              0.502564
             ]
           },
-          "rate_difference": 0.044643,
+          "rate_difference": -0.064103,
+          "fisher_two_sided": 0.68307
+        },
+        "W05": {
+          "adopted": {
+            "n": 3,
+            "top4": 1,
+            "rate": 0.333333,
+            "wilson95": [
+              0.061492,
+              0.79234
+            ]
+          },
+          "not_adopted": {
+            "n": 1,
+            "top4": 0,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.793451
+            ]
+          },
+          "rate_difference": 0.333333,
           "fisher_two_sided": 1.0
         }
       },
       "adjusted_for_week": {
-        "strata": 4,
-        "informative_strata": 4,
-        "common_odds_ratio": 1.518346,
-        "normal_approx_two_sided_p": 0.396302,
+        "strata": 5,
+        "informative_strata": 5,
+        "common_odds_ratio": 1.262506,
+        "normal_approx_two_sided_p": 0.593759,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
       "adjusted_for_week_and_dudunsparce_ex": {
-        "strata": 8,
-        "informative_strata": 7,
-        "common_odds_ratio": 1.503893,
-        "normal_approx_two_sided_p": 0.456838,
+        "strata": 10,
+        "informative_strata": 8,
+        "common_odds_ratio": 1.28871,
+        "normal_approx_two_sided_p": 0.598254,
         "method": "CMH without continuity correction; sparse-data exploratory"
       },
-      "bh_adjusted_q": 0.599764
+      "bh_adjusted_q": 1.0
     }
   ],
   "joint_hypothesis_kichi_shaymin": [
@@ -2345,12 +2612,12 @@
       "kichi_adopted": false,
       "shaymin_adopted": false,
       "results": {
-        "n": 31,
-        "top4": 6,
-        "rate": 0.193548,
+        "n": 38,
+        "top4": 8,
+        "rate": 0.210526,
         "wilson95": [
-          0.09187,
-          0.362803
+          0.110748,
+          0.363458
         ]
       }
     },
@@ -2358,12 +2625,12 @@
       "kichi_adopted": false,
       "shaymin_adopted": true,
       "results": {
-        "n": 55,
-        "top4": 9,
-        "rate": 0.163636,
+        "n": 67,
+        "top4": 13,
+        "rate": 0.19403,
         "wilson95": [
-          0.088554,
-          0.282637
+          0.117052,
+          0.304191
         ]
       }
     },
@@ -2371,12 +2638,12 @@
       "kichi_adopted": true,
       "shaymin_adopted": false,
       "results": {
-        "n": 21,
+        "n": 30,
         "top4": 10,
-        "rate": 0.47619,
+        "rate": 0.333333,
         "wilson95": [
-          0.28344,
-          0.676305
+          0.192305,
+          0.512199
         ]
       }
     },
@@ -2384,12 +2651,12 @@
       "kichi_adopted": true,
       "shaymin_adopted": true,
       "results": {
-        "n": 12,
+        "n": 14,
         "top4": 2,
-        "rate": 0.166667,
+        "rate": 0.142857,
         "wilson95": [
-          0.046965,
-          0.448031
+          0.040094,
+          0.399414
         ]
       }
     }
