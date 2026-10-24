@@ -2,6 +2,11 @@ name: Build Top16 deck library
 
 on:
   workflow_dispatch:
+  # The collector commits using GITHUB_TOKEN, so push alone cannot trigger this workflow.
+  workflow_run:
+    workflows: ["Sync City League DB"]
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -26,13 +31,35 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Check whether the source DB changed
+        id: freshness
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          from pathlib import Path
+          if os.environ.get("GITHUB_EVENT_NAME") != "workflow_run":
+              changed = True  # Manual runs and code changes should still rebuild.
+          else:
+              current = json.loads(Path("data/index.json").read_text(encoding="utf-8"))
+              manifest_path = Path("data/deck_library/manifest.json")
+              previous = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
+              changed = (
+                  current.get("city_sha256") != previous.get("source_city_sha256")
+                  or current.get("decks_sha256") != previous.get("source_decks_sha256")
+              )
+          print(f"rebuild={str(changed).lower()}")
+          PY
       - name: Validate and materialize read-only deck library
+        if: steps.freshness.outputs.rebuild == 'true'
         run: |
           python -m analysis.deck_library
           python -m analysis.dhelmise_groups
@@ -42,6 +69,7 @@ jobs:
           python -m analysis.dhelmise_card_factors
           python -m analysis.dhelmise_holdout
       - name: Commit derived index only when changed
+        if: steps.freshness.outputs.rebuild == 'true'
         shell: bash
         run: |
           set -euo pipefail
