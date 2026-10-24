@@ -7,7 +7,8 @@ import json
 import unittest
 
 from analysis.classification import classify
-from analysis.state import ROOT
+from analysis.state import ROOT, read_state
+from analysis.weekly import _classification_resolver
 
 
 EXPECTED = {
@@ -77,6 +78,7 @@ class W04ClassificationTests(unittest.TestCase):
         city = json.loads((ROOT / "data/city_db.json").read_text(encoding="utf-8"))
         cls.decks = json.loads((ROOT / "data/city_decks.json").read_text(encoding="utf-8"))["decks"]
         cls.index = json.loads((ROOT / "data/index.json").read_text(encoding="utf-8"))
+        cls.sidecar = read_state(ROOT / "data/analysis/deck_classifications.json")
         cls.w04_top8 = {
             p["deck_code"]
             for event in city["events"]
@@ -103,6 +105,13 @@ class W04ClassificationTests(unittest.TestCase):
                 result = classify(code, self.decks[code], self.index["source_updated_at"])
                 self.assertIsNone(result["parent_archetype"])
                 self.assertEqual(result["classification_status"], "unknown")
+
+    def test_exact_remaining_unknown_set_under_weekly_resolver(self):
+        resolve = _classification_resolver(
+            self.sidecar, self.decks, self.index["source_updated_at"])
+        unknown = {code for code in self.w04_top8 if not resolve(code)["parent"]}
+        self.assertEqual(unknown, AMBIGUOUS_REMAIN_UNKNOWN)
+        self.assertEqual(len(unknown), 13)
 
 
 if __name__ == "__main__":
