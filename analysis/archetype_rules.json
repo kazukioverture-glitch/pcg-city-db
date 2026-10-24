@@ -740,6 +740,332 @@
         }
       ],
       "variants": []
+    },
+    {
+      "id": "gengar_ex",
+      "name": "ゲンガーex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ゴース",
+          "min_count": 4
+        },
+        {
+          "card": "ゲンガーex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "メガゲンガーex採用",
+          "requires": [
+            {
+              "card": "メガゲンガーex",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hop_trevenant",
+      "name": "ホップのオーロット",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ホップのボクレー",
+          "min_count": 4
+        },
+        {
+          "card": "ホップのオーロット",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "stevens_metagross_ex",
+      "name": "ダイゴのメタグロスex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ダイゴのダンバル",
+          "min_count": 3
+        },
+        {
+          "card": "ダイゴのメタグロスex",
+          "min_count": 3
+        }
+      ],
+      "variants": [
+        {
+          "label": "ゲノセクトex採用",
+          "requires": [
+            {
+              "card": "ゲノセクトex",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beedrill_ex",
+      "name": "スピアーex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ビードル",
+          "min_count": 4
+        },
+        {
+          "card": "スピアーex",
+          "min_count": 4
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "ogerpon_meganium",
+      "name": "オーガポン みどりのめんex／メガニウム",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "オーガポン みどりのめんex",
+          "min_count": 4
+        },
+        {
+          "card": "メガニウム",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "lillies_clefairy_ex",
+      "name": "リーリエのピッピex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "リーリエのピッピex",
+          "min_count": 3
+        }
+      ],
+      "variants": [
+        {
+          "label": "ヨノワール型",
+          "requires": [
+            {
+              "card": "ヨノワール",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crustle",
+      "name": "イワパレス",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "イシズマイ",
+          "min_count": 3
+        },
+        {
+          "card": "イワパレス",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_gardevoir_ex",
+      "name": "メガサーナイトex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ラルトス",
+          "min_count": 4
+        },
+        {
+          "card": "キルリア",
+          "min_count": 3
+        },
+        {
+          "card": "メガサーナイトex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_starmie_ex",
+      "name": "メガスターミーex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガスターミーex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_froslass_ex",
+      "name": "メガユキメノコex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "palafin_ex",
+      "name": "イルカマンex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "イルカマンex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_golisopod_ex",
+      "name": "メガグソクムシャex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガグソクムシャex",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_absol_ex",
+      "name": "メガアブソルex",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "メガアブソルex",
+          "min_count": 2
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "azumarill",
+      "name": "マリルリ",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "マリル",
+          "min_count": 4
+        },
+        {
+          "card": "マリルリ",
+          "min_count": 4
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "greninja_froslass",
+      "name": "ゲッコウガex／メガユキメノコex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "ゲッコウガex",
+          "min_count": 2
+        },
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ヨノワール型",
+          "requires": [
+            {
+              "card": "ヨノワール",
+              "min_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mega_lopunny_froslass",
+      "name": "メガミミロップex／メガユキメノコex",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガミミロップex",
+          "min_count": 2
+        },
+        {
+          "card": "メガユキメノコex",
+          "min_count": 2
+        }
+      ],
+      "variants": [
+        {
+          "label": "ノココッチ型",
+          "requires": [
+            {
+              "card": "ノココッチ",
+              "min_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hibikis_typhlosion",
+      "name": "ヒビキのバクフーン",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ヒビキのヒノアラシ",
+          "min_count": 4
+        },
+        {
+          "card": "ヒビキのマグマラシ",
+          "min_count": 3
+        },
+        {
+          "card": "ヒビキのバクフーン",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_manectric_eelektrik",
+      "name": "メガライボルトex／シビビール",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガライボルトex",
+          "min_count": 2
+        },
+        {
+          "card": "シビビール",
+          "min_count": 3
+        },
+        {
+          "card": "シビシラス",
+          "min_count": 3
+        }
+      ],
+      "variants": []
     }
   ]
 }
