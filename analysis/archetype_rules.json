@@ -1026,6 +1026,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hibikis_typhlosion",
+      "name": "ヒビキのバクフーン",
+      "priority": 100,
+      "requires": [
+        {
+          "card": "ヒビキのヒノアラシ",
+          "min_count": 4
+        },
+        {
+          "card": "ヒビキのマグマラシ",
+          "min_count": 3
+        },
+        {
+          "card": "ヒビキのバクフーン",
+          "min_count": 3
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": "mega_manectric_eelektrik",
+      "name": "メガライボルトex／シビビール",
+      "priority": 110,
+      "requires": [
+        {
+          "card": "メガライボルトex",
+          "min_count": 2
+        },
+        {
+          "card": "シビビール",
+          "min_count": 3
+        },
+        {
+          "card": "シビシラス",
+          "min_count": 3
+        }
+      ],
+      "variants": []
     }
   ]
 }
