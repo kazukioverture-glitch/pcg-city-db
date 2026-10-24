@@ -48,6 +48,8 @@ EXPECTED = {
     "x8cGGc-kaCjcE-x848xx": "メガミミロップex／メガユキメノコex",
     "ggLLQn-DeN1VJ-9nQLn9": "メガミミロップex／メガユキメノコex",
     "R2MMyM-kIjjZw-UXyyMp": "メガミミロップex／メガユキメノコex",
+    "GY8cx8-KvIVxj-88xYDx": "ヒビキのバクフーン",
+    "RyU3yp-7CGSKz-pMMSU2": "メガライボルトex／シビビール",
 }
 
 AMBIGUOUS_REMAIN_UNKNOWN = {
@@ -62,7 +64,6 @@ AMBIGUOUS_REMAIN_UNKNOWN = {
     "nL9ngN-1vn6yT-g9LN6L",
     "9nLiQL-p7lwk7-LggLn9",
     "VVVVbv-HiXHF5-FVdk5F",
-    "RyU3yp-7CGSKz-pMMSU2",
     "kkVVkv-pHXBPq-VFF5Fb",
     "xc8GxK-Yntd0W-8xcGca",
     "9nnNLL-ZkuVdv-gLNLLn",
