@@ -1,0 +1,149 @@
+{
+  "calendar_id": "2027-s1-mon-sun-v1",
+  "week_id": "W05",
+  "period_start": "2026-10-19",
+  "period_end": "2026-10-25",
+  "delivery_status": "PUBLISHED_WITH_LIMITATIONS",
+  "stage": "INTERIM",
+  "audit_status": "WARN",
+  "input_commit": "a2f033c50ef86e8c50aeeb78ddbbfe2aa4dd9ff4",
+  "input_sha256": {
+    "data/city_db.json": "40e30daadbba7a9ae6ed89296c92ed8968a58f00f4dc5d7aee78f0687775116c",
+    "data/city_decks.json": "c737dc4af1fc917f48942b2674a31833c1303b69dd79c68453f8c02085a36b76",
+    "data/index.json": "67a53328cb6384d5cccf3d0877a441cf15375323ee9e73b1b008d371f94c7e8e",
+    "data/analysis/event_ledger.json": "3740ba569ac564f6c808930028aba0ec7daa6fa7abb9875f297663cc46b1e002",
+    "data/analysis/deck_classifications.json": "ee8af1d72d8da9299605d57b7f0881a3bd327689e5c20b91d1b0fe9ec858f787"
+  },
+  "source_updated_at": "2026-10-24T10:39:52+09:00",
+  "source_age_hours": 71.89353625833333,
+  "source_stale_24h": true,
+  "source_updated_after_week_end": false,
+  "full_week_coverage_verified": false,
+  "mdm_external_axes": "not_assessed",
+  "coverage": {
+    "result_events": 6,
+    "captured_top8_rows": 48,
+    "known_top8_deck_lists": 48
+  },
+  "missingness": {
+    "national_missingness_upper_bound": null,
+    "schedule_completeness_verified": false,
+    "interpretation": "Recorded events only; assume at most 8 Top8 slots per event. Not a confidence interval, missing-at-random assumption or national bound. Short results may be legitimate. Unlisted events remain unbounded.",
+    "uncertain_category_or_missing_event_ids": [
+      "1115090",
+      "1115223",
+      "1115389"
+    ],
+    "short_top8_potential_slots_by_event": {},
+    "conditional_potential_missing_top8_slots": 24,
+    "observed_top8_rows": 48,
+    "unclassified_observed_top8_rows": 0,
+    "conditional_uncertain_share_width_pp": 33.333333333333336,
+    "archetype_sensitivity": [
+      {
+        "parent_archetype": "ドラパルトex",
+        "observed_count": 18,
+        "conditional_share_min": 0.25,
+        "conditional_share_max": 0.5833333333333334
+      },
+      {
+        "parent_archetype": "メタング／ゲノセクトex",
+        "observed_count": 4,
+        "conditional_share_min": 0.05555555555555555,
+        "conditional_share_max": 0.3888888888888889
+      },
+      {
+        "parent_archetype": "フーディン",
+        "observed_count": 3,
+        "conditional_share_min": 0.041666666666666664,
+        "conditional_share_max": 0.375
+      },
+      {
+        "parent_archetype": "Nのゾロアークex",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "おまつりおんど",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "ジュペッタ／ダダリン",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "タケルライコex",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "マリィのオーロンゲex",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "メガガルーラ・オーガポンバレット",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "メガミミロップex",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "メガレックウザex",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "ヤドキング",
+        "observed_count": 2,
+        "conditional_share_min": 0.027777777777777776,
+        "conditional_share_max": 0.3611111111111111
+      },
+      {
+        "parent_archetype": "オーガポン みどりのめんex／メガニウム",
+        "observed_count": 1,
+        "conditional_share_min": 0.013888888888888888,
+        "conditional_share_max": 0.3472222222222222
+      },
+      {
+        "parent_archetype": "ストリンダー",
+        "observed_count": 1,
+        "conditional_share_min": 0.013888888888888888,
+        "conditional_share_max": 0.3472222222222222
+      },
+      {
+        "parent_archetype": "ブースターex",
+        "observed_count": 1,
+        "conditional_share_min": 0.013888888888888888,
+        "conditional_share_max": 0.3472222222222222
+      },
+      {
+        "parent_archetype": "リーリエのピッピex",
+        "observed_count": 1,
+        "conditional_share_min": 0.013888888888888888,
+        "conditional_share_max": 0.3472222222222222
+      },
+      {
+        "parent_archetype": "ロケット団のワナイダー",
+        "observed_count": 1,
+        "conditional_share_min": 0.013888888888888888,
+        "conditional_share_max": 0.3472222222222222
+      }
+    ]
+  },
+  "analyzer_revision": "f8f7a0aa2c95e5599a70f0077a545b1e2d6ff54d",
+  "generation_id": "433ad114b93f"
+}
