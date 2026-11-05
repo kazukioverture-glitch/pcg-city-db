@@ -1,7 +1,7 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-11-04T22:31:10+09:00",
+  "updated_at": "2026-11-05T07:30:57+09:00",
   "event_count": 446,
   "placement_count": 6305,
   "events": [
@@ -6573,7 +6573,7 @@
           "player_name": "らむだ",
           "player_id": "0055003890",
           "prefecture": "東京都",
-          "player_url": "https://players.pokemon-card.com/users/0055003890",
+          "player_url": null,
           "deck_code": "xG84cc-qzUP8I-c4DxKK",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xG84cc-qzUP8I-c4DxKK",
           "raw_text": "5 位 25pt\nらむだ\nプレイヤーID：0055003890\n東京都 デッキ\nをみる"
@@ -6702,7 +6702,7 @@
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-03T17:30:18+09:00",
-      "collected_at": "2026-11-04T17:30:18+09:00",
+      "collected_at": "2026-11-05T07:30:20+09:00",
       "venue_name": "TSUTAYA BOOKSTORE　そよら成田ニュータウン",
       "venue_prefecture": "千葉県",
       "top16_captured_rows": 8
