@@ -1,16 +1,16 @@
 {
   "season": "2027-S1",
   "season_start": "2026-09-26",
-  "updated_at": "2026-11-13T01:25:13+09:00",
+  "updated_at": "2026-11-13T03:30:47+09:00",
   "event_count": 535,
-  "placement_count": 7617,
+  "placement_count": 7625,
   "events": [
     {
       "event_id": "1115440",
       "date": "2026-11-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115440/result",
-      "placement_count": 15,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -176,21 +176,32 @@
           "deck_code": "kVbkfV-YpBk1L-kFbVFw",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kVbkfV-YpBk1L-kFbVFw",
           "raw_text": "9 位 15pt\nポカリ\nプレイヤーID：0057437556\n奈良県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "ぱなっぷ",
+          "player_id": "0036568187",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "xY88Y8-5fxyhK-8cGxx4",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xY88Y8-5fxyhK-8cGxx4",
+          "raw_text": "9 位 15pt\nぱなっぷ\nプレイヤーID：0036568187\n大阪府 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-13T01:24:00+09:00",
-      "collected_at": "2026-11-13T01:24:00+09:00",
+      "collected_at": "2026-11-13T03:30:36+09:00",
       "venue_name": "BOOKOFF奈良法華寺店",
       "venue_prefecture": "奈良県",
-      "top16_captured_rows": 7
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115439",
       "date": "2026-11-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115439/result",
-      "placement_count": 15,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -356,21 +367,32 @@
           "deck_code": "LLgnLQ-n9nmX6-n9nLgn",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/LLgnLQ-n9nmX6-n9nLgn",
           "raw_text": "9 位 15pt\nアオハル\nプレイヤーID：0032356133\n京都府 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "hayato",
+          "player_id": "0040946069",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "x84xGc-dnPPRA-8xxGcG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x84xGc-dnPPRA-8xxGcG",
+          "raw_text": "9 位 15pt\nhayato\nプレイヤーID：0040946069\n大阪府 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-13T01:23:59+09:00",
-      "collected_at": "2026-11-13T01:23:59+09:00",
+      "collected_at": "2026-11-13T03:30:35+09:00",
       "venue_name": "ドラゴンスター日本橋3号店",
       "venue_prefecture": "大阪府",
-      "top16_captured_rows": 7
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115247",
       "date": "2026-11-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115247/result",
-      "placement_count": 14,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -525,21 +547,43 @@
           "deck_code": "kdFvbV-zgfRlw-FkVfFV",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/kdFvbV-zgfRlw-FkVfFV",
           "raw_text": "9 位 15pt\nジネンジョ\nプレイヤーID：0013298407\n千葉県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "バンギラスおじ",
+          "player_id": "0049373961",
+          "prefecture": "東京都",
+          "player_url": "https://players.pokemon-card.com/users/0049373961",
+          "deck_code": "ypMpRM-YWgOCV-MRpMSM",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypMpRM-YWgOCV-MRpMSM",
+          "raw_text": "9 位 15pt\nバンギラスおじ\nプレイヤーID：0049373961\n東京都 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "くわしゅん",
+          "player_id": "0074760262",
+          "prefecture": "神奈川県",
+          "player_url": null,
+          "deck_code": "xxx8cY-QDUkAc-88DG4G",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xxx8cY-QDUkAc-88DG4G",
+          "raw_text": "9 位 15pt\nくわしゅん\nプレイヤーID：0074760262\n神奈川県 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-13T01:23:58+09:00",
-      "collected_at": "2026-11-13T01:23:58+09:00",
+      "collected_at": "2026-11-13T03:30:34+09:00",
       "venue_name": "ドラゴンスター町田店",
       "venue_prefecture": "東京都",
-      "top16_captured_rows": 6
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115125",
       "date": "2026-11-12",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115125/result",
-      "placement_count": 15,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -705,14 +749,25 @@
           "deck_code": "nLLLn6-rvKBNk-nH9gg6",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/nLLLn6-rvKBNk-nH9gg6",
           "raw_text": "9 位 15pt\nすし\nプレイヤーID：0012314078\n埼玉県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "デカヌおじ",
+          "player_id": "0041283198",
+          "prefecture": "埼玉県",
+          "player_url": "https://players.pokemon-card.com/users/0041283198",
+          "deck_code": "p2yMMM-vNKutX-yRySMX",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/p2yMMM-vNKutX-yRySMX",
+          "raw_text": "9 位 15pt\nデカヌおじ\nプレイヤーID：0041283198\n埼玉県 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-13T01:23:57+09:00",
-      "collected_at": "2026-11-13T01:23:57+09:00",
+      "collected_at": "2026-11-13T03:30:33+09:00",
       "venue_name": "秋葉原チェルモ",
       "venue_prefecture": "東京都",
-      "top16_captured_rows": 7
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115438",
@@ -910,7 +965,7 @@
       "date": "2026-11-11",
       "category": "オープン",
       "result_url": "https://players.pokemon-card.com/event/detail/1115437/result",
-      "placement_count": 13,
+      "placement_count": 16,
       "placements": [
         {
           "rank": 1,
@@ -1054,14 +1109,47 @@
           "deck_code": "f5VVdk-jUJvmS-FVbFkV",
           "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/f5VVdk-jUJvmS-FVbFkV",
           "raw_text": "9 位 15pt\nmikan\nプレイヤーID：0055686831\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "タッツー",
+          "player_id": "0061934654",
+          "prefecture": "大阪府",
+          "player_url": null,
+          "deck_code": "xDxcx8-P4hXxI-xxGxDG",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xDxcx8-P4hXxI-xxGxDG",
+          "raw_text": "9 位 15pt\nタッツー\nプレイヤーID：0061934654\n大阪府 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "ハピ",
+          "player_id": "0045242603",
+          "prefecture": "奈良県",
+          "player_url": null,
+          "deck_code": "x8cx8x-GoFZ1C-xcG44a",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x8cx8x-GoFZ1C-xcG44a",
+          "raw_text": "9 位 15pt\nハピ\nプレイヤーID：0045242603\n奈良県 デッキ\nをみる"
+        },
+        {
+          "rank": 9,
+          "points": 15,
+          "player_name": "けーてぃ",
+          "player_id": "0014251755",
+          "prefecture": "兵庫県",
+          "player_url": null,
+          "deck_code": "yMM2yp-NU0Ht2-RMM3Mp",
+          "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMM2yp-NU0Ht2-RMM3Mp",
+          "raw_text": "9 位 15pt\nけーてぃ\nプレイヤーID：0014251755\n兵庫県 デッキ\nをみる"
         }
       ],
       "top16_observed_rows": 8,
       "top16_checked_at": "2026-11-13T01:24:01+09:00",
-      "collected_at": "2026-11-13T01:24:01+09:00",
+      "collected_at": "2026-11-13T03:30:37+09:00",
       "venue_name": "ドラゴンスター日本橋2号店",
       "venue_prefecture": "大阪府",
-      "top16_captured_rows": 5
+      "top16_captured_rows": 8
     },
     {
       "event_id": "1115436",

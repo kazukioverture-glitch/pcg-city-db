@@ -1,8 +1,8 @@
 {
   "season": "2027-S1",
-  "updated_at": "2026-11-13T01:25:13+09:00",
-  "unique_deck_count": 7532,
-  "valid_60_count": 7532,
+  "updated_at": "2026-11-13T03:30:47+09:00",
+  "unique_deck_count": 7540,
+  "valid_60_count": 7540,
   "decks": {
     "HQn9gg-Tumg7o-nLn96g": {
       "deck_code": "HQn9gg-Tumg7o-nLn96g",
@@ -1701783,6 +1701783,1750 @@
         }
       ],
       "collected_at": "2026-11-13T01:25:01+09:00"
+    },
+    "p2yMMM-vNKutX-yRySMX": {
+      "deck_code": "p2yMMM-vNKutX-yRySMX",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/p2yMMM-vNKutX-yRySMX",
+      "total_cards": 60,
+      "unique_cards": 27,
+      "cards": [
+        {
+          "name": "Nのゾロアークex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50002",
+          "count": 4,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "Nのゾロア",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47228",
+          "count": 4,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "Nのゼクロム",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49970",
+          "count": 2,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "マシマシラ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45849",
+          "count": 3,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "シャリタツ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45854",
+          "count": 1,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "キチキギスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46066",
+          "count": 1,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "モモワロウex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46069",
+          "count": 1,
+          "section": "ポケモン (16)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45209",
+          "count": 4,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50171",
+          "count": 4,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "42399",
+          "count": 2,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "エネルギーつけかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "35206",
+          "count": 2,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48316",
+          "count": 1,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "Nのポイントアップ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49974",
+          "count": 3,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "スペシャルレッドカード",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50205",
+          "count": 1,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "アンフェアスタンプ(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45640",
+          "count": 1,
+          "section": "グッズ (18)"
+        },
+        {
+          "name": "くさりもち",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46962",
+          "count": 2,
+          "section": "ポケモンのどうぐ (4)"
+        },
+        {
+          "name": "ふうせん",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48441",
+          "count": 1,
+          "section": "ポケモンのどうぐ (4)"
+        },
+        {
+          "name": "とくちゅうチョッキ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50540",
+          "count": 1,
+          "section": "ポケモンのどうぐ (4)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48253",
+          "count": 4,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "シアノ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46442",
+          "count": 2,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "アンズの秘技",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46827",
+          "count": 1,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "からておうの稽古",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46599",
+          "count": 1,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "42900",
+          "count": 3,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ロケット団の監視塔",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47489",
+          "count": 2,
+          "section": "スタジアム (3)"
+        },
+        {
+          "name": "グラビティーマウンテン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46446",
+          "count": 1,
+          "section": "スタジアム (3)"
+        },
+        {
+          "name": "基本悪エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50751",
+          "count": 7,
+          "section": "エネルギー (8)"
+        },
+        {
+          "name": "プリズムエネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48166",
+          "count": 1,
+          "section": "エネルギー (8)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115125",
+          "date": "2026-11-12",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "デカヌおじ",
+          "player_id": "0041283198"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:40+09:00"
+    },
+    "ypMpRM-YWgOCV-MRpMSM": {
+      "deck_code": "ypMpRM-YWgOCV-MRpMSM",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/ypMpRM-YWgOCV-MRpMSM",
+      "total_cards": 60,
+      "unique_cards": 26,
+      "cards": [
+        {
+          "name": "ヨーギラス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46516",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "サナギラス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46517",
+          "count": 1,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "バンギラス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47066",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ドラメシヤ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46936",
+          "count": 3,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ドロンチ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46937",
+          "count": 3,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ドラパルトex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45862",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "スボミー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46849",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "マシマシラ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46903",
+          "count": 1,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "キチキギスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46058",
+          "count": 1,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ニャースex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50067",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47172",
+          "count": 4,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47712",
+          "count": 4,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49573",
+          "count": 4,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "ふしぎなアメ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "43129",
+          "count": 3,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48316",
+          "count": 3,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "アンフェアスタンプ(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45640",
+          "count": 1,
+          "section": "グッズ (19)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48443",
+          "count": 4,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "メイのはげまし",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50082",
+          "count": 1,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "アカマツ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46171",
+          "count": 1,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ジャッジマン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "31715",
+          "count": 2,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "43300",
+          "count": 3,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ジャミングタワー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49982",
+          "count": 1,
+          "section": "スタジアム (2)"
+        },
+        {
+          "name": "ロケット団の監視塔",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48711",
+          "count": 1,
+          "section": "スタジアム (2)"
+        },
+        {
+          "name": "基本悪エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "39881",
+          "count": 3,
+          "section": "エネルギー (9)"
+        },
+        {
+          "name": "基本炎エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "44218",
+          "count": 3,
+          "section": "エネルギー (9)"
+        },
+        {
+          "name": "基本超エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "44221",
+          "count": 3,
+          "section": "エネルギー (9)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115247",
+          "date": "2026-11-12",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "バンギラスおじ",
+          "player_id": "0049373961"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:47+09:00"
+    },
+    "xxx8cY-QDUkAc-88DG4G": {
+      "deck_code": "xxx8cY-QDUkAc-88DG4G",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xxx8cY-QDUkAc-88DG4G",
+      "total_cards": 60,
+      "unique_cards": 26,
+      "cards": [
+        {
+          "name": "カジッチュ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46855",
+          "count": 4,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "カミッチュ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46856",
+          "count": 4,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "サルノリ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46853",
+          "count": 4,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "バチンキー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46854",
+          "count": 4,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "トサキント",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46868",
+          "count": 1,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "アズマオウ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46869",
+          "count": 1,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "シェイミ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49728",
+          "count": 1,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "シガロコ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46859",
+          "count": 1,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "ベラカス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46860",
+          "count": 1,
+          "section": "ポケモン (21)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46958",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50070",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "むしとりセット",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46959",
+          "count": 3,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "44861",
+          "count": 2,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46960",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "せいなるはい",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50069",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ポケモンいれかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "44012",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "シークレットボックス(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45783",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ふうせん",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48441",
+          "count": 2,
+          "section": "ポケモンのどうぐ (4)"
+        },
+        {
+          "name": "ブレイブバングル",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48242",
+          "count": 2,
+          "section": "ポケモンのどうぐ (4)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49586",
+          "count": 4,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "43300",
+          "count": 2,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "スグリ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46976",
+          "count": 1,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "グラジオの決戦",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50336",
+          "count": 2,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "お祭り会場",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46987",
+          "count": 4,
+          "section": "スタジアム (4)"
+        },
+        {
+          "name": "基本草エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "23270",
+          "count": 4,
+          "section": "エネルギー (5)"
+        },
+        {
+          "name": "グロウ草エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50545",
+          "count": 1,
+          "section": "エネルギー (5)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115247",
+          "date": "2026-11-12",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "くわしゅん",
+          "player_id": "0074760262"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:45+09:00"
+    },
+    "x84xGc-dnPPRA-8xxGcG": {
+      "deck_code": "x84xGc-dnPPRA-8xxGcG",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x84xGc-dnPPRA-8xxGcG",
+      "total_cards": 60,
+      "unique_cards": 22,
+      "cards": [
+        {
+          "name": "メガルカリオex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47762",
+          "count": 3,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "リオル",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48613",
+          "count": 4,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "マクノシタ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47757",
+          "count": 2,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "ハリテヤマ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47758",
+          "count": 2,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "ルナトーン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49087",
+          "count": 2,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "ソルロック",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49088",
+          "count": 3,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "ニャースex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49694",
+          "count": 1,
+          "section": "ポケモン (17)"
+        },
+        {
+          "name": "パワープロテイン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49368",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ファイトゴング",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49370",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ポケモンいれかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49379",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49386",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50461",
+          "count": 3,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50463",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "マキシマムベルト(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49407",
+          "count": 1,
+          "section": "ポケモンのどうぐ (2)"
+        },
+        {
+          "name": "ふうせん",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50464",
+          "count": 1,
+          "section": "ポケモンのどうぐ (2)"
+        },
+        {
+          "name": "トウコ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49434",
+          "count": 2,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ジャッジマン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50427",
+          "count": 2,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50467",
+          "count": 3,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50468",
+          "count": 4,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "グラビティーマウンテン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48705",
+          "count": 2,
+          "section": "スタジアム (2)"
+        },
+        {
+          "name": "基本闘エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50750",
+          "count": 9,
+          "section": "エネルギー (11)"
+        },
+        {
+          "name": "ロック闘エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49713",
+          "count": 2,
+          "section": "エネルギー (11)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115439",
+          "date": "2026-11-12",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "hayato",
+          "player_id": "0040946069"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:41+09:00"
+    },
+    "xY88Y8-5fxyhK-8cGxx4": {
+      "deck_code": "xY88Y8-5fxyhK-8cGxx4",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xY88Y8-5fxyhK-8cGxx4",
+      "total_cards": 60,
+      "unique_cards": 25,
+      "cards": [
+        {
+          "name": "ドラパルトex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45862",
+          "count": 3,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "ドロンチ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46937",
+          "count": 4,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "ドラメシヤ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46936",
+          "count": 4,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "マシマシラ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45849",
+          "count": 2,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "スボミー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46849",
+          "count": 2,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "ファイヤー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48354",
+          "count": 1,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "ニャースex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50067",
+          "count": 1,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "キチキギスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49205",
+          "count": 1,
+          "section": "ポケモン (18)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45875",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50070",
+          "count": 4,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "36307",
+          "count": 3,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "スペシャルレッドカード",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50205",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46660",
+          "count": 3,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "クラッシュハンマー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50596",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "アンフェアスタンプ(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45640",
+          "count": 1,
+          "section": "グッズ (17)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48443",
+          "count": 4,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "ヒカリ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48512",
+          "count": 1,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "ジャッジマン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45128",
+          "count": 1,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "アカマツ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46171",
+          "count": 3,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "メイのはげまし",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50074",
+          "count": 1,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "41096",
+          "count": 3,
+          "section": "サポート (13)"
+        },
+        {
+          "name": "危ない廃墟",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47796",
+          "count": 3,
+          "section": "スタジアム (3)"
+        },
+        {
+          "name": "基本炎エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "25298",
+          "count": 3,
+          "section": "エネルギー (9)"
+        },
+        {
+          "name": "基本超エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "25301",
+          "count": 3,
+          "section": "エネルギー (9)"
+        },
+        {
+          "name": "基本悪エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "25303",
+          "count": 3,
+          "section": "エネルギー (9)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115440",
+          "date": "2026-11-12",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "ぱなっぷ",
+          "player_id": "0036568187"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:44+09:00"
+    },
+    "xDxcx8-P4hXxI-xxGxDG": {
+      "deck_code": "xDxcx8-P4hXxI-xxGxDG",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/xDxcx8-P4hXxI-xxGxDG",
+      "total_cards": 60,
+      "unique_cards": 25,
+      "cards": [
+        {
+          "name": "マリィのオーロンゲex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50003",
+          "count": 3,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "マリィのギモー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47258",
+          "count": 2,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "マリィのベロバー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47257",
+          "count": 3,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "ユキメノコ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45846",
+          "count": 2,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "ユキワラシ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49960",
+          "count": 3,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "マシマシラ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45849",
+          "count": 4,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "イベルタル",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47773",
+          "count": 1,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "スボミー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46849",
+          "count": 1,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "スボミー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49956",
+          "count": 1,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "ノココッチ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45203",
+          "count": 1,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "ノコッチ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49290",
+          "count": 1,
+          "section": "ポケモン (22)"
+        },
+        {
+          "name": "ポケギア3.0",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "39548",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45875",
+          "count": 2,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46660",
+          "count": 2,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ふしぎなアメ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48468",
+          "count": 3,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "アンフェアスタンプ(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49349",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ポケパッド",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50070",
+          "count": 4,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "スペシャルレッドカード",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50205",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ふうせん",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48441",
+          "count": 1,
+          "section": "ポケモンのどうぐ (1)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "43305",
+          "count": 3,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ロケット団のラムダ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49450",
+          "count": 3,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49586",
+          "count": 4,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "ムク",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50297",
+          "count": 1,
+          "section": "サポート (11)"
+        },
+        {
+          "name": "スパイクタウンジム",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47271",
+          "count": 3,
+          "section": "スタジアム (3)"
+        },
+        {
+          "name": "基本悪エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "34672",
+          "count": 9,
+          "section": "エネルギー (9)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115437",
+          "date": "2026-11-11",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "タッツー",
+          "player_id": "0061934654"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:43+09:00"
+    },
+    "x8cx8x-GoFZ1C-xcG44a": {
+      "deck_code": "x8cx8x-GoFZ1C-xcG44a",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/x8cx8x-GoFZ1C-xcG44a",
+      "total_cards": 60,
+      "unique_cards": 25,
+      "cards": [
+        {
+          "name": "メガドリュウズex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50321",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "モグリュー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50263",
+          "count": 3,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ゲノセクトex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47988",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ダンバル",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46925",
+          "count": 4,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "メタング",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46926",
+          "count": 4,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "メタグロス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50143",
+          "count": 2,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "キチキギスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46058",
+          "count": 1,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "シェイミ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47367",
+          "count": 1,
+          "section": "ポケモン (19)"
+        },
+        {
+          "name": "ロケット団のレシーバー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49977",
+          "count": 4,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "なかよしポフィン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48467",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ポケモンいれかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48508",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49976",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "夜のタンカ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48440",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "エネルギーリサイクル",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50068",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ジャンボアイス",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50204",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "スペシャルレッドカード",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50205",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "プレシャスキャリー(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46220",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ポケギア3.0",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "39548",
+          "count": 2,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ロケット団のラムダ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47526",
+          "count": 4,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "ジャッジマン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45128",
+          "count": 2,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "42900",
+          "count": 2,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "スグリ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "45864",
+          "count": 1,
+          "section": "サポート (9)"
+        },
+        {
+          "name": "グラビティーマウンテン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46661",
+          "count": 1,
+          "section": "スタジアム (2)"
+        },
+        {
+          "name": "ジャミングタワー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49982",
+          "count": 1,
+          "section": "スタジアム (2)"
+        },
+        {
+          "name": "基本鋼エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50752",
+          "count": 16,
+          "section": "エネルギー (16)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115437",
+          "date": "2026-11-11",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "ハピ",
+          "player_id": "0045242603"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:42+09:00"
+    },
+    "yMM2yp-NU0Ht2-RMM3Mp": {
+      "deck_code": "yMM2yp-NU0Ht2-RMM3Mp",
+      "deck_url": "https://www.pokemon-card.com/deck/confirm.html/deckID/yMM2yp-NU0Ht2-RMM3Mp",
+      "total_cards": 60,
+      "unique_cards": 23,
+      "cards": [
+        {
+          "name": "メガガルーラex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47847",
+          "count": 4,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "ファイアローex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50537",
+          "count": 2,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "メガレックウザex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50536",
+          "count": 2,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "ヒビキのホウオウex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47378",
+          "count": 2,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "レシラムex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48072",
+          "count": 1,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "ラティアスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49524",
+          "count": 2,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "ニャースex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50067",
+          "count": 1,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "キチキギスex",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46058",
+          "count": 1,
+          "section": "ポケモン (15)"
+        },
+        {
+          "name": "ハイパーボール",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49976",
+          "count": 4,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "エネルギーつけかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50323",
+          "count": 4,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ポケモンいれかえ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48508",
+          "count": 2,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ツールスクラッパー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50206",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ぼうけんのランタン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50538",
+          "count": 2,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "スペシャルレッドカード",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50205",
+          "count": 1,
+          "section": "グッズ (14)"
+        },
+        {
+          "name": "ヒーローマント(ACE SPEC)",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "49403",
+          "count": 1,
+          "section": "ポケモンのどうぐ (1)"
+        },
+        {
+          "name": "ボスの指令",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50028",
+          "count": 3,
+          "section": "サポート (12)"
+        },
+        {
+          "name": "リーリエの決心",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "48443",
+          "count": 2,
+          "section": "サポート (12)"
+        },
+        {
+          "name": "シアノ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "46650",
+          "count": 3,
+          "section": "サポート (12)"
+        },
+        {
+          "name": "ジャッジマン",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "41090",
+          "count": 2,
+          "section": "サポート (12)"
+        },
+        {
+          "name": "アカマツ",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "47148",
+          "count": 2,
+          "section": "サポート (12)"
+        },
+        {
+          "name": "伝説の溶岩洞",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50411",
+          "count": 4,
+          "section": "スタジアム (4)"
+        },
+        {
+          "name": "基本炎エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50746",
+          "count": 9,
+          "section": "エネルギー (14)"
+        },
+        {
+          "name": "基本雷エネルギー",
+          "set_code": null,
+          "card_number": null,
+          "card_id": "50748",
+          "count": 5,
+          "section": "エネルギー (14)"
+        }
+      ],
+      "usages": [
+        {
+          "event_id": "1115437",
+          "date": "2026-11-11",
+          "category": "オープン",
+          "rank": 9,
+          "player_name": "けーてぃ",
+          "player_id": "0014251755"
+        }
+      ],
+      "collected_at": "2026-11-13T03:30:46+09:00"
     }
   }
 }
