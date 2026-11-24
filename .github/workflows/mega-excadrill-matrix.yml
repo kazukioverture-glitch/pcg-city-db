@@ -1,0 +1,23 @@
+name: Mega Excadrill Metang Top8 Matrix
+on:
+  pull_request:
+    paths:
+      - "analysis/mega_excadrill_matrix.py"
+      - ".github/workflows/mega-excadrill-matrix.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate immutable raw data and generate comparison
+        run: python analysis/mega_excadrill_matrix.py
+      - name: Store read-only matrix report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mega-excadrill-metang-top8
+          path: .tmp/mega-excadrill-matrix/
+          if-no-files-found: error
